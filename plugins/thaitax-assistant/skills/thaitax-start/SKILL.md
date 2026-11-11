@@ -41,7 +41,7 @@ Ask the language question first, then continue in that language.
 
 ## Step 2: About you (intake rounds 1–3)
 
-Run the rounds from the intake checklist that apply: round 1 always, round 2 for individuals, round 3 per company. Ask 3–5 questions per message. After each round, echo back what was understood in a compact list. "I don't know" or "later" is fine: mark the item missing and move on.
+Run the rounds from the intake checklist that apply: round 1 always, round 2 for individuals, round 3 per company. Ask up to 4 clickable questions per round, as many rounds as needed. After each round, echo back what was understood in a compact list. "I don't know" or "later" is fine: mark the item missing and move on.
 
 If the user has income from abroad, say in one line that this is a topic the assistant handles in depth (`foreign-income`) and continue.
 

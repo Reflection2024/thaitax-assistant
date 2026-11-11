@@ -1,6 +1,6 @@
 # Intake checklist: everything ThaiTax Assistant needs from the user
 
-`thaitax-start` collects these details **in short rounds** (3–5 questions per message, in the user's language). Ask only the rounds that apply. Accept "I don't know" or "later": mark the item as missing and move on. Never ask for passwords, card numbers or full bank-account numbers.
+`thaitax-start` collects these details **in short rounds** (up to 4 clickable questions per round, as many rounds as needed, in the user's language). Ask only the rounds that apply. Accept "I don't know" or "later": mark the item as missing and move on. Never ask for passwords, card numbers or full bank-account numbers.
 
 ## Round 1: About you (everyone)
 
