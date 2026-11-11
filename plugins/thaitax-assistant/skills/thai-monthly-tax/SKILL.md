@@ -9,7 +9,7 @@ Read `../../references/thai-tax-facts.md` and `../../references/connectors-and-s
 
 ## Step 0: Scope
 
-1. Read the Sabai Office profile. If there is none, run `sabai-start` first, or ask for the company name and tax ID.
+1. Read the ThaiTax Assistant profile. If there is none, run `thaitax-start` first, or ask for the company name and tax ID.
 2. **One company per run.** For "all my companies", repeat the steps for each one and produce one section per company. Never blend totals.
 3. Choose the period: by default the last completed month. Use "half-year" or "annual" for PND.51 / PND.50.
 4. With web search, verify on rd.go.th the VAT rate for the period, whether the online filing extension is still in force, and any new holiday that moves a deadline. Note the source and date.

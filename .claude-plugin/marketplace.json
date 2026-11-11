@@ -1,5 +1,5 @@
 {
-  "name": "sabai-office",
+  "name": "thaitax-assistant",
   "owner": {
     "name": "Reflection Thailand"
   },
@@ -8,10 +8,10 @@
   },
   "plugins": [
     {
-      "name": "sabai-office",
-      "source": "./plugins/sabai-office",
+      "name": "thaitax-assistant",
+      "source": "./plugins/thaitax-assistant",
       "description": "Personal and company Thai tax prep, bilingual Thai documents, cash and collections (FlowAccount, Stripe, Omise), and Thai payroll. English, Hebrew, Thai.",
-      "version": "0.3.0"
+      "version": "0.4.0"
     }
   ]
 }

@@ -1,6 +1,6 @@
 ---
 name: thai-export-reader
-description: "Reads exports and statements from Thai systems that have no connector (PEAK, Express, SMLSoft, older FlowAccount files, 2C2P / GB Prime Pay / KSher settlement reports, Thai bank statement PDFs) and turns them into clean, checked data for the other Sabai Office skills. Handles Thai column headers, Buddhist Era dates, TIS-620 / Windows-874 encoding, 13-digit tax IDs, branch codes and VAT arithmetic. Can prepare import files back into the tool from its template. Use when the owner uploads an Excel/CSV/PDF from a Thai system, or says 'export from PEAK', 'bank statement to Excel', 'settlement report', 'קובץ מ-PEAK', 'דף בנק', 'ส่งออก', 'นำเข้า', 'รายงานภาษีขาย', 'รายงานภาษีซื้อ', 'สเตทเมนต์'."
+description: "Reads exports and statements from Thai systems that have no connector (PEAK, Express, SMLSoft, older FlowAccount files, 2C2P / GB Prime Pay / KSher settlement reports, Thai bank statement PDFs) and turns them into clean, checked data for the other ThaiTax Assistant skills. Handles Thai column headers, Buddhist Era dates, TIS-620 / Windows-874 encoding, 13-digit tax IDs, branch codes and VAT arithmetic. Can prepare import files back into the tool from its template. Use when the owner uploads an Excel/CSV/PDF from a Thai system, or says 'export from PEAK', 'bank statement to Excel', 'settlement report', 'קובץ מ-PEAK', 'דף בנק', 'ส่งออก', 'นำเข้า', 'รายงานภาษีขาย', 'รายงานภาษีซื้อ', 'สเตทเมนต์'."
 ---
 
 # Thai export reader

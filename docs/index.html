@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sabai Office</title>
+<title>ThaiTax Assistant</title>
 <meta name="description" content="Your Thai back office inside Claude. Tax prep, Thai documents, collections and payroll, in English, Hebrew and Thai. Free.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,6 +86,20 @@ section h2{font-size:clamp(28px,3.6vw,40px);font-weight:800;max-width:22em}
 .feat p{margin-top:8px;color:var(--muted);font-size:15.5px}
 .feat code{font-size:13px;background:color-mix(in srgb,var(--ink) 8%,transparent);padding:1px 6px;border-radius:5px}
 
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.filters button{font:inherit;font-size:14px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.asks{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:20px}
+.ask{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:12px;align-content:start}
+.ask[hidden]{display:none}
+.ask .who{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--jade);font-weight:600}
+.ask .q{background:color-mix(in srgb,var(--marigold) 14%,transparent);border-radius:14px 14px 14px 4px;padding:12px 14px;font-weight:500}
+.ask .a{border-left:3px solid var(--jade);padding:2px 0 2px 14px;color:var(--muted);font-size:15.5px}
+.ask .a b{color:var(--ink);font-weight:600}
+.ask .a ul{margin:6px 0 0;padding-left:18px}
+.ask .a li{margin:3px 0}
+.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (max-width:860px){.asks{grid-template-columns:1fr}}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px;counter-reset:s}
 .step{counter-increment:s}
 .step::before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--paper);font-family:var(--display);font-weight:800;margin-bottom:12px}
@@ -121,13 +135,13 @@ footer{padding:28px 0 48px;color:var(--muted);font-size:13.5px;display:grid;gap:
 <div class="wrap">
 
 <header>
-  <a class="logo" href="#top" aria-label="Sabai Office"><i>☀</i>Sabai Office</a>
+  <a class="logo" href="#top" aria-label="ThaiTax Assistant"><i>฿</i>ThaiTax Assistant</a>
   <nav class="nav">
     <div class="langs" role="group" aria-label="Language">
       <a href="#en" id="l-en">EN</a>
       <a href="#th" id="l-th">ไทย</a>
     </div>
-    <a class="gh" href="https://github.com/Reflection2024/sabai-office">GitHub</a>
+    <a class="gh" href="https://github.com/Reflection2024/thaitax-assistant">GitHub</a>
   </nav>
 </header>
 
@@ -136,10 +150,10 @@ footer{padding:28px 0 48px;color:var(--muted);font-size:13.5px;display:grid;gap:
   <div>
     <h1 lang="en">You came for the sea.<br><em>Not for the 15th of every month.</em></h1>
     <h1 lang="th">ชีวิตที่นี่ควรสบาย<br><em>ไม่ใช่วุ่นกับวันที่ 15 ทุกเดือน</em></h1>
-    <p class="lede" lang="en">Sabai Office turns Claude into your Thai back office. It prepares your tax returns, writes your documents in Thai, chases what you're owed and checks your payroll. You approve, your accountant reviews, and your evenings are yours again.</p>
-    <p class="lede" lang="th">Sabai Office ทำให้ Claude เป็นฝ่ายบัญชีและเอกสารของคุณ เตรียมแบบภาษี ร่างเอกสารภาษาไทย ติดตามเงินที่ลูกค้าค้างชำระ และตรวจเงินเดือนพนักงาน คุณเป็นผู้อนุมัติ นักบัญชีของคุณตรวจสอบ แล้วคุณก็มีเวลาให้ครอบครัวมากขึ้น</p>
+    <p class="lede" lang="en">ThaiTax Assistant turns Claude into your Thai back office. It prepares your tax returns, writes your documents in Thai, chases what you're owed and checks your payroll. You approve, your accountant reviews, and your evenings are yours again.</p>
+    <p class="lede" lang="th">ThaiTax Assistant ทำให้ Claude เป็นฝ่ายบัญชีและเอกสารของคุณ เตรียมแบบภาษี ร่างเอกสารภาษาไทย ติดตามเงินที่ลูกค้าค้างชำระ และตรวจเงินเดือนพนักงาน คุณเป็นผู้อนุมัติ นักบัญชีของคุณตรวจสอบ แล้วคุณก็มีเวลาให้ครอบครัวมากขึ้น</p>
     <div class="ctas">
-      <a class="btn primary" href="sabai-office.plugin"><span lang="en">Download free</span><span lang="th">ดาวน์โหลดฟรี</span> ↓</a>
+      <a class="btn primary" href="thaitax-assistant.plugin"><span lang="en">Download free</span><span lang="th">ดาวน์โหลดฟรี</span> ↓</a>
       <a class="btn ghost" href="#install"><span lang="en">Install in Claude Code</span><span lang="th">ติดตั้งใน Claude Code</span></a>
     </div>
     <div class="facts" lang="en"><span>Free</span><span>English · עברית · ไทย</span><span>For you personally, your company, or both</span></div>
@@ -247,12 +261,108 @@ footer{padding:28px 0 48px;color:var(--muted);font-size:13.5px;display:grid;gap:
   </div>
 </section>
 
+<section id="examples">
+  <p class="kicker" lang="en">Examples</p><p class="kicker" lang="th">ตัวอย่างการใช้งาน</p>
+  <h2 lang="en">Type it the way you'd say it. Here's what comes back.</h2>
+  <h2 lang="th">พิมพ์เหมือนพูดคุยกัน แล้วดูว่าได้อะไรกลับมา</h2>
+  <p class="sub" lang="en">Real questions, illustrative answers. Names and amounts are examples.</p>
+  <p class="sub" lang="th">คำถามจริง คำตอบเป็นตัวอย่าง ชื่อและตัวเลขสมมติ</p>
+
+  <div class="filters" role="group" aria-label="Filter examples">
+    <button type="button" data-f="all" aria-pressed="true"><span lang="en">All</span><span lang="th">ทั้งหมด</span></button>
+    <button type="button" data-f="me" aria-pressed="false"><span lang="en">Just me</span><span lang="th">บุคคลธรรมดา</span></button>
+    <button type="button" data-f="co" aria-pressed="false"><span lang="en">My company</span><span lang="th">บริษัท</span></button>
+  </div>
+
+  <div class="asks">
+    <article class="ask" data-k="me">
+      <p class="who" lang="en">Remote worker, salary from Europe</p><p class="who" lang="th">ทำงานรีโมต เงินเดือนจากยุโรป</p>
+      <p class="q" lang="en">"I moved to Samui in March and my salary still comes from Germany. Do I need to file in Thailand?"</p>
+      <p class="q" lang="th">"ย้ายมาสมุยตั้งแต่มีนาคม เงินเดือนยังจ่ายจากเยอรมนี ต้องยื่นภาษีที่ไทยไหม"</p>
+      <div class="a" lang="en"><b>You're at 214 days in Thailand this year, so you are tax resident.</b><ul><li>11 transfers sorted: 3 from savings before 2024, 8 from 2026 salary</li><li>Foreign-income declaration drafted, German tax credit estimated under the treaty</li><li>3 documents still needed for your accountant</li></ul></div>
+      <div class="a" lang="th"><b>ปีนี้คุณอยู่ไทย 214 วัน จึงเป็นผู้มีถิ่นที่อยู่ทางภาษี</b><ul><li>แยกยอดโอน 11 รายการ: เงินออมก่อนปี 2567 จำนวน 3 รายการ เงินเดือนปี 2569 จำนวน 8 รายการ</li><li>ร่างแบบแจ้งเงินได้จากต่างประเทศ และประมาณการเครดิตภาษีเยอรมนีตามอนุสัญญา</li><li>เหลือเอกสารอีก 3 รายการสำหรับนักบัญชี</li></ul></div>
+    </article>
+
+    <article class="ask" data-k="me">
+      <p class="who" lang="en">Freelancer with a condo to rent</p><p class="who" lang="th">ฟรีแลนซ์ มีคอนโดให้เช่า</p>
+      <p class="q" lang="en">"Fill in my PND.90. I have consulting fees and rent from my condo in Bangkok."</p>
+      <p class="q" lang="th">"ช่วยกรอก ภ.ง.ด.90 ให้หน่อย มีค่าที่ปรึกษากับค่าเช่าคอนโดที่กรุงเทพฯ"</p>
+      <div class="a" lang="en"><b>A worksheet that follows the form, line by line.</b><ul><li>Rent in item No. 4 with the 30% deduction, fees in No. 1</li><li>The 0.5% minimum-tax test checked</li><li>Withholding from 6 certificates credited, an estimated refund of <span class="num">THB 4,180</span></li><li>The exact numbers to type into e-Filing, screen by screen</li></ul></div>
+      <div class="a" lang="th"><b>ตารางคำนวณเรียงตามแบบ ทีละบรรทัด</b><ul><li>ค่าเช่าในข้อ 4 หักค่าใช้จ่าย 30% ค่าที่ปรึกษาในข้อ 1</li><li>ตรวจการคำนวณภาษีแบบ 0.5% แล้ว</li><li>นำภาษีหัก ณ ที่จ่ายจาก 50 ทวิ 6 ใบมาเครดิต ประมาณการขอคืน <span class="num">฿4,180</span></li><li>ตัวเลขสำหรับกรอกใน e-Filing ทีละหน้าจอ</li></ul></div>
+    </article>
+
+    <article class="ask" data-k="me">
+      <p class="who" lang="en">Consultant paid by Thai companies</p><p class="who" lang="th">ที่ปรึกษา รับเงินจากบริษัทไทย</p>
+      <p class="q" lang="en">"Which companies still haven't sent me a 50 Tawi this year?"</p>
+      <p class="q" lang="th">"ปีนี้บริษัทไหนยังไม่ส่ง 50 ทวิ มาให้บ้าง"</p>
+      <div class="a" lang="en"><b>4 payers are missing, worth <span class="num">THB 9,600</span> in tax already withheld.</b><ul><li>A polite request in Thai drafted for each one, ready for you to approve and send</li></ul></div>
+      <div class="a" lang="th"><b>ยังขาด 4 ราย คิดเป็นภาษีที่ถูกหักไว้แล้ว <span class="num">฿9,600</span></b><ul><li>ร่างจดหมายขอเอกสารอย่างสุภาพให้ทุกราย รอคุณอนุมัติก่อนส่ง</li></ul></div>
+    </article>
+
+    <article class="ask" data-k="me">
+      <p class="who" lang="en">Villa owner on Koh Phangan</p><p class="who" lang="th">เจ้าของวิลล่าเกาะพะงัน</p>
+      <p class="q" lang="en">"My villa rentals passed 1.5 million baht this year. Should I worry about VAT?"</p>
+      <p class="q" lang="th">"รายได้ค่าเช่าวิลล่าปีนี้เกิน 1.5 ล้านบาทแล้ว ต้องกังวลเรื่อง VAT ไหม"</p>
+      <div class="a" lang="en"><b>You're at 83% of the THB 1.8m registration threshold.</b><ul><li>Projected to cross it in late November at the current pace</li><li>Whether short-stay rent counts is a point for your accountant to confirm</li><li>Your half-year PND.94 figures are ready too</li></ul></div>
+      <div class="a" lang="th"><b>ขณะนี้อยู่ที่ 83% ของเกณฑ์จด VAT 1.8 ล้านบาท</b><ul><li>ตามอัตรานี้คาดว่าจะเกินเกณฑ์ปลายเดือนพฤศจิกายน</li><li>ประเด็นว่าค่าเช่าระยะสั้นเข้าเกณฑ์หรือไม่ ให้นักบัญชียืนยัน</li><li>ตัวเลข ภ.ง.ด.94 ครึ่งปีพร้อมแล้วเช่นกัน</li></ul></div>
+    </article>
+
+    <article class="ask" data-k="co">
+      <p class="who" lang="en">Small hotel company</p><p class="who" lang="th">บริษัทโรงแรมขนาดเล็ก</p>
+      <p class="q" lang="en">"What's due this month for my company?"</p>
+      <p class="q" lang="th">"เดือนนี้บริษัทต้องยื่นอะไรบ้าง"</p>
+      <div class="a" lang="en"><b>4 filings, <span class="num">THB 37,295</span> in total, with each deadline moved past the public holiday.</b><ul><li>VAT, withholding, social security, and VAT on overseas ad spend</li><li>2 purchase invoices can't be claimed: the buyer's name doesn't match your registration</li></ul></div>
+      <div class="a" lang="th"><b>4 แบบ รวม <span class="num">฿37,295</span> เลื่อนกำหนดตามวันหยุดราชการแล้ว</b><ul><li>ภ.พ.30, ภ.ง.ด.3/53, ประกันสังคม และ ภ.พ.36</li><li>ใบกำกับภาษีซื้อ 2 ใบใช้เครดิตไม่ได้ เพราะชื่อผู้ซื้อไม่ตรงกับที่จดทะเบียน</li></ul></div>
+    </article>
+
+    <article class="ask" data-k="co">
+      <p class="who" lang="en">Consulting company</p><p class="who" lang="th">บริษัทที่ปรึกษา</p>
+      <p class="q" lang="en">"Draft a tax invoice in Thai and English for 85,000 baht of consulting to Siam Coast Co."</p>
+      <p class="q" lang="th">"ร่างใบกำกับภาษีไทย-อังกฤษ ค่าที่ปรึกษา 85,000 บาท ให้บริษัท สยามโคสต์"</p>
+      <div class="a" lang="en"><b>Draft ready: <span class="num">85,000 + 5,950 VAT = 90,950 THB</span>.</b><ul><li>Dated 11 พฤศจิกายน 2569 (2026), serial number left for FlowAccount</li><li>A note that they will withhold 3%, <span class="num">THB 2,550</span>, and owe you a 50 ทวิ</li></ul></div>
+      <div class="a" lang="th"><b>ร่างพร้อมแล้ว: <span class="num">85,000 + VAT 5,950 = 90,950 บาท</span></b><ul><li>ลงวันที่ 11 พฤศจิกายน 2569 เว้นเลขที่ไว้ให้ออกจาก FlowAccount</li><li>หมายเหตุ: ลูกค้าจะหัก ณ ที่จ่าย 3% เป็นเงิน <span class="num">฿2,550</span> และต้องออก 50 ทวิ ให้คุณ</li></ul></div>
+    </article>
+
+    <article class="ask" data-k="co">
+      <p class="who" lang="en">Online shop on Stripe</p><p class="who" lang="th">ร้านออนไลน์ที่ใช้ Stripe</p>
+      <p class="q" lang="en">"Did all my Stripe payouts in October actually reach my bank?"</p>
+      <p class="q" lang="th">"ยอดโอนจาก Stripe เดือนตุลาคม เข้าบัญชีธนาคารครบไหม"</p>
+      <div class="a" lang="en"><b>12 of 13 payouts matched to your statement.</b><ul><li>1 payout of <span class="num">THB 18,240</span> is still in transit</li><li>October fees: <span class="num">THB 6,812</span></li><li>3 sales have no receipt in FlowAccount yet, and need one for VAT</li></ul></div>
+      <div class="a" lang="th"><b>ตรงกับสเตทเมนต์ 12 จาก 13 รายการ</b><ul><li>อีก 1 รายการ <span class="num">฿18,240</span> ยังอยู่ระหว่างโอน</li><li>ค่าธรรมเนียมเดือนตุลาคม <span class="num">฿6,812</span></li><li>มี 3 รายการขายที่ยังไม่มีใบเสร็จใน FlowAccount ต้องออกเพื่อ VAT</li></ul></div>
+    </article>
+
+    <article class="ask" data-k="co">
+      <p class="who" lang="en">Restaurant with 6 staff</p><p class="who" lang="th">ร้านอาหาร พนักงาน 6 คน</p>
+      <p class="q" lang="en">"Prepare November payroll for my 6 staff on Samui."</p>
+      <p class="q" lang="th">"เตรียมเงินเดือนพฤศจิกายนให้พนักงาน 6 คนที่สมุย"</p>
+      <div class="a" lang="en"><b>The run is ready for your approval, line by line.</b><ul><li>Overtime at 1.5x for 2 people, social security capped at <span class="num">THB 875</span></li><li>One work permit expires in 41 days, so that person's pay is held until you decide</li><li>Thai payslips drafted</li></ul></div>
+      <div class="a" lang="th"><b>รายการเงินเดือนพร้อมให้คุณอนุมัติทีละคน</b><ul><li>OT 1.5 เท่าสำหรับ 2 คน ประกันสังคมสูงสุด <span class="num">฿875</span></li><li>ใบอนุญาตทำงาน 1 ใบจะหมดอายุใน 41 วัน จึงพักเงินเดือนคนนั้นไว้จนกว่าคุณจะตัดสินใจ</li><li>ร่างสลิปเงินเดือนภาษาไทยแล้ว</li></ul></div>
+    </article>
+
+    <article class="ask" data-k="co">
+      <p class="who" lang="en">Agency that runs ads</p><p class="who" lang="th">เอเจนซี่ที่ลงโฆษณา</p>
+      <p class="q" lang="en">"We pay Google and Meta ads every month. Is there anything we have to file?"</p>
+      <p class="q" lang="th">"จ่ายค่าโฆษณา Google กับ Meta ทุกเดือน ต้องยื่นอะไรไหม"</p>
+      <div class="a" lang="en"><b>Yes: self-assessed VAT on PP.36 every month.</b><ul><li>October: <span class="num">THB 28,000</span> of ads, <span class="num">THB 1,960</span> VAT, due the 15th</li><li>Usually reclaimable on next month's PP.30. Your accountant confirms.</li></ul></div>
+      <div class="a" lang="th"><b>ต้องยื่น: นำส่ง VAT ตาม ภ.พ.36 ทุกเดือน</b><ul><li>ตุลาคม ค่าโฆษณา <span class="num">฿28,000</span> VAT <span class="num">฿1,960</span> กำหนดยื่นวันที่ 15</li><li>โดยทั่วไปนำไปเครดิตใน ภ.พ.30 เดือนถัดไปได้ ให้นักบัญชียืนยัน</li></ul></div>
+    </article>
+
+    <article class="ask" data-k="co">
+      <p class="who" lang="en">Company on PEAK</p><p class="who" lang="th">บริษัทที่ใช้ PEAK</p>
+      <p class="q" lang="en">"Here's my sales export from PEAK. Turn it into this month's VAT figures."</p>
+      <p class="q" lang="th">"นี่ไฟล์ส่งออกยอดขายจาก PEAK ช่วยสรุปตัวเลข VAT เดือนนี้"</p>
+      <div class="a" lang="en"><b>142 lines read, Thai headers mapped, Buddhist-Era dates converted.</b><ul><li>Output VAT: <span class="num">THB 48,307</span></li><li>2 lines flagged: one tax ID with 12 digits, and one gap in the invoice numbering</li></ul></div>
+      <div class="a" lang="th"><b>อ่าน 142 รายการ จับคู่หัวตารางภาษาไทย แปลงปี พ.ศ. แล้ว</b><ul><li>ภาษีขาย <span class="num">฿48,307</span></li><li>พบ 2 จุด: เลขผู้เสียภาษี 12 หลัก และเลขที่ใบกำกับขาดช่วง</li></ul></div>
+    </article>
+  </div>
+</section>
+
 <section>
   <p class="kicker" lang="en">Income from abroad</p><p class="kicker" lang="th">รายได้จากต่างประเทศ</p>
   <h2 lang="en">Your money comes from abroad. Your life is here. Your return should reflect both, correctly.</h2>
   <h2 lang="th">รายได้มาจากต่างประเทศ แต่ชีวิตอยู่ที่นี่ แบบภาษีของคุณควรสะท้อนทั้งสองอย่างให้ถูกต้อง</h2>
-  <p class="sub" lang="en">A salary from home, clients overseas, a flat you rent out, a pension. Sabai Office counts your days in Thailand, sorts every transfer into savings from before 2024 and income that may be taxable, prepares the Revenue Department's foreign-income declaration, and works out the credit for tax you already paid abroad.</p>
-  <p class="sub" lang="th">เงินเดือนจากต่างประเทศ ลูกค้าต่างประเทศ ค่าเช่าบ้าน หรือเงินบำนาญ Sabai Office นับวันที่คุณอยู่ในไทย แยกเงินที่โอนเข้าว่าเป็นเงินออมก่อนปี 2567 หรือเงินได้ที่อาจต้องเสียภาษี เตรียมแบบแจ้งเงินได้จากต่างประเทศ และคำนวณเครดิตภาษีที่จ่ายไปแล้วในต่างประเทศ</p>
+  <p class="sub" lang="en">A salary from home, clients overseas, a flat you rent out, a pension. ThaiTax Assistant counts your days in Thailand, sorts every transfer into savings from before 2024 and income that may be taxable, prepares the Revenue Department's foreign-income declaration, and works out the credit for tax you already paid abroad.</p>
+  <p class="sub" lang="th">เงินเดือนจากต่างประเทศ ลูกค้าต่างประเทศ ค่าเช่าบ้าน หรือเงินบำนาญ ThaiTax Assistant นับวันที่คุณอยู่ในไทย แยกเงินที่โอนเข้าว่าเป็นเงินออมก่อนปี 2567 หรือเงินได้ที่อาจต้องเสียภาษี เตรียมแบบแจ้งเงินได้จากต่างประเทศ และคำนวณเครดิตภาษีที่จ่ายไปแล้วในต่างประเทศ</p>
   <div class="grid">
     <div class="feat">
       <h3 lang="en">180 days, counted</h3><h3 lang="th">นับครบ 180 วัน</h3>
@@ -280,8 +390,8 @@ footer{padding:28px 0 48px;color:var(--muted);font-size:13.5px;display:grid;gap:
       <h3 lang="en">Install</h3><h3 lang="th">ติดตั้ง</h3>
       <p lang="en">In the Claude app, download the file and drag it into a chat, then press Install. In Claude Code, run:</p>
       <p lang="th">ในแอป Claude ดาวน์โหลดไฟล์ ลากไปวางในแชต แล้วกด Install หรือใน Claude Code พิมพ์:</p>
-      <pre>/plugin marketplace add Reflection2024/sabai-office
-/plugin install sabai-office@sabai-office</pre>
+      <pre>/plugin marketplace add Reflection2024/thaitax-assistant
+/plugin install thaitax-assistant@thaitax-assistant</pre>
     </div>
     <div class="step">
       <h3 lang="en">Connect</h3><h3 lang="th">เชื่อมต่อ</h3>
@@ -301,7 +411,7 @@ footer{padding:28px 0 48px;color:var(--muted);font-size:13.5px;display:grid;gap:
   <h2 lang="en">Built carefully, because it is your money</h2><h2 lang="th">ออกแบบอย่างรอบคอบ เพราะเป็นเงินของคุณ</h2>
   <div class="promise" lang="en">
     <p>Nothing is filed, paid or sent without the user's explicit approval.</p>
-    <p>Sabai Office drafts tax invoices. Numbered invoices are issued only from the user's own accounting system.</p>
+    <p>ThaiTax Assistant drafts tax invoices. Numbered invoices are issued only from the user's own accounting system.</p>
     <p>It never logs in to Revenue Department, Social Security or bank portals.</p>
     <p>Rates and deadlines are checked against official Thai sources before use.</p>
     <p>Each person and each company is kept separate. Currencies are never added together.</p>
@@ -321,12 +431,12 @@ footer{padding:28px 0 48px;color:var(--muted);font-size:13.5px;display:grid;gap:
   <p class="kicker">FAQ</p>
   <h2 lang="en">Questions you might have</h2><h2 lang="th">คำถามที่พบบ่อย</h2>
   <div lang="en">
-    <details><summary>Is it really free?</summary><p>Yes. Sabai Office is free to download and use. You need your own Claude plan, plus FlowAccount or Stripe if you want live connections.</p></details>
+    <details><summary>Is it really free?</summary><p>Yes. ThaiTax Assistant is free to download and use. You need your own Claude plan, plus FlowAccount or Stripe if you want live connections.</p></details>
     <details><summary>Does it replace my accountant?</summary><p>No. It does the preparation, so your accountant reviews a clean file instead of a box of receipts. Filing stays with you and your accountant.</p></details>
-    <details><summary>I don't use FlowAccount. Can I still use it?</summary><p>Yes. Upload the export from PEAK, Express, your gateway or your bank, and Sabai Office reads it.</p></details>
-    <details><summary>I only have personal income. Is it for me?</summary><p>Yes. Freelance work, rent from a property, or salary with side income: Sabai Office prepares your personal tax file and keeps track of your withholding certificates.</p></details>
-    <details><summary>I live here, but my income comes from abroad. Do I need to file?</summary><p>If you spend 180 days or more in Thailand in a year and bring income earned from 2024 into the country, it is likely reportable. Sabai Office checks your days and your transfers, prepares the foreign-income declaration and the treaty credit, and lists what your accountant needs to confirm.</p></details>
-    <details><summary>Where does my data go?</summary><p>Your data stays between you, Claude and the services you connect. Sabai Office does not send ID numbers, salaries or bank details to any outside service.</p></details>
+    <details><summary>I don't use FlowAccount. Can I still use it?</summary><p>Yes. Upload the export from PEAK, Express, your gateway or your bank, and ThaiTax Assistant reads it.</p></details>
+    <details><summary>I only have personal income. Is it for me?</summary><p>Yes. Freelance work, rent from a property, or salary with side income: ThaiTax Assistant prepares your personal tax file and keeps track of your withholding certificates.</p></details>
+    <details><summary>I live here, but my income comes from abroad. Do I need to file?</summary><p>If you spend 180 days or more in Thailand in a year and bring income earned from 2024 into the country, it is likely reportable. ThaiTax Assistant checks your days and your transfers, prepares the foreign-income declaration and the treaty credit, and lists what your accountant needs to confirm.</p></details>
+    <details><summary>Where does my data go?</summary><p>Your data stays between you, Claude and the services you connect. ThaiTax Assistant does not send ID numbers, salaries or bank details to any outside service.</p></details>
   </div>
   <div lang="th">
     <details><summary>ใช้ฟรีจริงไหม</summary><p>ฟรี ดาวน์โหลดและใช้งานได้ทันที คุณต้องมีบัญชี Claude ของตัวเอง และ FlowAccount หรือ Stripe หากต้องการเชื่อมต่อข้อมูลอัตโนมัติ</p></details>
@@ -339,16 +449,16 @@ footer{padding:28px 0 48px;color:var(--muted);font-size:13.5px;display:grid;gap:
 </section>
 
 <div class="final">
-  <h2 lang="en">Hand the paperwork to Sabai Office. Keep the island life.</h2>
-  <h2 lang="th">ให้ Sabai Office ดูแลงานเอกสาร คุณใช้ชีวิตให้สบาย</h2>
-  <a class="btn primary" href="sabai-office.plugin"><span lang="en">Download free</span><span lang="th">ดาวน์โหลดฟรี</span> ↓</a>
+  <h2 lang="en">Hand the paperwork to ThaiTax Assistant. Keep the island life.</h2>
+  <h2 lang="th">ให้ ThaiTax Assistant ดูแลงานเอกสาร คุณใช้ชีวิตให้สบาย</h2>
+  <a class="btn primary" href="thaitax-assistant.plugin"><span lang="en">Download free</span><span lang="th">ดาวน์โหลดฟรี</span> ↓</a>
 </div>
 </main>
 
 <footer>
   <p lang="en">Prepared for review by your Thai accountant. Not tax or legal advice. Nothing is filed without your approval.</p>
   <p lang="th">จัดเตรียมเพื่อให้นักบัญชีของท่านตรวจสอบ ไม่ใช่คำแนะนำด้านภาษีหรือกฎหมาย ไม่มีการยื่นแบบใด ๆ โดยไม่ได้รับการอนุมัติ</p>
-  <p>© 2026 Reflection Thailand · <a href="https://github.com/Reflection2024/sabai-office">GitHub</a></p>
+  <p>© 2026 Reflection Thailand · <a href="https://github.com/Reflection2024/thaitax-assistant">GitHub</a></p>
 </footer>
 </div>
 
@@ -357,14 +467,20 @@ footer{padding:28px 0 48px;color:var(--muted);font-size:13.5px;display:grid;gap:
   var root=document.documentElement;
   function apply(){
     var l=(location.hash==="#th")?"th":(location.hash==="#en"?"en":null);
-    if(!l){try{l=localStorage.getItem("sabai-lang")}catch(e){}}
+    if(!l){try{l=localStorage.getItem("thaitax-lang")}catch(e){}}
     if(!l){l=(navigator.language||"").toLowerCase().indexOf("th")===0?"th":"en"}
     root.lang=l;
-    try{localStorage.setItem("sabai-lang",l)}catch(e){}
+    try{localStorage.setItem("thaitax-lang",l)}catch(e){}
     document.getElementById("l-en").setAttribute("aria-current",l==="en");
     document.getElementById("l-th").setAttribute("aria-current",l==="th");
   }
   window.addEventListener("hashchange",apply);apply();
+  var btns=document.querySelectorAll(".filters button");
+  btns.forEach(function(b){b.addEventListener("click",function(){
+    var f=b.getAttribute("data-f");
+    btns.forEach(function(x){x.setAttribute("aria-pressed",x===b)});
+    document.querySelectorAll(".ask").forEach(function(c){c.hidden=!(f==="all"||c.getAttribute("data-k")===f)});
+  })});
 })();
 </script>
 </body>

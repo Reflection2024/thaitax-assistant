@@ -1,9 +1,9 @@
 ---
-name: sabai-start
-description: "Sets up Sabai Office for a business owner in Thailand: records the companies they run (name, tax ID, branch, VAT status, year end), their working language (English, Hebrew or Thai), and the tools they use, guides them to connect FlowAccount, Stripe and their Thai payment gateway, and runs one quick check to show value. Use when the owner says 'get started', 'set up Sabai', 'start', 'what can you do', 'התחל', 'בוא נתחיל', 'เริ่มต้น', or on first use of any Sabai Office skill when no Sabai profile exists."
+name: thaitax-start
+description: "Sets up ThaiTax Assistant for a business owner in Thailand: records the companies they run (name, tax ID, branch, VAT status, year end), their working language (English, Hebrew or Thai), and the tools they use, guides them to connect FlowAccount, Stripe and their Thai payment gateway, and runs one quick check to show value. Use when the owner says 'get started', 'set up ThaiTax', 'start', 'what can you do', 'התחל', 'בוא נתחיל', 'เริ่มต้น', or on first use of any ThaiTax Assistant skill when no ThaiTax profile exists."
 ---
 
-# Sabai Office: start
+# ThaiTax Assistant: start
 
 Read `../../references/connectors-and-safety.md` and `../../references/language-and-documents.md` first.
 
@@ -11,7 +11,7 @@ Reply in the language the owner writes in. Keep the conversation plain: no file 
 
 ## Step 1: Check for an existing profile
 
-Look in persistent memory (or a file named `sabai-profile.md` in the owner's working folder) for a `## Sabai Office profile` block.
+Look in persistent memory (or a file named `thaitax-profile.md` in the owner's working folder) for a `## ThaiTax Assistant profile` block.
 
 - **If one exists:** show it, ask what has changed, update only those fields, then skip to Step 4.
 - **If none exists:** continue.
@@ -52,10 +52,10 @@ Narrate in one line what is being checked and why.
 
 ## Step 5: Save the profile
 
-Show the draft and wait for an explicit yes. Then save it to persistent memory, or, if memory is unavailable, write `sabai-profile.md` for the owner to keep.
+Show the draft and wait for an explicit yes. Then save it to persistent memory, or, if memory is unavailable, write `thaitax-profile.md` for the owner to keep.
 
 ```markdown
-## Sabai Office profile
+## ThaiTax Assistant profile
 - **Owner language:** <en | he | th>
 - **Customer / staff language:** <th, en, he — as stated>
 - **Works as:** <individual | company | both>

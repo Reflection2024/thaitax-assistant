@@ -1,4 +1,4 @@
-# Sabai Office 🌴
+# ThaiTax Assistant 🌴
 
 **A back office in Thailand for foreign business owners, inside Claude. In English, עברית and ไทย.**
 
@@ -8,11 +8,11 @@ By Reflection Thailand.
 
 ## English
 
-Sabai Office takes care of the Thai admin that usually needs an accountant, a translator and a spreadsheet. It works for **individuals** (freelancers, consultants, landlords, expats with side income) and for **companies**, or both at once, always keeping each taxpayer separate.
+ThaiTax Assistant takes care of the Thai admin that usually needs an accountant, a translator and a spreadsheet. It works for **individuals** (freelancers, consultants, landlords, expats with side income) and for **companies**, or both at once, always keeping each taxpayer separate.
 
 | Skill | What it does | Say |
 |---|---|---|
-| **sabai-start** | Sets up your companies, language and tools | "Get started" |
+| **thaitax-start** | Sets up your companies, language and tools | "Get started" |
 | **thai-personal-tax** | Your annual return (PND.90/91) and half-year PND.94, line by line, with a worksheet that mirrors the form and an e-Filing walkthrough | "Fill in my annual tax return" |
 | **foreign-income** | Income from abroad: 180-day residency, remittance ledger (pre-2024 savings vs. taxable income), Foreign-Sourced Income Declaration, Foreign Tax Credit | "I have income from abroad" |
 | **thai-monthly-tax** | Prepares PP.30, PP.36, PND.3/53/54, SSO, and PND.50/51 working papers, with deadlines | "What's due this month?" |
@@ -36,12 +36,12 @@ Omise publishes an MCP server that runs on your computer with your API keys. Sta
 2. Install Omise's MCP server following Omise's own instructions, with `OMISE_PUBLIC_KEY`, `OMISE_SECRET_KEY` and `OMISE_ENVIRONMENT=test`.
 3. Add it to Claude Desktop. Switch to live keys only once you are comfortable.
 
-The secret key can charge and refund. Sabai Office always asks before any write.
+The secret key can charge and refund. ThaiTax Assistant always asks before any write.
 
 ### Safety rules (built in)
 
 - Nothing is filed, paid, sent or created without your explicit yes.
-- Sabai Office never issues a numbered legal tax invoice. It drafts the document; you issue it from FlowAccount.
+- ThaiTax Assistant never issues a numbered legal tax invoice. It drafts the document; you issue it from FlowAccount.
 - It never logs in to the Revenue Department, SSO or bank portals.
 - Each company is handled separately and amounts are never added across currencies.
 - Rates and deadlines are checked against official Thai sources before use.
@@ -52,7 +52,7 @@ The secret key can charge and refund. Sabai Office always asks before any write.
 
 ## עברית
 
-Sabai Office מטפל בכל מה שחוזר כל חודש בעסק בתאילנד: דוחות מס, מסמכים בתאילנדית, גבייה ותזרים, ומשכורות. הוא מתאים גם לאדם פרטי (פרילנסר, יועץ, משכיר נכס) וגם לחברה.
+ThaiTax Assistant מטפל בכל מה שחוזר כל חודש בעסק בתאילנד: דוחות מס, מסמכים בתאילנדית, גבייה ותזרים, ומשכורות. הוא מתאים גם לאדם פרטי (פרילנסר, יועץ, משכיר נכס) וגם לחברה.
 
 - **"תמלא לי את הדוח השנתי"**: הדוח השנתי (PND.90/91) והחצי-שנתי (PND.94), שורה אחר שורה. גיליון עבודה שבנוי כמו הטופס עצמו, עם הדרכה למילוי במערכת ה-e-Filing.
 - **"יש לי הכנסות מחו"ל"**: ספירת ימים לצורך תושבות מס (180 יום), מעקב אחרי העברות כסף לתאילנד (הפרדה בין חסכונות מלפני 2024 לבין הכנסה חייבת), טופס הצהרה על הכנסות מחו"ל, וזיכוי בגין מס ששולם בחו"ל.
@@ -69,7 +69,7 @@ Sabai Office מטפל בכל מה שחוזר כל חודש בעסק בתאילנ
 
 ## ภาษาไทย
 
-Sabai Office ช่วยเตรียมงานเอกสารประจำเดือนสำหรับธุรกิจในประเทศไทย ได้แก่ ภาษีมูลค่าเพิ่ม ภาษีหัก ณ ที่จ่าย ประกันสังคม เอกสารสองภาษา ติดตามหนี้ และเงินเดือน
+ThaiTax Assistant ช่วยเตรียมงานเอกสารประจำเดือนสำหรับธุรกิจในประเทศไทย ได้แก่ ภาษีมูลค่าเพิ่ม ภาษีหัก ณ ที่จ่าย ประกันสังคม เอกสารสองภาษา ติดตามหนี้ และเงินเดือน
 
 เหมาะทั้งบุคคลธรรมดา (ฟรีแลนซ์ ผู้ให้เช่า) และนิติบุคคล
 
