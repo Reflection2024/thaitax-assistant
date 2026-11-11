@@ -13,7 +13,8 @@ Sabai Office takes care of the Thai admin that usually needs an accountant, a tr
 | Skill | What it does | Say |
 |---|---|---|
 | **sabai-start** | Sets up your companies, language and tools | "Get started" |
-| **thai-personal-tax** | For individuals: freelance, rental and side income, 50 ทวิ certificates, PND.90/91/94, residency and remittance flags | "My personal tax" |
+| **thai-personal-tax** | Your annual return (PND.90/91) and half-year PND.94, line by line, with a worksheet that mirrors the form and an e-Filing walkthrough | "Fill in my annual tax return" |
+| **foreign-income** | Income from abroad: 180-day residency, remittance ledger (pre-2024 savings vs. taxable income), Foreign-Sourced Income Declaration, Foreign Tax Credit | "I have income from abroad" |
 | **thai-monthly-tax** | Prepares PP.30, PP.36, PND.3/53/54, SSO, and PND.50/51 working papers, with deadlines | "What's due this month?" |
 | **thai-documents** | Bilingual tax-invoice drafts, quotations, receipts, billing notes, 50 ทวิ, payslips, letters | "Draft a tax invoice in Thai" |
 | **cash-and-collections** | Receivables, payments and payouts, a 90-day cash outlook, polite reminders | "Who owes me money?" |
@@ -53,7 +54,8 @@ The secret key can charge and refund. Sabai Office always asks before any write.
 
 Sabai Office מטפל בכל מה שחוזר כל חודש בעסק בתאילנד: דוחות מס, מסמכים בתאילנדית, גבייה ותזרים, ומשכורות. הוא מתאים גם לאדם פרטי (פרילנסר, יועץ, משכיר נכס) וגם לחברה.
 
-- **"המס האישי שלי"**: הכנסות כפרילנסר ומשכירות, אישורי ניכוי במקור (50 Tawi), ודוחות שנתיים וחצי-שנתיים (PND.90/91/94).
+- **"תמלא לי את הדוח השנתי"**: הדוח השנתי (PND.90/91) והחצי-שנתי (PND.94), שורה אחר שורה. גיליון עבודה שבנוי כמו הטופס עצמו, עם הדרכה למילוי במערכת ה-e-Filing.
+- **"יש לי הכנסות מחו"ל"**: ספירת ימים לצורך תושבות מס (180 יום), מעקב אחרי העברות כסף לתאילנד (הפרדה בין חסכונות מלפני 2024 לבין הכנסה חייבת), טופס הצהרה על הכנסות מחו"ל, וזיכוי בגין מס ששולם בחו"ל.
 
 - **"בוא נתחיל"**: הגדרת החברות, השפה והכלים.
 - **"מה צריך להגיש החודש?"**: מע"מ (PP.30), מע"מ על שירותים מחו"ל (PP.36), ניכוי במקור (PND.3/53/54) וביטוח לאומי, עם מועדי ההגשה.
@@ -71,7 +73,8 @@ Sabai Office ช่วยเตรียมงานเอกสารประ�
 
 เหมาะทั้งบุคคลธรรมดา (ฟรีแลนซ์ ผู้ให้เช่า) และนิติบุคคล
 
-- "ภาษีส่วนตัวของฉัน": ภ.ง.ด.90/91/94 และหนังสือรับรอง 50 ทวิ
+- "ช่วยกรอก ภ.ง.ด.90": เตรียมแบบ ภ.ง.ด.90/91/94 ทีละบรรทัด
+- "มีรายได้จากต่างประเทศ": ถิ่นที่อยู่ทางภาษี เงินได้ที่นำเข้าประเทศ และเครดิตภาษีต่างประเทศ
 - "เดือนนี้ต้องยื่นอะไรบ้าง": ภ.พ.30, ภ.พ.36, ภ.ง.ด.3/53/54
 - "ร่างใบกำกับภาษี": ร่างเอกสารภาษาไทยคู่ภาษาอังกฤษ
 - "ใครค้างชำระบ้าง": ลูกหนี้ค้างชำระและจดหมายทวงถามอย่างสุภาพ

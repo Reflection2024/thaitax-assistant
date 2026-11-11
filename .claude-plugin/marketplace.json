@@ -11,7 +11,7 @@
       "name": "sabai-office",
       "source": "./plugins/sabai-office",
       "description": "Personal and company Thai tax prep, bilingual Thai documents, cash and collections (FlowAccount, Stripe, Omise), and Thai payroll. English, Hebrew, Thai.",
-      "version": "0.2.0"
+      "version": "0.3.0"
     }
   ]
 }

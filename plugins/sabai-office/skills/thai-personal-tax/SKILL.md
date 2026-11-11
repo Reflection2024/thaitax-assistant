@@ -1,53 +1,77 @@
 ---
 name: thai-personal-tax
-description: "Helps an individual in Thailand (freelancer, consultant, sole trader, landlord renting out a condo or villa, or a salaried expat with side income) keep track of income, collect withholding certificates, see what is due (PND.90 / PND.91 annual, PND.94 half-year), and prepare a personal tax working file for their accountant, with flags for tax residency, foreign income brought into Thailand, and VAT registration. Prepares; never files. Use when the owner says 'personal tax', 'freelancer tax Thailand', 'rental income tax', 'PND.90', 'PND.94', 'tax residency', 'remittance', 'מס אישי בתאילנד', 'פרילנסר', 'הכנסה משכירות', 'ภาษีเงินได้บุคคลธรรมดา', 'ภ.ง.ด.90', 'ภ.ง.ด.94', 'ฟรีแลนซ์'."
+description: "Prepares an individual's annual Thai income tax return (PND.90 or PND.91) line by line, and the half-year PND.94: freelance, consulting, rental, dividend, salary and foreign income sorted into the Section 40 categories, standard versus actual expense deductions, every allowance, the 0.5% minimum-tax test, Thai withholding credits from 50 ทวิ, the Income Declaration for Foreign-Sourced Income, and the Foreign Tax Credit. Produces a filled-in worksheet that mirrors the form and an e-Filing walkthrough for the person or their accountant. Prepares; never files. Use when the owner says 'annual tax return', 'PND.90', 'PND.91', 'PND.94', 'personal tax', 'freelancer tax Thailand', 'rental income tax', 'fill in my tax return', 'דוח שנתי', 'מס אישי בתאילנד', 'למלא את הדוח', 'ภ.ง.ด.90', 'ภ.ง.ด.91', 'ภ.ง.ด.94', 'ยื่นภาษี'."
 ---
 
-# Thai personal tax (individuals)
+# Thai personal tax: annual return (PND.90 / 91) and half-year (PND.94)
 
-Read `../../references/thai-tax-facts.md` (the individuals section) and `../../references/connectors-and-safety.md` first. The person is one taxpayer: never mix their figures with a company's, even one they own.
+Read first:
 
-## Step 0: Who and which year
+- `../../references/pnd90-annual-return.md`, the line-by-line guide. **It is the backbone of this skill.**
+- `../../references/thai-tax-facts.md`
+- `../../references/connectors-and-safety.md`
 
-From the Sabai Office profile, or by asking once:
+The person is one taxpayer. Never mix their figures with a company's, even one they own.
 
-- the person's name and 13-digit tax ID (Thai ID or the tax ID issued to a foreigner);
-- the tax year (the calendar year);
-- the kinds of income: salary, freelance and professional fees, business, rent, dividends and interest, foreign income;
-- the days spent in Thailand this year: 180 or more means tax resident;
-- visa type, if relevant (some visas, such as LTR, carry special treatment: flag it, never apply it).
+## Step 0: Scope and verification
 
-With web search, verify on rd.go.th the current bands, the allowances, the expense deductions for each income type, and the PND.90/91/94 deadlines. Note the source and date.
+1. Identify the person (name, 13-digit Thai tax ID or "not yet registered") and the tax year. If they are married, ask about the spouse's income and whether they would file jointly or separately.
+2. If the person has any income from abroad, or brings money into Thailand, **run `foreign-income` first**. It returns residency, the remittance ledger, and the foreign tax paid.
+3. With web search, verify for **this** tax year on rd.go.th and recent professional notes: tax bands, every allowance amount (especially the temporary ones), filing deadlines, the social security deduction cap, the Foreign Tax Credit tool, and the current foreign-income declaration form. Write "verified <date>, <sources>".
 
 ## Step 1: Collect
 
-- **Income records:** FlowAccount if the person invoices through it, Stripe or Omise payouts, bank statements, rental agreements, payslips (50 ทวิ from employers).
-- **Withholding certificates (50 ทวิ)** from every company that paid them. Build a register: payer, tax ID, date, income type, amount, tax withheld. List payers with no certificate yet, and draft a polite request in Thai through `thai-documents` (sent only on a yes).
-- **Allowances the person states:** spouse, children, parents, insurance, provident or retirement funds, donations, mortgage interest. Ask; never assume.
+Work through the checklist in section 7 of the guide. Ask for the documents in batches, in the person's language. Sources:
 
-## Step 2: Prepare
+- Thai: 50 ทวิ from every payer, FlowAccount (if the person invoices through it), Stripe or Omise payouts, Thai bank statements, leases.
+- Foreign: from `foreign-income`.
+- Allowances: certificates and receipts. **Ask; never assume** a spouse, a child or an insurance policy.
 
-- **Income by type.** Group income into the Revenue Code categories (salary; professional and contractor fees; rent; business; dividends and interest). Show which expense deduction each category allows, as verified in Step 0. Where a category lets the person choose between a flat deduction and actual expenses, show both, and let the person and the accountant choose.
-- **Estimate (labelled as an estimate):** net income → tax by band → minus tax already withheld = estimated payable or refund. Only if the person has supplied the allowances. Otherwise show the gross figures and stop.
-- **What's due:** PND.90 (several income types) or PND.91 (salary only) by 31 March, about a week later online. PND.94 by 30 September for the first half's non-salary income (such as rent or business). Move dates past weekends and holidays.
+Missing items stay missing and go on the list. Never zero them.
 
-## Step 3: Flags (never decide these)
+If a payer withheld tax but no 50 ทวิ has arrived, draft a polite request in Thai through `thai-documents`. Send it only on a yes.
 
-- **Foreign income brought into Thailand** by a resident: taxable when remitted, with limited treaty credit. List the transfers into Thailand the person shows you and hand them to a specialist.
-- **VAT:** if VAT-able income from freelance work, rent of commercial space, or business exceeds THB 1.8 million a year, the person must register for VAT. Flag it as the threshold approaches.
-- **Rent paid by companies:** the tenant company withholds 5%. Check that a 50 ทวิ exists for every month.
-- **Working legally:** a foreigner earning from work in Thailand generally needs a work permit for that work. Flag it to the person's lawyer; never assess it.
-- **Changing to a company:** if the person asks whether to incorporate, list the factors (income level, expenses, VAT, foreign-ownership rules) and send the decision to the accountant and lawyer.
+## Step 2: Classify income into Section 40 items
 
-## Step 4: Deliver
+For each income line, assign the PND.90 item (No. 1–8) using the table in the guide. For each line show:
 
-A one-page summary in the person's language:
+- source (Thai or the foreign country) and payer;
+- gross amount in THB, with the FX method for foreign items;
+- Thai tax withheld;
+- the expense method: standard rate, or actual (only if the person has documents).
 
-- income by type;
-- the withholding register and missing certificates;
-- the estimate, if one was made;
-- what's due and when;
-- the flags;
-- the trilingual disclaimer.
+**Ambiguous classifications** (for example consulting fees as 40(2), 40(6) or 40(8), or furnished villa rent as 40(5) or 40(8)): compute each option side by side and mark the decision for the accountant. Never pick silently.
 
-Attach a spreadsheet with the detail. Offer to draft a cover email to the accountant. Never file, pay, or log in to the Revenue Department system.
+## Step 3: Compute (mirror the form)
+
+Build the computation in the order of the form's No. 11:
+
+1. income after expenses → minus allowances → minus double-rate donations → minus general donations → **net income**;
+2. **progressive tax**, and separately the **0.5% minimum-tax test** on non-employment income before expenses (THB 120k income and THB 5k tax thresholds). Tax payable = the higher of the two;
+3. **credits:** Thai withholding (sum of the 50 ทวิ), PND.94 or PND.93 already paid, the Thai dividend credit if the person elects it, and the **Foreign Tax Credit** (RD formula: foreign income brought in ÷ total assessable income before expenses × Thai tax, capped at the foreign tax actually paid; treaty countries only);
+4. **result:** payable or refundable. If payable and at least THB 3,000, note the instalment option.
+
+Show every formula. Label the result **an estimate for the accountant's review**.
+
+Where the spouse has income, compute **joint versus separate** and show both outcomes.
+
+## Step 4: PND.94 (half-year), when relevant
+
+If the person had 40(5)–(8) income from January to June (rent, business, freelance outside 40(2)), prepare PND.94 the same way on six months of income: the half-year allowances, due 30 September (online about a week later). The PND.94 tax paid becomes a credit on the annual return.
+
+## Step 5: Deliver
+
+Produce one file in the person's language, with the Thai form labels alongside:
+
+1. **Form-mirror worksheet:** page 1 details, then each PND.90 item No. 1–8 with the amounts and the expense method, the allowances attachment, and the No. 11 computation line by line. Where the person files on e-Filing, these are the numbers to type in, in the same order.
+2. **Foreign-Sourced Income Declaration worksheet:** for each line, the Section 40 category, country, tax year earned, and amount brought in (taxpayer / spouse).
+3. **Foreign Tax Credit sheet:** country, treaty, foreign tax paid, the RD limit and the credit claimed, with the list of evidence.
+4. **Decisions for the accountant:** classifications, joint or separate, actual or standard expenses, mixed foreign accounts.
+5. **Missing documents.**
+6. **Deadlines** for this year (moved past weekends and holidays), and the payment or refund method (PromptPay or ค.21).
+7. **e-Filing walkthrough:** the screens in order (log in with the tax ID → choose PND.90 → income categories → allowances → foreign tax credit → review → submit), with the worksheet numbers for each screen. The person or accountant files; **never log in for them**.
+8. **Disclaimer** in three languages.
+
+Deliver it as a spreadsheet (worksheet tabs) plus a one-page summary document. Offer to draft the cover email to the accountant.
+
+Never file, pay, or log in to the Revenue Department system.

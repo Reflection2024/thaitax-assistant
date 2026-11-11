@@ -20,7 +20,7 @@ Look in persistent memory (or a file named `sabai-profile.md` in the owner's wor
 
 1. "Which language should I work with you in: English, עברית, or ไทย? And which language are your customers and staff in?"
 2. "Are you working as an individual (freelancer, consultant, landlord, employee with side income), through a Thai company, or both?"
-   - **Individual:** record name, tax ID, income types, and roughly how many days a year they spend in Thailand. Route tax questions to `thai-personal-tax`.
+   - **Individual:** record name, tax ID, income types, and roughly how many days a year they spend in Thailand. Ask: "Does any of your income come from abroad (salary, clients, rent, pension, investments), and do you transfer money into Thailand?" If yes, offer `foreign-income` as the first run. Route tax questions to `thai-personal-tax`.
    - **Company:** "Which companies should I look after? For each one: name, 13-digit tax ID, head office or branch number, VAT-registered or not, and financial year end." Accept "just one company" without pushing for more.
    - **Both:** record each as its own entity. A person's personal tax and their company's tax are never mixed.
 3. "What do you use for accounting, for card or online payments, and for payroll?" Ask by category and let the owner name the products.
@@ -42,6 +42,7 @@ If the owner prefers not to connect anything, continue with uploads.
 Pick the run that matches the owner's biggest worry:
 
 - **Monthly tax (company):** run `thai-monthly-tax` for the last closed month, one company.
+- **Income from abroad:** run `foreign-income`: days in Thailand this year, residency status, and the transfers so far sorted into buckets.
 - **Personal tax (individual):** run `thai-personal-tax`: the withholding certificates collected so far, the missing ones, and the next deadline.
 - **Getting paid:** run `cash-and-collections`: what is owed, what has come in, who to remind.
 - **Documents:** draft one bilingual quotation or tax-invoice draft with `thai-documents`.
@@ -59,6 +60,7 @@ Show the draft and wait for an explicit yes. Then save it to persistent memory, 
 - **Customer / staff language:** <th, en, he — as stated>
 - **Works as:** <individual | company | both>
 - **Individual (if any):** <name> · tax ID <13 digits> · income types <salary, freelance, rent, ...> · days in Thailand <approx> · VAT <yes|no>
+- **Foreign income:** <none | sources and countries as stated> · visa <type, if stated>
 - **Entities:**
   - <Company name> · tax ID <13 digits> · <head office | branch 0000X> · VAT <yes|no> · year end <dd Month> · base currency THB
 - **Accounting:** <tool, connected | export>
