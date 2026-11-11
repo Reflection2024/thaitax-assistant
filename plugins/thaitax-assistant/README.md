@@ -37,6 +37,7 @@ ThaiTax Assistant takes care of the Thai admin that usually needs an accountant,
 
 - `scripts/thaitax_calc.py`: every tax, VAT, SSO, withholding and overtime figure is calculated here, never estimated (tested; rates in `scripts/rates.json`).
 - `scripts/make_document.js`: Thai + English/Hebrew tax invoices, receipts, quotations, billing notes and payslips with the same layout every time.
+- `scripts/official_forms.py` + `assets/forms/`: the Revenue Department's own PDF forms (ภ.ง.ด.90/91/94, foreign-income declaration, ภ.ง.ด.1/3/53 and their attachments, ภ.พ.30, ภ.พ.36, ภ.ง.ด.50/51, 50 ทวิ) filled in with your figures, checked by preview, plus a one-page explanation. Send the form straight to your accountant.
 - `scripts/budget.py` + `scripts/budget_dashboard.py`: family budget engine (categories, recurring payments, duplicates, FX) and a self-contained dashboard page in English, Hebrew or Thai (tested).
 - `skills/tax-facts-update`: annual re-verification of every rate and deadline.
 

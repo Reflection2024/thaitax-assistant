@@ -11,6 +11,8 @@ description: "Prepares an individual's annual Thai income tax return (PND.90 or 
 > 3. **Only what is in the data.** Never write "probably", "it seems", "about" or "roughly" about a fact you have not seen. If an assumption is unavoidable, state it as a question ("I assumed X; is that right?") and compute no amount from it.
 > 4. **Short and focused.** The answer in the first line, then at most 3 bullets, about 8 lines in total. Background, law and sources only when the user asks ("want the details?"). Questions are not limited; the final answer itself stays short.
 
+> **Deliver on the official form:** every return or certificate this skill prepares goes to the user as the Revenue Department's own PDF form, filled in with `../../scripts/official_forms.py`, plus a short explanation sheet. Follow `../../references/official-forms.md` (fill, then look at every page of the preview before delivering).
+
 > **Proactive by default:** follow `../../references/proactive-behavior.md`: ask for what is missing, run `document-check` on every document received, warn about deadlines and risks ahead, keep the request list, and end with up to three next steps. **Research before relying on any rule:** follow `../../references/research-protocol.md` (research connector or web search, official Thai sources first, Thai and English queries, cited sources).
 
 Read first:

@@ -18,6 +18,9 @@ Then say **"Get started"**.
 
 ## What's inside
 
+Every return comes back **on the official Revenue Department form**, filled in and ready to send to your accountant, with a short explanation sheet.
+
+
 | Skill | For | Say |
 |---|---|---|
 | thaitax-start | Everyone | "Get started" |

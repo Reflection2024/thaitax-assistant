@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0-rc.12 (2026-11-11): official forms
+- Returns and certificates are delivered on the Revenue Department's own PDF forms, filled in: ภ.ง.ด.90, 91, 94, the Foreign-Sourced Income Declaration, ภ.ง.ด.1, 3, 53 with their attachments, ภ.พ.30, ภ.พ.36, ภ.ง.ด.50, 51 and the 50 ทวิ certificate (`assets/forms/`, source links in `catalog.json`).
+- `scripts/official_forms.py`: list, fields (each box with its printed Thai label), fill (Sarabun font, tax-ID and amount boxes handled, baht and satang split, form flattened, "Draft for review" footer unless `--final`), preview (PNG per page for a visual check), explain (one-page explanation sheet).
+- Plain-name maps for the main boxes of ภ.ง.ด.90/91/94, ภ.ง.ด.1/3/53 and attachments, ภ.พ.30 and 50 ทวิ.
+- Tax skills now deliver the filled official form plus the explanation (`references/official-forms.md`); `tax-facts-update` refreshes the forms each year.
+- `scripts/test_official_forms.py` (5 tests, every map entry checked against the real form).
+
 ## 1.0.0-rc.11 (2026-11-11)
 - No cap on questions: the assistant asks everything the best result needs, in rounds of up to 4 clickable questions, until nothing is missing. Only the final answer stays short.
 

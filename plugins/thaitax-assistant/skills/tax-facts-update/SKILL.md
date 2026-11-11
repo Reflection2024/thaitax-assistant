@@ -40,3 +40,8 @@ Priority checks every January:
 ## Step 4: Report
 
 Produce a short table: fact, old value, new value, source. Put **expiring** and **unverified** items first. If working in the repository, commit on a branch named `facts-update-<YYYY-MM-DD>` and push the branch; never push to `main` without the maintainer's yes.
+
+
+## Official forms
+
+Also check rd.go.th for new versions of every form in `assets/forms/catalog.json` (each entry has its source link). When a newer form is published (the annual personal forms appear around January), download it, run `official_forms.py fields <FORM>` and `debug <FORM>` to see whether box names changed, update `<FORM>.map.json` where needed, fill a sample and look at the preview, then update `catalog.json`.
