@@ -21,6 +21,10 @@ Every deliverable carries this line:
 | `calendar.md` | Buddhist Era, holidays, year end | all |
 | `../pnd90-annual-return.md` | PND.90/91 line by line, foreign-income declaration, FTC | thai-personal-tax, foreign-income |
 
+## Research
+
+These files are a starting point. Before a figure goes into anything the user acts on, follow `../research-protocol.md`.
+
 ## Arithmetic
 
 Never compute tax, VAT, SSO, withholding, overtime, BE dates, deadlines or baht-in-words in prose. Run the plugin's calculator and quote its output:

@@ -5,6 +5,8 @@ description: "Checks any Thai business or tax document for errors and says exact
 
 # Document check
 
+> **Research before relying on any rule:** follow `../../references/research-protocol.md`.
+
 Read first:
 
 - `../../references/proactive-behavior.md`;

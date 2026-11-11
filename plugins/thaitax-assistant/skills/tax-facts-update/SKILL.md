@@ -17,7 +17,7 @@ List every dated or numeric fact in those files: each `rates.json` block, each "
 
 ## Step 2: Verify
 
-For each fact, search official sources first: rd.go.th (English and Thai), sso.go.th, mol.go.th, the Royal Gazette (ratchakitcha.soc.go.th), and dbd.go.th. Then use one recent professional note (Big-Four, Forvis Mazars, HLB, Luther, a Thai law firm) to confirm interpretation. Record for each fact: the old value, the current value, the source URL, the date read, and a status of **unchanged**, **changed**, **expiring** (within 6 months) or **unverified**.
+Follow `../../references/research-protocol.md` (research connector or deep research first, Thai and English queries). For each fact, search official sources first: rd.go.th (English and Thai), sso.go.th, mol.go.th, the Royal Gazette (ratchakitcha.soc.go.th), and dbd.go.th. Then use one recent professional note (Big-Four, Forvis Mazars, HLB, Luther, a Thai law firm) to confirm interpretation. Record for each fact: the old value, the current value, the source URL, the date read, and a status of **unchanged**, **changed**, **expiring** (within 6 months) or **unverified**.
 
 Priority checks every January:
 

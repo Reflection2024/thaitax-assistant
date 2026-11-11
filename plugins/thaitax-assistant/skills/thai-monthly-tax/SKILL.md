@@ -5,7 +5,7 @@ description: "Prepares the monthly Thai tax package for one company at a time: V
 
 # Thai monthly tax
 
-> **Proactive by default:** follow `../../references/proactive-behavior.md`: ask for what is missing, run `document-check` on every document received, warn about deadlines and risks ahead, keep the request list, and end with up to three next steps.
+> **Proactive by default:** follow `../../references/proactive-behavior.md`: ask for what is missing, run `document-check` on every document received, warn about deadlines and risks ahead, keep the request list, and end with up to three next steps. **Research before relying on any rule:** follow `../../references/research-protocol.md` (research connector or web search, official Thai sources first, Thai and English queries, cited sources).
 
 Read `../../references/facts/_index.md`, `../../references/facts/vat.md`, `../../references/facts/withholding.md`, `../../references/facts/calendar.md` and `../../references/connectors-and-safety.md` before anything else; add `../../references/facts/corporate.md` only for PND.50/51 and `../../references/facts/payroll.md` for SSO. Do every calculation with the plugin calculator, `../../scripts/thaitax_calc.py` (see `../../references/facts/_index.md` § Arithmetic), and quote its output. (commands `vat`, `vat_check`, `wht`, `deadlines`)
 

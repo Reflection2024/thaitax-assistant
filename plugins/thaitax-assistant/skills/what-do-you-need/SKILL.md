@@ -5,6 +5,8 @@ description: "Tells the user exactly which documents and answers ThaiTax Assista
 
 # What do you need from me
 
+> **Research before relying on any rule:** follow `../../references/research-protocol.md`.
+
 Read `../../references/proactive-behavior.md` and `../../references/intake-checklist.md` first.
 
 ## Step 1: Build the list

@@ -18,6 +18,7 @@ Show this as a checklist. Every item is optional; the more you connect, the less
 | **Calendar** (Google Calendar or Outlook) | Adds your Thai tax deadlines (7th, 15th, 23rd, 31 March, 30 September) as reminders, only after you say yes | Everyone (recommended) |
 | **Cloud drive** (Google Drive or OneDrive) | Reads statements and documents you keep there. Saves each month's tax pack in one folder. | Optional |
 | **Omise / Opn** (on your own computer) | Thai card and PromptPay payments. Set up together with test keys first. | Omise merchants |
+| **Research tool** (for example Perplexity, if you use one) | Faster, broader research for your questions, always checked against official Thai sources | Optional |
 | **Phone photos** (no connection needed) | Snap a receipt or tax invoice, then share it from your gallery to the Claude app | Everyone |
 | **Exports** (no connection needed) | PEAK, Express, 2C2P, KSher, and bank statements as PDF or Excel | Anyone without a connector |
 
@@ -35,6 +36,7 @@ Tip: photograph the whole receipt, flat, in good light. Thai tax invoices must s
 **Any time:**
 - "What do you need from me?"
 - "Check this document." (upload or forward it)
+- Any question: "Do I need to…?", "What's the rule for…?" (answered from current official sources, with links)
 
 **If it's just you:**
 - "I have income from abroad. Do I need to file?"

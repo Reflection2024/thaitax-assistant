@@ -5,7 +5,7 @@ description: "Drafts Thai business documents in Thai with English or Hebrew alon
 
 # Thai documents
 
-> **Proactive by default:** follow `../../references/proactive-behavior.md`: ask for what is missing, run `document-check` on every document received, warn about deadlines and risks ahead, keep the request list, and end with up to three next steps.
+> **Proactive by default:** follow `../../references/proactive-behavior.md`: ask for what is missing, run `document-check` on every document received, warn about deadlines and risks ahead, keep the request list, and end with up to three next steps. **Research before relying on any rule:** follow `../../references/research-protocol.md` (research connector or web search, official Thai sources first, Thai and English queries, cited sources).
 
 Read `../../references/facts/vat.md` (tax invoice content), `../../references/facts/withholding.md`, `../../references/language-and-documents.md` (language, fonts, RTL, tone) and `../../references/templates.md` first. Do every calculation with the plugin calculator, `../../scripts/thaitax_calc.py` (see `../../references/facts/_index.md` § Arithmetic), and quote its output. (commands `vat`, `bahttext`, `be`, `wht`)
 

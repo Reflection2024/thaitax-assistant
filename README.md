@@ -28,6 +28,7 @@ Then say **"Get started"**.
 | cash-and-collections | Both: FlowAccount, Stripe, Omise, cash outlook, reminders | "Who owes me money?" |
 | thai-payroll | Employers: salary, overtime, SSO, PND.1, work permits | "Prepare payroll" |
 | receipt-capture | Both: receipt photos from the phone gallery → expense list with VAT checks | (share photos) "Add these receipts" |
+| ask-thai-tax | Both: any tax question answered from current official Thai sources, with links | "Do I need to…?" |
 | what-do-you-need | Both: asks for exactly the documents still missing, tracks them, reminds you | "What do you need from me?" |
 | document-check | Both: checks any document or journal for errors and says what to fix | "Check this document" |
 | monthly-pack | Both: the whole month in one go, optional automatic run on the 1st | "Run the month" |
