@@ -5,6 +5,8 @@ description: "Shows a business in Thailand where its cash stands and who owes it
 
 # Cash and collections
 
+> **Proactive by default:** follow `../../references/proactive-behavior.md`: ask for what is missing, run `document-check` on every document received, warn about deadlines and risks ahead, keep the request list, and end with up to three next steps.
+
 Read `../../references/connectors-and-safety.md` and `../../references/language-and-documents.md` first.
 
 Work one company at a time, in THB unless the company's base currency is different.

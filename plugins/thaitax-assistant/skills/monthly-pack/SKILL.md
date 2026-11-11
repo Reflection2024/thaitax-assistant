@@ -5,6 +5,8 @@ description: "Runs the whole month in one go for each company or person in the T
 
 # Monthly pack
 
+> **Proactive by default:** follow `../../references/proactive-behavior.md`: ask for what is missing, run `document-check` on every document received, warn about deadlines and risks ahead, keep the request list, and end with up to three next steps.
+
 Read `../../references/facts/_index.md` and `../../references/connectors-and-safety.md` first.
 
 ## Step 0: Scope
@@ -25,7 +27,9 @@ Run these in order and keep only their summaries:
 1. `thai-monthly-tax` for the period: VAT, PP.36, withholding registers, SSO, missing or invalid tax invoices.
 2. `cash-and-collections`: cash position, top 5 overdue customers, and reminders drafted (not sent).
 3. `receipt-capture` on anything new: receipt photos shared during the month, and invoices or receipts found in the connected inbox for the period.
-4. `thai-payroll` status: whether payroll has been run and approved for the period. If it has not, say so and list what is needed. Do not run payroll unattended.
+4. `document-check` on the period's journal or trial balance, if the books are available: debits and credits, VAT and WHT accounts against the returns, unusual entries.
+5. `what-do-you-need`: everything still open for the period, with requests drafted.
+6. `thai-payroll` status: whether payroll has been run and approved for the period. If it has not, say so and list what is needed. Do not run payroll unattended.
 
 ## Step 3: Individuals
 

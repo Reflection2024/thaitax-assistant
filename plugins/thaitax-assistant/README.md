@@ -20,6 +20,8 @@ ThaiTax Assistant takes care of the Thai admin that usually needs an accountant,
 | **cash-and-collections** | Receivables, payments and payouts, a 90-day cash outlook, polite reminders | "Who owes me money?" |
 | **thai-payroll** | Salaries, overtime, social security, PND.1, work-permit flags | "Prepare payroll" |
 | **receipt-capture** | Photos of receipts from your phone gallery → an expense list, with VAT claimability checked | (share photos) "Add these receipts" |
+| **what-do-you-need** | Asks for exactly what is missing, keeps the list, reminds you | "What do you need from me?" |
+| **document-check** | Checks every document (invoices, 50 ทวิ, forms, payslips, statements, journals) and says what to fix | "Check this" |
 | **monthly-pack** | Everything for the month in one go, automatically on the 1st if you want, with a draft email to your accountant | "Run the month" |
 | **thai-export-reader** | Reads PEAK / Express / gateway / bank files with Thai headers and BE dates | (upload a file) |
 

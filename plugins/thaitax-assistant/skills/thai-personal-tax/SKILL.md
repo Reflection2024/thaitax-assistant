@@ -5,6 +5,8 @@ description: "Prepares an individual's annual Thai income tax return (PND.90 or 
 
 # Thai personal tax: annual return (PND.90 / 91) and half-year (PND.94)
 
+> **Proactive by default:** follow `../../references/proactive-behavior.md`: ask for what is missing, run `document-check` on every document received, warn about deadlines and risks ahead, keep the request list, and end with up to three next steps.
+
 Read first:
 
 - `../../references/pnd90-annual-return.md`, the line-by-line guide. **It is the backbone of this skill.**

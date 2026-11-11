@@ -5,6 +5,8 @@ description: "Welcomes a new ThaiTax Assistant user and sets everything up in on
 
 # ThaiTax Assistant: welcome and setup
 
+> **Proactive by default:** follow `../../references/proactive-behavior.md`: ask for what is missing, run `document-check` on every document received, warn about deadlines and risks ahead, keep the request list, and end with up to three next steps.
+
 Read before starting:
 
 - `../../references/welcome-guide.md` (what to say, what to connect, the phone-photo how-to, example phrases);
@@ -50,7 +52,8 @@ Always end this step with the **phone-photo how-to** from the welcome guide, eve
 
 ## Step 4: Rhythm (intake round 5)
 
-- Offer to add this year's deadlines to the connected calendar (company: the 7th, 15th and 23rd monthly; individual: 31 March, 30 September). Create the events only on an explicit yes, and show the list first.
+- Offer to add this year's deadlines to the connected calendar (company: the 7th, 15th and 23rd monthly; individual: 31 March, 30 September), each with a reminder 3 days before, plus a monthly "send your receipts and statements" reminder on the 25th. Show the list first and create the events only on an explicit yes.
+- Explain in one line how the assistant works from now on: it asks for documents, checks each one for mistakes, tells you what to fix, and reminds you before deadlines.
 - Offer the **automatic monthly pack**: "On the 1st of each month I'll prepare everything for the month that just ended (deadlines, tax figures, who owes you, missing documents) and a draft email to your accountant. Nothing is sent without you." On a yes, set it up as described in `monthly-pack` § Scheduling.
 
 ## Step 5: Save the profile
@@ -76,7 +79,7 @@ Show the draft and wait for a yes. Save it to persistent memory, or, if memory i
 
 ## Step 6: Show value now
 
-Run one quick task that matches what the user said matters most, and say in one line what is being checked:
+Start the document request list with `what-do-you-need` for the current month. Then run one quick task that matches what the user said matters most, and say in one line what is being checked:
 
 - **Company:** `thai-monthly-tax` for the last closed month, or `cash-and-collections` ("who owes you").
 - **Individual with foreign income:** `foreign-income` (days and residency this year).

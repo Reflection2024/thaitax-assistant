@@ -5,6 +5,8 @@ description: "Prepares Thai payroll for the owner to approve: gross pay, overtim
 
 # Thai payroll
 
+> **Proactive by default:** follow `../../references/proactive-behavior.md`: ask for what is missing, run `document-check` on every document received, warn about deadlines and risks ahead, keep the request list, and end with up to three next steps.
+
 Read `../../references/facts/payroll.md`, `../../references/facts/withholding.md` (PND.1) and `../../references/facts/calendar.md` first. Do every calculation with the plugin calculator, `../../scripts/thaitax_calc.py` (see `../../references/facts/_index.md` § Arithmetic), and quote its output. (commands `sso`, `overtime`, `deadlines`) A wrong payslip is a person who cannot pay rent: assemble and check, and let the owner decide.
 
 ## Step 1: Verify the moving numbers

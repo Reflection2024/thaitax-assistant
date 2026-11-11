@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0-rc.2 (2026-11-11)
+- Proactive by default: asks for missing documents, checks every document on arrival, warns ahead, keeps a request list, calendar reminders (on a yes).
+- New skills: `document-check` (incl. journals and trial balance), `what-do-you-need`.
+
 ## 1.0.0-rc.1 (2026-11-11)
 - Calculator `scripts/thaitax_calc.py` (VAT, BE dates, SSO, overtime, withholding, PND.90 tax incl. 0.5% minimum tax and foreign tax credit, deadlines, baht in words) with tests; rates in `scripts/rates.json`.
 - Fact files split by topic (`references/facts/`); skills load only what they need.

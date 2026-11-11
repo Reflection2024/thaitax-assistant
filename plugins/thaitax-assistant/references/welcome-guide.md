@@ -32,6 +32,10 @@ Tip: photograph the whole receipt, flat, in good light. Thai tax invoices must s
 
 ## Part 3: Things you can say (pick the ones that fit)
 
+**Any time:**
+- "What do you need from me?"
+- "Check this document." (upload or forward it)
+
 **If it's just you:**
 - "I have income from abroad. Do I need to file?"
 - "Fill in my annual tax return."

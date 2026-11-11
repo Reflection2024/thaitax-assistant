@@ -5,6 +5,8 @@ description: "Reads exports and statements from Thai systems that have no connec
 
 # Thai export reader
 
+> **Proactive by default:** follow `../../references/proactive-behavior.md`: ask for what is missing, run `document-check` on every document received, warn about deadlines and risks ahead, keep the request list, and end with up to three next steps.
+
 Read `../../references/connectors-and-safety.md` first.
 
 ## Step 1: Ask for the right file
