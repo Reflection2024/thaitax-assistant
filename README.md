@@ -1,6 +1,6 @@
 # ThaiTax Assistant
 
-A Thai back office inside Claude, for foreign individuals and companies in Thailand. Works in English, עברית and ไทย. Free.
+**Every Thai tax report, ready for your accountant.** Personal or company: ThaiTax Assistant gathers your numbers, prepares your monthly and annual reports, and hands your accountant a clean file. You just approve. English, עברית, ไทย. Free.
 
 **Website:** https://reflection2024.github.io/thaitax-assistant/
 

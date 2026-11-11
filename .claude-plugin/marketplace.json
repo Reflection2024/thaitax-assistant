@@ -4,13 +4,13 @@
     "name": "Reflection Thailand"
   },
   "metadata": {
-    "description": "Thai back office for foreign individuals and companies in Thailand, inside Claude."
+    "description": "Every Thai tax report, personal or company, ready for your accountant."
   },
   "plugins": [
     {
       "name": "thaitax-assistant",
       "source": "./plugins/thaitax-assistant",
-      "description": "Personal and company Thai tax prep, bilingual Thai documents, cash and collections (FlowAccount, Stripe, Omise), and Thai payroll. English, Hebrew, Thai.",
+      "description": "ThaiTax Assistant: every Thai tax report, personal or company, prepared and ready for your accountant. Gathers your numbers (FlowAccount, Stripe, Omise, receipts, bank files), prepares monthly and annual returns (VAT, withholding, SSO, PND.90/91/94, foreign income), drafts Thai documents and payroll, and hands your accountant a clean file. You just approve. English, Hebrew, Thai. Free.",
       "version": "1.0.0-rc.1"
     }
   ]

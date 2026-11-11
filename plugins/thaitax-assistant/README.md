@@ -1,6 +1,6 @@
-# ThaiTax Assistant 🌴
+# ThaiTax Assistant
 
-**A back office in Thailand for foreign business owners, inside Claude. In English, עברית and ไทย.**
+**Every Thai tax report, ready for your accountant.** Personal or company, in English, עברית and ไทย. Free.
 
 By Reflection Thailand.
 

@@ -1,10 +1,21 @@
 {
   "name": "thaitax-assistant",
   "version": "1.0.0-rc.1",
-  "description": "ThaiTax Assistant: a back office in Thailand for foreign individuals and companies. Prepares personal (incl. foreign income) and company Thai tax returns, drafts bilingual Thai documents, tracks cash and collections from FlowAccount, Stripe and Omise, and prepares Thai payroll and social security. Works in English, Hebrew and Thai.",
+  "description": "ThaiTax Assistant: every Thai tax report, personal or company, prepared and ready for your accountant. Gathers your numbers (FlowAccount, Stripe, Omise, receipts, bank files), prepares monthly and annual returns (VAT, withholding, SSO, PND.90/91/94, foreign income), drafts Thai documents and payroll, and hands your accountant a clean file. You just approve. English, Hebrew, Thai. Free.",
   "author": {
     "name": "Reflection Thailand"
   },
-  "keywords": ["thailand", "flowaccount", "vat", "withholding-tax", "social-security", "payroll", "stripe", "omise", "bilingual", "hebrew"],
+  "keywords": [
+    "thailand",
+    "flowaccount",
+    "vat",
+    "withholding-tax",
+    "social-security",
+    "payroll",
+    "stripe",
+    "omise",
+    "bilingual",
+    "hebrew"
+  ],
   "license": "Proprietary"
 }
