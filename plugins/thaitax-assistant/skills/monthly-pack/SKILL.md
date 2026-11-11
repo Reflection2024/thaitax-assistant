@@ -77,3 +77,7 @@ When the user asks for it, or accepts the offer in `thaitax-start`, create a **m
 - prompt: "Run the ThaiTax Assistant monthly-pack skill for all entities in my profile, for the month that just ended. Unattended: prepare only; send, file, post or pay nothing."
 
 If no scheduling tool exists, offer a recurring calendar event instead, titled "Run ThaiTax monthly pack".
+
+## Suppliers and withholding
+
+For each company, run the monthly check from `contracts-and-payments` (`scripts/contracts.py check`): withholding not taken, payments with no contract or invoice, amounts that differ from the contract, missing 50 ทวิ, contracts ending within 30 days. Put only the items that need action in the summary.

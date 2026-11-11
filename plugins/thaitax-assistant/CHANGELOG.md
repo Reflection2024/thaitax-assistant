@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-rc.13 (2026-11-11): contracts, withholding, employee documents
+- New skill `contracts-and-payments`: a Suppliers & contracts register in the company's drive linking every expense to its contract and tax invoice; withholding worked out before every supplier payment by service type (services 3%, rent 5%, advertising 2%, transport 1%...) and form (PND.3 / 53 / 54), with the amount to transfer and the 50 ทวิ drafted on the official form; withholding terms recorded when a contract is signed; a monthly check.
+- `scripts/contracts.py check`: payments without a contract or invoice, amounts that differ from the contract, VAT missing from a VAT-registered supplier's invoice, withholding not taken or wrong, missing 50 ทวิ, contracts ending within 30 days. 6 tests; sample data in `pilot/sample-data`.
+- `thai-payroll`: asks for each employee's documents (Thai ID or passport, visa, work permit, bank book, SSO), saves them in a folder per employee in the company's drive on a yes, keeps only numbers and expiry dates in payroll, and warns before permits and visas expire.
+- Withholding facts: the 1,000-baht threshold.
+
 ## 1.0.0-rc.12 (2026-11-11): official forms
 - Returns and certificates are delivered on the Revenue Department's own PDF forms, filled in: ภ.ง.ด.90, 91, 94, the Foreign-Sourced Income Declaration, ภ.ง.ด.1, 3, 53 with their attachments, ภ.พ.30, ภ.พ.36, ภ.ง.ด.50, 51 and the 50 ทวิ certificate (`assets/forms/`, source links in `catalog.json`).
 - `scripts/official_forms.py`: list, fields (each box with its printed Thai label), fill (Sarabun font, tax-ID and amount boxes handled, baht and satang split, form flattened, "Draft for review" footer unless `--final`), preview (PNG per page for a visual check), explain (one-page explanation sheet).

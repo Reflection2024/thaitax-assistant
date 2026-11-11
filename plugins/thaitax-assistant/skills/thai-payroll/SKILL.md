@@ -39,6 +39,14 @@ Take the data from the owner's payroll tool, spreadsheet, or last month's payrol
 
 Anything missing stays missing and goes on the list. Never assume a figure.
 
+### Employee documents (ask for them for every employee, new hires first)
+
+- **Thai staff:** a copy of the Thai ID card (บัตรประชาชน), the first page of their bank book, and the SSO registration (สปส.1-03) once filed.
+- **Foreign staff:** passport photo page and current visa / extension stamp, the work permit (ใบอนุญาตทำงาน, all pages showing the employer and job), the bank book first page, and the SSO card or registration.
+- Ask for each missing document by name, per person, as clickable questions; "later" is fine and stays on the request list.
+- **Where they go:** with the user's yes, create a folder per employee in the company's drive (`Employees/<name>/`) and save the copies there. In the payroll file keep only what payroll needs: name, ID or passport number (needed for PND.1 and SSO), work-permit number and the **expiry dates** of passport, visa and work permit. Never keep ID copies in the chat summary or in memory.
+- From the expiry dates: warn 60 days before a work permit or visa ends, 6 months before a passport ends, and offer calendar reminders (`visa-reminders`). A foreign employee with no valid permit on file is not staged for pay until the owner decides.
+
 ## Step 3: Compute (show the formula per person)
 
 - **Gross** = salary + overtime (1.5x working day; holiday work 1x or 2x; overtime on a holiday 3x) + allowances. Hourly rate = monthly ÷ (30 × normal daily hours).

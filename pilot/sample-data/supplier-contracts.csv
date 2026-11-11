@@ -1,0 +1,4 @@
+contract_id,supplier,tax_id,legal_form,service_type,amount_before_vat,vat,start,end,file
+C1,Clean Service Co.,0105561234567,company,services,25000,yes,2026-01-01,2026-12-15,drive/Contracts/clean.pdf
+C2,Somchai Jaidee,3101234567890,individual,rent,40000,no,2025-06-01,,drive/Contracts/rent.pdf
+C3,Samui Ads Co.,0845560009999,company,advertising,10000,yes,2026-03-01,2027-02-28,

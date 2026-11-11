@@ -1,0 +1,5 @@
+date,supplier,amount_paid,invoice_no,invoice_before_vat,invoice_vat,wht_withheld,cert_no,contract_id
+2026-10-05,Clean Service Co.,26000,IV-881,25000,1750,750,0045,
+2026-10-03,Somchai Jaidee,40000,R-10,40000,0,0,,
+2026-10-20,Samui Ads Co.,12840,AD-55,12000,840,0,,
+2026-10-22,Island Plumbing,8500,,,,,,
