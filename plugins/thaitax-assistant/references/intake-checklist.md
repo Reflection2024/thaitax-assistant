@@ -33,7 +33,7 @@
 7. Regular payments: rent, contractors, foreign services (Google, Meta, AWS, SaaS). This decides PND.3/53/54 and PP.36.
 8. Staff: number, Thai or foreign, work-permit expiry dates for foreigners, SSO registered (yes/no), province and district of work.
 9. Whether e-Withholding Tax and e-Tax Invoice are used (yes, no, or unknown).
-10. Who files today, and how (the accountant, online or paper).
+10. Who files today, and how (the accountant, online or paper). Does the user have **their own** RD e-Filing and DBD logins? Does the accountant pay taxes on the user's behalf? This decides whether `accountant-check` is offered.
 
 ## Round 4: Connections (everyone)
 

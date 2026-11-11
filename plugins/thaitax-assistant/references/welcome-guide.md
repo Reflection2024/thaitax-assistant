@@ -45,6 +45,7 @@ Tip: photograph the whole receipt, flat, in good light. Thai tax invoices must s
 - "Add these receipts" (with photos)
 
 **If you have a company:**
+- "Check my accountant's work." (were all filings made, on time, and paid?)
 - "What's due this month?"
 - "Who owes me money? Write the reminders."
 - "Draft a tax invoice in Thai and English for …"

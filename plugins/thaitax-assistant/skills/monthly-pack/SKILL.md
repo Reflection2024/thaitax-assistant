@@ -28,8 +28,9 @@ Run these in order and keep only their summaries:
 2. `cash-and-collections`: cash position, top 5 overdue customers, and reminders drafted (not sent).
 3. `receipt-capture` on anything new: receipt photos shared during the month, and invoices or receipts found in the connected inbox for the period.
 4. `document-check` on the period's journal or trial balance, if the books are available: debits and credits, VAT and WHT accounts against the returns, unusual entries.
-5. `what-do-you-need`: everything still open for the period, with requests drafted.
-6. `thai-payroll` status: whether payroll has been run and approved for the period. If it has not, say so and list what is needed. Do not run payroll unattended.
+5. **Quarterly (January, April, July, October):** `accountant-check` for the last quarter, if someone else files for this entity.
+6. `what-do-you-need`: everything still open for the period, with requests drafted.
+7. `thai-payroll` status: whether payroll has been run and approved for the period. If it has not, say so and list what is needed. Do not run payroll unattended.
 
 ## Step 3: Individuals
 

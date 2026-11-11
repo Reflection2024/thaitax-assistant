@@ -1,6 +1,6 @@
 {
   "name": "thaitax-assistant",
-  "version": "1.0.0-rc.3",
+  "version": "1.0.0-rc.4",
   "description": "ThaiTax Assistant: every Thai tax report, personal or company, prepared and ready for your accountant. Gathers your numbers (FlowAccount, Stripe, Omise, receipts, bank files), prepares monthly and annual returns (VAT, withholding, SSO, PND.90/91/94, foreign income), drafts Thai documents and payroll, and hands your accountant a clean file. You just approve. English, Hebrew, Thai. Free.",
   "author": {
     "name": "Reflection Thailand"

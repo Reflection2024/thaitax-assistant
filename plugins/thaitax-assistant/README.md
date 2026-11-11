@@ -21,6 +21,7 @@ ThaiTax Assistant takes care of the Thai admin that usually needs an accountant,
 | **thai-payroll** | Salaries, overtime, social security, PND.1, work-permit flags | "Prepare payroll" |
 | **receipt-capture** | Photos of receipts from your phone gallery → an expense list, with VAT claimability checked | (share photos) "Add these receipts" |
 | **ask-thai-tax** | Any question, researched in current official sources (rd.go.th, Royal Gazette, SSO) and answered with links | "Do I need to…?" |
+| **accountant-check** | A second pair of eyes on your accountant: filings complete and on time, figures match your books, tax payments really reached the Revenue Department, your own access in place | "Check my accountant's work" |
 | **what-do-you-need** | Asks for exactly what is missing, keeps the list, reminds you | "What do you need from me?" |
 | **document-check** | Checks every document (invoices, 50 ทวิ, forms, payslips, statements, journals) and says what to fix | "Check this" |
 | **monthly-pack** | Everything for the month in one go, automatically on the 1st if you want, with a draft email to your accountant | "Run the month" |
