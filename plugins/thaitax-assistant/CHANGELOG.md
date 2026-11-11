@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.0-rc.11 (2026-11-11)
+- No cap on questions: the assistant asks everything the best result needs, in rounds of up to 4 clickable questions, until nothing is missing. Only the final answer stays short.
+
 ## 1.0.0-rc.10 (2026-11-11)
 - Questions to the user are shown as clickable choices (2–4 options each, free text always allowed) wherever the app supports it.
 
