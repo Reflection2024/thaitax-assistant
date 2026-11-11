@@ -27,6 +27,7 @@ Then say **"Get started"**.
 | thai-documents | Both: bilingual tax-invoice drafts, quotations, 50 ทวิ, payslips | "Draft a tax invoice in Thai" |
 | cash-and-collections | Both: FlowAccount, Stripe, Omise, cash outlook, reminders | "Who owes me money?" |
 | thai-payroll | Employers: salary, overtime, SSO, PND.1, work permits | "Prepare payroll" |
+| receipt-capture | Both: receipt photos from the phone gallery → expense list with VAT checks | (share photos) "Add these receipts" |
 | thai-export-reader | Both: PEAK / Express / gateway / bank files | (upload a file) |
 
 Full documentation: [`plugins/thaitax-assistant/README.md`](plugins/thaitax-assistant/README.md).

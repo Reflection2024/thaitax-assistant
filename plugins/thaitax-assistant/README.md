@@ -19,14 +19,23 @@ ThaiTax Assistant takes care of the Thai admin that usually needs an accountant,
 | **thai-documents** | Bilingual tax-invoice drafts, quotations, receipts, billing notes, 50 ทวิ, payslips, letters | "Draft a tax invoice in Thai" |
 | **cash-and-collections** | Receivables, payments and payouts, a 90-day cash outlook, polite reminders | "Who owes me money?" |
 | **thai-payroll** | Salaries, overtime, social security, PND.1, work-permit flags | "Prepare payroll" |
+| **receipt-capture** | Photos of receipts from your phone gallery → an expense list, with VAT claimability checked | (share photos) "Add these receipts" |
 | **thai-export-reader** | Reads PEAK / Express / gateway / bank files with Thai headers and BE dates | (upload a file) |
 
-### Connectors
+### Getting started
 
-- **FlowAccount**: included (official connector, OAuth). Sign in as the Account Owner and pick the company. Works with every FlowAccount package.
-- **Stripe**: included (official connector, OAuth).
-- **Omise / Opn Payments**: optional, runs locally. See *Omise setup* below.
-- **2C2P, GB Prime Pay, KSher, PEAK, Express**: work from the monthly export file.
+After installing, say **"Get started"**. ThaiTax Assistant welcomes you, asks for the details it needs in short rounds, walks you through each connection one at a time, and shows you something useful straight away.
+
+### What to connect (all optional)
+
+- **FlowAccount**: included. Sign in as the Account Owner and pick the company.
+- **Stripe**: included.
+- **Email** (Gmail or Outlook): finds invoices, receipts and 50 ทวิ in your inbox.
+- **Calendar**: deadline reminders, added only after you say yes.
+- **Cloud drive**: statements in, monthly packs out.
+- **Omise / Opn**: optional, runs on your computer. See *Omise setup* below.
+- **Phone photos**: no connection. In the Claude app, tap **+ → Photos**, or **Share → Claude** from your gallery.
+- **PEAK, Express, 2C2P, KSher, banks**: send the export file.
 
 ### Omise setup (optional)
 

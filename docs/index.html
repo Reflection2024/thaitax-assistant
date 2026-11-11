@@ -348,6 +348,14 @@ footer{padding:28px 0 48px;color:var(--muted);font-size:13.5px;display:grid;gap:
     </article>
 
     <article class="ask" data-k="co">
+      <p class="who" lang="en">Café owner, end of month</p><p class="who" lang="th">เจ้าของคาเฟ่ สิ้นเดือน</p>
+      <p class="q" lang="en">(shares 14 receipt photos from the gallery) "Add these to October's expenses."</p>
+      <p class="q" lang="th">(แชร์รูปใบเสร็จ 14 ใบจากแกลเลอรี) "บันทึกเป็นค่าใช้จ่ายเดือนตุลาคม"</p>
+      <div class="a" lang="en"><b>14 receipts read, <span class="num">THB 3,402</span> of claimable VAT.</b><ul><li>3 can't be claimed: 2 abbreviated tax invoices and 1 with the wrong buyer name. A Thai request to the supplier drafted.</li><li>1 duplicate caught</li><li>Draft expenses ready for FlowAccount, waiting for your yes</li></ul></div>
+      <div class="a" lang="th"><b>อ่านใบเสร็จ 14 ใบ VAT ที่เครดิตได้ <span class="num">฿3,402</span></b><ul><li>3 ใบใช้ไม่ได้: ใบกำกับภาษีอย่างย่อ 2 ใบ และชื่อผู้ซื้อไม่ถูกต้อง 1 ใบ ร่างข้อความขอใบใหม่จากร้านแล้ว</li><li>พบใบซ้ำ 1 ใบ</li><li>ร่างรายการค่าใช้จ่ายสำหรับ FlowAccount รอคุณอนุมัติ</li></ul></div>
+    </article>
+
+    <article class="ask" data-k="co">
       <p class="who" lang="en">Company on PEAK</p><p class="who" lang="th">บริษัทที่ใช้ PEAK</p>
       <p class="q" lang="en">"Here's my sales export from PEAK. Turn it into this month's VAT figures."</p>
       <p class="q" lang="th">"นี่ไฟล์ส่งออกยอดขายจาก PEAK ช่วยสรุปตัวเลข VAT เดือนนี้"</p>
@@ -394,15 +402,31 @@ footer{padding:28px 0 48px;color:var(--muted);font-size:13.5px;display:grid;gap:
 /plugin install thaitax-assistant@thaitax-assistant</pre>
     </div>
     <div class="step">
-      <h3 lang="en">Connect</h3><h3 lang="th">เชื่อมต่อ</h3>
-      <p lang="en">Sign in to FlowAccount and Stripe when Claude asks. Using PEAK, Express or another gateway? Upload the monthly export instead.</p>
-      <p lang="th">เข้าสู่ระบบ FlowAccount และ Stripe เมื่อ Claude ถาม ถ้าใช้ PEAK, Express หรือเกตเวย์อื่น ก็อัปโหลดไฟล์ส่งออกรายเดือนได้</p>
+      <h3 lang="en">Say "Get started"</h3><h3 lang="th">พิมพ์ "เริ่มต้น"</h3>
+      <p lang="en">It welcomes you and asks a few short rounds of questions about you or your company, in English, Hebrew or Thai.</p>
+      <p lang="th">ระบบจะต้อนรับคุณ และถามข้อมูลเกี่ยวกับคุณหรือบริษัททีละชุดสั้น ๆ เป็นภาษาไทย อังกฤษ หรือฮีบรู</p>
     </div>
     <div class="step">
-      <h3 lang="en">Say "Get started"</h3><h3 lang="th">พิมพ์ "เริ่มต้น"</h3>
-      <p lang="en">Tell it who you are, in English, Hebrew or Thai. From then on, just ask.</p>
-      <p lang="th">บอกข้อมูลของคุณเป็นภาษาไทย อังกฤษ หรือฮีบรู จากนั้นถามได้เลย</p>
+      <h3 lang="en">Connect and go</h3><h3 lang="th">เชื่อมต่อแล้วเริ่มใช้</h3>
+      <p lang="en">It walks you through connecting FlowAccount, Stripe, email and calendar, shows you how to send receipt photos, and runs your first task.</p>
+      <p lang="th">พาเชื่อมต่อ FlowAccount, Stripe, อีเมล และปฏิทิน สอนส่งรูปใบเสร็จ แล้วทำงานแรกให้ดูทันที</p>
     </div>
+  </div>
+</section>
+
+<section id="connect">
+  <p class="kicker" lang="en">What to connect</p><p class="kicker" lang="th">เชื่อมต่ออะไรได้บ้าง</p>
+  <h2 lang="en">Connect what you already use. Skip the rest.</h2>
+  <h2 lang="th">เชื่อมต่อเฉพาะสิ่งที่คุณใช้อยู่แล้ว</h2>
+  <p class="sub" lang="en">Say "Get started" and ThaiTax Assistant walks you through it, one connection at a time, in your language. Every connection uses your own sign-in, and you can remove it whenever you like.</p>
+  <p class="sub" lang="th">พิมพ์ "เริ่มต้น" แล้วระบบจะพาคุณเชื่อมต่อทีละขั้นตอนเป็นภาษาของคุณ ทุกการเชื่อมต่อใช้บัญชีของคุณเอง และยกเลิกได้ทุกเมื่อ</p>
+  <div class="grid">
+    <div class="feat"><h3>FlowAccount</h3><p lang="en">Sales, purchases, receivables and tax reports, read automatically.</p><p lang="th">อ่านยอดขาย ยอดซื้อ ลูกหนี้ และรายงานภาษีอัตโนมัติ</p></div>
+    <div class="feat"><h3>Stripe · Omise</h3><p lang="en">Payments and payouts matched to your invoices.</p><p lang="th">จับคู่ยอดชำระและยอดโอนกับใบแจ้งหนี้</p></div>
+    <div class="feat"><h3 lang="en">Email</h3><h3 lang="th">อีเมล</h3><p lang="en">Invoices, receipts and 50 ทวิ found in your inbox. Reminders drafted for you to send.</p><p lang="th">ค้นหาใบแจ้งหนี้ ใบเสร็จ และ 50 ทวิ ในกล่องจดหมาย พร้อมร่างจดหมายให้คุณส่ง</p></div>
+    <div class="feat"><h3 lang="en">Calendar</h3><h3 lang="th">ปฏิทิน</h3><p lang="en">Every Thai tax deadline as a reminder, once you say yes.</p><p lang="th">ทุกกำหนดยื่นภาษีเป็นการแจ้งเตือน เมื่อคุณอนุญาต</p></div>
+    <div class="feat"><h3 lang="en">Cloud drive</h3><h3 lang="th">ไดรฟ์ออนไลน์</h3><p lang="en">Statements in, and each month's tax pack saved in its own folder.</p><p lang="th">อ่านสเตทเมนต์ และเก็บชุดเอกสารภาษีแต่ละเดือนเป็นโฟลเดอร์</p></div>
+    <div class="feat"><h3 lang="en">Receipt photos</h3><h3 lang="th">รูปใบเสร็จ</h3><p lang="en">Snap a receipt, then Share → Claude from your gallery. You get the amount, the VAT, and whether your company can claim it.</p><p lang="th">ถ่ายใบเสร็จ แล้วกดแชร์ไปที่ Claude จากแกลเลอรี ได้ยอดเงิน VAT และบอกว่าบริษัทนำไปเครดิตได้หรือไม่</p></div>
   </div>
 </section>
 
