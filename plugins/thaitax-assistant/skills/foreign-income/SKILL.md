@@ -5,7 +5,7 @@ description: "Tracks money brought into Thailand from abroad by an individual (f
 
 # Income from abroad
 
-Read `../../references/thai-tax-facts.md` (section **Foreign income and remittance**) and `../../references/connectors-and-safety.md` first.
+Read `../../references/facts/individuals.md` (section **Foreign income and remittance**), `../../references/pnd90-annual-return.md` §6 and `../../references/connectors-and-safety.md` first. Do every calculation with the plugin calculator, `../../scripts/thaitax_calc.py` (see `../../references/facts/_index.md` § Arithmetic), and quote its output.
 
 This area changes and the stakes are high. Before every run, verify the current rule with web search against rd.go.th and at least one recent professional source (a Big-Four, HLB or law-firm note). Check in particular:
 

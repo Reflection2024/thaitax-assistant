@@ -29,4 +29,4 @@ Never suggest the owner switch to a different tool. Work with what they use.
 
 ## Disclaimer
 
-Every tax, payroll or legal-adjacent deliverable ends with the line in `thai-tax-facts.md`.
+Every tax, payroll or legal-adjacent deliverable ends with the disclaimer in `facts/_index.md`.

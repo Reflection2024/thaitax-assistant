@@ -77,7 +77,7 @@ Most allowances need **Thai** providers (Thai insurer, Thai fund, Thai bank) and
 
 ## 6. Foreign-sourced income
 
-- **What is assessable:** a resident (180+ days in the tax year) reports foreign income **earned from 1 Jan 2024 and brought into Thailand** in that year or a later one. Income earned before 2024, and income from years of non-residence, is generally excluded (see `thai-tax-facts.md`).
+- **What is assessable:** a resident (180+ days in the tax year) reports foreign income **earned from 1 Jan 2024 and brought into Thailand** in that year or a later one. Income earned before 2024, and income from years of non-residence, is generally excluded (see `facts/individuals.md`).
 - **Where it goes:** foreign income is reported in the **same Section 40 items as Thai income** (foreign salary in No. 1, foreign rent in No. 4, foreign-company dividends in No. 3 item 3, and so on), with the same expense rules.
 - **Income Declaration for Foreign-Sourced Income** (RD form, 2026 e-Form list) is attached to the return. For each income line by Section 40 category, it records the **country**, the **tax year in which it was earned**, and the **amount brought into Thailand**, for the taxpayer and the spouse, alongside domestic income. The amount reported is what remains after any exempt part.
 - **Exchange rate:** convert at the rate on the transfer document, or the Bank of Thailand reference rate for the remittance date, and state which. Use one method consistently.

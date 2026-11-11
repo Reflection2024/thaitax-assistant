@@ -20,7 +20,14 @@ ThaiTax Assistant takes care of the Thai admin that usually needs an accountant,
 | **cash-and-collections** | Receivables, payments and payouts, a 90-day cash outlook, polite reminders | "Who owes me money?" |
 | **thai-payroll** | Salaries, overtime, social security, PND.1, work-permit flags | "Prepare payroll" |
 | **receipt-capture** | Photos of receipts from your phone gallery → an expense list, with VAT claimability checked | (share photos) "Add these receipts" |
+| **monthly-pack** | Everything for the month in one go, automatically on the 1st if you want, with a draft email to your accountant | "Run the month" |
 | **thai-export-reader** | Reads PEAK / Express / gateway / bank files with Thai headers and BE dates | (upload a file) |
+
+### Built-in tools
+
+- `scripts/thaitax_calc.py`: every tax, VAT, SSO, withholding and overtime figure is calculated here, never estimated (tested; rates in `scripts/rates.json`).
+- `scripts/make_document.js`: Thai + English/Hebrew tax invoices, receipts, quotations, billing notes and payslips with the same layout every time.
+- `skills/tax-facts-update`: annual re-verification of every rate and deadline.
 
 ### Getting started
 

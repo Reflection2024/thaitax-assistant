@@ -5,7 +5,7 @@ description: "Turns photos of receipts, tax invoices and bills (shared from the 
 
 # Receipt capture
 
-Read `../../references/thai-tax-facts.md` (tax invoice content, input VAT rules) and `../../references/connectors-and-safety.md` first.
+Read `../../references/facts/vat.md` (tax invoice content, input VAT rules), `../../references/facts/withholding.md` and `../../references/connectors-and-safety.md` first. Do every calculation with the plugin calculator, `../../scripts/thaitax_calc.py` (see `../../references/facts/_index.md` § Arithmetic), and quote its output. (commands `vat_check`, `be`)
 
 ## Step 1: Whose expenses
 

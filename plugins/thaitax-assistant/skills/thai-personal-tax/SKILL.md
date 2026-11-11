@@ -8,7 +8,8 @@ description: "Prepares an individual's annual Thai income tax return (PND.90 or 
 Read first:
 
 - `../../references/pnd90-annual-return.md`, the line-by-line guide. **It is the backbone of this skill.**
-- `../../references/thai-tax-facts.md`
+- `../../references/facts/individuals.md` and `../../references/facts/calendar.md`
+- the calculator `../../scripts/thaitax_calc.py`: run `pit` for the whole computation (expenses, allowances, donations, progressive and 0.5% minimum tax, credits, foreign tax credit) and quote its output; never compute the tax in prose
 - `../../references/connectors-and-safety.md`
 
 The person is one taxpayer. Never mix their figures with a company's, even one they own.

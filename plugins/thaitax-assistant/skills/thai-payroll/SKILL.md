@@ -5,7 +5,7 @@ description: "Prepares Thai payroll for the owner to approve: gross pay, overtim
 
 # Thai payroll
 
-Read `../../references/thai-tax-facts.md` first. A wrong payslip is a person who cannot pay rent: assemble and check, and let the owner decide.
+Read `../../references/facts/payroll.md`, `../../references/facts/withholding.md` (PND.1) and `../../references/facts/calendar.md` first. Do every calculation with the plugin calculator, `../../scripts/thaitax_calc.py` (see `../../references/facts/_index.md` § Arithmetic), and quote its output. (commands `sso`, `overtime`, `deadlines`) A wrong payslip is a person who cannot pay rent: assemble and check, and let the owner decide.
 
 ## Step 1: Verify the moving numbers
 

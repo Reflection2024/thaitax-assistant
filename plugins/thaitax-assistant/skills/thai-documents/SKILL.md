@@ -5,7 +5,7 @@ description: "Drafts Thai business documents in Thai with English or Hebrew alon
 
 # Thai documents
 
-Read `../../references/thai-tax-facts.md` (tax invoice content, withholding) and `../../references/language-and-documents.md` (language, fonts, RTL, tone) first.
+Read `../../references/facts/vat.md` (tax invoice content), `../../references/facts/withholding.md`, `../../references/language-and-documents.md` (language, fonts, RTL, tone) and `../../references/templates.md` first. Do every calculation with the plugin calculator, `../../scripts/thaitax_calc.py` (see `../../references/facts/_index.md` § Arithmetic), and quote its output. (commands `vat`, `bahttext`, `be`, `wht`)
 
 **A legal tax invoice carries a running serial number from the issuer's own system.** This skill drafts the content and the layout. Every draft says:
 
@@ -43,4 +43,4 @@ If FlowAccount is connected and the owner wants the document created there as a 
 - The Thai font is set, Hebrew is RTL, and numbers sit in LTR runs.
 - Blank legal fields are visibly marked.
 
-Deliver as DOCX by default (easiest to edit in Thai), or PDF/HTML if the owner prefers. Offer the same document in the other language pair with identical numbers.
+Build the file with `../../scripts/make_document.js` (see `../../references/templates.md`); never lay out an invoice, receipt, quotation, billing note or payslip by hand. Deliver as DOCX by default (easiest to edit in Thai), or PDF if the owner prefers. Offer the same document in the other language pair with identical numbers.

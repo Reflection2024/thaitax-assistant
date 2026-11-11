@@ -1,0 +1,5 @@
+name,thai_or_foreign,position,monthly_salary,ot_hours,holiday_hours,work_permit_expiry,sso_registered,district
+พนักงาน ก,thai,cook,15000,12,0,,yes,Ko Samui
+พนักงาน ข,thai,waiter,11000,0,8,,yes,Ko Samui
+Staff C,foreign,manager,45000,0,0,2026-12-22,yes,Ko Samui
+พนักงาน ง,thai,cleaner,9500,0,0,,no,Ko Samui

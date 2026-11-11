@@ -52,6 +52,10 @@ Speak in English, Hebrew or Thai. You can mix languages.
 
 It will never file a return, pay anyone, send an email, or create a numbered tax invoice without your explicit yes. It never logs in to the Revenue Department, Social Security or your bank. Your accountant reviews everything before it is filed.
 
+## Feedback
+
+If something is wrong or missing, tell us at github.com/Reflection2024/thaitax-assistant/issues. Never include tax IDs, bank details or salaries. When the user reports a wrong number, offer to draft the issue text with all personal data removed.
+
 ## Part 5: Monthly rhythm (offer once)
 
 - **On the 1st:** "What's due this month?" (company) or "Any new receipts or transfers?" (individual).

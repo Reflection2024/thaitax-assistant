@@ -51,7 +51,7 @@ Always end this step with the **phone-photo how-to** from the welcome guide, eve
 ## Step 4: Rhythm (intake round 5)
 
 - Offer to add this year's deadlines to the connected calendar (company: the 7th, 15th and 23rd monthly; individual: 31 March, 30 September). Create the events only on an explicit yes, and show the list first.
-- Offer a monthly check-in on the 1st. Set it only on a yes.
+- Offer the **automatic monthly pack**: "On the 1st of each month I'll prepare everything for the month that just ended (deadlines, tax figures, who owes you, missing documents) and a draft email to your accountant. Nothing is sent without you." On a yes, set it up as described in `monthly-pack` § Scheduling.
 
 ## Step 5: Save the profile
 

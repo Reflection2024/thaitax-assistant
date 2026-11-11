@@ -1,0 +1,24 @@
+name: Something was wrong / มีบางอย่างผิดพลาด / משהו לא היה נכון
+description: A wrong number, rate, deadline, or a step that did not work.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Please do NOT paste tax IDs, passport numbers, bank accounts or salaries. กรุณาอย่าใส่เลขผู้เสียภาษี เลขบัญชี หรือเงินเดือน. נא לא להדביק מספרי נישום, חשבונות בנק או שכר."
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [Monthly tax (VAT / WHT / SSO), Personal tax (PND.90/91/94), Income from abroad, Documents, Cash & collections, Payroll, Receipts, Getting started / connections, Other]
+    validations: {required: true}
+  - type: textarea
+    id: asked
+    attributes: {label: What you asked, description: The words you typed (remove personal data)}
+    validations: {required: true}
+  - type: textarea
+    id: wrong
+    attributes: {label: What was wrong, description: The wrong value and the correct one, with a source if you have it (rd.go.th, sso.go.th, accountant)}
+    validations: {required: true}
+  - type: input
+    id: version
+    attributes: {label: Plugin version, placeholder: "e.g. 1.0.0-rc.1"}

@@ -1,0 +1,13 @@
+name: Idea or request / ข้อเสนอแนะ / רעיון או בקשה
+description: Something you'd like ThaiTax Assistant to do.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes: {label: What would help you?, description: Describe your situation and what you'd like it to do.}
+    validations: {required: true}
+  - type: dropdown
+    id: who
+    attributes:
+      label: You are
+      options: [Individual, Company, Both, Accountant]
