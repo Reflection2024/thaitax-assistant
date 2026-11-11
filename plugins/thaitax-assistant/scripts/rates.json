@@ -5,7 +5,7 @@
     "valid_until": "2027-09-30",
     "registration_threshold_thb": 1800000,
     "verified": "2026-11-11",
-    "source": "Royal Decree No. 807 (rd.go.th)"
+    "source": "Royal Decree No. 807 (1 Oct 2026 - 30 Sep 2027); confirmed BDO alert 26 Aug 2026, HLB"
   },
   "sso": {
     "rate": 0.05,
@@ -14,7 +14,7 @@
     "next_changes": [{"from": "2029-01-01", "wage_ceiling_thb": 20000}, {"from": "2032-01-01", "wage_ceiling_thb": 23000}],
     "rounding": "half_up_to_baht",
     "verified": "2026-11-11",
-    "source": "Ministerial Regulation B.E. 2568 (sso.go.th); rounding method to be confirmed"
+    "source": "Ministerial Regulation B.E. 2568, gazetted 12 Dec 2025 (sso.go.th); confirmed Forvis Mazars Payroll Flash Dec 2025; rounding method to be confirmed"
   },
   "wht_resident": {
     "services": 0.03,
@@ -32,7 +32,7 @@
     "e_wht_applies_to": [0.05, 0.03, 0.02],
     "e_wht_valid_until": "2027-12-31",
     "verified": "2026-11-11",
-    "source": "rd.go.th withholding tables; e-WHT Ministerial Regulation 2026-2027"
+    "source": "rd.go.th withholding tables; e-WHT 1%: Ministerial Regulation No. 402 B.E. 2569 (gazetted Oct 2026, covers 1 Jan 2026 - 31 Dec 2027; cabinet 16 Jun 2026)"
   },
   "pit": {
     "bands": [
@@ -57,7 +57,7 @@
     },
     "donation_cap_ratio": 0.10,
     "verified": "2026-11-11",
-    "source": "RD Guide to PND.90 (latest English edition); top bands to re-verify yearly"
+    "source": "RD Guide to PND.90 (latest English edition); no rate change found for tax year 2026 (professional notes Sep-Oct 2026); top bands to re-verify yearly"
   },
   "deadlines": {
     "pnd_wht": {"paper_day": 7, "online_day": 15},
@@ -66,7 +66,27 @@
     "sso": {"day": 15},
     "pnd90_91": {"paper": "03-31", "online_extra_days": 8},
     "pnd94": {"paper": "09-30", "online_extra_days": 8},
+    "online_extension_valid_until": "2027-01-31",
     "verified": "2026-11-11",
-    "source": "rd.go.th; online extension renewed by MoF notice, confirm yearly"
+    "source": "MoF notice 12 Jan 2024: 8 extra days online for returns due 1 Feb 2024 - 31 Jan 2027. EXPIRING: renewal not yet published on 2026-11-11"
+  },
+  "ewf": {
+    "rate_employee": 0.0025,
+    "rate_employer": 0.0025,
+    "from": "2027-01-01",
+    "next_changes": [{"from": "2032-01-01", "rate_employee": 0.005, "rate_employer": 0.005}],
+    "applies_to": "employers with 10+ employees without a qualifying provident fund or employer welfare fund",
+    "due_day": 15,
+    "status": "UNVERIFIED: cabinet-approved postponement (Oct 2026); implementing regulations not yet in the Royal Gazette",
+    "verified": "2026-11-11",
+    "source": "Tilleke & Gibbins 15 Oct 2026; HLB 16 Oct 2026"
+  },
+  "holidays": {
+    "2026": ["2026-01-01", "2026-01-02", "2026-03-03", "2026-04-06", "2026-04-13", "2026-04-14", "2026-04-15", "2026-05-04", "2026-06-01", "2026-06-03", "2026-07-28", "2026-07-29", "2026-07-30", "2026-08-12", "2026-10-13", "2026-10-23", "2026-12-07", "2026-12-10", "2026-12-31"],
+    "2026_note": "Government holidays as announced. 16 Oct 2026 was an extra holiday in Bangkok only. 1 May is a bank holiday, not a government holiday.",
+    "2027": ["2027-01-01", "2027-02-22", "2027-04-06", "2027-04-13", "2027-04-14", "2027-04-15", "2027-05-03", "2027-05-04", "2027-05-20", "2027-06-03", "2027-07-19", "2027-07-20", "2027-07-28", "2027-08-12", "2027-10-13", "2027-10-25", "2027-12-06", "2027-12-10", "2027-12-31"],
+    "2027_note": "PROVISIONAL weekday holidays incl. substitute days (Makha Bucha Sun 21 Feb -> 22 Feb; Asalha Bucha Sun 18 Jul -> 20 Jul). Lunar dates are estimates until the cabinet publishes the official list; Royal Ploughing Day (government only) TBA.",
+    "verified": "2026-11-11",
+    "source": "thethaiger.com 2569 calendar; infoquest.co.th/holidays/year-2570 and globalholidayscalendar.com (both provisional for 2027)"
   }
 }

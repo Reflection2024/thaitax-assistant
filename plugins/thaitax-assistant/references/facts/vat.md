@@ -4,9 +4,9 @@ Last verified: 2026-11-11. Re-verify before use (see `_index.md`). For arithmeti
 
 ## VAT (ภาษีมูลค่าเพิ่ม)
 
-- Rate **7%** (a royal decree reduces the statutory 10%). The current decree runs to **30 Sep 2027**. Check the rate for any document dated after that.
+- Rate **7%** (a royal decree reduces the statutory 10%). The current decree (Royal Decree No. 807, 1 Oct 2026 to **30 Sep 2027**) runs to that date. Check the rate for any document dated after that.
 - Registration is mandatory above THB 1.8 million of VAT-able annual revenue. A business that is not registered cannot charge VAT or issue a tax invoice.
-- **PP.30 (ภ.พ.30)** is filed every month, including months with no sales. Due the 15th of the next month on paper, the 23rd online.
+- **PP.30 (ภ.พ.30)** is filed every month, including months with no sales. Due the 15th of the next month on paper, the 23rd online. The online extension runs to **31 Jan 2027** under the current MoF notice; confirm its renewal for later periods (see `withholding.md`).
 - **PP.36 (ภ.พ.36)** is reverse-charge VAT: self-assess 7% on services bought from a foreign provider and used in Thailand (Google Ads, Meta, AWS, SaaS). Due the 15th. The input credit is usually claimable.
 - Input VAT can be claimed only with a valid tax invoice that carries the company's exact registered name, address and tax ID. Entertainment, passenger cars under 10 seats, and invoices missing a mandatory field cannot be claimed.
 - Exports and services used abroad are 0%. Education, healthcare, residential rent and some land sales are exempt or fall under other taxes. Classify each item; never assume.

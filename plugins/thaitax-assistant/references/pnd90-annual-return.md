@@ -1,13 +1,13 @@
 # Annual personal return PND.90 / PND.91: line-by-line guide
 
-Sources: Revenue Department *Guide to Personal Income Tax Return (ภ.ง.ด.90)* (English, latest edition on rd.go.th); RD e-Form page "Personal Income Tax 2026"; RD *Manual for Foreign Tax Credit Calculation Tool* (Nov 2025); professional summaries (Forvis Mazars, PwC, Luther), 2026. **Re-verify amounts each filing season**, because temporary allowances change every year.
+Sources: Revenue Department *Guide to Personal Income Tax Return (ภ.ง.ด.90)* (English, latest edition on rd.go.th); RD e-Form page "Personal Income Tax 2026"; RD *Manual for Foreign Tax Credit Calculation Tool* (Nov 2025); professional summaries (Forvis Mazars, PwC, Luther), 2026. Last verified: 2026-11-11. **Re-verify amounts each filing season**, because temporary allowances change every year.
 
 ## 1. Which form, which deadline
 
 - **PND.91:** Thai employment income (Section 40(1)) only.
 - **PND.90:** every other case. This includes foreign income, freelance fees, rent, dividends, interest and business income.
 - **Filing obligation:** a single person with assessable income above THB 120,000 a year, or THB 60,000 if any of it is non-employment income. Married thresholds are higher. A filing obligation can exist even when no tax is due.
-- **Deadlines:** 31 March of the following year on paper; online about 8 days later (8 April in recent years; RD confirms each year). Tax year 2026 is filed January to early April 2027.
+- **Deadlines:** 31 March of the following year on paper; online 8 days later (8 April in recent years). Tax year 2026 is filed January to early April 2027. **The online extension notice covers returns due up to 31 Jan 2027 only.** On 11 Nov 2026 its renewal had not been published, so 8 April 2027 is **unverified** until it is.
 - **Instalments:** if the tax due is at least THB 3,000, it can be paid in 3 equal instalments (31 Mar, 30 Apr, 31 May).
 - **Late payment:** 1.5% surcharge per month, plus a possible fine.
 - **Refunds:** PromptPay linked to the Thai ID or tax ID. Foreigners usually receive a ค.21 letter with a cheque.
@@ -48,13 +48,15 @@ Tax year 2026 values as reported (verify each season):
 - **Spouse with no income:** THB 60,000, if the marriage is registered. For non-residents, only if the spouse lives in Thailand.
 - **Children:** THB 30,000 each, plus THB 30,000 extra for the 2nd and later children born from 2018. Prenatal and childbirth costs up to THB 60,000 per pregnancy.
 - **Parents** of the taxpayer or spouse, aged 60+, with income up to THB 30,000: THB 30,000 each (form ล.ย.03). Disabled dependant: THB 60,000.
-- **Social security contributions:** actual amount (about THB 10,500 maximum for 2026 at the THB 17,500 wage ceiling; verify).
+- **Social security contributions:** actual amount, up to THB 10,500 for 2026 (THB 875 × 12 at the THB 17,500 wage ceiling).
 - **Life insurance** (10-year+ policy with a Thai insurer): up to THB 100,000. **Health insurance:** up to THB 25,000, combined with life within THB 100,000. **Parents' health insurance:** up to THB 15,000.
 - **Retirement group:** RMF (30% of income), pension life insurance (15%, 200k), provident fund, SSF, National Savings Fund. Combined cap THB 500,000.
-- **Thai ESG:** 30% of income, up to THB 300,000 (2024–2026).
+- **Thai ESG:** 30% of income, up to THB 300,000, for units bought 1 Jan 2024 to **31 Dec 2026** (held 5 years); outside that window the cap is THB 100,000. Separate from the THB 500,000 retirement cap. Thai ESGX (from LTF switching) has its own rules; check the fund certificate.
 - **Mortgage interest** on a Thai residence: up to THB 100,000.
-- **New house construction** with a VAT-registered contractor: THB 10,000 per THB 1m, up to THB 100,000 (if extended; verify).
-- **Temporary stimulus allowances** (Easy E-Receipt, tourism and similar): only if enacted for that tax year. Professional sources reported none approved for 2026. **Verify.**
+- **New house construction** with a VAT-registered contractor: THB 10,000 per THB 1m, up to THB 100,000. No extension covering 2026 spending was found in this run; **unverified**, do not claim without proof it applies.
+- **Solar rooftop** on the taxpayer's home, grid-connected to MEA/PEA: actual cost up to **THB 200,000**, once, in the year the grid connection is completed. Spending from 3 Mar 2026 to 31 Dec 2028 (Royal Decree, Royal Gazette March 2026). Needs a full e-Tax Invoice from a VAT-registered seller.
+- **Artwork purchases** (paintings, sculpture, prints, new media by National Artists, Silpathorn awardees or registered artists): up to **THB 100,000** a year (Ministerial Regulation, November 2025). Sources disagree on the end year (2026 or 2027); **verify** before relying on it for 2027.
+- **Temporary stimulus allowances:** **no Easy E-Receipt for tax year 2026** (none approved as of 11 Nov 2026). The hotel and tourism deduction covered only 29 Oct to 15 Dec 2025 (tax year 2025). Claim a stimulus allowance only if it was enacted for that tax year.
 - **Age 65+ or disabled:** up to THB 190,000 of income exempt (Income Exemption Entitlement form).
 
 Most allowances need **Thai** providers (Thai insurer, Thai fund, Thai bank) and Thai documents. Foreign policies and pensions usually do not qualify. Say so.
@@ -79,7 +81,7 @@ Most allowances need **Thai** providers (Thai insurer, Thai fund, Thai bank) and
 
 - **What is assessable:** a resident (180+ days in the tax year) reports foreign income **earned from 1 Jan 2024 and brought into Thailand** in that year or a later one. Income earned before 2024, and income from years of non-residence, is generally excluded (see `facts/individuals.md`).
 - **Where it goes:** foreign income is reported in the **same Section 40 items as Thai income** (foreign salary in No. 1, foreign rent in No. 4, foreign-company dividends in No. 3 item 3, and so on), with the same expense rules.
-- **Income Declaration for Foreign-Sourced Income** (RD form, 2026 e-Form list) is attached to the return. For each income line by Section 40 category, it records the **country**, the **tax year in which it was earned**, and the **amount brought into Thailand**, for the taxpayer and the spouse, alongside domestic income. The amount reported is what remains after any exempt part.
+- **Income Declaration for Foreign-Sourced Income** (RD form, on the RD forms page, updated 10 Sep 2026) is attached to the return. For each income line by Section 40 category, it records the **country**, the **tax year in which it was earned**, and the **amount brought into Thailand**, for the taxpayer and the spouse, alongside domestic income. The amount reported is what remains after any exempt part.
 - **Exchange rate:** convert at the rate on the transfer document, or the Bank of Thailand reference rate for the remittance date, and state which. Use one method consistently.
 - **Foreign Tax Credit:** available where a double-tax treaty applies (Thailand has about 61) and the person is a Thai resident under the treaty's own tie-breaker rules.
   - RD limit ≈ (foreign income brought in ÷ total assessable income before expenses and allowances) × Thai tax payable. The credit is the **lower** of that limit and the foreign tax actually paid on the income brought in.
