@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-rc.8 (2026-11-11): ask first, answer short
+- Every user-facing skill now starts with the same rule: confirm the request, ask up to 3 short questions for any fact the answer depends on, and ask for the supporting document by name instead of estimating.
+- No assumed facts: no "probably / it seems / about" for anything not in the data; an unavoidable assumption is asked as a question and no amount is computed from it.
+- Short answers: the answer first, at most 3 bullets, about 8 lines; details only on request.
+- Replaced the "defaults over questions" rule; defaults now only for things that change no money.
+
 ## 1.0.0-rc.7 (2026-11-11): family budget
 - New skill `family-budget`: bank statements from any bank or currency → money in vs. out per month, where the money goes, fixed payments and subscriptions with yearly cost, price rises, services paid for twice; remembers the family's own category corrections.
 - `scripts/budget.py` (standard library; own-account transfers excluded, FX never silent) and `scripts/budget_dashboard.py` (one self-contained page, EN/HE/TH, right-to-left for Hebrew, light and dark).
