@@ -1,0 +1,46 @@
+---
+name: thai-documents
+description: "Drafts Thai business documents in Thai with English or Hebrew alongside: tax invoice drafts (ใบกำกับภาษี), receipts, quotations, billing notes, withholding certificate (50 ทวิ) data, payslips, overdue-payment letters and short business letters. Applies Buddhist Era dates, THB amounts and every mandatory field. Never issues a numbered legal tax invoice; the owner issues it from FlowAccount. Use when the owner says 'tax invoice', 'quotation in Thai', 'bilingual invoice', 'write this in Thai', '50 Tawi', 'חשבונית מס בתאילנדית', 'הצעת מחיר בתאילנדית', 'תתרגם לתאילנדית', 'ใบกำกับภาษี', 'ใบเสร็จ', 'ใบเสนอราคา', 'ใบวางบิล', '50 ทวิ'."
+---
+
+# Thai documents
+
+Read `../../references/thai-tax-facts.md` (tax invoice content, withholding) and `../../references/language-and-documents.md` (language, fonts, RTL, tone) first.
+
+**A legal tax invoice carries a running serial number from the issuer's own system.** This skill drafts the content and the layout. Every draft says:
+
+> *Draft. Issue from your accounting system. / ร่างเอกสาร โปรดออกจากระบบบัญชีของท่าน*
+
+## Step 1: What, from whom, to whom, in which language
+
+Ask only for what is missing:
+
+- **Document type.**
+- **Issuing company:** taken from the profile, with tax ID and branch.
+- **Customer:** name, address, tax ID and branch if they are VAT-registered.
+- **Items and terms.**
+- **Language pair:** Thai + English (default for foreign owners), Thai + Hebrew, or Thai only.
+
+If a legally required field is unknown, show it as a clearly marked blank. Never put a plausible guess there.
+
+## Step 2: Build the document
+
+- **Tax invoice draft:** ใบกำกับภาษี / Tax Invoice title, full seller and buyer blocks, serial number left blank, date in BE with CE in brackets, lines (description, quantity, unit price), pre-VAT total, **VAT 7% on its own line**, grand total, and the amount in Thai words if the owner's template uses it. Check the VAT rate for the document date.
+- **Quotation:** the same header, plus validity period, payment terms and delivery terms.
+- **Receipt:** references the invoice it settles and the payment method.
+- **Billing note (ใบวางบิล):** lists the invoices being billed, with the due date.
+- **50 ทวิ data:** payer and payee details, form (PND.3 or PND.53), payment date, income type, amount, tax withheld, number left blank. Draft the data table; the payer issues and signs the certificate.
+- **Payslip:** Thai first, staff member's name, period, earnings, SSO, tax withheld, net. Use the figures from `thai-payroll`.
+- **Overdue letter:** follow the tone ladder in the language reference. Never threaten legal action.
+
+If FlowAccount is connected and the owner wants the document created there as a draft, show exactly what will be created and wait for an explicit yes. Never approve or number a document in FlowAccount.
+
+## Step 3: Check before handing over
+
+- The VAT arithmetic reconciles to the satang, and the rounding method is stated.
+- Names, tax IDs and branches match the registered details.
+- The BE and CE dates agree.
+- The Thai font is set, Hebrew is RTL, and numbers sit in LTR runs.
+- Blank legal fields are visibly marked.
+
+Deliver as DOCX by default (easiest to edit in Thai), or PDF/HTML if the owner prefers. Offer the same document in the other language pair with identical numbers.

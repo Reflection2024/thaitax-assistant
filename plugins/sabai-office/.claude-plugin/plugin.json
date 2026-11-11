@@ -1,0 +1,10 @@
+{
+  "name": "sabai-office",
+  "version": "0.2.0",
+  "description": "Sabai Office: a back office in Thailand for foreign individuals and companies. Prepares personal and company Thai tax returns, drafts bilingual Thai documents, tracks cash and collections from FlowAccount, Stripe and Omise, and prepares Thai payroll and social security. Works in English, Hebrew and Thai.",
+  "author": {
+    "name": "Reflection Thailand"
+  },
+  "keywords": ["thailand", "flowaccount", "vat", "withholding-tax", "social-security", "payroll", "stripe", "omise", "bilingual", "hebrew"],
+  "license": "Proprietary"
+}
