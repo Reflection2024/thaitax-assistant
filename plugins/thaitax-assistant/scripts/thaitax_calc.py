@@ -108,6 +108,9 @@ def deadlines(period, holidays=None):
         "PP.36 (reverse charge)": {"paper": at(dl["pp36"]["paper_day"]), "online": at(dl["pp36"]["online_day"])},
         "SSO (SPS 1-10)": at(dl["sso"]["day"]),
         "holidays_supplied": len(holidays),
+        "online_extension_valid_until": dl.get("online_extension_valid_until"),
+        "online_extension_warning": (f"Online dates rely on the MoF extension valid until {dl['online_extension_valid_until']}; confirm renewal."
+                                     if dl.get("online_extension_valid_until") and dt.date(ny, nm, 23) > dt.date.fromisoformat(dl["online_extension_valid_until"]) else None),
         "note": "Online extensions are renewed by Ministry of Finance notice; confirm. Supply the year's public holidays.",
     }
 
@@ -319,7 +322,8 @@ def land_building_tax(appraised_value, use, years_unused=0):
 
 
 def property_sale(appraised_value, price, seller="individual", years_held=1, house_registration_years=0,
-                  acquired_by="purchase", residential=True, buyer_thai_individual=False, transfer_date=None):
+                  acquired_by="purchase", residential=True, buyer_thai_individual=False, transfer_date=None,
+                  in_tambon_area=False):
     """Seller- and buyer-side costs of selling Thai property (transfer fee, SBT or stamp duty, withholding)."""
     S = RATES["property"]["sale"]
     a, p = D(str(appraised_value)), D(str(price))
@@ -342,16 +346,22 @@ def property_sale(appraised_value, price, seller="individual", years_held=1, hou
             exp_ratio = D(str(S["wht_individual_inherited_or_gift_expense"]))
         else:
             exp_ratio = D(str(S["wht_individual_expense_by_years"][str(min(yrs, 8))]))
-        income = a - a * exp_ratio
+        base = a
+        exempt = D(0)
+        if acquired_by in ("inheritance", "gift") and in_tambon_area:
+            exempt = min(a, D(str(S["wht_inherited_tambon_exemption"])))
+            base = a - exempt
+        income = base - base * exp_ratio
         per_year = income / yrs
         t_year, steps = _banded(per_year, S["wht_individual_bands"])
         wht = money(t_year * yrs)
-        cap = money(a * D(str(S["wht_individual_cap_ratio"])))
+        cap = money(p * D(str(S["wht_individual_cap_ratio"])))
         capped = wht > cap
         wht = min(wht, cap)
         detail = {"method": "individual: appraised value less holding-period expense, divided by years held, progressive, times years",
                   "years_counted": yrs, "expense_ratio": str(exp_ratio), "net_income": s(income),
-                  "per_year": s(per_year), "per_year_steps": steps, "cap_20pct": s(cap), "capped": capped}
+                  "per_year": s(per_year), "per_year_steps": steps, "cap_20pct_of_price": s(cap), "capped": capped,
+                  "tambon_inheritance_exemption": s(exempt)}
     return {
         "appraised_value": s(a), "price": s(p),
         "transfer_fee": {"rate": str(fee_rate), "amount": s(transfer_fee), "reduced_rate_applied": reduced,

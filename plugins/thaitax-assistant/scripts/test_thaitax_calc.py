@@ -92,6 +92,17 @@ class T(unittest.TestCase):
         # 50% expense -> 2.5m / 8 = 312,500/yr -> 15,000 + 1,250 = 16,250 x 8 = 130,000
         self.assertEqual(r["withholding_tax"]["amount"], "130000.00")
 
+    def test_property_sale_cap_and_tambon(self):
+        r = c.property_sale(10000000, 300000, seller="individual", years_held=1, transfer_date="2026-11-11")
+        self.assertTrue(r["withholding_tax"]["capped"])
+        self.assertEqual(r["withholding_tax"]["amount"], "60000.00")
+        r2 = c.property_sale(1000000, 1000000, acquired_by="inheritance", years_held=5, in_tambon_area=True, transfer_date="2026-11-11")
+        self.assertEqual(r2["withholding_tax"]["tambon_inheritance_exemption"], "200000.00")
+
+    def test_deadline_extension_warning(self):
+        self.assertIsNone(c.deadlines("2026-11")["online_extension_warning"])
+        self.assertIsNotNone(c.deadlines("2027-01")["online_extension_warning"])
+
     def test_lease_registration(self):
         self.assertEqual(c.lease_registration(36000000)["total"], "396000.00")
 

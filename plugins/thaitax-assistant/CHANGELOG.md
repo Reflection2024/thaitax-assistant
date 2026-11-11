@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.0-rc.6 (2026-11-11): verification pass
+- PIT bands confirmed on rd.go.th (30% to THB 5m, 35% above).
+- Online filing extension: valid for filings due to 31 Jan 2027; the calculator now warns for later periods and PND.90 for tax year 2026.
+- SSO: ceiling 17,500 / 875 confirmed; rounding rule (50 satang up) confirmed; PIT deduction 10,500.
+- Minimum wage: Notification No. 14 still current; Koh Samui 400, rest of Surat Thani incl. Koh Phangan 352; hotels types 2-4 and entertainment venues 400 nationwide.
+- Severance 400 days after 20 years confirmed (Act No. 7, 2019).
+- Land & building tax: tiered computation (s.42), payment by 30 April (s.46), appeal within 30 days (s.73).
+- Property sale: individual WHT capped at 20% of the sale price (Por.100/2543); THB 200,000 exemption for inherited or gifted property in Tambon areas; 0.01% transfer fee confirmed for Thai-national individual buyers only.
+- 90-day report windows by channel (in person, online, post).
+
 ## 1.0.0-rc.5 (2026-11-11)
 - Lightness rule: never ask what can be found, defaults over questions, one batch of requests per conversation.
 - Monthly bank-statement upload request (no Thai bank connection available yet).

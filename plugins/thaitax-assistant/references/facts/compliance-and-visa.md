@@ -24,7 +24,7 @@ Foreign-owned or BOI companies have extra reporting (BOI progress reports, forei
 
 | What | When | Notes |
 |---|---|---|
-| **90-day report** (TM47) | every 90 days in Thailand; window 15 days before to 7 days after the due date | online, by post, by agent or in person; the clock resets on re-entry |
+| **90-day report** (TM47) | every 90 days in Thailand; **in person or by agent:** 15 days before to 7 days after the due date; **online:** from 15 days before, closing on or a few days before the due date (offices differ); **by post:** posted at least 15 days before; fine THB 2,000 if late | first report in person; the clock resets on re-entry |
 | **Extension of stay** | apply before the permission to stay expires (about 30–45 days before is common) | documents depend on the visa type (marriage, retirement, business, education) |
 | **Re-entry permit** | before leaving Thailand, if the user wants to keep the extension | single or multiple |
 | **Work permit** | renew before expiry; it is tied to the employer and the role | change of employer or role means a new permit |

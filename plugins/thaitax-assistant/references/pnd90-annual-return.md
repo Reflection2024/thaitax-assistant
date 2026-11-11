@@ -7,7 +7,7 @@ Sources: Revenue Department *Guide to Personal Income Tax Return (ภ.ง.ด.90
 - **PND.91:** Thai employment income (Section 40(1)) only.
 - **PND.90:** every other case. This includes foreign income, freelance fees, rent, dividends, interest and business income.
 - **Filing obligation:** a single person with assessable income above THB 120,000 a year, or THB 60,000 if any of it is non-employment income. Married thresholds are higher. A filing obligation can exist even when no tax is due.
-- **Deadlines:** 31 March of the following year on paper; online about 8 days later (8 April in recent years; RD confirms each year). Tax year 2026 is filed January to early April 2027.
+- **Deadlines:** 31 March of the following year on paper; online 8 days later (8 April) under the Ministry of Finance extension, which covers filings due up to 31 Jan 2027. **For tax year 2026 (due March 2027) check that the extension has been renewed**; otherwise 31 March applies online too. Tax year 2026 is filed January to early April 2027.
 - **Instalments:** if the tax due is at least THB 3,000, it can be paid in 3 equal instalments (31 Mar, 30 Apr, 31 May).
 - **Late payment:** 1.5% surcharge per month, plus a possible fine.
 - **Refunds:** PromptPay linked to the Thai ID or tax ID. Foreigners usually receive a ค.21 letter with a cheque.
@@ -48,7 +48,7 @@ Tax year 2026 values as reported (verify each season):
 - **Spouse with no income:** THB 60,000, if the marriage is registered. For non-residents, only if the spouse lives in Thailand.
 - **Children:** THB 30,000 each, plus THB 30,000 extra for the 2nd and later children born from 2018. Prenatal and childbirth costs up to THB 60,000 per pregnancy.
 - **Parents** of the taxpayer or spouse, aged 60+, with income up to THB 30,000: THB 30,000 each (form ล.ย.03). Disabled dependant: THB 60,000.
-- **Social security contributions:** actual amount (about THB 10,500 maximum for 2026 at the THB 17,500 wage ceiling; verify).
+- **Social security contributions:** actual amount (up to THB 10,500 for 2026: 875 × 12 at the THB 17,500 ceiling; confirmed).
 - **Life insurance** (10-year+ policy with a Thai insurer): up to THB 100,000. **Health insurance:** up to THB 25,000, combined with life within THB 100,000. **Parents' health insurance:** up to THB 15,000.
 - **Retirement group:** RMF (30% of income), pension life insurance (15%, 200k), provident fund, SSF, National Savings Fund. Combined cap THB 500,000.
 - **Thai ESG:** 30% of income, up to THB 300,000 (2024–2026).

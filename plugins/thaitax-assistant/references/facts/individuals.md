@@ -4,7 +4,7 @@ Last verified: 2026-11-11. Re-verify before use (see `_index.md`). For arithmeti
 
 ## Individuals
 
-- Progressive rates on net income: 0% up to THB 150k; 5% / 10% / 15% / 20% / 25% in the bands up to THB 2m; 30% and 35% above that. Verify the top bands.
+- Progressive rates on net income (verified on rd.go.th, Revenue Code as amended by Act No. 44, 2017): 0% up to THB 150,000 · 5% to 300,000 · 10% to 500,000 · 15% to 750,000 · 20% to 1,000,000 · 25% to 2,000,000 · 30% to 5,000,000 · 35% above 5,000,000.
 - A person in Thailand 180 days or more in a calendar year is tax resident.
 - Annual return: PND.90 (several income types, including foreign income) or PND.91 (Thai salary only), due 31 March, about a week later online. PND.94 half-year return by 30 September for non-salary income such as rent.
 

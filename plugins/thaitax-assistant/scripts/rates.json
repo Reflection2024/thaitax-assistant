@@ -21,9 +21,10 @@
         "wage_ceiling_thb": 23000
       }
     ],
-    "rounding": "half_up_to_baht",
+    "rounding": "half_up_to_baht (50 satang or more up, less dropped; SSO form instructions)",
     "verified": "2026-11-11",
-    "source": "Ministerial Regulation B.E. 2568 (sso.go.th); rounding method to be confirmed"
+    "source": "Ministerial Regulation B.E. 2568 (Royal Gazette); SSO SPS 1-10 instructions; verified 2026-11-11",
+    "pit_deduction_max_2026": 10500
   },
   "wht_resident": {
     "services": 0.03,
@@ -126,7 +127,7 @@
     },
     "donation_cap_ratio": 0.1,
     "verified": "2026-11-11",
-    "source": "RD Guide to PND.90 (latest English edition); top bands to re-verify yearly"
+    "source": "rd.go.th (Revenue Code rates as amended by Act No. 44 B.E. 2560); bands verified 2026-11-11"
   },
   "deadlines": {
     "pnd_wht": {
@@ -153,7 +154,8 @@
       "online_extra_days": 8
     },
     "verified": "2026-11-11",
-    "source": "rd.go.th; online extension renewed by MoF notice, confirm yearly"
+    "source": "MoF notice on online filing extension (filings due 1 Feb 2024 - 31 Jan 2027); verified 2026-11-11",
+    "online_extension_valid_until": "2027-01-31"
   },
   "property": {
     "land_building_tax": {
@@ -293,12 +295,12 @@
       "payment_month": "April (often extended; 2026 extended to June-August)",
       "note": "Computed in tiers (ขั้นบันได): each slice of value at its band rate; base = official appraised value (land + building). The local authority's assessment notice is final; compare against it. Rental condos in Bangkok under review for reclassification to commercial (July 2026).",
       "verified": "2026-11-11",
-      "source": "Land and Building Tax Act B.E. 2562; Royal Decree on rates B.E. 2564; Thairath/Lex Bangkok 2026 summaries"
+      "source": "Land and Building Tax Act B.E. 2562 s.42 (tiered), s.46 (30 April), s.52 (instalments), s.73 (appeal 30 days); Royal Decree on rates B.E. 2564; verified 2026-11-11"
     },
     "sale": {
       "transfer_fee": 0.02,
       "transfer_fee_reduced": 0.0001,
-      "reduced_conditions": "residential (house, condo, commercial building, land with building), price AND appraised value <= THB 7m; reported as Thai individual buyers only - verify; valid 2026-07-01 to 2027-06-30",
+      "reduced_conditions": "residential (house, townhouse, commercial building, land with building, condo), price AND appraised value <= THB 7m, buyer a Thai-national individual; valid 2026-07-01 to 2027-06-30",
       "reduced_valid_until": "2027-06-30",
       "sbt": 0.033,
       "stamp_duty": 0.005,
@@ -347,7 +349,9 @@
       "wht_individual_cap_ratio": 0.2,
       "wht_years_cap": 10,
       "verified": "2026-11-11",
-      "source": "RD PND.90 guide (holding-period table, 20% cap); Ministry of Interior notifications 1 Jul 2026; Forvis Mazars, Lex Bangkok 2026. Individual WHT band table and cap basis to be confirmed with RD each year."
+      "source": "RD Por.100/2543 (20% of sale price cap); RD PND.90 guide (holding-period table); MoI notifications 1 Jul 2026; verified 2026-11-11",
+      "wht_individual_cap_basis": "sale_price",
+      "wht_inherited_tambon_exemption": 200000
     },
     "lease_registration": {
       "fee": 0.01,
@@ -355,5 +359,31 @@
       "verified": "2026-11-11",
       "source": "Land Department practice; professional summaries 2026"
     }
+  },
+  "minimum_wage": {
+    "notification": "Wage Committee No. 14, in force 2025-07-01, still current Nov 2026",
+    "daily_thb": {
+      "bangkok": 400,
+      "phuket": 400,
+      "chachoengsao": 400,
+      "chonburi": 400,
+      "rayong": 400,
+      "koh_samui_district": 400,
+      "surat_thani_other_incl_koh_phangan": 352,
+      "hotels_type_2_3_4_nationwide": 400,
+      "entertainment_venues_nationwide": 400
+    },
+    "verified": "2026-11-11",
+    "source": "Royal Gazette 1 Jul 2025; Thai press and MoL summaries"
+  },
+  "severance_days": {
+    "120d": 30,
+    "1y": 90,
+    "3y": 180,
+    "6y": 240,
+    "10y": 300,
+    "20y": 400,
+    "source": "Labour Protection Act s.118 (Act No. 7, 2019)",
+    "verified": "2026-11-11"
   }
 }
