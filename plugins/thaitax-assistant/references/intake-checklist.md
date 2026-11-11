@@ -35,6 +35,12 @@
 9. Whether e-Withholding Tax and e-Tax Invoice are used (yes, no, or unknown).
 10. Who files today, and how (the accountant, online or paper). Does the user have **their own** RD e-Filing and DBD logins? Does the accountant pay taxes on the user's behalf? This decides whether `accountant-check` is offered.
 
+## Round 3b: Optional extras (ask in one line, skip if not wanted)
+
+- Properties owned in Thailand (type, use, owner): for land-tax reminders and sale costs.
+- Visa and work-permit dates for the user and family: for reminders only.
+- Company licences with expiry dates.
+
 ## Round 4: Connections (everyone)
 
 Walk through the table in `welcome-guide.md` Part 2. For each item record **connected**, **will connect later**, **not used**, or **export instead**. For phone photos, show the 4-step how-to once.

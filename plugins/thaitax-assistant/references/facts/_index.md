@@ -18,6 +18,8 @@ Every deliverable carries this line:
 | `corporate.md` | CIT, SME rate, PND.50/51, DBD filing | thai-monthly-tax (annual) |
 | `individuals.md` | Personal tax, residency, foreign income and remittance | thai-personal-tax, foreign-income |
 | `payroll.md` | SSO, minimum wage, overtime, severance, work permits | thai-payroll, thai-monthly-tax |
+| `property.md` | Land and building tax, sale costs (transfer fee, SBT, stamp duty, WHT), leases | property-tax, thai-personal-tax |
+| `compliance-and-visa.md` | Company yearly cycle (AGM, DBD, บอจ.5, 14-day changes), visa and work-permit reminder dates | company-housekeeping, visa-reminders |
 | `calendar.md` | Buddhist Era, holidays, year end | all |
 | `../pnd90-annual-return.md` | PND.90/91 line by line, foreign-income declaration, FTC | thai-personal-tax, foreign-income |
 
@@ -33,4 +35,4 @@ Never compute tax, VAT, SSO, withholding, overtime, BE dates, deadlines or baht-
 python3 -I <plugin>/scripts/thaitax_calc.py <command> '<json>'
 ```
 
-Commands: `vat`, `vat_check`, `be`, `deadlines`, `sso`, `overtime`, `wht`, `pit`, `bahttext` (`help` lists them). `<plugin>` is two folders above the running skill's base directory. If Python cannot run, compute by hand, show every step, and label the result "unchecked".
+Commands: `vat`, `vat_check`, `be`, `deadlines`, `sso`, `overtime`, `wht`, `pit`, `bahttext`, `land_building_tax`, `property_sale`, `lease_registration` (`help` lists them). `<plugin>` is two folders above the running skill's base directory. If Python cannot run, compute by hand, show every step, and label the result "unchecked".

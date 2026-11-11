@@ -33,6 +33,8 @@ For each entity in the profile and each open period, list what the month normall
 
 Remove whatever a connected tool already supplies, and whatever already arrived (`[x]` items).
 
+**Bank statements:** Thai banks offer no direct connection yet, so the monthly statement (PDF or Excel from the bank's app or internet banking) is a standing request for every account, every month. Ask for it once per month, together with the other items, and say in one line how to download it: in the bank app, open **Statement / e-Statement / ขอรายการเดินบัญชี**, choose the month, then share the PDF to Claude. Keep a note that a direct bank connection will be added when Thai banks make one available.
+
 ## Step 2: Ask
 
 Group the list by how the user sends each item:

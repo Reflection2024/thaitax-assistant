@@ -73,5 +73,27 @@ class T(unittest.TestCase):
         self.assertEqual(r["PP.30 (VAT)"]["online"]["date"], "2026-12-23")
 
 
+    def test_land_building_tax(self):
+        self.assertEqual(c.land_building_tax(20000000, "residential_other")["annual_tax"], "4000.00")
+        self.assertEqual(c.land_building_tax(40000000, "main_home")["annual_tax"], "0.00")
+        self.assertEqual(c.land_building_tax(5000000, "commercial")["annual_tax"], "15000.00")
+        self.assertEqual(c.land_building_tax(100000000, "vacant", years_unused=3)["annual_tax"], "650000.00")
+
+    def test_property_sale_company(self):
+        r = c.property_sale(4000000, 5000000, seller="company", transfer_date="2026-11-11")
+        self.assertEqual(r["transfer_fee"]["amount"], "80000.00")
+        self.assertEqual(r["specific_business_tax"]["amount"], "165000.00")
+        self.assertEqual(r["withholding_tax"]["amount"], "50000.00")
+
+    def test_property_sale_individual_long_hold(self):
+        r = c.property_sale(5000000, 5000000, seller="individual", years_held=8, transfer_date="2026-11-11")
+        self.assertFalse(r["specific_business_tax"]["applies"])
+        self.assertEqual(r["stamp_duty"]["amount"], "25000.00")
+        # 50% expense -> 2.5m / 8 = 312,500/yr -> 15,000 + 1,250 = 16,250 x 8 = 130,000
+        self.assertEqual(r["withholding_tax"]["amount"], "130000.00")
+
+    def test_lease_registration(self):
+        self.assertEqual(c.lease_registration(36000000)["total"], "396000.00")
+
 if __name__ == "__main__":
     unittest.main()

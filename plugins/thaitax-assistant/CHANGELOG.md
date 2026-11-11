@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0-rc.5 (2026-11-11)
+- Lightness rule: never ask what can be found, defaults over questions, one batch of requests per conversation.
+- Monthly bank-statement upload request (no Thai bank connection available yet).
+- New skills: `official-letter`, `year-end-planning`, `property-tax` (with calculator: land & building tax, sale costs, lease registration), `company-housekeeping`, `visa-reminders`.
+
 ## 1.0.0-rc.4 (2026-11-11)
 - New skill `accountant-check`: completeness, timeliness, figures vs. books, payments reached the RD, access and control, annual statements, fees; polite questions for the accountant. Runs quarterly from `monthly-pack`.
 

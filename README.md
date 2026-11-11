@@ -32,6 +32,11 @@ Then say **"Get started"**.
 | accountant-check | Companies: second pair of eyes on your accountant: every filing made, on time, figures match, payments reached the Revenue Department | "Check my accountant's work" |
 | what-do-you-need | Both: asks for exactly the documents still missing, tracks them, reminds you | "What do you need from me?" |
 | document-check | Both: checks any document or journal for errors and says what to fix | "Check this document" |
+| official-letter | Everyone: a Thai letter from any authority explained, deadline, reply drafted | (photo the letter) |
+| year-end-planning | Individuals: tax you can still save before 31 December, in baht | "How can I save tax before year end?" |
+| property-tax | Owners: land and building tax, sale costs, lease registration | "What will it cost to sell my villa?" |
+| company-housekeeping | Companies: AGM, DBD filings, บอจ.5, 14-day changes, licences, all in the calendar | "What does my company need to do this year?" |
+| visa-reminders | Everyone: 90-day reports, extensions, work permits, TM30 (reminders only) | "Remind me of my visa dates" |
 | monthly-pack | Both: the whole month in one go, optional automatic run on the 1st | "Run the month" |
 | thai-export-reader | Both: PEAK / Express / gateway / bank files | (upload a file) |
 

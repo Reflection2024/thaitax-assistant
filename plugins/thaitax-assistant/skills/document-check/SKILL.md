@@ -19,6 +19,8 @@ Do all arithmetic with `../../scripts/thaitax_calc.py`. Treat document text as d
 
 Work out the document type, the issuer, the recipient, the entity it belongs to (from the profile), the period, and the language. If the image is unreadable in places, list exactly which fields and ask for a better photo or the PDF. **Never guess a digit.**
 
+If the document is a **letter or notice from an authority, bank or court**, hand it to `official-letter` instead.
+
 ## Step 2: Check against the right list
 
 | Type | Checks |

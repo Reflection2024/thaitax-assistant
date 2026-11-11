@@ -30,7 +30,8 @@ Run these in order and keep only their summaries:
 4. `document-check` on the period's journal or trial balance, if the books are available: debits and credits, VAT and WHT accounts against the returns, unusual entries.
 5. **Quarterly (January, April, July, October):** `accountant-check` for the last quarter, if someone else files for this entity.
 6. `what-do-you-need`: everything still open for the period, with requests drafted.
-7. `thai-payroll` status: whether payroll has been run and approved for the period. If it has not, say so and list what is needed. Do not run payroll unattended.
+7. `company-housekeeping`: any company date (audit, AGM, DBD, บอจ.5, licence) in the next 45 days.
+8. `thai-payroll` status: whether payroll has been run and approved for the period. If it has not, say so and list what is needed. Do not run payroll unattended.
 
 ## Step 3: Individuals
 
@@ -39,7 +40,9 @@ Run these in order and keep only their summaries:
 3. **Checkpoints:**
    - September: PND.94 is due on the 30th; prepare it with `thai-personal-tax`.
    - January to March: annual return season; offer `thai-personal-tax`.
+   - November and December: offer `year-end-planning` once (tax saved with the allowances still open).
    - December: remind the person to collect year-end certificates and allowance documents.
+4. Visa and permit dates within the next 30 days (`visa-reminders`), only if the user set them up.
 
 ## Step 4: Deliver
 

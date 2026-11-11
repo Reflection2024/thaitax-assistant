@@ -11,7 +11,16 @@
     "rate": 0.05,
     "wage_ceiling_thb": 17500,
     "wage_floor_thb": 1650,
-    "next_changes": [{"from": "2029-01-01", "wage_ceiling_thb": 20000}, {"from": "2032-01-01", "wage_ceiling_thb": 23000}],
+    "next_changes": [
+      {
+        "from": "2029-01-01",
+        "wage_ceiling_thb": 20000
+      },
+      {
+        "from": "2032-01-01",
+        "wage_ceiling_thb": 23000
+      }
+    ],
     "rounding": "half_up_to_baht",
     "verified": "2026-11-11",
     "source": "Ministerial Regulation B.E. 2568 (sso.go.th); rounding method to be confirmed"
@@ -27,46 +36,324 @@
     "insurance_premium": 0.01,
     "royalties": 0.03,
     "prizes": 0.05,
-    "dividends": 0.10,
+    "dividends": 0.1,
     "e_wht_reduced_rate": 0.01,
-    "e_wht_applies_to": [0.05, 0.03, 0.02],
+    "e_wht_applies_to": [
+      0.05,
+      0.03,
+      0.02
+    ],
     "e_wht_valid_until": "2027-12-31",
     "verified": "2026-11-11",
     "source": "rd.go.th withholding tables; e-WHT Ministerial Regulation 2026-2027"
   },
   "pit": {
     "bands": [
-      [150000, 0.00],
-      [300000, 0.05],
-      [500000, 0.10],
-      [750000, 0.15],
-      [1000000, 0.20],
-      [2000000, 0.25],
-      [5000000, 0.30],
-      [null, 0.35]
+      [
+        150000,
+        0.0
+      ],
+      [
+        300000,
+        0.05
+      ],
+      [
+        500000,
+        0.1
+      ],
+      [
+        750000,
+        0.15
+      ],
+      [
+        1000000,
+        0.2
+      ],
+      [
+        2000000,
+        0.25
+      ],
+      [
+        5000000,
+        0.3
+      ],
+      [
+        null,
+        0.35
+      ]
     ],
-    "minimum_tax": {"rate": 0.005, "income_threshold": 120000, "tax_threshold": 5000},
-    "expense": {
-      "40(1)+40(2)": {"rate": 0.50, "cap": 100000},
-      "40(3)": {"rate": 0.50, "cap": 100000},
-      "40(4)": {"rate": 0.0},
-      "40(5)": {"building": 0.30, "agri_land": 0.20, "other_land": 0.15, "vehicle": 0.30, "other": 0.10, "hire_purchase_breach": 0.20},
-      "40(6)": {"medicine": 0.60, "other": 0.30},
-      "40(7)": {"rate": 0.60},
-      "40(8)": {"rate": 0.60, "performer": {"first": 300000, "rate_first": 0.60, "rate_rest": 0.40, "cap": 600000}}
+    "minimum_tax": {
+      "rate": 0.005,
+      "income_threshold": 120000,
+      "tax_threshold": 5000
     },
-    "donation_cap_ratio": 0.10,
+    "expense": {
+      "40(1)+40(2)": {
+        "rate": 0.5,
+        "cap": 100000
+      },
+      "40(3)": {
+        "rate": 0.5,
+        "cap": 100000
+      },
+      "40(4)": {
+        "rate": 0.0
+      },
+      "40(5)": {
+        "building": 0.3,
+        "agri_land": 0.2,
+        "other_land": 0.15,
+        "vehicle": 0.3,
+        "other": 0.1,
+        "hire_purchase_breach": 0.2
+      },
+      "40(6)": {
+        "medicine": 0.6,
+        "other": 0.3
+      },
+      "40(7)": {
+        "rate": 0.6
+      },
+      "40(8)": {
+        "rate": 0.6,
+        "performer": {
+          "first": 300000,
+          "rate_first": 0.6,
+          "rate_rest": 0.4,
+          "cap": 600000
+        }
+      }
+    },
+    "donation_cap_ratio": 0.1,
     "verified": "2026-11-11",
     "source": "RD Guide to PND.90 (latest English edition); top bands to re-verify yearly"
   },
   "deadlines": {
-    "pnd_wht": {"paper_day": 7, "online_day": 15},
-    "pp30": {"paper_day": 15, "online_day": 23},
-    "pp36": {"paper_day": 15, "online_day": 15},
-    "sso": {"day": 15},
-    "pnd90_91": {"paper": "03-31", "online_extra_days": 8},
-    "pnd94": {"paper": "09-30", "online_extra_days": 8},
+    "pnd_wht": {
+      "paper_day": 7,
+      "online_day": 15
+    },
+    "pp30": {
+      "paper_day": 15,
+      "online_day": 23
+    },
+    "pp36": {
+      "paper_day": 15,
+      "online_day": 15
+    },
+    "sso": {
+      "day": 15
+    },
+    "pnd90_91": {
+      "paper": "03-31",
+      "online_extra_days": 8
+    },
+    "pnd94": {
+      "paper": "09-30",
+      "online_extra_days": 8
+    },
     "verified": "2026-11-11",
     "source": "rd.go.th; online extension renewed by MoF notice, confirm yearly"
+  },
+  "property": {
+    "land_building_tax": {
+      "bands": {
+        "main_home": [
+          [
+            50000000,
+            0.0
+          ],
+          [
+            75000000,
+            0.0003
+          ],
+          [
+            100000000,
+            0.0005
+          ],
+          [
+            null,
+            0.001
+          ]
+        ],
+        "main_home_building_only": [
+          [
+            10000000,
+            0.0
+          ],
+          [
+            50000000,
+            0.0002
+          ],
+          [
+            75000000,
+            0.0003
+          ],
+          [
+            100000000,
+            0.0005
+          ],
+          [
+            null,
+            0.001
+          ]
+        ],
+        "residential_other": [
+          [
+            50000000,
+            0.0002
+          ],
+          [
+            75000000,
+            0.0003
+          ],
+          [
+            100000000,
+            0.0005
+          ],
+          [
+            null,
+            0.001
+          ]
+        ],
+        "commercial": [
+          [
+            50000000,
+            0.003
+          ],
+          [
+            200000000,
+            0.004
+          ],
+          [
+            1000000000,
+            0.005
+          ],
+          [
+            5000000000,
+            0.006
+          ],
+          [
+            null,
+            0.007
+          ]
+        ],
+        "agricultural_individual": [
+          [
+            50000000,
+            0.0
+          ],
+          [
+            125000000,
+            0.0001
+          ],
+          [
+            150000000,
+            0.0003
+          ],
+          [
+            550000000,
+            0.0005
+          ],
+          [
+            1050000000,
+            0.0007
+          ],
+          [
+            null,
+            0.001
+          ]
+        ],
+        "agricultural_company": [
+          [
+            75000000,
+            0.0001
+          ],
+          [
+            100000000,
+            0.0003
+          ],
+          [
+            500000000,
+            0.0005
+          ],
+          [
+            1000000000,
+            0.0007
+          ],
+          [
+            null,
+            0.001
+          ]
+        ]
+      },
+      "vacant_uses": "commercial",
+      "vacant_surcharge_per_3_years": 0.003,
+      "vacant_cap": 0.03,
+      "payment_month": "April (often extended; 2026 extended to June-August)",
+      "note": "Computed in tiers (ขั้นบันได): each slice of value at its band rate; base = official appraised value (land + building). The local authority's assessment notice is final; compare against it. Rental condos in Bangkok under review for reclassification to commercial (July 2026).",
+      "verified": "2026-11-11",
+      "source": "Land and Building Tax Act B.E. 2562; Royal Decree on rates B.E. 2564; Thairath/Lex Bangkok 2026 summaries"
+    },
+    "sale": {
+      "transfer_fee": 0.02,
+      "transfer_fee_reduced": 0.0001,
+      "reduced_conditions": "residential (house, condo, commercial building, land with building), price AND appraised value <= THB 7m; reported as Thai individual buyers only - verify; valid 2026-07-01 to 2027-06-30",
+      "reduced_valid_until": "2027-06-30",
+      "sbt": 0.033,
+      "stamp_duty": 0.005,
+      "wht_company": 0.01,
+      "wht_individual_expense_by_years": {
+        "1": 0.92,
+        "2": 0.84,
+        "3": 0.77,
+        "4": 0.71,
+        "5": 0.65,
+        "6": 0.6,
+        "7": 0.55,
+        "8": 0.5
+      },
+      "wht_individual_inherited_or_gift_expense": 0.5,
+      "wht_individual_bands": [
+        [
+          300000,
+          0.05
+        ],
+        [
+          500000,
+          0.1
+        ],
+        [
+          750000,
+          0.15
+        ],
+        [
+          1000000,
+          0.2
+        ],
+        [
+          2000000,
+          0.25
+        ],
+        [
+          5000000,
+          0.3
+        ],
+        [
+          null,
+          0.35
+        ]
+      ],
+      "wht_individual_cap_ratio": 0.2,
+      "wht_years_cap": 10,
+      "verified": "2026-11-11",
+      "source": "RD PND.90 guide (holding-period table, 20% cap); Ministry of Interior notifications 1 Jul 2026; Forvis Mazars, Lex Bangkok 2026. Individual WHT band table and cap basis to be confirmed with RD each year."
+    },
+    "lease_registration": {
+      "fee": 0.01,
+      "stamp_duty": 0.001,
+      "verified": "2026-11-11",
+      "source": "Land Department practice; professional summaries 2026"
+    }
   }
 }

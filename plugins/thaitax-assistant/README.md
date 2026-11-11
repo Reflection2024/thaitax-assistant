@@ -24,6 +24,11 @@ ThaiTax Assistant takes care of the Thai admin that usually needs an accountant,
 | **accountant-check** | A second pair of eyes on your accountant: filings complete and on time, figures match your books, tax payments really reached the Revenue Department, your own access in place | "Check my accountant's work" |
 | **what-do-you-need** | Asks for exactly what is missing, keeps the list, reminds you | "What do you need from me?" |
 | **document-check** | Checks every document (invoices, 50 ทวิ, forms, payslips, statements, journals) and says what to fix | "Check this" |
+| **official-letter** | A Thai letter from the Revenue Department, SSO, DBD, a bank or the land office: translated, what they want, deadline, reply drafted | (photo the letter) |
+| **year-end-planning** | How much tax you can still save before 31 December, with each option computed | "How can I save tax before year end?" |
+| **property-tax** | Land and building tax, the full cost of selling, lease registration | "What will it cost to sell my villa?" |
+| **company-housekeeping** | Your company's yearly calendar: AGM, DBD, บอจ.5, changes, licences | "What does my company need to do this year?" |
+| **visa-reminders** | 90-day reports, extensions, work permits, TM30: reminders only | "Remind me of my visa dates" |
 | **monthly-pack** | Everything for the month in one go, automatically on the 1st if you want, with a draft email to your accountant | "Run the month" |
 | **thai-export-reader** | Reads PEAK / Express / gateway / bank files with Thai headers and BE dates | (upload a file) |
 

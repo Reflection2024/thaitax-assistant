@@ -36,6 +36,8 @@ Tip: photograph the whole receipt, flat, in good light. Thai tax invoices must s
 **Any time:**
 - "What do you need from me?"
 - "Check this document." (upload or forward it)
+- "I got a letter in Thai." (photo it)
+- "How much will it cost to sell my villa?" / "Is my land tax bill right?"
 - Any question: "Do I need to…?", "What's the rule for…?" (answered from current official sources, with links)
 
 **If it's just you:**
@@ -43,6 +45,10 @@ Tip: photograph the whole receipt, flat, in good light. Thai tax invoices must s
 - "Fill in my annual tax return."
 - "Which companies haven't sent me a 50 ทวิ?"
 - "Add these receipts" (with photos)
+
+**Around the year:**
+- "How can I save tax before the year ends?" (October to December)
+- "Remind me of my 90-day report and visa dates."
 
 **If you have a company:**
 - "Check my accountant's work." (were all filings made, on time, and paid?)
@@ -52,6 +58,7 @@ Tip: photograph the whole receipt, flat, in good light. Thai tax invoices must s
 - "Prepare payroll for November."
 - "Did all my Stripe payouts reach the bank?"
 - "Put my tax deadlines in my calendar."
+- "What does my company need to do this year?" (AGM, DBD filings, licences)
 
 Speak in English, Hebrew or Thai. You can mix languages.
 

@@ -284,6 +284,95 @@ def pit(income, allowances=0, donations_double=0, donations_general=0,
     }
 
 
+
+# ---------------------------------------------------------------- property
+def _banded(value, bands):
+    v, lower, tax, steps = D(str(value)), D(0), D(0), []
+    for upper, rate in bands:
+        up = D(str(upper)) if upper is not None else None
+        if v <= lower:
+            break
+        top = min(v, up) if up is not None else v
+        part = (top - lower) * D(str(rate))
+        steps.append({"from": s(lower), "to": s(top), "rate": rate, "tax": s(part)})
+        tax += part
+        if up is None or v <= up:
+            break
+        lower = up
+    return tax, steps
+
+
+def land_building_tax(appraised_value, use, years_unused=0):
+    """Annual land and building tax. use: main_home | main_home_building_only | residential_other | commercial | vacant | agricultural_individual | agricultural_company."""
+    P = RATES["property"]["land_building_tax"]
+    key = P["vacant_uses"] if use == "vacant" else use
+    if key not in P["bands"]:
+        raise ValueError("unknown use; choose one of: " + ", ".join(list(P["bands"]) + ["vacant"]))
+    tax, steps = _banded(appraised_value, P["bands"][key])
+    surcharge = D(0)
+    if use == "vacant" and int(years_unused) >= 3:
+        extra = min(D(str(P["vacant_surcharge_per_3_years"])) * (int(years_unused) // 3), D(str(P["vacant_cap"])))
+        surcharge = D(str(appraised_value)) * extra
+    total = money(tax + surcharge)
+    return {"appraised_value": s(appraised_value), "use": use, "band_steps": steps, "vacant_surcharge": s(surcharge),
+            "annual_tax": s(total), "payment": P["payment_month"], "note": P["note"], "verified": P["verified"]}
+
+
+def property_sale(appraised_value, price, seller="individual", years_held=1, house_registration_years=0,
+                  acquired_by="purchase", residential=True, buyer_thai_individual=False, transfer_date=None):
+    """Seller- and buyer-side costs of selling Thai property (transfer fee, SBT or stamp duty, withholding)."""
+    S = RATES["property"]["sale"]
+    a, p = D(str(appraised_value)), D(str(price))
+    base_high = max(a, p)
+    td = dt.date.fromisoformat(transfer_date) if transfer_date else dt.date.today()
+    reduced = (residential and buyer_thai_individual and a <= 7000000 and p <= 7000000
+               and td <= dt.date.fromisoformat(S["reduced_valid_until"]))
+    fee_rate = D(str(S["transfer_fee_reduced"] if reduced else S["transfer_fee"]))
+    transfer_fee = money(a * fee_rate)
+    sbt_applies = seller == "company" or (acquired_by == "purchase" and int(years_held) < 5 and int(house_registration_years) < 1)
+    sbt = money(base_high * D(str(S["sbt"]))) if sbt_applies else D(0)
+    stamp = D(0) if sbt_applies else money(base_high * D(str(S["stamp_duty"])))
+    detail = {}
+    if seller == "company":
+        wht = money(base_high * D(str(S["wht_company"])))
+        detail = {"method": "company 1% of the higher of price and appraised value"}
+    else:
+        yrs = max(1, min(int(years_held), int(S["wht_years_cap"])))
+        if acquired_by in ("inheritance", "gift"):
+            exp_ratio = D(str(S["wht_individual_inherited_or_gift_expense"]))
+        else:
+            exp_ratio = D(str(S["wht_individual_expense_by_years"][str(min(yrs, 8))]))
+        income = a - a * exp_ratio
+        per_year = income / yrs
+        t_year, steps = _banded(per_year, S["wht_individual_bands"])
+        wht = money(t_year * yrs)
+        cap = money(a * D(str(S["wht_individual_cap_ratio"])))
+        capped = wht > cap
+        wht = min(wht, cap)
+        detail = {"method": "individual: appraised value less holding-period expense, divided by years held, progressive, times years",
+                  "years_counted": yrs, "expense_ratio": str(exp_ratio), "net_income": s(income),
+                  "per_year": s(per_year), "per_year_steps": steps, "cap_20pct": s(cap), "capped": capped}
+    return {
+        "appraised_value": s(a), "price": s(p),
+        "transfer_fee": {"rate": str(fee_rate), "amount": s(transfer_fee), "reduced_rate_applied": reduced,
+                          "note": S["reduced_conditions"], "who_pays": "by contract, often split 50/50"},
+        "specific_business_tax": {"applies": sbt_applies, "amount": s(sbt), "who_pays": "seller"},
+        "stamp_duty": {"applies": not sbt_applies, "amount": s(stamp), "who_pays": "seller"},
+        "withholding_tax": {"amount": s(wht), **detail, "who_pays": "seller (credit against annual tax)"},
+        "seller_total_excl_fee": s(sbt + stamp + wht),
+        "verified": S["verified"], "source": S["source"],
+    }
+
+
+def lease_registration(total_rent):
+    """Land Office cost to register a lease over 3 years: 1% fee + 0.1% stamp duty on total rent."""
+    L = RATES["property"]["lease_registration"]
+    t = D(str(total_rent))
+    fee, stamp = money(t * D(str(L["fee"]))), money(t * D(str(L["stamp_duty"])))
+    return {"total_rent": s(t), "registration_fee": s(fee), "stamp_duty": s(stamp), "total": s(fee + stamp),
+            "who_pays": "by contract", "verified": L["verified"]}
+
+
 # ---------------------------------------------------------------- baht in words
 _DIG = ["", "หนึ่ง", "สอง", "สาม", "สี่", "ห้า", "หก", "เจ็ด", "แปด", "เก้า"]
 _POS = ["", "สิบ", "ร้อย", "พัน", "หมื่น", "แสน"]
@@ -325,7 +414,8 @@ def bahttext(amount):
 
 # ---------------------------------------------------------------- CLI
 COMMANDS = {"vat": vat, "vat_check": vat_check, "be": be, "deadlines": deadlines, "sso": sso,
-            "overtime": overtime, "wht": wht, "pit": pit, "bahttext": bahttext}
+            "overtime": overtime, "wht": wht, "pit": pit, "bahttext": bahttext,
+            "land_building_tax": land_building_tax, "property_sale": property_sale, "lease_registration": lease_registration}
 
 
 def main(argv):
