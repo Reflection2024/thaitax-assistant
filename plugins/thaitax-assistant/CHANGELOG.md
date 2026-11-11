@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.0-rc.9 (2026-11-11)
+- `family-budget` and `ask-thai-tax` now trigger whenever statements are uploaded or any Thai tax question is asked, so their ask-first rules always apply.
+
 ## 1.0.0-rc.8 (2026-11-11): ask first, answer short
 - Every user-facing skill now starts with the same rule: confirm the request, ask up to 3 short questions for any fact the answer depends on, and ask for the supporting document by name instead of estimating.
 - No assumed facts: no "probably / it seems / about" for anything not in the data; an unavoidable assumption is asked as a question and no amount is computed from it.
