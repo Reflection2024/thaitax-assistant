@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.0-rc.10 (2026-11-11)
+- Questions to the user are shown as clickable choices (2–4 options each, free text always allowed) wherever the app supports it.
+
 ## 1.0.0-rc.9 (2026-11-11)
 - `family-budget` and `ask-thai-tax` now trigger whenever statements are uploaded or any Thai tax question is asked, so their ask-first rules always apply.
 
