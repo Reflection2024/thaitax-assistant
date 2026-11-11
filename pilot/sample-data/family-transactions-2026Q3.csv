@@ -1,0 +1,93 @@
+date,description,amount,currency,account
+2026-08-01,Salary transfer from employer GmbH,4200.00,EUR,Wise EUR
+2026-08-02,Transfer from own Wise account,152000.00,THB,KBank savings
+2026-08-02,Transfer to own KBank account,-4000.00,EUR,Wise EUR
+2026-08-03,Villa rent - landlord Koh Samui,-45000.00,THB,KBank savings
+2026-08-05,PEA electricity bill,-4200.00,THB,KBank savings
+2026-08-05,PWA water supply,-420.00,THB,KBank savings
+2026-08-06,AIS Fibre internet,-799.00,THB,KBank savings
+2026-08-06,AIS mobile postpaid,-599.00,THB,KBank savings
+2026-08-07,NETFLIX.COM,-419.00,THB,KBank savings
+2026-08-07,Spotify family,-249.00,THB,KBank savings
+2026-08-08,Apple.com iCloud 2TB,-349.00,THB,KBank savings
+2026-08-09,Google One storage,-350.00,THB,KBank savings
+2026-08-10,7-Eleven,-2966.00,THB,KBank savings
+2026-08-10,International School Samui term fee,-38000.00,THB,KBank savings
+2026-08-11,Makro Samui,-596.00,THB,KBank savings
+2026-08-11,Starbucks Chaweng,-323.00,THB,KBank savings
+2026-08-12,AIA health insurance premium,-6200.00,THB,KBank savings
+2026-08-12,LINE MAN,-365.00,THB,KBank savings
+2026-08-12,Makro Samui,-1797.00,THB,KBank savings
+2026-08-13,Makro Samui,-2378.00,THB,KBank savings
+2026-08-13,Starbucks Chaweng,-301.00,THB,KBank savings
+2026-08-14,Big C Chaweng,-453.00,THB,KBank savings
+2026-08-14,GrabFood,-637.00,THB,KBank savings
+2026-08-15,GrabFood,-1361.00,THB,KBank savings
+2026-08-15,Makro Samui,-2076.00,THB,KBank savings
+2026-08-18,PTT fuel station,-1499.00,THB,KBank savings
+2026-08-20,Lazada order,-2124.00,THB,KBank savings
+2026-08-22,Muay Thai gym monthly,-2500.00,THB,KBank savings
+2026-08-25,ATM cash withdrawal,-5000.00,THB,KBank savings
+2026-09-01,Salary transfer from employer GmbH,4200.00,EUR,Wise EUR
+2026-09-02,Transfer from own Wise account,152000.00,THB,KBank savings
+2026-09-02,Transfer to own KBank account,-4000.00,EUR,Wise EUR
+2026-09-03,Villa rent - landlord Koh Samui,-45000.00,THB,KBank savings
+2026-09-05,PEA electricity bill,-3800.00,THB,KBank savings
+2026-09-05,PWA water supply,-420.00,THB,KBank savings
+2026-09-06,AIS Fibre internet,-799.00,THB,KBank savings
+2026-09-06,AIS mobile postpaid,-599.00,THB,KBank savings
+2026-09-07,Disney+ Hotstar,-289.00,THB,KBank savings
+2026-09-07,NETFLIX.COM,-419.00,THB,KBank savings
+2026-09-07,Spotify family,-249.00,THB,KBank savings
+2026-09-08,Apple.com iCloud 2TB,-349.00,THB,KBank savings
+2026-09-09,Google One storage,-350.00,THB,KBank savings
+2026-09-10,Makro Samui,-2580.00,THB,KBank savings
+2026-09-11,Big C Chaweng,-1486.00,THB,KBank savings
+2026-09-11,LINE MAN,-942.00,THB,KBank savings
+2026-09-12,7-Eleven,-890.00,THB,KBank savings
+2026-09-12,AIA health insurance premium,-6200.00,THB,KBank savings
+2026-09-12,GrabFood,-1301.00,THB,KBank savings
+2026-09-13,GrabFood,-1335.00,THB,KBank savings
+2026-09-13,Makro Samui,-2638.00,THB,KBank savings
+2026-09-14,GrabFood,-601.00,THB,KBank savings
+2026-09-14,Lompraya ferry to Bangkok,-2400.00,THB,KBank savings
+2026-09-14,Tops Market,-2594.00,THB,KBank savings
+2026-09-15,Big C Chaweng,-722.00,THB,KBank savings
+2026-09-15,Starbucks Chaweng,-1268.00,THB,KBank savings
+2026-09-18,PTT fuel station,-1337.00,THB,KBank savings
+2026-09-20,Lazada order,-3683.00,THB,KBank savings
+2026-09-22,Muay Thai gym monthly,-2500.00,THB,KBank savings
+2026-09-25,ATM cash withdrawal,-5000.00,THB,KBank savings
+2026-10-01,Salary transfer from employer GmbH,4200.00,EUR,Wise EUR
+2026-10-02,Transfer from own Wise account,152000.00,THB,KBank savings
+2026-10-02,Transfer to own KBank account,-4000.00,EUR,Wise EUR
+2026-10-03,Villa rent - landlord Koh Samui,-45000.00,THB,KBank savings
+2026-10-05,PEA electricity bill,-4200.00,THB,KBank savings
+2026-10-05,PWA water supply,-420.00,THB,KBank savings
+2026-10-06,AIS Fibre internet,-799.00,THB,KBank savings
+2026-10-06,AIS mobile postpaid,-599.00,THB,KBank savings
+2026-10-07,Disney+ Hotstar,-289.00,THB,KBank savings
+2026-10-07,NETFLIX.COM,-419.00,THB,KBank savings
+2026-10-07,Spotify family,-249.00,THB,KBank savings
+2026-10-08,Apple.com iCloud 2TB,-349.00,THB,KBank savings
+2026-10-09,Google One storage,-350.00,THB,KBank savings
+2026-10-10,7-Eleven,-1781.00,THB,KBank savings
+2026-10-11,Starbucks Chaweng,-769.00,THB,KBank savings
+2026-10-11,Tops Market,-1317.00,THB,KBank savings
+2026-10-12,AIA health insurance premium,-6200.00,THB,KBank savings
+2026-10-12,Big C Chaweng,-3163.00,THB,KBank savings
+2026-10-12,GrabFood,-421.00,THB,KBank savings
+2026-10-13,Big C Chaweng,-635.00,THB,KBank savings
+2026-10-13,Starbucks Chaweng,-517.00,THB,KBank savings
+2026-10-14,Cafe Fisherman's,-491.00,THB,KBank savings
+2026-10-14,Tops Market,-2451.00,THB,KBank savings
+2026-10-15,7-Eleven,-1706.00,THB,KBank savings
+2026-10-15,Bangkok Hospital Samui,-2800.00,THB,KBank savings
+2026-10-15,Starbucks Chaweng,-1043.00,THB,KBank savings
+2026-10-18,PTT fuel station,-940.00,THB,KBank savings
+2026-10-19,Agoda hotel Bangkok,-6800.00,THB,KBank savings
+2026-10-20,Lazada order,-3237.00,THB,KBank savings
+2026-10-21,Immigration 90 day agent fee,-500.00,THB,KBank savings
+2026-10-22,Muay Thai gym monthly,-2500.00,THB,KBank savings
+2026-10-25,ATM cash withdrawal,-5000.00,THB,KBank savings
+2026-10-28,Unknown merchant XYZ 88231,-1250.00,THB,KBank savings

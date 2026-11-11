@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-rc.7 (2026-11-11): family budget
+- New skill `family-budget`: bank statements from any bank or currency → money in vs. out per month, where the money goes, fixed payments and subscriptions with yearly cost, price rises, services paid for twice; remembers the family's own category corrections.
+- `scripts/budget.py` (standard library; own-account transfers excluded, FX never silent) and `scripts/budget_dashboard.py` (one self-contained page, EN/HE/TH, right-to-left for Hebrew, light and dark).
+- Advanced option: export to Actual Budget, and setup notes for the community `actual-mcp` server.
+- `scripts/test_budget.py` (7 tests); sample family statements in `pilot/sample-data`.
+
 ## 1.0.0-rc.6 (2026-11-11): verification pass
 - PIT bands confirmed on rd.go.th (30% to THB 5m, 35% above).
 - Online filing extension: valid for filings due to 31 Jan 2027; the calculator now warns for later periods and PND.90 for tax year 2026.

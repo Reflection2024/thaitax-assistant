@@ -37,6 +37,7 @@ Then say **"Get started"**.
 | property-tax | Owners: land and building tax, sale costs, lease registration | "What will it cost to sell my villa?" |
 | company-housekeeping | Companies: AGM, DBD filings, บอจ.5, 14-day changes, licences, all in the calendar | "What does my company need to do this year?" |
 | visa-reminders | Everyone: 90-day reports, extensions, work permits, TM30 (reminders only) | "Remind me of my visa dates" |
+| family-budget | Families: bank statements → a dashboard of money in vs. out, where it goes, subscriptions and fixed payments; optional Actual Budget export | "Where does our money go?" |
 | monthly-pack | Both: the whole month in one go, optional automatic run on the 1st | "Run the month" |
 | thai-export-reader | Both: PEAK / Express / gateway / bank files | (upload a file) |
 

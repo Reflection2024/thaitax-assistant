@@ -29,6 +29,7 @@ ThaiTax Assistant takes care of the Thai admin that usually needs an accountant,
 | **property-tax** | Land and building tax, the full cost of selling, lease registration | "What will it cost to sell my villa?" |
 | **company-housekeeping** | Your company's yearly calendar: AGM, DBD, บอจ.5, changes, licences | "What does my company need to do this year?" |
 | **visa-reminders** | 90-day reports, extensions, work permits, TM30: reminders only | "Remind me of my visa dates" |
+| **family-budget** | Your bank statements → a family dashboard: money in vs. out, where it goes, every fixed payment and subscription, services paid twice. Optional export to Actual Budget | "Where does our money go?" |
 | **monthly-pack** | Everything for the month in one go, automatically on the 1st if you want, with a draft email to your accountant | "Run the month" |
 | **thai-export-reader** | Reads PEAK / Express / gateway / bank files with Thai headers and BE dates | (upload a file) |
 
@@ -36,6 +37,7 @@ ThaiTax Assistant takes care of the Thai admin that usually needs an accountant,
 
 - `scripts/thaitax_calc.py`: every tax, VAT, SSO, withholding and overtime figure is calculated here, never estimated (tested; rates in `scripts/rates.json`).
 - `scripts/make_document.js`: Thai + English/Hebrew tax invoices, receipts, quotations, billing notes and payslips with the same layout every time.
+- `scripts/budget.py` + `scripts/budget_dashboard.py`: family budget engine (categories, recurring payments, duplicates, FX) and a self-contained dashboard page in English, Hebrew or Thai (tested).
 - `skills/tax-facts-update`: annual re-verification of every rate and deadline.
 
 ### Getting started
