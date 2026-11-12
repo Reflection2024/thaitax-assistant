@@ -1,0 +1,103 @@
+{
+ "PND90": {
+  "file": "PND90.pdf",
+  "name": "ภ.ง.ด.90 Personal income tax return (general)",
+  "year": "tax year 2568 (2025) form",
+  "source": "https://www.rd.go.th/fileadmin/tax_pdf/pit/2568/241268PIT90.pdf",
+  "map": "PND90.map.json"
+ },
+ "PND91": {
+  "file": "PND91.pdf",
+  "name": "ภ.ง.ด.91 Personal income tax return (employment income only)",
+  "year": "tax year 2568 (2025) form",
+  "source": "https://www.rd.go.th/fileadmin/tax_pdf/pit/2568/241268PIT91.pdf",
+  "map": "PND91.map.json"
+ },
+ "PND94": {
+  "file": "PND94.pdf",
+  "name": "ภ.ง.ด.94 Half-year personal income tax return",
+  "year": "2568 (2025) form",
+  "source": "https://www.rd.go.th/fileadmin/tax_pdf/pit/2568/250668PIT94.pdf",
+  "map": "PND94.map.json"
+ },
+ "PND90_FOREIGN": {
+  "file": "PND90_Foreign.pdf",
+  "name": "Income Declaration for Foreign-Sourced Income (attach to ภ.ง.ด.90/91)",
+  "year": "2568 (2025) form",
+  "source": "https://www.rd.go.th/fileadmin/tax_pdf/pit/2568/Foreign_Income_241268-v2.pdf",
+  "map": null
+ },
+ "PND1": {
+  "file": "PND1.pdf",
+  "name": "ภ.ง.ด.1 Monthly withholding return: salaries (Section 40(1)(2))",
+  "source": "https://www.rd.go.th/fileadmin/tax_pdf/withhold/200360_WHT1.pdf",
+  "map": "PND1.map.json"
+ },
+ "PND3": {
+  "file": "PND3.pdf",
+  "name": "ภ.ง.ด.3 Monthly withholding return: payments to individuals",
+  "source": "https://www.rd.go.th/fileadmin/tax_pdf/withhold/270360_WHT3.pdf",
+  "map": "PND3.map.json"
+ },
+ "PND3_ATTACH": {
+  "file": "PND3_attach.pdf",
+  "name": "ใบแนบ ภ.ง.ด.3 Attachment: list of payees",
+  "source": "https://www.rd.go.th/fileadmin/tax_pdf/withhold/270360_attach3.pdf",
+  "map": "PND3_ATTACH.map.json"
+ },
+ "PND53": {
+  "file": "PND53.pdf",
+  "name": "ภ.ง.ด.53 Monthly withholding return: payments to companies",
+  "source": "https://www.rd.go.th/fileadmin/tax_pdf/withhold/WHT53_041060.pdf",
+  "map": "PND53.map.json"
+ },
+ "PP30": {
+  "file": "PP30.pdf",
+  "name": "ภ.พ.30 Monthly VAT return",
+  "year": "2568 form (revised Sep 2025)",
+  "source": "https://www.rd.go.th/fileadmin/tax_pdf/vat/2568/pp30_010968.pdf",
+  "map": "PP30.map.json"
+ },
+ "PND53_ATTACH": {
+  "file": "PND53_attach.pdf",
+  "name": "ใบแนบ ภ.ง.ด.53 Attachment: list of company payees",
+  "source": "https://www.rd.go.th/fileadmin/tax_pdf/withhold/290360_attach53.pdf",
+  "map": "PND53_ATTACH.map.json"
+ },
+ "PND1_ATTACH": {
+  "file": "PND1_attach.pdf",
+  "name": "ใบแนบ ภ.ง.ด.1 Attachment: list of employees",
+  "source": "https://www.rd.go.th/fileadmin/tax_pdf/withhold/200360_attach1.pdf",
+  "map": "PND1_ATTACH.map.json"
+ },
+ "PP36": {
+  "file": "PP36.pdf",
+  "name": "ภ.พ.36 Reverse-charge VAT (payments abroad / foreign services)",
+  "year": "2568 form",
+  "source": "https://www.rd.go.th/fileadmin/tax_pdf/vat/2568/pp36_010968.pdf",
+  "note": "No plain-name map yet: use `fields PP36 --page 1`.",
+  "map": null
+ },
+ "WHT_CERT": {
+  "file": "WHT_CERT_50TAWI.pdf",
+  "name": "หนังสือรับรองการหักภาษี ณ ที่จ่าย ตามมาตรา 50 ทวิ (withholding tax certificate)",
+  "source": "https://www.rd.go.th/fileadmin/tax_pdf/withhold/approve_wh3_081156.pdf",
+  "map": "WHT_CERT.map.json"
+ },
+ "PND50": {
+  "file": "PND50.pdf",
+  "name": "ภ.ง.ด.50 Annual corporate income tax return",
+  "year": "accounting periods 2568 (2025)",
+  "source": "https://www.rd.go.th/fileadmin/tax_pdf/cit/2568/050369CIT50.pdf",
+  "map": null,
+  "note": "No plain-name map yet: use `fields PND50 --page N`."
+ },
+ "PND51": {
+  "file": "PND51.pdf",
+  "name": "ภ.ง.ด.51 Half-year corporate income tax return",
+  "year": "accounting periods 2569 (2026)",
+  "source": "https://www.rd.go.th/fileadmin/tax_pdf/cit/2569/230669CIT51.pdf",
+  "map": null,
+  "note": "No plain-name map yet: use `fields PND51 --page N`."
+ }
+}

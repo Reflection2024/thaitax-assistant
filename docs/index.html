@@ -120,6 +120,7 @@ section h2{font-size:clamp(28px,3.6vw,40px);font-weight:800;max-width:22em}
 .ask .a li{margin:3px 0}
 .num{font-variant-numeric:tabular-nums;white-space:nowrap}
 @media (max-width:860px){.asks{grid-template-columns:1fr}}
+pre{direction:ltr;text-align:left;unicode-bidi:isolate}.pick{display:inline-flex;gap:4px;margin-top:22px;padding:4px;background:#fff;border:1px solid var(--line);border-radius:999px}.pick button{font:inherit;font-weight:600;padding:9px 22px;border:0;border-radius:999px;background:transparent;color:var(--muted);cursor:pointer}.pick button[aria-pressed="true"]{background:var(--ink);color:#fff}.steps[hidden]{display:none}.btn.dl{margin:12px 0 4px;display:inline-flex}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px;counter-reset:s}
 .step{counter-increment:s}
 .step::before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--paper);font-family:var(--display);font-weight:800;margin-bottom:12px}
@@ -249,7 +250,7 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
   <p class="lead" lang="en">Send the receipts, the bank statements, the letter you can't read. Your assistant asks what it needs, fills the official forms, and hands your accountant one clean file.</p><p class="lead" lang="he" dir="rtl">שלח את הקבלות, דפי הבנק, המכתב שאתה לא מצליח לקרוא. העוזרת שואלת רק מה שהיא צריכה, ממלאת את הטפסים הרשמיים ומעבירה לרואה החשבון שלך קובץ אחד מסודר.</p>
   <p class="lead" lang="th">ส่งใบเสร็จ สเตทเมนต์ธนาคาร หรือจดหมายที่อ่านไม่ออกมาได้เลย ผู้ช่วยจะถามเฉพาะสิ่งที่จำเป็น กรอกแบบฟอร์มทางการ แล้วส่งไฟล์ที่เรียบร้อยให้นักบัญชีของคุณ</p>
   <div class="ctas">
-   <a class="btn primary" href="thaitax-assistant.plugin"><span lang="en">Get it free</span><span lang="he" dir="rtl">קבל חינם</span><span lang="th">รับฟรี</span> →</a>
+   <a class="btn primary" href="#install"><span lang="en">Get it free</span><span lang="he" dir="rtl">קבל חינם</span><span lang="th">รับฟรี</span> →</a>
    <a class="btn ghost" href="#install"><span lang="en">How to install</span><span lang="he" dir="rtl">איך מתקינים</span><span lang="th">วิธีติดตั้ง</span></a>
   </div>
   <div class="proof">
@@ -500,12 +501,18 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
 
 <section id="install">
   <p class="kicker" lang="en">Start in five minutes</p><p class="kicker" lang="he" dir="rtl">מתחילים בחמש דקות</p><p class="kicker" lang="th">เริ่มใช้ใน 5 นาที</p>
-  <h2 lang="en">Three steps and you're set up</h2><h2 lang="he" dir="rtl">שלושה צעדים ואתה מוכן</h2><h2 lang="th">3 ขั้นตอนก็พร้อมใช้</h2>
-  <div class="steps">
+  <h2 lang="en">For Claude or ChatGPT. Three steps and you're set up</h2><h2 lang="he" dir="rtl">ל-Claude או ל-ChatGPT. שלושה צעדים ואתה מוכן</h2><h2 lang="th">สำหรับ Claude หรือ ChatGPT 3 ขั้นตอนก็พร้อมใช้</h2>
+  <div class="pick" role="group" aria-label="Choose your app">
+    <button type="button" data-p="claude" aria-pressed="true">Claude</button>
+    <button type="button" data-p="chatgpt" aria-pressed="false">ChatGPT</button>
+  </div>
+  <p class="sub" lang="en">Pick the app you already use. Same assistant in both.</p><p class="sub" lang="he" dir="rtl">בחר את האפליקציה שאתה כבר משתמש בה. אותה עוזרת בשתיהן.</p><p class="sub" lang="th">เลือกแอปที่คุณใช้อยู่ ผู้ช่วยเดียวกันทั้งสองแอป</p>
+  <div class="steps" data-p="claude">
     <div class="step">
       <h3 lang="en">Install</h3><h3 lang="he" dir="rtl">התקנה</h3><h3 lang="th">ติดตั้ง</h3>
       <p lang="en">In the Claude app, download the file and drag it into a chat, then press Install. In Claude Code, run:</p><p lang="he" dir="rtl">באפליקציית Claude, הורד את הקובץ, גרור אותו לשיחה ולחץ Install. ב-Claude Code, הרץ:</p>
       <p lang="th">ในแอป Claude ดาวน์โหลดไฟล์ ลากไปวางในแชต แล้วกด Install หรือใน Claude Code พิมพ์:</p>
+      <a class="btn primary dl" href="https://reflection2024.github.io/thaitax-assistant/thaitax-assistant.plugin"><span lang="en">Download for Claude</span><span lang="he" dir="rtl">הורדה ל-Claude</span><span lang="th">ดาวน์โหลดสำหรับ Claude</span> ↓</a>
       <pre>/plugin marketplace add Reflection2024/thaitax-assistant
 /plugin install thaitax-assistant@thaitax-assistant</pre>
     </div>
@@ -518,6 +525,22 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
       <h3 lang="en">Connect and go</h3><h3 lang="he" dir="rtl">מחברים ויוצאים לדרך</h3><h3 lang="th">เชื่อมต่อแล้วเริ่มใช้</h3>
       <p lang="en">It walks you through connecting FlowAccount, Stripe, email and calendar, shows you how to send receipt photos, and runs your first task.</p><p lang="he" dir="rtl">היא מדריכה אותך לחבר את FlowAccount, Stripe, המייל והיומן, מראה איך לשלוח תמונות של קבלות, ומריצה את המשימה הראשונה שלך.</p>
       <p lang="th">พาเชื่อมต่อ FlowAccount, Stripe, อีเมล และปฏิทิน สอนส่งรูปใบเสร็จ แล้วทำงานแรกให้ดูทันที</p>
+    </div>
+  </div>
+<div class="steps" data-p="chatgpt" hidden>
+    <div class="step">
+      <h3 lang="en">Install</h3><h3 lang="he" dir="rtl">התקנה</h3><h3 lang="th">ติดตั้ง</h3>
+      <p lang="en">In the ChatGPT desktop app, on a paid plan that includes Plugins: add our plugin list once from the terminal, restart the app, and install ThaiTax Assistant from Plugins. A workspace owner can instead upload the ZIP under Admin → Plugins.</p><p lang="he" dir="rtl">באפליקציית ChatGPT למחשב, במנוי בתשלום שכולל Plugins: מוסיפים פעם אחת את רשימת הפלאג-אינים שלנו מהטרמינל, מפעילים מחדש את האפליקציה, ומתקינים את ThaiTax Assistant מתוך Plugins. מנהל של סביבת עבודה יכול במקום זה להעלות את קובץ ה-ZIP דרך Admin ← Plugins.</p><p lang="th">ในแอป ChatGPT บนคอมพิวเตอร์ ด้วยแพ็กเกจแบบชำระเงินที่มี Plugins: เพิ่มรายการปลั๊กอินของเราครั้งเดียวจากเทอร์มินัล รีสตาร์ตแอป แล้วติดตั้ง ThaiTax Assistant จาก Plugins หรือผู้ดูแลเวิร์กสเปซอัปโหลดไฟล์ ZIP ที่ Admin → Plugins</p>
+      <a class="btn primary dl" href="https://reflection2024.github.io/thaitax-assistant/thaitax-assistant-chatgpt.zip"><span lang="en">Download for ChatGPT</span><span lang="he" dir="rtl">הורדה ל-ChatGPT</span><span lang="th">ดาวน์โหลดสำหรับ ChatGPT</span> ↓</a>
+      <pre>codex plugin marketplace add Reflection2024/thaitax-assistant</pre>
+    </div>
+    <div class="step">
+      <h3 lang="en">Say "Get started"</h3><h3 lang="he" dir="rtl">תגיד "בוא נתחיל"</h3><h3 lang="th">พิมพ์ "เริ่มต้น"</h3>
+      <p lang="en">Same assistant, same rules: it welcomes you and asks short rounds of questions about you or your company, in your own language.</p><p lang="he" dir="rtl">אותה עוזרת, אותם כללים: היא מקבלת אותך בברכה ושואלת סבבים קצרים של שאלות עליך או על החברה שלך, בשפה שלך.</p><p lang="th">ผู้ช่วยคนเดียวกัน กฎเดียวกัน ต้อนรับคุณและถามคำถามสั้น ๆ ทีละชุดเกี่ยวกับคุณหรือบริษัท ด้วยภาษาของคุณ</p>
+    </div>
+    <div class="step">
+      <h3 lang="en">Connect and go</h3><h3 lang="he" dir="rtl">מחברים ויוצאים לדרך</h3><h3 lang="th">เชื่อมต่อแล้วเริ่มใช้</h3>
+      <p lang="en">It walks you through connecting FlowAccount and Stripe as an MCP connection in ChatGPT, with your own sign-in. Or just upload exports, statements and receipt photos: it works from files too.</p><p lang="he" dir="rtl">היא מדריכה אותך לחבר את FlowAccount ו-Stripe כחיבור MCP ב-ChatGPT, עם הכניסה שלך. או פשוט מעלים קבצים מהנהלת החשבונות, דפי בנק ותמונות של קבלות: היא עובדת גם מקבצים.</p><p lang="th">ผู้ช่วยพาคุณเชื่อมต่อ FlowAccount และ Stripe แบบ MCP ใน ChatGPT ด้วยบัญชีของคุณเอง หรือจะอัปโหลดไฟล์ส่งออก สเตทเมนต์ และรูปใบเสร็จก็ได้ ผู้ช่วยทำงานจากไฟล์ได้เช่นกัน</p>
     </div>
   </div>
 </section>
@@ -674,7 +697,7 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
   <p class="kicker">FAQ</p>
   <h2 lang="en">Questions you might have</h2><h2 lang="he" dir="rtl">שאלות שאולי יש לך</h2><h2 lang="th">คำถามที่พบบ่อย</h2>
   <div lang="en">
-    <details><summary>Is it really free?</summary><p>Yes. ThaiTax Assistant is free to download and use. You need your own Claude plan, plus FlowAccount or Stripe if you want live connections.</p></details>
+    <details><summary>Is it really free?</summary><p>Yes. ThaiTax Assistant is free to download and use. You need your own Claude or ChatGPT plan (in ChatGPT, a paid plan that includes Plugins), plus FlowAccount or Stripe if you want live connections.</p></details>
     <details><summary>Which language can I talk to it in?</summary><p>Yours. Write or speak to it in any language, English, Thai, Hebrew, Russian, French and more, and it answers in the same language. The official forms stay in Thai, with an explanation in your language.</p></details>
     <details><summary>Does it replace my accountant?</summary><p>No. It does the preparation, so your accountant reviews a clean file instead of a box of receipts. Filing stays with you and your accountant.</p></details>
     <details><summary>I don't use FlowAccount. Can I still use it?</summary><p>Yes. Upload the export from PEAK, Express, your gateway or your bank, and ThaiTax Assistant reads it.</p></details>
@@ -682,7 +705,7 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
     <details><summary>I live here, but my income comes from abroad. Do I need to file?</summary><p>If you spend 180 days or more in Thailand in a year and bring income earned from 2024 into the country, it is likely reportable. ThaiTax Assistant checks your days and your transfers, prepares the foreign-income declaration and the treaty credit, and lists what your accountant needs to confirm.</p></details>
     <details><summary>How do I know the answers are up to date?</summary><p>Thai tax rules change often. Before any figure you act on, ThaiTax Assistant checks the official sources (Revenue Department, Royal Gazette, Social Security Office), cross-checks them, and shows you the links. Proposed changes are marked as "not yet law". Every rate it uses is also re-verified every January.</p></details>
     <details><summary>Where does my data go?</summary><p>We don't keep any of your information. There is no server and no database of ours: your files stay on your computer, in your own Claude account and in the services you connect. ThaiTax Assistant does not send ID numbers, salaries or bank details to any outside service.</p></details>
-  </div><div lang="he" dir="rtl"><details><summary>זה באמת חינם?</summary><p>כן. ThaiTax Assistant חינם להורדה ולשימוש. צריך מנוי Claude משלך, ו-FlowAccount או Stripe אם אתה רוצה חיבורים חיים.</p></details>
+  </div><div lang="he" dir="rtl"><details><summary>זה באמת חינם?</summary><p>כן. ThaiTax Assistant חינם להורדה ולשימוש. צריך מנוי Claude או ChatGPT משלך (ב-ChatGPT, מנוי בתשלום שכולל Plugins), ו-FlowAccount או Stripe אם אתה רוצה חיבורים חיים.</p></details>
     <details><summary>באיזו שפה אפשר לדבר איתה?</summary><p>בשפה שלך. תכתוב או תדבר איתה בכל שפה, עברית, אנגלית, תאילנדית, רוסית, צרפתית ועוד, והיא עונה באותה שפה. הטפסים הרשמיים נשארים בתאילנדית, עם הסבר בשפה שלך.</p></details>
     <details><summary>זה מחליף את רואה החשבון שלי?</summary><p>לא. זה עושה את ההכנה, כך שרואה החשבון בודק קובץ מסודר במקום קופסה של קבלות. ההגשה נשארת אצלך ואצל רואה החשבון.</p></details>
     <details><summary>אני לא משתמש ב-FlowAccount. זה עדיין מתאים?</summary><p>כן. תעלה את הקובץ מ-PEAK, מ-Express, ממערכת הסליקה או מהבנק, ו-ThaiTax Assistant קורא אותו.</p></details>
@@ -691,7 +714,7 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
     <details><summary>איך אני יודע שהתשובות עדכניות?</summary><p>חוקי המס בתאילנד משתנים לעיתים קרובות. לפני כל מספר שאתה פועל לפיו, ThaiTax Assistant בודק את המקורות הרשמיים (רשות המסים, הרשומות הרשמיות, הביטוח הלאומי), מצליב ביניהם ומראה לך את הקישורים. שינויים מוצעים מסומנים "עדיין לא חוק". כל שיעור נבדק מחדש בכל ינואר.</p></details>
     <details><summary>לאן המידע שלי הולך?</summary><p>אנחנו לא שומרים שום מידע שלך. אין לנו שרת ואין מאגר מידע: הקבצים נשארים על המחשב שלך, בחשבון ה-Claude שלך ובשירותים שאתה מחבר. ThaiTax Assistant לא שולח מספרי זהות, משכורות או פרטי בנק לשום שירות חיצוני.</p></details></div>
   <div lang="th">
-    <details><summary>ใช้ฟรีจริงไหม</summary><p>ฟรี ดาวน์โหลดและใช้งานได้ทันที คุณต้องมีบัญชี Claude ของตัวเอง และ FlowAccount หรือ Stripe หากต้องการเชื่อมต่อข้อมูลอัตโนมัติ</p></details>
+    <details><summary>ใช้ฟรีจริงไหม</summary><p>ฟรี ดาวน์โหลดและใช้งานได้ทันที คุณต้องมีบัญชี Claude หรือ ChatGPT ของตัวเอง (สำหรับ ChatGPT ต้องเป็นแพ็กเกจแบบชำระเงินที่มี Plugins) และ FlowAccount หรือ Stripe หากต้องการเชื่อมต่อข้อมูลอัตโนมัติ</p></details>
     <details><summary>คุยกับผู้ช่วยได้ภาษาอะไรบ้าง?</summary><p>ภาษาของคุณ พิมพ์หรือพูดได้ทุกภาษา ไทย อังกฤษ ฮีบรู รัสเซีย ฝรั่งเศส และอื่น ๆ ผู้ช่วยจะตอบเป็นภาษาเดียวกัน แบบฟอร์มทางการยังคงเป็นภาษาไทย พร้อมคำอธิบายเป็นภาษาของคุณ</p></details>
     <details><summary>ใช้แทนนักบัญชีได้ไหม</summary><p>ไม่ได้ ระบบช่วยเตรียมงาน นักบัญชีของคุณจะได้ตรวจไฟล์ที่เรียบร้อยแทนกล่องใบเสร็จ การยื่นแบบยังเป็นหน้าที่ของคุณและนักบัญชี</p></details>
     <details><summary>ไม่ได้ใช้ FlowAccount ใช้ได้ไหม</summary><p>ได้ อัปโหลดไฟล์ส่งออกจาก PEAK, Express, เกตเวย์ชำระเงิน หรือธนาคาร ระบบจะอ่านให้</p></details>
@@ -705,7 +728,7 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
 <div class="final">
   <h2 lang="en">Hand the paperwork to ThaiTax Assistant. Keep the island life.</h2><h2 lang="he" dir="rtl">תן ל-ThaiTax Assistant את הניירת. תשמור לעצמך את חיי האי.</h2>
   <h2 lang="th">ให้ ThaiTax Assistant ดูแลงานเอกสาร คุณใช้ชีวิตให้สบาย</h2>
-  <a class="btn primary" href="thaitax-assistant.plugin"><span lang="en">Download free</span><span lang="he" dir="rtl">הורדה חינם</span><span lang="th">ดาวน์โหลดฟรี</span> ↓</a>
+  <a class="btn primary" href="#install"><span lang="en">Download free</span><span lang="he" dir="rtl">הורדה חינם</span><span lang="th">ดาวน์โหลดฟรี</span> ↓</a>
 </div>
 </main>
 
@@ -730,6 +753,10 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
     document.getElementById("l-he").setAttribute("aria-current",l==="he");
   }
   window.addEventListener("hashchange",apply);apply();
+  var pk=document.querySelectorAll(".pick button");
+  pk.forEach(function(b){b.addEventListener("click",function(){var p=b.getAttribute("data-p");
+    pk.forEach(function(x){x.setAttribute("aria-pressed",x===b)});
+    document.querySelectorAll(".steps[data-p]").forEach(function(s){s.hidden=s.getAttribute("data-p")!==p});})});
   var btns=document.querySelectorAll(".filters button");
   btns.forEach(function(b){b.addEventListener("click",function(){
     var f=b.getAttribute("data-f");

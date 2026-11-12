@@ -1,0 +1,72 @@
+{
+ "lang": "en",
+ "title": "Days in Thailand and money from abroad · 2026",
+ "subtitle": "From your passport stamps and transfer list",
+ "kpis": [
+  {
+   "label": "Days in Thailand",
+   "value": "214",
+   "note": "Over 180: tax resident",
+   "tone": "good"
+  },
+  {
+   "label": "Savings before 2024",
+   "value": "฿302,400",
+   "note": "Not income",
+   "tone": "good"
+  },
+  {
+   "label": "Income since 2024 brought in",
+   "value": "฿472,920",
+   "note": "Assessable",
+   "tone": "warn"
+  }
+ ],
+ "sections": [
+  {
+   "type": "ring",
+   "title": "Residency",
+   "value": 214,
+   "max": 365,
+   "target": 180,
+   "label": "days",
+   "note": "Day 180 was 28 August"
+  },
+  {
+   "type": "table",
+   "title": "Transfers",
+   "columns": [
+    "Date",
+    "From",
+    "THB",
+    "What it is"
+   ],
+   "rows": [
+    [
+     "2026-02-02",
+     "Deutsche Bank",
+     "302,400",
+     "Savings before 2024"
+    ],
+    [
+     "2026-03-28",
+     "Wise",
+     "157,500",
+     "Salary"
+    ],
+    [
+     "2026-06-15",
+     "Revolut",
+     "114,000",
+     "Open: ask"
+    ]
+   ],
+   "tones": [
+    "good",
+    "warn",
+    "bad"
+   ]
+  }
+ ],
+ "footer": "Sample numbers."
+}

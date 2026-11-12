@@ -1,0 +1,32 @@
+{
+  "form": "PP30",
+  "note": "Verified against the 2568 (Sep 2025) form. Months: chk_month_01 ... chk_month_12. Amount boxes take a number like 15000.50.",
+  "fields": {
+    "tin": "Text1.0", "branch_no": "Text1.1",
+    "operator_name": "Text1.01", "operator_name_2": "Text1.02", "establishment_name": "Text1.3",
+    "addr_building": "Text1.4", "addr_room": "Text1.5", "addr_floor": "Text1.6", "addr_village": "Text1.7",
+    "addr_house_no": "Text1.8", "addr_moo": "Text1.9", "addr_soi": "Text1.10", "addr_junction": "Text1.11",
+    "addr_road": "Text1.111", "addr_subdistrict": "Text1.12", "addr_district": "Text1.13", "addr_province": "Text1.14",
+    "addr_postcode": "Text1.15", "phone": "Text1.16",
+    "chk_branches_separate": "Radio Button4#1", "chk_separate_head_office": "Radio Button5#1", "chk_separate_branch": "Radio Button5#2", "separate_branch_no": "Text1.19",
+    "chk_branches_combined": "Radio Button4#2", "chk_combined_head_office": "Radio Button6#1", "chk_combined_branch": "Radio Button6#2", "combined_branch_no": "Text1.20",
+    "chk_filing_regular": "Radio Button7#1", "chk_filing_additional": "Radio Button7#2", "additional_filing_no": "Text1.21",
+    "chk_on_time": "Radio Button8#1", "chk_late": "Radio Button8#2",
+    "year_be": "Text1.22",
+    "chk_month_01": "Radio Button3#1", "chk_month_04": "Radio Button3#2", "chk_month_07": "Radio Button3#3", "chk_month_10": "Radio Button3#4",
+    "chk_month_02": "Radio Button3#5", "chk_month_05": "Radio Button3#6", "chk_month_08": "Radio Button3#7", "chk_month_11": "Radio Button3#8",
+    "chk_month_03": "Radio Button3#9", "chk_month_06": "Radio Button3#10", "chk_month_09": "Radio Button3#11", "chk_month_12": "Radio Button3#12",
+    "line1_sales": "Text2.1", "line2_zero_rated_sales": "Text2.2", "line3_exempt_sales": "Text2.3", "line4_taxable_sales": "Text2.4",
+    "line5_output_vat": "Text2.5", "line6_purchases_with_input_vat": "Text2.6", "line7_input_vat": "Text2.7",
+    "line8_vat_payable": "Text2.8", "line9_vat_overpaid": "Text2.9", "line10_overpaid_brought_forward": "Text2.10",
+    "chk_line11_net_payable": "Radio Button11", "line11_net_payable": "Text2.11",
+    "chk_line12_net_overpaid": "Radio Button12", "line12_net_overpaid": "Text2.12",
+    "line13_surcharge": "Text2.13", "line14_penalty": "Text2.14", "line15_total_payable": "Text2.15", "line16_total_overpaid": "Text2.16",
+    "add_chk_sales_underreported": "Radio Button2", "add_sales_underreported": "Text2.22",
+    "add_chk_purchases_overreported": "Radio Button25", "add_purchases_overreported": "Text2.23",
+    "add_chk_zero_rated_overreported": "Radio Button13", "add_chk_exempt_overreported": "Radio Button14",
+    "add_chk_purchases_underreported": "Radio Button1", "add_purchases_underreported": "Text2.24",
+    "add_chk_sales_overreported": "Radio Button15", "add_sales_overreported": "Text2.25",
+    "signer_name": "Text2.19", "signed_date": "Text2.20"
+  }
+}

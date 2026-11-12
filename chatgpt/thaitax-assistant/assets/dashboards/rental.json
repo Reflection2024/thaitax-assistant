@@ -1,0 +1,61 @@
+{
+ "lang": "en",
+ "title": "Rent from your condo",
+ "subtitle": "2026, month by month",
+ "kpis": [
+  {
+   "label": "Rent this year",
+   "value": "฿486,000"
+  },
+  {
+   "label": "Expense deduction (30%)",
+   "value": "฿145,800"
+  },
+  {
+   "label": "Land tax due",
+   "value": "30 April",
+   "tone": "warn"
+  }
+ ],
+ "sections": [
+  {
+   "type": "bars",
+   "title": "Rent received",
+   "labels": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+   ],
+   "series": [
+    {
+     "name": "Rent",
+     "values": [
+      30000,
+      31000,
+      40000,
+      47500,
+      45000,
+      35000,
+      27500,
+      25000,
+      29000,
+      33000,
+      42500,
+      50000
+     ]
+    }
+   ],
+   "unit": "฿"
+  }
+ ],
+ "footer": "Sample numbers."
+}

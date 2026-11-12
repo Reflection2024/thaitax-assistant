@@ -1,0 +1,389 @@
+{
+  "_about": "Rates used by thaitax_calc.py. Update yearly with the tax-facts-update skill. Every block carries the date it was last verified and its source.",
+  "vat": {
+    "rate": 0.07,
+    "valid_until": "2027-09-30",
+    "registration_threshold_thb": 1800000,
+    "verified": "2026-11-11",
+    "source": "Royal Decree No. 807 (rd.go.th)"
+  },
+  "sso": {
+    "rate": 0.05,
+    "wage_ceiling_thb": 17500,
+    "wage_floor_thb": 1650,
+    "next_changes": [
+      {
+        "from": "2029-01-01",
+        "wage_ceiling_thb": 20000
+      },
+      {
+        "from": "2032-01-01",
+        "wage_ceiling_thb": 23000
+      }
+    ],
+    "rounding": "half_up_to_baht (50 satang or more up, less dropped; SSO form instructions)",
+    "verified": "2026-11-11",
+    "source": "Ministerial Regulation B.E. 2568 (Royal Gazette); SSO SPS 1-10 instructions; verified 2026-11-11",
+    "pit_deduction_max_2026": 10500
+  },
+  "wht_resident": {
+    "services": 0.03,
+    "professional_fees": 0.03,
+    "contractor": 0.03,
+    "commission": 0.03,
+    "rent": 0.05,
+    "advertising": 0.02,
+    "transport": 0.01,
+    "insurance_premium": 0.01,
+    "royalties": 0.03,
+    "prizes": 0.05,
+    "dividends": 0.1,
+    "e_wht_reduced_rate": 0.01,
+    "e_wht_applies_to": [
+      0.05,
+      0.03,
+      0.02
+    ],
+    "e_wht_valid_until": "2027-12-31",
+    "verified": "2026-11-11",
+    "source": "rd.go.th withholding tables; e-WHT Ministerial Regulation 2026-2027"
+  },
+  "pit": {
+    "bands": [
+      [
+        150000,
+        0.0
+      ],
+      [
+        300000,
+        0.05
+      ],
+      [
+        500000,
+        0.1
+      ],
+      [
+        750000,
+        0.15
+      ],
+      [
+        1000000,
+        0.2
+      ],
+      [
+        2000000,
+        0.25
+      ],
+      [
+        5000000,
+        0.3
+      ],
+      [
+        null,
+        0.35
+      ]
+    ],
+    "minimum_tax": {
+      "rate": 0.005,
+      "income_threshold": 120000,
+      "tax_threshold": 5000
+    },
+    "expense": {
+      "40(1)+40(2)": {
+        "rate": 0.5,
+        "cap": 100000
+      },
+      "40(3)": {
+        "rate": 0.5,
+        "cap": 100000
+      },
+      "40(4)": {
+        "rate": 0.0
+      },
+      "40(5)": {
+        "building": 0.3,
+        "agri_land": 0.2,
+        "other_land": 0.15,
+        "vehicle": 0.3,
+        "other": 0.1,
+        "hire_purchase_breach": 0.2
+      },
+      "40(6)": {
+        "medicine": 0.6,
+        "other": 0.3
+      },
+      "40(7)": {
+        "rate": 0.6
+      },
+      "40(8)": {
+        "rate": 0.6,
+        "performer": {
+          "first": 300000,
+          "rate_first": 0.6,
+          "rate_rest": 0.4,
+          "cap": 600000
+        }
+      }
+    },
+    "donation_cap_ratio": 0.1,
+    "verified": "2026-11-11",
+    "source": "rd.go.th (Revenue Code rates as amended by Act No. 44 B.E. 2560); bands verified 2026-11-11"
+  },
+  "deadlines": {
+    "pnd_wht": {
+      "paper_day": 7,
+      "online_day": 15
+    },
+    "pp30": {
+      "paper_day": 15,
+      "online_day": 23
+    },
+    "pp36": {
+      "paper_day": 15,
+      "online_day": 15
+    },
+    "sso": {
+      "day": 15
+    },
+    "pnd90_91": {
+      "paper": "03-31",
+      "online_extra_days": 8
+    },
+    "pnd94": {
+      "paper": "09-30",
+      "online_extra_days": 8
+    },
+    "verified": "2026-11-11",
+    "source": "MoF notice on online filing extension (filings due 1 Feb 2024 - 31 Jan 2027); verified 2026-11-11",
+    "online_extension_valid_until": "2027-01-31"
+  },
+  "property": {
+    "land_building_tax": {
+      "bands": {
+        "main_home": [
+          [
+            50000000,
+            0.0
+          ],
+          [
+            75000000,
+            0.0003
+          ],
+          [
+            100000000,
+            0.0005
+          ],
+          [
+            null,
+            0.001
+          ]
+        ],
+        "main_home_building_only": [
+          [
+            10000000,
+            0.0
+          ],
+          [
+            50000000,
+            0.0002
+          ],
+          [
+            75000000,
+            0.0003
+          ],
+          [
+            100000000,
+            0.0005
+          ],
+          [
+            null,
+            0.001
+          ]
+        ],
+        "residential_other": [
+          [
+            50000000,
+            0.0002
+          ],
+          [
+            75000000,
+            0.0003
+          ],
+          [
+            100000000,
+            0.0005
+          ],
+          [
+            null,
+            0.001
+          ]
+        ],
+        "commercial": [
+          [
+            50000000,
+            0.003
+          ],
+          [
+            200000000,
+            0.004
+          ],
+          [
+            1000000000,
+            0.005
+          ],
+          [
+            5000000000,
+            0.006
+          ],
+          [
+            null,
+            0.007
+          ]
+        ],
+        "agricultural_individual": [
+          [
+            50000000,
+            0.0
+          ],
+          [
+            125000000,
+            0.0001
+          ],
+          [
+            150000000,
+            0.0003
+          ],
+          [
+            550000000,
+            0.0005
+          ],
+          [
+            1050000000,
+            0.0007
+          ],
+          [
+            null,
+            0.001
+          ]
+        ],
+        "agricultural_company": [
+          [
+            75000000,
+            0.0001
+          ],
+          [
+            100000000,
+            0.0003
+          ],
+          [
+            500000000,
+            0.0005
+          ],
+          [
+            1000000000,
+            0.0007
+          ],
+          [
+            null,
+            0.001
+          ]
+        ]
+      },
+      "vacant_uses": "commercial",
+      "vacant_surcharge_per_3_years": 0.003,
+      "vacant_cap": 0.03,
+      "payment_month": "April (often extended; 2026 extended to June-August)",
+      "note": "Computed in tiers (ขั้นบันได): each slice of value at its band rate; base = official appraised value (land + building). The local authority's assessment notice is final; compare against it. Rental condos in Bangkok under review for reclassification to commercial (July 2026).",
+      "verified": "2026-11-11",
+      "source": "Land and Building Tax Act B.E. 2562 s.42 (tiered), s.46 (30 April), s.52 (instalments), s.73 (appeal 30 days); Royal Decree on rates B.E. 2564; verified 2026-11-11"
+    },
+    "sale": {
+      "transfer_fee": 0.02,
+      "transfer_fee_reduced": 0.0001,
+      "reduced_conditions": "residential (house, townhouse, commercial building, land with building, condo), price AND appraised value <= THB 7m, buyer a Thai-national individual; valid 2026-07-01 to 2027-06-30",
+      "reduced_valid_until": "2027-06-30",
+      "sbt": 0.033,
+      "stamp_duty": 0.005,
+      "wht_company": 0.01,
+      "wht_individual_expense_by_years": {
+        "1": 0.92,
+        "2": 0.84,
+        "3": 0.77,
+        "4": 0.71,
+        "5": 0.65,
+        "6": 0.6,
+        "7": 0.55,
+        "8": 0.5
+      },
+      "wht_individual_inherited_or_gift_expense": 0.5,
+      "wht_individual_bands": [
+        [
+          300000,
+          0.05
+        ],
+        [
+          500000,
+          0.1
+        ],
+        [
+          750000,
+          0.15
+        ],
+        [
+          1000000,
+          0.2
+        ],
+        [
+          2000000,
+          0.25
+        ],
+        [
+          5000000,
+          0.3
+        ],
+        [
+          null,
+          0.35
+        ]
+      ],
+      "wht_individual_cap_ratio": 0.2,
+      "wht_years_cap": 10,
+      "verified": "2026-11-11",
+      "source": "RD Por.100/2543 (20% of sale price cap); RD PND.90 guide (holding-period table); MoI notifications 1 Jul 2026; verified 2026-11-11",
+      "wht_individual_cap_basis": "sale_price",
+      "wht_inherited_tambon_exemption": 200000
+    },
+    "lease_registration": {
+      "fee": 0.01,
+      "stamp_duty": 0.001,
+      "verified": "2026-11-11",
+      "source": "Land Department practice; professional summaries 2026"
+    }
+  },
+  "minimum_wage": {
+    "notification": "Wage Committee No. 14, in force 2025-07-01, still current Nov 2026",
+    "daily_thb": {
+      "bangkok": 400,
+      "phuket": 400,
+      "chachoengsao": 400,
+      "chonburi": 400,
+      "rayong": 400,
+      "koh_samui_district": 400,
+      "surat_thani_other_incl_koh_phangan": 352,
+      "hotels_type_2_3_4_nationwide": 400,
+      "entertainment_venues_nationwide": 400
+    },
+    "verified": "2026-11-11",
+    "source": "Royal Gazette 1 Jul 2025; Thai press and MoL summaries"
+  },
+  "severance_days": {
+    "120d": 30,
+    "1y": 90,
+    "3y": 180,
+    "6y": 240,
+    "10y": 300,
+    "20y": 400,
+    "source": "Labour Protection Act s.118 (Act No. 7, 2019)",
+    "verified": "2026-11-11"
+  }
+}

@@ -1,5 +1,9 @@
 # Changelog
 
+## ChatGPT edition (2026-11-12)
+- The same 23 assistants for ChatGPT: `chatgpt/thaitax-assistant` (built from this plugin by `tools/build_chatgpt.py`, Claude wording swapped for ChatGPT wording, `plugin.json` + `.codex-plugin/plugin.json`), a marketplace entry in `.agents/plugins/marketplace.json`, and `docs/thaitax-assistant-chatgpt.zip`. FlowAccount and Stripe are declared as MCP servers in `mcp.json` and connected in ChatGPT with the user's own sign-in; without a connection, everything works from uploaded files.
+- Site: the install section lets the visitor choose Claude or ChatGPT, each with its own download and steps.
+
 ## 1.0.0-rc.14 (2026-11-12): dashboards, any language, your data stays yours
 - New skill `dashboard-builder-thai-tax-payroll-cash-budget` (23rd): builds a dashboard page from the user's own files for a person or a company (days in Thailand and money from abroad, tax still to save before 31 December, rent and land tax, this month's taxes and deadlines, 90-day cash and receivables, payroll and work permits, family budget), in the user's language, refreshed on request.
 - `scripts/dashboard.py`: draws any dashboard from a JSON spec with inline SVG, no network; right to left for Hebrew, Arabic, Persian, Urdu; numbers kept left to right. Six example specs in `assets/dashboards/`. 4 tests.

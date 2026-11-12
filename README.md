@@ -1,6 +1,6 @@
 # ThaiTax Assistant
 
-**Every Thai tax report, ready for your accountant.** Personal or company: ThaiTax Assistant gathers your numbers, prepares your monthly and annual reports, and hands your accountant a clean file. You just approve. English, עברית, ไทย. Free.
+**Every Thai tax report, ready for your accountant.** Personal or company: ThaiTax Assistant gathers your numbers, prepares your monthly and annual reports, and hands your accountant a clean file. You just approve. Any language. For Claude and ChatGPT. Free.
 
 **Website:** https://reflection2024.github.io/thaitax-assistant/
 
@@ -13,6 +13,12 @@
 ```
 
 **Claude desktop app:** download [`thaitax-assistant.plugin`](https://reflection2024.github.io/thaitax-assistant/thaitax-assistant.plugin), drag it into a Claude chat, and press **Install**.
+
+**ChatGPT** (paid plan that includes Plugins): in the ChatGPT desktop app, add the marketplace once and restart, then install ThaiTax Assistant from Plugins:
+```
+codex plugin marketplace add Reflection2024/thaitax-assistant
+```
+Or download [`thaitax-assistant-chatgpt.zip`](https://reflection2024.github.io/thaitax-assistant/thaitax-assistant-chatgpt.zip) (workspace owners: Admin → Plugins → Upload). Same assistants. FlowAccount and Stripe connect as MCP servers (`mcp.json`; in ChatGPT: Plugins → + → Add custom MCP server). Rebuild after any change with `python3 tools/build_chatgpt.py`.
 
 Then say **"Get started"**.
 

@@ -1,0 +1,66 @@
+{
+ "lang": "en",
+ "title": "This month's taxes · Example Co., Ltd.",
+ "subtitle": "October 2026 activity, filed in November",
+ "kpis": [
+  {
+   "label": "Total due",
+   "value": "฿16,465"
+  },
+  {
+   "label": "Ready",
+   "value": "3 of 4",
+   "tone": "good"
+  },
+  {
+   "label": "Missing",
+   "value": "1 certificate",
+   "tone": "warn"
+  }
+ ],
+ "sections": [
+  {
+   "type": "table",
+   "title": "Filings",
+   "columns": [
+    "Form",
+    "Amount",
+    "Online deadline",
+    "Status"
+   ],
+   "rows": [
+    [
+     "PP.30",
+     "฿10,605",
+     "23.11",
+     "Ready"
+    ],
+    [
+     "PP.36",
+     "฿1,960",
+     "16.11",
+     "Ready"
+    ],
+    [
+     "PND.53",
+     "฿900",
+     "16.11",
+     "50 Tawi missing"
+    ],
+    [
+     "SSO",
+     "฿3,000",
+     "15.11",
+     "Ready"
+    ]
+   ],
+   "tones": [
+    "good",
+    "good",
+    "warn",
+    "good"
+   ]
+  }
+ ],
+ "footer": "Sample numbers."
+}

@@ -1,0 +1,62 @@
+{
+ "lang": "en",
+ "title": "Tax you can still save before 31 December",
+ "subtitle": "Personal income tax 2026, with and without each allowance",
+ "kpis": [
+  {
+   "label": "Tax today",
+   "value": "฿48,500"
+  },
+  {
+   "label": "With both options",
+   "value": "฿37,800",
+   "tone": "good"
+  },
+  {
+   "label": "You save",
+   "value": "฿10,700",
+   "tone": "good"
+  }
+ ],
+ "sections": [
+  {
+   "type": "hbars",
+   "title": "Your options",
+   "items": [
+    {
+     "label": "Tax today",
+     "value": 48500,
+     "display": "฿48,500",
+     "tone": "warn"
+    },
+    {
+     "label": "With RMF",
+     "value": 41000,
+     "display": "฿41,000",
+     "tone": "good"
+    },
+    {
+     "label": "Plus health insurance",
+     "value": 37800,
+     "display": "฿37,800",
+     "tone": "good"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Before 31 December",
+   "items": [
+    {
+     "text": "Buy RMF units and keep the fund's certificate",
+     "tone": "warn"
+    },
+    {
+     "text": "Ask the insurer for the tax-allowance letter",
+     "tone": "neutral"
+    }
+   ]
+  }
+ ],
+ "footer": "Sample numbers."
+}

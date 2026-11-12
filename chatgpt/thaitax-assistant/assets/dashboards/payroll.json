@@ -1,0 +1,74 @@
+{
+ "lang": "en",
+ "title": "Payroll and your staff",
+ "subtitle": "Last six months",
+ "kpis": [
+  {
+   "label": "Staff",
+   "value": "4"
+  },
+  {
+   "label": "Cost this month",
+   "value": "฿84,000"
+  },
+  {
+   "label": "Work permit",
+   "value": "41 days left",
+   "tone": "warn"
+  }
+ ],
+ "sections": [
+  {
+   "type": "bars",
+   "title": "Employer cost",
+   "labels": [
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov"
+   ],
+   "series": [
+    {
+     "name": "Salaries",
+     "values": [
+      70000,
+      72000,
+      71000,
+      78000,
+      80000,
+      84000
+     ]
+    },
+    {
+     "name": "Social security",
+     "values": [
+      2250,
+      2250,
+      2250,
+      2750,
+      3000,
+      3000
+     ]
+    }
+   ],
+   "unit": "฿"
+  },
+  {
+   "type": "list",
+   "title": "Watch",
+   "items": [
+    {
+     "text": "Staff C: work permit ends 22.12.2026",
+     "tone": "warn"
+    },
+    {
+     "text": "พนักงาน ง: not yet registered with social security",
+     "tone": "bad"
+    }
+   ]
+  }
+ ],
+ "footer": "Sample numbers."
+}

@@ -1,0 +1,90 @@
+# Changelog
+
+## ChatGPT edition (2026-11-12)
+- The same 23 assistants for ChatGPT: `chatgpt/thaitax-assistant` (built from this plugin by `tools/build_chatgpt.py`, ChatGPT wording swapped for ChatGPT wording, `plugin.json` + `.codex-plugin/plugin.json`), a marketplace entry in `.agents/plugins/marketplace.json`, and `docs/thaitax-assistant-chatgpt.zip`. FlowAccount and Stripe are declared as MCP servers in `mcp.json` and connected in ChatGPT with the user's own sign-in; without a connection, everything works from uploaded files.
+- Site: the install section lets the visitor choose ChatGPT or ChatGPT, each with its own download and steps.
+
+## 1.0.0-rc.14 (2026-11-12): dashboards, any language, your data stays yours
+- New skill `dashboard-builder-thai-tax-payroll-cash-budget` (23rd): builds a dashboard page from the user's own files for a person or a company (days in Thailand and money from abroad, tax still to save before 31 December, rent and land tax, this month's taxes and deadlines, 90-day cash and receivables, payroll and work permits, family budget), in the user's language, refreshed on request.
+- `scripts/dashboard.py`: draws any dashboard from a JSON spec with inline SVG, no network; right to left for Hebrew, Arabic, Persian, Urdu; numbers kept left to right. Six example specs in `assets/dashboards/`. 4 tests.
+- Language: the assistant answers in whatever language the user writes in, not only English, Hebrew or Thai. Official forms stay in Thai; `official_forms.py explain` now writes the explanation in any language (`--lang`, HTML output, automatic switch from PDF when the script needs it).
+- Privacy: a "Your data stays yours" section: no server, no database, nothing sent to the developers; files stay on the user's computer, ChatGPT account and connected services.
+
+## 1.0.0-rc.13 (2026-11-11): contracts, withholding, employee documents
+- New skill `contracts-and-payments`: a Suppliers & contracts register in the company's drive linking every expense to its contract and tax invoice; withholding worked out before every supplier payment by service type (services 3%, rent 5%, advertising 2%, transport 1%...) and form (PND.3 / 53 / 54), with the amount to transfer and the 50 ทวิ drafted on the official form; withholding terms recorded when a contract is signed; a monthly check.
+- `scripts/contracts.py check`: payments without a contract or invoice, amounts that differ from the contract, VAT missing from a VAT-registered supplier's invoice, withholding not taken or wrong, missing 50 ทวิ, contracts ending within 30 days. 6 tests; sample data in `pilot/sample-data`.
+- `thai-payroll`: asks for each employee's documents (Thai ID or passport, visa, work permit, bank book, SSO), saves them in a folder per employee in the company's drive on a yes, keeps only numbers and expiry dates in payroll, and warns before permits and visas expire.
+- Withholding facts: the 1,000-baht threshold.
+
+## 1.0.0-rc.12 (2026-11-11): official forms
+- Returns and certificates are delivered on the Revenue Department's own PDF forms, filled in: ภ.ง.ด.90, 91, 94, the Foreign-Sourced Income Declaration, ภ.ง.ด.1, 3, 53 with their attachments, ภ.พ.30, ภ.พ.36, ภ.ง.ด.50, 51 and the 50 ทวิ certificate (`assets/forms/`, source links in `catalog.json`).
+- `scripts/official_forms.py`: list, fields (each box with its printed Thai label), fill (Sarabun font, tax-ID and amount boxes handled, baht and satang split, form flattened, "Draft for review" footer unless `--final`), preview (PNG per page for a visual check), explain (one-page explanation sheet).
+- Plain-name maps for the main boxes of ภ.ง.ด.90/91/94, ภ.ง.ด.1/3/53 and attachments, ภ.พ.30 and 50 ทวิ.
+- Tax skills now deliver the filled official form plus the explanation (`references/official-forms.md`); `tax-facts-update` refreshes the forms each year.
+- `scripts/test_official_forms.py` (5 tests, every map entry checked against the real form).
+
+## 1.0.0-rc.11 (2026-11-11)
+- No cap on questions: the assistant asks everything the best result needs, in rounds of up to 4 clickable questions, until nothing is missing. Only the final answer stays short.
+
+## 1.0.0-rc.10 (2026-11-11)
+- Questions to the user are shown as clickable choices (2–4 options each, free text always allowed) wherever the app supports it.
+
+## 1.0.0-rc.9 (2026-11-11)
+- `family-budget` and `ask-thai-tax` now trigger whenever statements are uploaded or any Thai tax question is asked, so their ask-first rules always apply.
+
+## 1.0.0-rc.8 (2026-11-11): ask first, answer short
+- Every user-facing skill now starts with the same rule: confirm the request, ask up to 3 short questions for any fact the answer depends on, and ask for the supporting document by name instead of estimating.
+- No assumed facts: no "probably / it seems / about" for anything not in the data; an unavoidable assumption is asked as a question and no amount is computed from it.
+- Short answers: the answer first, at most 3 bullets, about 8 lines; details only on request.
+- Replaced the "defaults over questions" rule; defaults now only for things that change no money.
+
+## 1.0.0-rc.7 (2026-11-11): family budget
+- New skill `family-budget`: bank statements from any bank or currency → money in vs. out per month, where the money goes, fixed payments and subscriptions with yearly cost, price rises, services paid for twice; remembers the family's own category corrections.
+- `scripts/budget.py` (standard library; own-account transfers excluded, FX never silent) and `scripts/budget_dashboard.py` (one self-contained page, EN/HE/TH, right-to-left for Hebrew, light and dark).
+- Advanced option: export to Actual Budget, and setup notes for the community `actual-mcp` server.
+- `scripts/test_budget.py` (7 tests); sample family statements in `pilot/sample-data`.
+
+## 1.0.0-rc.6 (2026-11-11): verification pass
+- PIT bands confirmed on rd.go.th (30% to THB 5m, 35% above).
+- Online filing extension: valid for filings due to 31 Jan 2027; the calculator now warns for later periods and PND.90 for tax year 2026.
+- SSO: ceiling 17,500 / 875 confirmed; rounding rule (50 satang up) confirmed; PIT deduction 10,500.
+- Minimum wage: Notification No. 14 still current; Koh Samui 400, rest of Surat Thani incl. Koh Phangan 352; hotels types 2-4 and entertainment venues 400 nationwide.
+- Severance 400 days after 20 years confirmed (Act No. 7, 2019).
+- Land & building tax: tiered computation (s.42), payment by 30 April (s.46), appeal within 30 days (s.73).
+- Property sale: individual WHT capped at 20% of the sale price (Por.100/2543); THB 200,000 exemption for inherited or gifted property in Tambon areas; 0.01% transfer fee confirmed for Thai-national individual buyers only.
+- 90-day report windows by channel (in person, online, post).
+
+## 1.0.0-rc.5 (2026-11-11)
+- Lightness rule: never ask what can be found, defaults over questions, one batch of requests per conversation.
+- Monthly bank-statement upload request (no Thai bank connection available yet).
+- New skills: `official-letter`, `year-end-planning`, `property-tax` (with calculator: land & building tax, sale costs, lease registration), `company-housekeeping`, `visa-reminders`.
+
+## 1.0.0-rc.4 (2026-11-11)
+- New skill `accountant-check`: completeness, timeliness, figures vs. books, payments reached the RD, access and control, annual statements, fees; polite questions for the accountant. Runs quarterly from `monthly-pack`.
+
+## 1.0.0-rc.3 (2026-11-11)
+- Research protocol for every skill: research connector / web / deep research, official Thai sources first, Thai + English queries, cross-checks, cited sources.
+- New skill `ask-thai-tax` for any question.
+
+## 1.0.0-rc.2 (2026-11-11)
+- Proactive by default: asks for missing documents, checks every document on arrival, warns ahead, keeps a request list, calendar reminders (on a yes).
+- New skills: `document-check` (incl. journals and trial balance), `what-do-you-need`.
+
+## 1.0.0-rc.1 (2026-11-11)
+- Calculator `scripts/thaitax_calc.py` (VAT, BE dates, SSO, overtime, withholding, PND.90 tax incl. 0.5% minimum tax and foreign tax credit, deadlines, baht in words) with tests; rates in `scripts/rates.json`.
+- Fact files split by topic (`references/facts/`); skills load only what they need.
+- Document generator `scripts/make_document.js`: tax invoice, receipt, quotation, billing note, payslip (Thai + English/Hebrew).
+- New skills: `monthly-pack` (runs on the 1st), `tax-facts-update` (annual).
+- All facts last verified 2026-11-11.
+
+## 0.4.0 (2026-11-11)
+- Renamed to ThaiTax Assistant. Guided onboarding with intake checklist; receipt capture from phone photos.
+
+## 0.3.0
+- PND.90 line-by-line guide; foreign income and treaty credit.
+
+## 0.2.0
+- Individuals supported (personal tax).
+
+## 0.1.0
+- First version: monthly tax, documents, collections, payroll, export reader.
