@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ThaiTax Assistant</title>
-<meta name="description" content="Every Thai tax report, personal or company, prepared and ready for your accountant. Free, in English, Hebrew and Thai.">
+<meta name="description" content="Every Thai tax report, personal or company, prepared and ready for your accountant. Free, and you can talk to it in your own language.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
 /* Layout idea: a calm ink-and-marigold page; a real "this month" card is the hero's proof. */
 :root{
@@ -30,6 +30,13 @@ p{margin:0}
 /* language switching */
 html[lang="en"] [lang="th"]{display:none!important}
 html[lang="th"] [lang="en"]{display:none!important}
+html[lang="en"] [lang="he"],html[lang="th"] [lang="he"]{display:none!important}
+html[lang="he"] [lang="en"],html[lang="he"] [lang="th"]{display:none!important}
+html[lang="he"] body{font-family:"Rubik","Heebo",var(--body)}
+html[lang="he"] [lang="he"]{text-align:right}
+html[lang="he"] ul[lang="he"]{padding-right:1.2em;padding-left:0}
+html[lang="he"] h1,html[lang="he"] h2,html[lang="he"] h3{letter-spacing:0;font-family:"Rubik",sans-serif;font-weight:700}
+html[lang="he"] .h2o h1{line-height:1.15}
 
 header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0}
 .logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:20px;text-decoration:none}
@@ -100,6 +107,8 @@ section h2{font-size:clamp(28px,3.6vw,40px);font-weight:800;max-width:22em}
 .mini .rows{font-size:14px;display:grid;gap:6px}.mini .rows div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line);padding-bottom:5px}
 .mini .rows small{color:var(--muted)}
 @media (max-width:820px){.fam{grid-template-columns:1fr}}
+.shots{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:26px}.shot{margin:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 18px 40px -24px rgba(29,20,13,.35)}.shot img{display:block;width:100%;height:auto;border-bottom:1px solid var(--line)}.shot figcaption{padding:14px 18px;font-size:15px;color:var(--muted)}#chats .fine{font-size:13px;color:var(--muted);margin-top:14px}@media(max-width:800px){.shots{grid-template-columns:1fr}}html[dir="rtl"] .ask .a{border-left:0;border-right:3px solid var(--jade);padding:2px 14px 2px 0}html[dir="rtl"] .ask .q{border-radius:14px 14px 4px 14px}
+.dgroup{margin:30px 0 0;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--jade)}.dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px}.dcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:10px;box-shadow:0 14px 34px -26px rgba(29,20,13,.4)}.dcard h3{margin:0;font-size:18px}.dcard .dd{margin:0;color:var(--muted);font-size:14.5px}.viz{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px;min-height:130px;font-size:13px}.viz p{margin:4px 0}.viz .note{color:var(--jade);font-weight:600;margin-top:8px}.ask-q{margin:auto 0 0;font-size:13.5px;background:color-mix(in srgb,var(--marigold) 14%,transparent);border-radius:12px;padding:8px 12px}.ask-q span::before{content:"\201C"}.ask-q span::after{content:"\201D"}.vbars{display:flex;align-items:flex-end;gap:5px;height:80px;border-bottom:1px solid var(--line)}.vbars i{flex:1;background:var(--marigold);border-radius:4px 4px 0 0;opacity:.85}.vbars i.g{background:var(--jade)}.chipline{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px!important}.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:12.5px}.chip.warn{background:color-mix(in srgb,var(--marigold) 20%,#fff);border-color:transparent;color:#8a5208}.ringrow{display:flex;gap:14px;align-items:center}.ring{width:84px;height:84px;flex:none;transform:rotate(-90deg)}.ring circle{fill:none;stroke-width:8}.ring .trk{stroke:var(--line)}.ring .val{stroke:var(--jade);stroke-linecap:round}.ring text{transform:rotate(90deg);transform-origin:32px 32px;text-anchor:middle;font-size:15px;font-weight:700;fill:var(--ink)}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-inline-end:6px;background:var(--line)}.dot.g{background:var(--jade)}.dot.o{background:var(--marigold)}.legend b,.trows b{font-weight:600}.hbars p{display:grid;grid-template-columns:1fr 1.2fr auto;gap:8px;align-items:center}.hb{height:9px;background:var(--line);border-radius:6px;overflow:hidden}.hb i{display:block;height:100%;background:var(--marigold)}.hb i.g{background:var(--jade)}.trows p{display:grid;grid-template-columns:auto 1fr auto auto;gap:10px;align-items:center;padding:3px 0;border-bottom:1px dashed var(--line)}.trows em{font-style:normal;color:var(--muted)}.trows .note{display:block;border:0}.line{width:100%;height:70px}.line polyline{fill:none;stroke:var(--jade);stroke-width:2.5}.line line{stroke:var(--line)}.aging{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:6px}.aging p{background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px;margin:0;display:flex;flex-direction:column}.aging .late b{color:#b4540a}@media(max-width:960px){.dgrid{grid-template-columns:1fr}}
 .asks{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:20px}
 .ask{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:12px;align-content:start}
 .ask[hidden]{display:none}
@@ -175,8 +184,8 @@ pre{background:#1d140d;color:#ffe9d1}
 .h2o .grid2>*{min-width:0}
 .eyebrow{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;color:var(--muted)}
 .eyebrow b{color:var(--jade)}
-.h2o h1{font-size:clamp(40px,5.2vw,68px);line-height:1.02;letter-spacing:-.04em;margin:22px 0 0}
-html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(36px,4.4vw,58px)}
+.h2o h1{font-size:clamp(34px,4.3vw,56px);line-height:1.06;letter-spacing:-.04em;margin:22px 0 0}
+html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(32px,3.9vw,50px)}
 .h2o h1 .swap{display:block;color:var(--jade)}
 .h2o .lead{font-size:19px;line-height:1.55;color:var(--muted);max-width:29em;margin:22px 0 30px}
 .proof{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap}
@@ -226,26 +235,27 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
     <div class="langs" role="group" aria-label="Language">
       <a href="#en" id="l-en">EN</a>
       <a href="#th" id="l-th">ไทย</a>
+      <a href="#he" id="l-he">עב</a>
     </div>
     <a class="gh" href="https://github.com/Reflection2024/thaitax-assistant">GitHub</a>
   </nav>
 </header>
 <div class="grid2">
  <div>
-  <div class="eyebrow" lang="en">Free · works inside Claude · <b>official RD forms</b></div>
+  <div class="eyebrow" lang="en">Free · works inside Claude · <b>official RD forms</b></div><div class="eyebrow" lang="he" dir="rtl">חינם · עובד בתוך Claude · <b>הטפסים הרשמיים של רשות המסים</b></div>
   <div class="eyebrow" lang="th">ฟรี · ใช้งานใน Claude · <b>แบบฟอร์มกรมสรรพากรจริง</b></div>
-  <h1 lang="en">Thai paperwork, sorted.<span class="swap">Evenings, yours again.</span></h1>
-  <h1 lang="th">เอกสารภาษีไทย จัดการเรียบร้อย<span class="swap">เวลาเย็นกลับมาเป็นของคุณ</span></h1>
-  <p class="lead" lang="en">Send the receipts, the bank statements, the letter you can't read. Your assistant asks what it needs, fills the official forms, and hands your accountant one clean file.</p>
+  <h1 lang="en">Your personal assistant for Thai tax filings<span class="swap">for your company and for you</span></h1><h1 lang="he" dir="rtl">עוזרת אישית לניהול דיווחי המס בתאילנד<span class="swap">לחברה וגם לאישי</span></h1>
+  <h1 lang="th">ผู้ช่วยส่วนตัวจัดการการยื่นภาษีในไทย<span class="swap">ทั้งบริษัทและบุคคลธรรมดา</span></h1>
+  <p class="lead" lang="en">Send the receipts, the bank statements, the letter you can't read. Your assistant asks what it needs, fills the official forms, and hands your accountant one clean file.</p><p class="lead" lang="he" dir="rtl">שלח את הקבלות, דפי הבנק, המכתב שאתה לא מצליח לקרוא. העוזרת שואלת רק מה שהיא צריכה, ממלאת את הטפסים הרשמיים ומעבירה לרואה החשבון שלך קובץ אחד מסודר.</p>
   <p class="lead" lang="th">ส่งใบเสร็จ สเตทเมนต์ธนาคาร หรือจดหมายที่อ่านไม่ออกมาได้เลย ผู้ช่วยจะถามเฉพาะสิ่งที่จำเป็น กรอกแบบฟอร์มทางการ แล้วส่งไฟล์ที่เรียบร้อยให้นักบัญชีของคุณ</p>
   <div class="ctas">
-   <a class="btn primary" href="thaitax-assistant.plugin"><span lang="en">Get it free</span><span lang="th">รับฟรี</span> →</a>
-   <a class="btn ghost" href="#install"><span lang="en">How to install</span><span lang="th">วิธีติดตั้ง</span></a>
+   <a class="btn primary" href="thaitax-assistant.plugin"><span lang="en">Get it free</span><span lang="he" dir="rtl">קבל חינם</span><span lang="th">รับฟรี</span> →</a>
+   <a class="btn ghost" href="#install"><span lang="en">How to install</span><span lang="he" dir="rtl">איך מתקינים</span><span lang="th">วิธีติดตั้ง</span></a>
   </div>
   <div class="proof">
-   <div><b>22</b><span lang="en">assistants, personal &amp; company</span><span lang="th">ผู้ช่วย ทั้งบุคคลและบริษัท</span></div>
-   <div><b>13</b><span lang="en">official forms filled</span><span lang="th">แบบฟอร์มทางการที่กรอกให้</span></div>
-   <div><b>EN · HE · TH</b><span lang="en">your language</span><span lang="th">ภาษาของคุณ</span></div>
+   <div><b>22</b><span lang="en">assistants, personal &amp; company</span><span lang="he" dir="rtl">עוזרים, אישי וחברה</span><span lang="th">ผู้ช่วย ทั้งบุคคลและบริษัท</span></div>
+   <div><b>13</b><span lang="en">official forms filled</span><span lang="he" dir="rtl">טפסים רשמיים ממולאים</span><span lang="th">แบบฟอร์มทางการที่กรอกให้</span></div>
+   <div><b lang="en">Any language</b><b lang="th">ทุกภาษา</b><b lang="he" dir="rtl">כל שפה</b><span lang="en">talk to it in yours</span><span lang="he" dir="rtl">דבר איתה בשפה שלך</span><span lang="th">คุยด้วยภาษาของคุณ</span></div>
   </div>
  </div>
  <div class="stage" id="stage" aria-label="Animation: a pile of documents becomes one filled official form">
@@ -258,10 +268,10 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
   <div class="doc linemsg" data-x="-40%" data-y="22%" data-r="-4"><span class="gr">LINE</span> Accountant<div class="bub">Khun, please send October documents by the 5th 🙏</div></div>
   <div class="doc stickynote" data-x="32%" data-y="30%" data-r="8">90-day report<br>due Friday!!</div>
   <div class="doc letter" data-x="-128%" data-y="44%" data-r="9" style="width:170px"><div class="h"><span>50 ทวิ</span></div>หนังสือรับรองการหักภาษี<div class="ln"></div><div class="ln" style="width:50%"></div></div>
-  <div class="finalform"><img src="pp30.jpg" alt="Filled official ภ.พ.30 VAT return (example)"><div class="stampx"><span lang="en">✓ Ready for your accountant</span><span lang="th">✓ พร้อมส่งนักบัญชี</span></div></div>
-  <div class="chipx" style="left:-2%;top:16%"><i style="background:#e6f6ee">📄</i><span lang="en">23 receipts read</span><span lang="th">อ่านใบเสร็จแล้ว 23 ใบ</span></div>
-  <div class="chipx" style="right:-2%;top:38%"><i style="background:#fff1d6">⚠️</i><span lang="en">2 tax invoices missing, request drafted</span><span lang="th">ขาดใบกำกับภาษี 2 ใบ ร่างคำขอแล้ว</span></div>
-  <div class="chipx" style="left:2%;bottom:16%"><i style="background:#e6f6ee">฿</i><span lang="en">VAT to pay ฿18,697 · due 23 Nov</span><span lang="th">VAT ต้องชำระ ฿18,697 · ภายใน 23 พ.ย.</span></div>
+  <div class="finalform"><img src="pp30.jpg" alt="Filled official ภ.พ.30 VAT return (example)"><div class="stampx"><span lang="en">✓ Ready for your accountant</span><span lang="he" dir="rtl">✓ מוכן לרואה החשבון</span><span lang="th">✓ พร้อมส่งนักบัญชี</span></div></div>
+  <div class="chipx" style="left:-2%;top:16%"><i style="background:#e6f6ee">📄</i><span lang="en">23 receipts read</span><span lang="he" dir="rtl">23 קבלות נקראו</span><span lang="th">อ่านใบเสร็จแล้ว 23 ใบ</span></div>
+  <div class="chipx" style="right:-2%;top:38%"><i style="background:#fff1d6">⚠️</i><span lang="en">2 tax invoices missing, request drafted</span><span lang="he" dir="rtl">חסרות 2 חשבוניות מס, בקשה נוסחה</span><span lang="th">ขาดใบกำกับภาษี 2 ใบ ร่างคำขอแล้ว</span></div>
+  <div class="chipx" style="left:2%;bottom:16%"><i style="background:#e6f6ee">฿</i><span lang="en">VAT to pay ฿18,697 · due 23 Nov</span><span lang="he" dir="rtl">מע"מ לתשלום ฿18,697 · עד 23 בנובמבר</span><span lang="th">VAT ต้องชำระ ฿18,697 · ภายใน 23 พ.ย.</span></div>
   <div class="status" id="status"></div>
  </div>
 </div>
@@ -271,33 +281,33 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
 <section class="glance">
  <div class="wrapg">
   <div>
-   <p class="kicker" lang="en">Every month, at a glance</p><p class="kicker" lang="th">ทุกเดือน ในหน้าเดียว</p>
-   <h2 lang="en">You see what's due. It's already prepared.</h2>
+   <p class="kicker" lang="en">Every month, at a glance</p><p class="kicker" lang="he" dir="rtl">כל חודש, במבט אחד</p><p class="kicker" lang="th">ทุกเดือน ในหน้าเดียว</p>
+   <h2 lang="en">You see what's due. It's already prepared.</h2><h2 lang="he" dir="rtl">אתה רואה מה צריך להגיש. וזה כבר מוכן.</h2>
    <h2 lang="th">คุณเห็นว่าต้องยื่นอะไร และทุกอย่างเตรียมไว้แล้ว</h2>
-   <p class="sub" lang="en">Your assistant keeps track of every Thai deadline for you and your company, prepares each form before it's due, and tells you exactly what is still missing.</p>
+   <p class="sub" lang="en">Your assistant keeps track of every Thai deadline for you and your company, prepares each form before it's due, and tells you exactly what is still missing.</p><p class="sub" lang="he" dir="rtl">העוזרת עוקבת אחרי כל מועד מס בתאילנד, שלך ושל החברה שלך, מכינה כל טופס לפני המועד ואומרת לך בדיוק מה עוד חסר.</p>
    <p class="sub" lang="th">ผู้ช่วยติดตามกำหนดยื่นภาษีทุกฉบับของคุณและบริษัท เตรียมแบบฟอร์มก่อนถึงกำหนด และบอกชัดเจนว่ายังขาดอะไร</p>
   </div>
   <div class="month" aria-label="Example monthly summary">
     <div class="top">
-      <b lang="en">What's due this month</b><b lang="th">เดือนนี้ต้องยื่นอะไรบ้าง</b>
-      <span class="tag" lang="en">Example</span><span class="tag" lang="th">ตัวอย่าง</span>
+      <b lang="en">What's due this month</b><b lang="he" dir="rtl">מה צריך להגיש החודש</b><b lang="th">เดือนนี้ต้องยื่นอะไรบ้าง</b>
+      <span class="tag" lang="en">Example</span><span class="tag" lang="he" dir="rtl">דוגמה</span><span class="tag" lang="th">ตัวอย่าง</span>
     </div>
     <table>
       <thead><tr>
-        <th lang="en">Form</th><th lang="th">แบบ</th>
-        <th lang="en">Due (paper / online)</th><th lang="th">กำหนด (กระดาษ / ออนไลน์)</th>
+        <th lang="en">Form</th><th lang="he" dir="rtl">טופס</th><th lang="th">แบบ</th>
+        <th lang="en">Due (paper / online)</th><th lang="he" dir="rtl">מועד (נייר / אונליין)</th><th lang="th">กำหนด (กระดาษ / ออนไลน์)</th>
         <th class="amt">THB</th>
       </tr></thead>
       <tbody>
-        <tr><td>ภ.ง.ด.3 / 53<small lang="en">Withholding tax</small><small lang="th">ภาษีหัก ณ ที่จ่าย</small></td><td>7th / 15th</td><td class="amt">8,420</td></tr>
-        <tr><td>ประกันสังคม<small lang="en">Social security, 4 staff</small><small lang="th">พนักงาน 4 คน</small></td><td>15th</td><td class="amt">5,600</td></tr>
-        <tr><td>ภ.พ.30<small lang="en">VAT return</small><small lang="th">ภาษีมูลค่าเพิ่ม</small></td><td>15th / 23rd</td><td class="amt">21,315</td></tr>
-        <tr><td>ภ.พ.36<small lang="en">VAT on Google &amp; Meta ads</small><small lang="th">VAT ค่าโฆษณาต่างประเทศ</small></td><td>15th</td><td class="amt">1,960</td></tr>
+        <tr><td>⁦ภ.ง.ด.3 / 53⁩<small lang="en">Withholding tax</small><small lang="he" dir="rtl">ניכוי במקור</small><small lang="th">ภาษีหัก ณ ที่จ่าย</small></td><td>7th / 15th</td><td class="amt">8,420</td></tr>
+        <tr><td>ประกันสังคม<small lang="en">Social security, 4 staff</small><small lang="he" dir="rtl">ביטוח לאומי, 4 עובדים</small><small lang="th">พนักงาน 4 คน</small></td><td>15th</td><td class="amt">5,600</td></tr>
+        <tr><td>⁦ภ.พ.30⁩<small lang="en">VAT return</small><small lang="he" dir="rtl">דוח מע"מ</small><small lang="th">ภาษีมูลค่าเพิ่ม</small></td><td>15th / 23rd</td><td class="amt">21,315</td></tr>
+        <tr><td>⁦ภ.พ.36⁩<small lang="en">VAT on Google &amp; Meta ads</small><small lang="he" dir="rtl">מע"מ על פרסום בגוגל ומטא</small><small lang="th">VAT ค่าโฆษณาต่างประเทศ</small></td><td>15th</td><td class="amt">1,960</td></tr>
       </tbody>
     </table>
     <p class="note">
-      <span class="pill warn" lang="en">2 tax invoices missing</span><span class="pill warn" lang="th">ขาดใบกำกับภาษี 2 ใบ</span>
-      <span class="pill" lang="en">Ready for your accountant</span><span class="pill" lang="th">พร้อมส่งนักบัญชี</span>
+      <span class="pill warn" lang="en">2 tax invoices missing</span><span class="pill warn" lang="he" dir="rtl">חסרות 2 חשבוניות מס</span><span class="pill warn" lang="th">ขาดใบกำกับภาษี 2 ใบ</span>
+      <span class="pill" lang="en">Ready for your accountant</span><span class="pill" lang="he" dir="rtl">מוכן לרואה החשבון</span><span class="pill" lang="th">พร้อมส่งนักบัญชี</span>
     </p>
   </div>
 
@@ -305,36 +315,42 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
 </section>
 
 <section>
-  <p class="kicker" lang="en">Made for your situation</p><p class="kicker" lang="th">เหมาะกับคุณ</p>
-  <h2 lang="en">Working on your own, or running a company? It fits both.</h2>
+  <p class="kicker" lang="en">Made for your situation</p><p class="kicker" lang="he" dir="rtl">מותאם למצב שלך</p><p class="kicker" lang="th">เหมาะกับคุณ</p>
+  <h2 lang="en">Working on your own, or running a company? It fits both.</h2><h2 lang="he" dir="rtl">עובד לבד או מנהל חברה? זה מתאים לשניהם.</h2>
   <h2 lang="th">ทำงานอิสระหรือมีบริษัท ก็ใช้ได้ทั้งคู่</h2>
   <div class="paths">
     <div class="path">
-      <h3 lang="en">Just you</h3><h3 lang="th">บุคคลธรรมดา</h3>
+      <h3 lang="en">Just you</h3><h3 lang="he" dir="rtl">רק אתה</h3><h3 lang="th">บุคคลธรรมดา</h3>
       <ul lang="en">
         <li>Freelance or consulting income, rent from your condo or villa</li>
         <li>Every 50 ทวิ withholding certificate collected, with polite Thai requests for the missing ones</li>
         <li>Your annual PND.90 / 91 and half-year PND.94 prepared line by line</li>
         <li>Income from abroad sorted out: residency, transfers, treaty credit</li>
-      </ul>
+      </ul><ul lang="he" dir="rtl"><li>הכנסה מפרילנס או ייעוץ, שכירות מהדירה או מהווילה</li>
+<li>כל תעודות הניכוי ⁦50 ทวิ⁩ נאספות, עם בקשה מנומסת בתאילנדית לאלה שחסרות</li>
+<li>הדוח השנתי ⁦ภ.ง.ด.90 / 91⁩ והחצי-שנתי ⁦ภ.ง.ด.94⁩ מוכנים שורה אחר שורה</li>
+<li>הכנסה מחו"ל מסודרת: תושבות, העברות וזיכוי לפי האמנה</li></ul>
       <ul lang="th">
         <li>รายได้ฟรีแลนซ์ ค่าที่ปรึกษา ค่าเช่าคอนโดหรือวิลล่า</li>
         <li>รวบรวมหนังสือรับรอง 50 ทวิ และร่างจดหมายขอฉบับที่ขาด</li>
-        <li>เตรียม ภ.ง.ด.90 / 91 และ ภ.ง.ด.94 ทีละบรรทัด</li>
+        <li>เตรียม ⁦ภ.ง.ด.90 / 91⁩ และ ⁦ภ.ง.ด.94⁩ ทีละบรรทัด</li>
         <li>จัดการรายได้จากต่างประเทศ: ถิ่นที่อยู่ ยอดโอน และเครดิตภาษี</li>
       </ul>
     </div>
     <div class="path">
-      <h3 lang="en">Your company</h3><h3 lang="th">นิติบุคคล</h3>
+      <h3 lang="en">Your company</h3><h3 lang="he" dir="rtl">החברה שלך</h3><h3 lang="th">นิติบุคคล</h3>
       <ul lang="en">
-        <li>ภ.พ.30, ภ.พ.36 and ภ.ง.ด.3 / 53 / 54 prepared every month</li>
-        <li>Payroll, social security and ภ.ง.ด.1, with work-permit alerts</li>
+        <li>⁦ภ.พ.30⁩, ⁦ภ.พ.36⁩ and ⁦ภ.ง.ด.3 / 53 / 54⁩ prepared every month</li>
+        <li>Payroll, social security and ⁦ภ.ง.ด.1⁩, with work-permit alerts</li>
         <li>Payments from Stripe and Omise matched to FlowAccount invoices</li>
         <li>Several companies? Each one kept separate, never blended</li>
-      </ul>
+      </ul><ul lang="he" dir="rtl"><li>⁦ภ.พ.30⁩, ⁦ภ.พ.36⁩ ו-⁦ภ.ง.ด.3 / 53 / 54⁩ מוכנים כל חודש</li>
+<li>משכורות, ביטוח לאומי ו-⁦ภ.ง.ด.1⁩, עם התראות על אישורי עבודה</li>
+<li>תשלומים מ-Stripe ומ-Omise מותאמים לחשבוניות ב-FlowAccount</li>
+<li>כמה חברות? כל אחת נשמרת בנפרד, אף פעם לא מתערבבת</li></ul>
       <ul lang="th">
-        <li>เตรียม ภ.พ.30, ภ.พ.36 และ ภ.ง.ด.3 / 53 / 54 ทุกเดือน</li>
-        <li>เงินเดือน ประกันสังคม และ ภ.ง.ด.1 พร้อมแจ้งเตือนใบอนุญาตทำงาน</li>
+        <li>เตรียม ⁦ภ.พ.30⁩, ⁦ภ.พ.36⁩ และ ⁦ภ.ง.ด.3 / 53 / 54⁩ ทุกเดือน</li>
+        <li>เงินเดือน ประกันสังคม และ ⁦ภ.ง.ด.1⁩ พร้อมแจ้งเตือนใบอนุญาตทำงาน</li>
         <li>จับคู่ยอดชำระจาก Stripe และ Omise กับใบแจ้งหนี้ใน FlowAccount</li>
         <li>มีหลายบริษัท? แยกข้อมูลแต่ละบริษัทชัดเจน</li>
       </ul>
@@ -343,243 +359,192 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
 </section>
 
 <section>
-  <p class="kicker" lang="en">What it does</p><p class="kicker" lang="th">ทำอะไรได้บ้าง</p>
-  <h2 lang="en">Ask in your own words. Get work you can send.</h2>
+  <p class="kicker" lang="en">What it does</p><p class="kicker" lang="he" dir="rtl">מה זה עושה</p><p class="kicker" lang="th">ทำอะไรได้บ้าง</p>
+  <h2 lang="en">Ask in your own words. Get work you can send.</h2><h2 lang="he" dir="rtl">תשאל במילים שלך. תקבל עבודה שאפשר לשלוח.</h2>
   <h2 lang="th">ถามด้วยภาษาของคุณ ได้งานที่พร้อมส่ง</h2>
   <div class="grid">
     <div class="feat">
-      <h3 lang="en">Monthly tax, ready</h3><h3 lang="th">ภาษีรายเดือน พร้อมยื่น</h3>
-      <p lang="en">Every return, every deadline, and a list of what's missing. Say <code>What's due this month?</code></p>
+      <h3 lang="en">Monthly tax, ready</h3><h3 lang="he" dir="rtl">מס חודשי, מוכן</h3><h3 lang="th">ภาษีรายเดือน พร้อมยื่น</h3>
+      <p lang="en">Every return, every deadline, and a list of what's missing. Say <code>What's due this month?</code></p><p lang="he" dir="rtl">כל דוח, כל מועד, ורשימה של מה שחסר. תגיד <code>מה צריך להגיש החודש?</code></p>
       <p lang="th">ทุกแบบ ทุกกำหนดยื่น และรายการเอกสารที่ขาด พิมพ์ <code>เดือนนี้ต้องยื่นอะไรบ้าง</code></p>
     </div>
     <div class="feat">
-      <h3 lang="en">Documents in Thai</h3><h3 lang="th">เอกสารภาษาไทย</h3>
-      <p lang="en">Tax-invoice drafts, quotations, receipts, billing notes and payslips, in Thai with English or Hebrew beside it.</p>
+      <h3 lang="en">Documents in Thai</h3><h3 lang="he" dir="rtl">מסמכים בתאילנדית</h3><h3 lang="th">เอกสารภาษาไทย</h3>
+      <p lang="en">Tax-invoice drafts, quotations, receipts, billing notes and payslips, in Thai with English or Hebrew beside it.</p><p lang="he" dir="rtl">טיוטות חשבוניות מס, הצעות מחיר, קבלות, דרישות תשלום ותלושי שכר, בתאילנדית ולצידה אנגלית או עברית.</p>
       <p lang="th">ร่างใบกำกับภาษี ใบเสนอราคา ใบเสร็จ ใบวางบิล และสลิปเงินเดือน ภาษาไทยคู่ภาษาอังกฤษหรือฮีบรู</p>
     </div>
     <div class="feat">
-      <h3 lang="en">Get paid on time</h3><h3 lang="th">ได้รับเงินตรงเวลา</h3>
-      <p lang="en">See who owes you, what landed from Stripe and Omise, and a 90-day cash view. Gentle reminders, drafted for you.</p>
+      <h3 lang="en">Get paid on time</h3><h3 lang="he" dir="rtl">לקבל תשלום בזמן</h3><h3 lang="th">ได้รับเงินตรงเวลา</h3>
+      <p lang="en">See who owes you, what landed from Stripe and Omise, and a 90-day cash view. Gentle reminders, drafted for you.</p><p lang="he" dir="rtl">מי חייב לך, מה הגיע מ-Stripe ומ-Omise, ותחזית מזומנים ל-90 יום. תזכורות עדינות, מנוסחות בשבילך.</p>
       <p lang="th">ดูว่าใครค้างชำระ ยอดที่เข้าจาก Stripe และ Omise และกระแสเงินสด 90 วัน พร้อมร่างจดหมายทวงถามอย่างสุภาพ</p>
     </div>
     <div class="feat">
-      <h3 lang="en">Payroll, checked</h3><h3 lang="th">เงินเดือน ตรวจครบ</h3>
-      <p lang="en">Overtime, social security and withholding computed line by line. Minimum wage and work-permit alerts.</p>
+      <h3 lang="en">Payroll, checked</h3><h3 lang="he" dir="rtl">משכורות, בדוקות</h3><h3 lang="th">เงินเดือน ตรวจครบ</h3>
+      <p lang="en">Overtime, social security and withholding computed line by line. Minimum wage and work-permit alerts.</p><p lang="he" dir="rtl">שעות נוספות, ביטוח לאומי וניכוי מס מחושבים שורה אחר שורה. התראות על שכר מינימום ואישורי עבודה.</p>
       <p lang="th">คำนวณ OT ประกันสังคม และภาษีหัก ณ ที่จ่ายทีละรายการ พร้อมแจ้งเตือนค่าแรงขั้นต่ำและใบอนุญาตทำงาน</p>
     </div>
     <div class="feat">
-      <h3 lang="en">Your annual return, line by line</h3><h3 lang="th">ภ.ง.ด.90 ทีละบรรทัด</h3>
-      <p lang="en">A worksheet that mirrors PND.90, every allowance checked, and the numbers to type into e-Filing. Say <code>Fill in my annual tax return</code></p>
-      <p lang="th">ตารางที่เรียงตามแบบ ภ.ง.ด.90 ตรวจครบทุกค่าลดหย่อน พร้อมตัวเลขสำหรับกรอกใน e-Filing พิมพ์ <code>ช่วยกรอก ภ.ง.ด.90</code></p>
+      <h3 lang="en">Your annual return, line by line</h3><h3 lang="he" dir="rtl">הדוח השנתי שלך, שורה אחר שורה</h3><h3 lang="th">⁦ภ.ง.ด.90⁩ ทีละบรรทัด</h3>
+      <p lang="en">A worksheet that mirrors PND.90, every allowance checked, and the numbers to type into e-Filing. Say <code>Fill in my annual tax return</code></p><p lang="he" dir="rtl">גיליון שמשקף את ⁦ภ.ง.ด.90⁩, כל הקלה נבדקת, והמספרים להקליד ב-e-Filing. תגיד <code>תמלא לי את הדוח השנתי</code></p>
+      <p lang="th">ตารางที่เรียงตามแบบ ⁦ภ.ง.ด.90⁩ ตรวจครบทุกค่าลดหย่อน พร้อมตัวเลขสำหรับกรอกใน e-Filing พิมพ์ <code>ช่วยกรอก ⁦ภ.ง.ด.90⁩</code></p>
     </div>
     <div class="feat">
-      <h3 lang="en">Any Thai file</h3><h3 lang="th">อ่านไฟล์ได้ทุกแบบ</h3>
-      <p lang="en">PEAK, Express, 2C2P, KSher, bank statements. Thai headers and Buddhist-Era dates handled.</p>
+      <h3 lang="en">Any Thai file</h3><h3 lang="he" dir="rtl">כל קובץ תאילנדי</h3><h3 lang="th">อ่านไฟล์ได้ทุกแบบ</h3>
+      <p lang="en">PEAK, Express, 2C2P, KSher, bank statements. Thai headers and Buddhist-Era dates handled.</p><p lang="he" dir="rtl">PEAK, Express, 2C2P, KSher, דפי בנק. כותרות בתאילנדית ותאריכים בלוח הבודהיסטי, מטופלים.</p>
       <p lang="th">PEAK, Express, 2C2P, KSher และสเตทเมนต์ธนาคาร อ่านหัวตารางภาษาไทยและปี พ.ศ. ได้</p>
     </div>
   </div>
 </section>
 
+<section id="chats">
+  <p class="kicker" lang="en">Real conversations</p><p class="kicker" lang="he" dir="rtl">שיחות אמיתיות</p><p class="kicker" lang="th">บทสนทนาจริง</p>
+  <h2 lang="en">See how it really talks to you</h2><h2 lang="he" dir="rtl">ככה היא באמת מדברת איתך</h2><h2 lang="th">ดูว่าผู้ช่วยคุยกับคุณอย่างไร</h2>
+  <p class="sub" lang="en">Real chats with the assistant, on sample data. It asks before it answers, with questions you just tap, in the language you write in.</p><p class="sub" lang="he" dir="rtl">שיחות אמיתיות עם העוזרת, על נתוני דוגמה. היא שואלת לפני שהיא עונה, בשאלות שפשוט לוחצים עליהן, ובשפה שבה כתבת.</p><p class="sub" lang="th">บทสนทนาจริงกับผู้ช่วยโดยใช้ข้อมูลตัวอย่าง ผู้ช่วยถามก่อนตอบ ด้วยคำถามที่แค่แตะเลือก และตอบเป็นภาษาที่คุณพิมพ์</p>
+  <div class="shots">
+    <figure class="shot"><img src="chat-he-q1.jpg" alt=""><figcaption lang="en">In Hebrew: a company's October VAT. It spots a duplicate invoice and asks before counting it.</figcaption><figcaption lang="he" dir="rtl">בעברית: מע"מ של אוקטובר לחברה. היא מזהה חשבונית כפולה ושואלת לפני שהיא סופרת אותה.</figcaption><figcaption lang="th">ภาษาฮีบรู: ภาษีมูลค่าเพิ่มเดือนตุลาคมของบริษัท ผู้ช่วยพบใบกำกับซ้ำและถามก่อนนับ</figcaption></figure>
+    <figure class="shot"><img src="chat-he-a1.jpg" alt=""><figcaption lang="en">The answer: three filings, the amounts, the deadlines, and what is still open.</figcaption><figcaption lang="he" dir="rtl">התשובה: שלושה דוחות, הסכומים, המועדים, ומה עוד פתוח.</figcaption><figcaption lang="th">คำตอบ: แบบยื่น 3 รายการ ยอดเงิน กำหนดยื่น และสิ่งที่ยังค้างอยู่</figcaption></figure>
+    <figure class="shot"><img src="chat-en-q1.jpg" alt=""><figcaption lang="en">In English: salary from Germany. Each transfer is sorted, then one question at a time.</figcaption><figcaption lang="he" dir="rtl">באנגלית: משכורת מגרמניה. כל העברה ממוינת, ואז שאלה אחת בכל פעם.</figcaption><figcaption lang="th">ภาษาอังกฤษ: เงินเดือนจากเยอรมนี แยกการโอนแต่ละรายการ แล้วถามทีละข้อ</figcaption></figure>
+    <figure class="shot"><img src="chat-th-q1.jpg" alt=""><figcaption lang="en">In Thai: November payroll for a restaurant. It asks how the overtime was worked before paying it.</figcaption><figcaption lang="he" dir="rtl">בתאילנדית: משכורות נובמבר למסעדה. היא שואלת איך בוצעו השעות הנוספות לפני החישוב.</figcaption><figcaption lang="th">ภาษาไทย: เงินเดือนเดือนพฤศจิกายนของร้านอาหาร ผู้ช่วยถามว่าโอทีเป็นวันแบบไหนก่อนคำนวณ</figcaption></figure>
+  </div>
+  <p class="fine" lang="en">Sample data. Names and numbers are examples.</p><p class="fine" lang="he" dir="rtl">נתוני דוגמה. השמות והמספרים לדוגמה בלבד.</p><p class="fine" lang="th">ข้อมูลตัวอย่าง ชื่อและตัวเลขสมมติ</p>
+</section>
+
 <section id="examples">
-  <p class="kicker" lang="en">Examples</p><p class="kicker" lang="th">ตัวอย่างการใช้งาน</p>
-  <h2 lang="en">Type it the way you'd say it. Here's what comes back.</h2>
+  <p class="kicker" lang="en">Examples</p><p class="kicker" lang="he" dir="rtl">דוגמאות</p><p class="kicker" lang="th">ตัวอย่างการใช้งาน</p>
+  <h2 lang="en">Type it the way you'd say it. Here's what comes back.</h2><h2 lang="he" dir="rtl">שאלות לדוגמה, ומה העוזרת עונה</h2>
   <h2 lang="th">พิมพ์เหมือนพูดคุยกัน แล้วดูว่าได้อะไรกลับมา</h2>
-  <p class="sub" lang="en">Real questions, illustrative answers. Names and amounts are examples.</p>
+  <p class="sub" lang="en">Real questions, illustrative answers. Names and amounts are examples.</p><p class="sub" lang="he" dir="rtl">שאלות אמיתיות, תשובות לדוגמה. שמות וסכומים הם דוגמה.</p>
   <p class="sub" lang="th">คำถามจริง คำตอบเป็นตัวอย่าง ชื่อและตัวเลขสมมติ</p>
 
   <div class="filters" role="group" aria-label="Filter examples">
-    <button type="button" data-f="all" aria-pressed="true"><span lang="en">All</span><span lang="th">ทั้งหมด</span></button>
-    <button type="button" data-f="me" aria-pressed="false"><span lang="en">Just me</span><span lang="th">บุคคลธรรมดา</span></button>
-    <button type="button" data-f="co" aria-pressed="false"><span lang="en">My company</span><span lang="th">บริษัท</span></button>
+    <button type="button" data-f="all" aria-pressed="true"><span lang="en">All</span><span lang="he" dir="rtl">הכול</span><span lang="th">ทั้งหมด</span></button>
+    <button type="button" data-f="me" aria-pressed="false"><span lang="en">Just me</span><span lang="he" dir="rtl">רק אני</span><span lang="th">บุคคลธรรมดา</span></button>
+    <button type="button" data-f="co" aria-pressed="false"><span lang="en">My company</span><span lang="he" dir="rtl">החברה שלי</span><span lang="th">บริษัท</span></button>
   </div>
 
   <div class="asks">
     <article class="ask" data-k="me">
-      <p class="who" lang="en">Family of four on Samui</p><p class="who" lang="th">ครอบครัวสี่คนที่สมุย</p>
-      <p class="q" lang="en">"Here are three months of statements from KBank and Wise. Where does our money go?"</p>
+      <p class="who" lang="en">Family of four on Samui</p><p class="who" lang="he" dir="rtl">משפחה של ארבע בסמוי</p><p class="who" lang="th">ครอบครัวสี่คนที่สมุย</p>
+      <p class="q" lang="en">"Here are three months of statements from KBank and Wise. Where does our money go?"</p><p class="q" lang="he" dir="rtl">"הנה דפי בנק של שלושה חודשים מ-KBank ומ-Wise. לאן הולך הכסף שלנו?"</p>
       <p class="q" lang="th">"นี่สเตทเมนต์สามเดือนจาก KBank กับ Wise เงินเราไปไหนบ้าง"</p>
-      <div class="a" lang="en"><b>You kept ฿55,600 a month on average. Housing is your biggest cost.</b><ul><li>Dashboard page ready: month by month, categories, fixed payments</li><li>Euro salary converted at the rate on your statement</li><li>1 payment still needs a category</li></ul></div>
+      <div class="a" lang="en"><b>You kept ฿55,600 a month on average. Housing is your biggest cost.</b><ul><li>Dashboard page ready: month by month, categories, fixed payments</li><li>Euro salary converted at the rate on your statement</li><li>1 payment still needs a category</li></ul></div><div class="a" lang="he" dir="rtl"><b>נשארו לכם בממוצע ฿55,600 בחודש. הדיור הוא ההוצאה הגדולה ביותר.</b><ul><li>דף דשבורד מוכן: חודש אחרי חודש, קטגוריות, תשלומים קבועים</li><li>המשכורת באירו הומרה לפי השער שבדף הבנק</li><li>לתשלום אחד עוד אין קטגוריה</li></ul></div>
       <div class="a" lang="th"><b>เฉลี่ยคุณเหลือเงินเดือนละ ฿55,600 ค่าที่พักเป็นรายจ่ายใหญ่ที่สุด</b><ul><li>หน้าแดชบอร์ดพร้อมแล้ว: รายเดือน หมวดหมู่ รายจ่ายประจำ</li><li>แปลงเงินเดือนยูโรตามอัตราในสเตทเมนต์</li><li>เหลืออีก 1 รายการที่ยังไม่มีหมวด</li></ul></div>
     </article>
 
     <article class="ask" data-k="me">
-      <p class="who" lang="en">Couple, lots of apps</p><p class="who" lang="th">คู่รัก ใช้แอปเยอะ</p>
-      <p class="q" lang="en">"What are we paying every month without noticing?"</p>
-      <p class="q" lang="th">"เราจ่ายอะไรทุกเดือนโดยไม่รู้ตัวบ้าง"</p>
-      <div class="a" lang="en"><b>12 fixed payments, ฿61,374 a month.</b><ul><li>Two cloud plans (Google One + iCloud), ฿699 a month together</li><li>Two video services, ฿708 a month together</li><li>Each one with its yearly cost, so you can decide what stays</li></ul></div>
-      <div class="a" lang="th"><b>รายจ่ายประจำ 12 รายการ รวม ฿61,374 ต่อเดือน</b><ul><li>พื้นที่คลาวด์สองที่ (Google One + iCloud) รวม ฿699 ต่อเดือน</li><li>บริการวิดีโอสองเจ้า รวม ฿708 ต่อเดือน</li><li>แสดงค่าใช้จ่ายต่อปีของแต่ละรายการ ให้คุณตัดสินใจเองว่าจะเก็บอะไรไว้</li></ul></div>
-    </article>
-
-    <article class="ask" data-k="me">
-      <p class="who" lang="en">Remote worker, salary from Europe</p><p class="who" lang="th">ทำงานรีโมต เงินเดือนจากยุโรป</p>
-      <p class="q" lang="en">"I moved to Samui in March and my salary still comes from Germany. Do I need to file in Thailand?"</p>
+      <p class="who" lang="en">Remote worker, salary from Europe</p><p class="who" lang="he" dir="rtl">עובד מרחוק, משכורת מאירופה</p><p class="who" lang="th">ทำงานรีโมต เงินเดือนจากยุโรป</p>
+      <p class="q" lang="en">"I moved to Samui in March and my salary still comes from Germany. Do I need to file in Thailand?"</p><p class="q" lang="he" dir="rtl">"עברתי לסמוי במרץ והמשכורת שלי עדיין מגיעה מגרמניה. אני צריך להגיש דוח בתאילנד?"</p>
       <p class="q" lang="th">"ย้ายมาสมุยตั้งแต่มีนาคม เงินเดือนยังจ่ายจากเยอรมนี ต้องยื่นภาษีที่ไทยไหม"</p>
-      <div class="a" lang="en"><b>You're at 214 days in Thailand this year, so you are tax resident.</b><ul><li>11 transfers sorted: 3 from savings before 2024, 8 from 2026 salary</li><li>Foreign-income declaration drafted, German tax credit estimated under the treaty</li><li>3 documents still needed for your accountant</li></ul></div>
+      <div class="a" lang="en"><b>You're at 214 days in Thailand this year, so you are tax resident.</b><ul><li>11 transfers sorted: 3 from savings before 2024, 8 from 2026 salary</li><li>Foreign-income declaration drafted, German tax credit estimated under the treaty</li><li>3 documents still needed for your accountant</li></ul></div><div class="a" lang="he" dir="rtl"><b>אתה כבר 214 ימים בתאילנד השנה, ולכן אתה תושב מס.</b><ul><li>11 העברות מוינו: 3 מחסכונות מלפני 2024, 8 ממשכורת 2026</li><li>הצהרת ההכנסה מחו"ל נוסחה, וזיכוי המס הגרמני הוערך לפי האמנה</li><li>עוד 3 מסמכים נחוצים לרואה החשבון</li></ul></div>
       <div class="a" lang="th"><b>ปีนี้คุณอยู่ไทย 214 วัน จึงเป็นผู้มีถิ่นที่อยู่ทางภาษี</b><ul><li>แยกยอดโอน 11 รายการ: เงินออมก่อนปี 2567 จำนวน 3 รายการ เงินเดือนปี 2569 จำนวน 8 รายการ</li><li>ร่างแบบแจ้งเงินได้จากต่างประเทศ และประมาณการเครดิตภาษีเยอรมนีตามอนุสัญญา</li><li>เหลือเอกสารอีก 3 รายการสำหรับนักบัญชี</li></ul></div>
     </article>
 
     <article class="ask" data-k="me">
-      <p class="who" lang="en">Freelancer with a condo to rent</p><p class="who" lang="th">ฟรีแลนซ์ มีคอนโดให้เช่า</p>
-      <p class="q" lang="en">"Fill in my PND.90. I have consulting fees and rent from my condo in Bangkok."</p>
-      <p class="q" lang="th">"ช่วยกรอก ภ.ง.ด.90 ให้หน่อย มีค่าที่ปรึกษากับค่าเช่าคอนโดที่กรุงเทพฯ"</p>
-      <div class="a" lang="en"><b>A worksheet that follows the form, line by line.</b><ul><li>Rent in item No. 4 with the 30% deduction, fees in No. 1</li><li>The 0.5% minimum-tax test checked</li><li>Withholding from 6 certificates credited, an estimated refund of <span class="num">THB 4,180</span></li><li>The exact numbers to type into e-Filing, screen by screen</li></ul></div>
+      <p class="who" lang="en">Freelancer with a condo to rent</p><p class="who" lang="he" dir="rtl">פרילנסר עם דירה להשכרה</p><p class="who" lang="th">ฟรีแลนซ์ มีคอนโดให้เช่า</p>
+      <p class="q" lang="en">"Fill in my PND.90. I have consulting fees and rent from my condo in Bangkok."</p><p class="q" lang="he" dir="rtl">"תמלא לי את ⁦ภ.ง.ด.90⁩. יש לי שכר ייעוץ ושכירות מהדירה בבנגקוק."</p>
+      <p class="q" lang="th">"ช่วยกรอก ⁦ภ.ง.ด.90⁩ ให้หน่อย มีค่าที่ปรึกษากับค่าเช่าคอนโดที่กรุงเทพฯ"</p>
+      <div class="a" lang="en"><b>A worksheet that follows the form, line by line.</b><ul><li>Rent in item No. 4 with the 30% deduction, fees in No. 1</li><li>The 0.5% minimum-tax test checked</li><li>Withholding from 6 certificates credited, an estimated refund of <span class="num">THB 4,180</span></li><li>The exact numbers to type into e-Filing, screen by screen</li></ul></div><div class="a" lang="he" dir="rtl"><b>גיליון שהולך לפי הטופס, שורה אחר שורה.</b><ul><li>השכירות בסעיף 4 עם ניכוי 30%, שכר הייעוץ בסעיף 1</li><li>מבחן מס המינימום 0.5% נבדק</li><li>ניכוי במקור מ-6 תעודות זוכה, החזר משוער של <span class="num">THB 4,180</span></li><li>המספרים המדויקים להקליד ב-e-Filing, מסך אחרי מסך</li></ul></div>
       <div class="a" lang="th"><b>ตารางคำนวณเรียงตามแบบ ทีละบรรทัด</b><ul><li>ค่าเช่าในข้อ 4 หักค่าใช้จ่าย 30% ค่าที่ปรึกษาในข้อ 1</li><li>ตรวจการคำนวณภาษีแบบ 0.5% แล้ว</li><li>นำภาษีหัก ณ ที่จ่ายจาก 50 ทวิ 6 ใบมาเครดิต ประมาณการขอคืน <span class="num">฿4,180</span></li><li>ตัวเลขสำหรับกรอกใน e-Filing ทีละหน้าจอ</li></ul></div>
     </article>
 
-    <article class="ask" data-k="me">
-      <p class="who" lang="en">Consultant paid by Thai companies</p><p class="who" lang="th">ที่ปรึกษา รับเงินจากบริษัทไทย</p>
-      <p class="q" lang="en">"Which companies still haven't sent me a 50 Tawi this year?"</p>
-      <p class="q" lang="th">"ปีนี้บริษัทไหนยังไม่ส่ง 50 ทวิ มาให้บ้าง"</p>
-      <div class="a" lang="en"><b>4 payers are missing, worth <span class="num">THB 9,600</span> in tax already withheld.</b><ul><li>A polite request in Thai drafted for each one, ready for you to approve and send</li></ul></div>
-      <div class="a" lang="th"><b>ยังขาด 4 ราย คิดเป็นภาษีที่ถูกหักไว้แล้ว <span class="num">฿9,600</span></b><ul><li>ร่างจดหมายขอเอกสารอย่างสุภาพให้ทุกราย รอคุณอนุมัติก่อนส่ง</li></ul></div>
-    </article>
-
-    <article class="ask" data-k="me">
-      <p class="who" lang="en">Villa owner on Koh Phangan</p><p class="who" lang="th">เจ้าของวิลล่าเกาะพะงัน</p>
-      <p class="q" lang="en">"My villa rentals passed 1.5 million baht this year. Should I worry about VAT?"</p>
-      <p class="q" lang="th">"รายได้ค่าเช่าวิลล่าปีนี้เกิน 1.5 ล้านบาทแล้ว ต้องกังวลเรื่อง VAT ไหม"</p>
-      <div class="a" lang="en"><b>You're at 83% of the THB 1.8m registration threshold.</b><ul><li>Projected to cross it in late November at the current pace</li><li>Whether short-stay rent counts is a point for your accountant to confirm</li><li>Your half-year PND.94 figures are ready too</li></ul></div>
-      <div class="a" lang="th"><b>ขณะนี้อยู่ที่ 83% ของเกณฑ์จด VAT 1.8 ล้านบาท</b><ul><li>ตามอัตรานี้คาดว่าจะเกินเกณฑ์ปลายเดือนพฤศจิกายน</li><li>ประเด็นว่าค่าเช่าระยะสั้นเข้าเกณฑ์หรือไม่ ให้นักบัญชียืนยัน</li><li>ตัวเลข ภ.ง.ด.94 ครึ่งปีพร้อมแล้วเช่นกัน</li></ul></div>
-    </article>
-
     <article class="ask" data-k="co">
-      <p class="who" lang="en">Company owner with an outside accountant</p><p class="who" lang="th">เจ้าของบริษัทที่ใช้สำนักงานบัญชี</p>
-      <p class="q" lang="en">"Check my accountant's work for the last 12 months. Were my taxes really filed and paid?"</p>
+      <p class="who" lang="en">Company owner with an outside accountant</p><p class="who" lang="he" dir="rtl">בעל חברה עם רואה חשבון חיצוני</p><p class="who" lang="th">เจ้าของบริษัทที่ใช้สำนักงานบัญชี</p>
+      <p class="q" lang="en">"Check my accountant's work for the last 12 months. Were my taxes really filed and paid?"</p><p class="q" lang="he" dir="rtl">"תבדוק את העבודה של רואה החשבון שלי ב-12 החודשים האחרונים. המסים באמת הוגשו ושולמו?"</p>
       <p class="q" lang="th">"ช่วยตรวจงานนักบัญชีย้อนหลัง 12 เดือน ภาษียื่นและจ่ายครบจริงไหม"</p>
-      <div class="a" lang="en"><b>11 of 12 VAT returns have Revenue Department receipts. One month is unaccounted for.</b><ul><li>August PP.30: no receipt in your e-Filing history, and <span class="num">THB 14,200</span> you transferred for it has no matching payment</li><li>2 withholding returns filed late, with a <span class="num">THB 1,140</span> surcharge</li><li>Polite questions drafted in Thai for your accountant, with a reminder in 7 days</li></ul></div>
-      <div class="a" lang="th"><b>ภ.พ.30 มีใบเสร็จกรมสรรพากร 11 จาก 12 เดือน ยังขาดหนึ่งเดือน</b><ul><li>ภ.พ.30 เดือนสิงหาคม ไม่พบในประวัติการยื่นแบบออนไลน์ และยอด <span class="num">฿14,200</span> ที่คุณโอนไปยังไม่พบการชำระที่ตรงกัน</li><li>ยื่นภาษีหัก ณ ที่จ่ายล่าช้า 2 ครั้ง มีเงินเพิ่ม <span class="num">฿1,140</span></li><li>ร่างคำถามสุภาพเป็นภาษาไทยถึงนักบัญชีแล้ว พร้อมเตือนติดตามใน 7 วัน</li></ul></div>
+      <div class="a" lang="en"><b>11 of 12 VAT returns have Revenue Department receipts. One month is unaccounted for.</b><ul><li>August PP.30: no receipt in your e-Filing history, and <span class="num">THB 14,200</span> you transferred for it has no matching payment</li><li>2 withholding returns filed late, with a <span class="num">THB 1,140</span> surcharge</li><li>Polite questions drafted in Thai for your accountant, with a reminder in 7 days</li></ul></div><div class="a" lang="he" dir="rtl"><b>ל-11 מתוך 12 דוחות המע"מ יש קבלות מרשות המסים. חודש אחד חסר.</b><ul><li>⁦ภ.พ.30⁩ של אוגוסט: אין קבלה בהיסטוריית ה-e-Filing שלך, ול-<span class="num">THB 14,200</span> שהעברת עבורו אין תשלום תואם</li><li>2 דוחות ניכוי במקור הוגשו באיחור, עם תוספת של <span class="num">THB 1,140</span></li><li>שאלות מנומסות בתאילנדית נוסחו לרואה החשבון, עם תזכורת בעוד 7 ימים</li></ul></div>
+      <div class="a" lang="th"><b>⁦ภ.พ.30⁩ มีใบเสร็จกรมสรรพากร 11 จาก 12 เดือน ยังขาดหนึ่งเดือน</b><ul><li>⁦ภ.พ.30⁩ เดือนสิงหาคม ไม่พบในประวัติการยื่นแบบออนไลน์ และยอด <span class="num">฿14,200</span> ที่คุณโอนไปยังไม่พบการชำระที่ตรงกัน</li><li>ยื่นภาษีหัก ณ ที่จ่ายล่าช้า 2 ครั้ง มีเงินเพิ่ม <span class="num">฿1,140</span></li><li>ร่างคำถามสุภาพเป็นภาษาไทยถึงนักบัญชีแล้ว พร้อมเตือนติดตามใน 7 วัน</li></ul></div>
     </article>
 
     <article class="ask" data-k="co">
-      <p class="who" lang="en">Small hotel company</p><p class="who" lang="th">บริษัทโรงแรมขนาดเล็ก</p>
-      <p class="q" lang="en">"What's due this month for my company?"</p>
-      <p class="q" lang="th">"เดือนนี้บริษัทต้องยื่นอะไรบ้าง"</p>
-      <div class="a" lang="en"><b>4 filings, <span class="num">THB 37,295</span> in total, with each deadline moved past the public holiday.</b><ul><li>VAT, withholding, social security, and VAT on overseas ad spend</li><li>2 purchase invoices can't be claimed: the buyer's name doesn't match your registration</li></ul></div>
-      <div class="a" lang="th"><b>4 แบบ รวม <span class="num">฿37,295</span> เลื่อนกำหนดตามวันหยุดราชการแล้ว</b><ul><li>ภ.พ.30, ภ.ง.ด.3/53, ประกันสังคม และ ภ.พ.36</li><li>ใบกำกับภาษีซื้อ 2 ใบใช้เครดิตไม่ได้ เพราะชื่อผู้ซื้อไม่ตรงกับที่จดทะเบียน</li></ul></div>
-    </article>
-
-    <article class="ask" data-k="co">
-      <p class="who" lang="en">Consulting company</p><p class="who" lang="th">บริษัทที่ปรึกษา</p>
-      <p class="q" lang="en">"Draft a tax invoice in Thai and English for 85,000 baht of consulting to Siam Coast Co."</p>
-      <p class="q" lang="th">"ร่างใบกำกับภาษีไทย-อังกฤษ ค่าที่ปรึกษา 85,000 บาท ให้บริษัท สยามโคสต์"</p>
-      <div class="a" lang="en"><b>Draft ready: <span class="num">85,000 + 5,950 VAT = 90,950 THB</span>.</b><ul><li>Dated 11 พฤศจิกายน 2569 (2026), serial number left for FlowAccount</li><li>A note that they will withhold 3%, <span class="num">THB 2,550</span>, and owe you a 50 ทวิ</li></ul></div>
-      <div class="a" lang="th"><b>ร่างพร้อมแล้ว: <span class="num">85,000 + VAT 5,950 = 90,950 บาท</span></b><ul><li>ลงวันที่ 11 พฤศจิกายน 2569 เว้นเลขที่ไว้ให้ออกจาก FlowAccount</li><li>หมายเหตุ: ลูกค้าจะหัก ณ ที่จ่าย 3% เป็นเงิน <span class="num">฿2,550</span> และต้องออก 50 ทวิ ให้คุณ</li></ul></div>
-    </article>
-
-    <article class="ask" data-k="co">
-      <p class="who" lang="en">Online shop on Stripe</p><p class="who" lang="th">ร้านออนไลน์ที่ใช้ Stripe</p>
-      <p class="q" lang="en">"Did all my Stripe payouts in October actually reach my bank?"</p>
-      <p class="q" lang="th">"ยอดโอนจาก Stripe เดือนตุลาคม เข้าบัญชีธนาคารครบไหม"</p>
-      <div class="a" lang="en"><b>12 of 13 payouts matched to your statement.</b><ul><li>1 payout of <span class="num">THB 18,240</span> is still in transit</li><li>October fees: <span class="num">THB 6,812</span></li><li>3 sales have no receipt in FlowAccount yet, and need one for VAT</li></ul></div>
-      <div class="a" lang="th"><b>ตรงกับสเตทเมนต์ 12 จาก 13 รายการ</b><ul><li>อีก 1 รายการ <span class="num">฿18,240</span> ยังอยู่ระหว่างโอน</li><li>ค่าธรรมเนียมเดือนตุลาคม <span class="num">฿6,812</span></li><li>มี 3 รายการขายที่ยังไม่มีใบเสร็จใน FlowAccount ต้องออกเพื่อ VAT</li></ul></div>
-    </article>
-
-    <article class="ask" data-k="co">
-      <p class="who" lang="en">Restaurant with 6 staff</p><p class="who" lang="th">ร้านอาหาร พนักงาน 6 คน</p>
-      <p class="q" lang="en">"Prepare November payroll for my 6 staff on Samui."</p>
+      <p class="who" lang="en">Restaurant with 6 staff</p><p class="who" lang="he" dir="rtl">מסעדה עם 6 עובדים</p><p class="who" lang="th">ร้านอาหาร พนักงาน 6 คน</p>
+      <p class="q" lang="en">"Prepare November payroll for my 6 staff on Samui."</p><p class="q" lang="he" dir="rtl">"תכין את המשכורות של נובמבר ל-6 העובדים שלי בסמוי."</p>
       <p class="q" lang="th">"เตรียมเงินเดือนพฤศจิกายนให้พนักงาน 6 คนที่สมุย"</p>
-      <div class="a" lang="en"><b>The run is ready for your approval, line by line.</b><ul><li>Overtime at 1.5x for 2 people, social security capped at <span class="num">THB 875</span></li><li>One work permit expires in 41 days, so that person's pay is held until you decide</li><li>Thai payslips drafted</li></ul></div>
+      <div class="a" lang="en"><b>The run is ready for your approval, line by line.</b><ul><li>Overtime at 1.5x for 2 people, social security capped at <span class="num">THB 875</span></li><li>One work permit expires in 41 days, so that person's pay is held until you decide</li><li>Thai payslips drafted</li></ul></div><div class="a" lang="he" dir="rtl"><b>הריצה מוכנה לאישור שלך, שורה אחר שורה.</b><ul><li>שעות נוספות ב-1.5 לשני אנשים, ביטוח לאומי עד תקרה של <span class="num">THB 875</span></li><li>אישור עבודה אחד פג בעוד 41 יום, ולכן השכר של העובד הזה מוחזק עד שתחליט</li><li>תלושי שכר בתאילנדית נוסחו</li></ul></div>
       <div class="a" lang="th"><b>รายการเงินเดือนพร้อมให้คุณอนุมัติทีละคน</b><ul><li>OT 1.5 เท่าสำหรับ 2 คน ประกันสังคมสูงสุด <span class="num">฿875</span></li><li>ใบอนุญาตทำงาน 1 ใบจะหมดอายุใน 41 วัน จึงพักเงินเดือนคนนั้นไว้จนกว่าคุณจะตัดสินใจ</li><li>ร่างสลิปเงินเดือนภาษาไทยแล้ว</li></ul></div>
     </article>
 
     <article class="ask" data-k="co">
-      <p class="who" lang="en">Agency that runs ads</p><p class="who" lang="th">เอเจนซี่ที่ลงโฆษณา</p>
-      <p class="q" lang="en">"We pay Google and Meta ads every month. Is there anything we have to file?"</p>
-      <p class="q" lang="th">"จ่ายค่าโฆษณา Google กับ Meta ทุกเดือน ต้องยื่นอะไรไหม"</p>
-      <div class="a" lang="en"><b>Yes: self-assessed VAT on PP.36 every month.</b><ul><li>October: <span class="num">THB 28,000</span> of ads, <span class="num">THB 1,960</span> VAT, due the 15th</li><li>Usually reclaimable on next month's PP.30. Your accountant confirms.</li></ul></div>
-      <div class="a" lang="th"><b>ต้องยื่น: นำส่ง VAT ตาม ภ.พ.36 ทุกเดือน</b><ul><li>ตุลาคม ค่าโฆษณา <span class="num">฿28,000</span> VAT <span class="num">฿1,960</span> กำหนดยื่นวันที่ 15</li><li>โดยทั่วไปนำไปเครดิตใน ภ.พ.30 เดือนถัดไปได้ ให้นักบัญชียืนยัน</li></ul></div>
-    </article>
-
-    <article class="ask" data-k="co">
-      <p class="who" lang="en">Café owner, end of month</p><p class="who" lang="th">เจ้าของคาเฟ่ สิ้นเดือน</p>
-      <p class="q" lang="en">(shares 14 receipt photos from the gallery) "Add these to October's expenses."</p>
+      <p class="who" lang="en">Café owner, end of month</p><p class="who" lang="he" dir="rtl">בעל בית קפה, סוף החודש</p><p class="who" lang="th">เจ้าของคาเฟ่ สิ้นเดือน</p>
+      <p class="q" lang="en">(shares 14 receipt photos from the gallery) "Add these to October's expenses."</p><p class="q" lang="he" dir="rtl">(משתף 14 תמונות של קבלות מהגלריה) "תוסיף אותן להוצאות של אוקטובר."</p>
       <p class="q" lang="th">(แชร์รูปใบเสร็จ 14 ใบจากแกลเลอรี) "บันทึกเป็นค่าใช้จ่ายเดือนตุลาคม"</p>
-      <div class="a" lang="en"><b>14 receipts read, <span class="num">THB 3,402</span> of claimable VAT.</b><ul><li>3 can't be claimed: 2 abbreviated tax invoices and 1 with the wrong buyer name. A Thai request to the supplier drafted.</li><li>1 duplicate caught</li><li>Draft expenses ready for FlowAccount, waiting for your yes</li></ul></div>
+      <div class="a" lang="en"><b>14 receipts read, <span class="num">THB 3,402</span> of claimable VAT.</b><ul><li>3 can't be claimed: 2 abbreviated tax invoices and 1 with the wrong buyer name. A Thai request to the supplier drafted.</li><li>1 duplicate caught</li><li>Draft expenses ready for FlowAccount, waiting for your yes</li></ul></div><div class="a" lang="he" dir="rtl"><b>14 קבלות נקראו, <span class="num">THB 3,402</span> מע"מ שאפשר לקזז.</b><ul><li>3 אי אפשר לקזז: 2 חשבוניות מס מקוצרות ואחת עם שם קונה שגוי. בקשה בתאילנדית לספק נוסחה.</li><li>כפילות אחת נתפסה</li><li>טיוטות ההוצאות מוכנות ל-FlowAccount, ומחכות לאישור שלך</li></ul></div>
       <div class="a" lang="th"><b>อ่านใบเสร็จ 14 ใบ VAT ที่เครดิตได้ <span class="num">฿3,402</span></b><ul><li>3 ใบใช้ไม่ได้: ใบกำกับภาษีอย่างย่อ 2 ใบ และชื่อผู้ซื้อไม่ถูกต้อง 1 ใบ ร่างข้อความขอใบใหม่จากร้านแล้ว</li><li>พบใบซ้ำ 1 ใบ</li><li>ร่างรายการค่าใช้จ่ายสำหรับ FlowAccount รอคุณอนุมัติ</li></ul></div>
-    </article>
-
-    <article class="ask" data-k="co">
-      <p class="who" lang="en">Company on PEAK</p><p class="who" lang="th">บริษัทที่ใช้ PEAK</p>
-      <p class="q" lang="en">"Here's my sales export from PEAK. Turn it into this month's VAT figures."</p>
-      <p class="q" lang="th">"นี่ไฟล์ส่งออกยอดขายจาก PEAK ช่วยสรุปตัวเลข VAT เดือนนี้"</p>
-      <div class="a" lang="en"><b>142 lines read, Thai headers mapped, Buddhist-Era dates converted.</b><ul><li>Output VAT: <span class="num">THB 48,307</span></li><li>2 lines flagged: one tax ID with 12 digits, and one gap in the invoice numbering</li></ul></div>
-      <div class="a" lang="th"><b>อ่าน 142 รายการ จับคู่หัวตารางภาษาไทย แปลงปี พ.ศ. แล้ว</b><ul><li>ภาษีขาย <span class="num">฿48,307</span></li><li>พบ 2 จุด: เลขผู้เสียภาษี 12 หลัก และเลขที่ใบกำกับขาดช่วง</li></ul></div>
     </article>
   </div>
 </section>
 
 <section>
-  <p class="kicker" lang="en">Income from abroad</p><p class="kicker" lang="th">รายได้จากต่างประเทศ</p>
-  <h2 lang="en">Your money comes from abroad. Your life is here. Your return should reflect both, correctly.</h2>
+  <p class="kicker" lang="en">Income from abroad</p><p class="kicker" lang="he" dir="rtl">הכנסה מחו"ל</p><p class="kicker" lang="th">รายได้จากต่างประเทศ</p>
+  <h2 lang="en">Your money comes from abroad. Your life is here. Your return should reflect both, correctly.</h2><h2 lang="he" dir="rtl">הכסף שלך מגיע מחו"ל. החיים שלך כאן. הדוח שלך צריך לשקף את שניהם, נכון.</h2>
   <h2 lang="th">รายได้มาจากต่างประเทศ แต่ชีวิตอยู่ที่นี่ แบบภาษีของคุณควรสะท้อนทั้งสองอย่างให้ถูกต้อง</h2>
-  <p class="sub" lang="en">A salary from home, clients overseas, a flat you rent out, a pension. ThaiTax Assistant counts your days in Thailand, sorts every transfer into savings from before 2024 and income that may be taxable, prepares the Revenue Department's foreign-income declaration, and works out the credit for tax you already paid abroad.</p>
+  <p class="sub" lang="en">A salary from home, clients overseas, a flat you rent out, a pension. ThaiTax Assistant counts your days in Thailand, sorts every transfer into savings from before 2024 and income that may be taxable, prepares the Revenue Department's foreign-income declaration, and works out the credit for tax you already paid abroad.</p><p class="sub" lang="he" dir="rtl">משכורת מהבית, לקוחות בחו"ל, דירה שאתה משכיר, פנסיה. ThaiTax Assistant סופר את הימים שלך בתאילנד, ממיין כל העברה לחסכונות מלפני 2024 ולהכנסה שעשויה להיות חייבת במס, מכין את הצהרת ההכנסה מחו"ל של רשות המסים ומחשב את הזיכוי על מס ששילמת כבר בחו"ל.</p>
   <p class="sub" lang="th">เงินเดือนจากต่างประเทศ ลูกค้าต่างประเทศ ค่าเช่าบ้าน หรือเงินบำนาญ ThaiTax Assistant นับวันที่คุณอยู่ในไทย แยกเงินที่โอนเข้าว่าเป็นเงินออมก่อนปี 2567 หรือเงินได้ที่อาจต้องเสียภาษี เตรียมแบบแจ้งเงินได้จากต่างประเทศ และคำนวณเครดิตภาษีที่จ่ายไปแล้วในต่างประเทศ</p>
   <div class="grid">
     <div class="feat">
-      <h3 lang="en">180 days, counted</h3><h3 lang="th">นับครบ 180 วัน</h3>
-      <p lang="en">See whether you are tax resident this year, and how many days you have left.</p>
+      <h3 lang="en">180 days, counted</h3><h3 lang="he" dir="rtl">180 יום, נספרים</h3><h3 lang="th">นับครบ 180 วัน</h3>
+      <p lang="en">See whether you are tax resident this year, and how many days you have left.</p><p lang="he" dir="rtl">תראה אם אתה תושב מס השנה, וכמה ימים נשארו לך.</p>
       <p lang="th">รู้ว่าปีนี้คุณเป็นผู้มีถิ่นที่อยู่ทางภาษีหรือไม่ และเหลืออีกกี่วัน</p>
     </div>
     <div class="feat">
-      <h3 lang="en">Every transfer, explained</h3><h3 lang="th">ทุกยอดโอน มีที่มา</h3>
-      <p lang="en">Savings from before 2024 kept apart from new income, with the proof your accountant will ask for.</p>
+      <h3 lang="en">Every transfer, explained</h3><h3 lang="he" dir="rtl">כל העברה, מוסברת</h3><h3 lang="th">ทุกยอดโอน มีที่มา</h3>
+      <p lang="en">Savings from before 2024 kept apart from new income, with the proof your accountant will ask for.</p><p lang="he" dir="rtl">חסכונות מלפני 2024 נשמרים בנפרד מהכנסה חדשה, עם ההוכחות שרואה החשבון יבקש.</p>
       <p lang="th">แยกเงินออมก่อนปี 2567 ออกจากเงินได้ใหม่ พร้อมเอกสารที่นักบัญชีต้องการ</p>
     </div>
     <div class="feat">
-      <h3 lang="en">No paying twice</h3><h3 lang="th">ไม่เสียภาษีซ้ำซ้อน</h3>
-      <p lang="en">Tax paid at home is credited under the treaty, using the Revenue Department's own method.</p>
+      <h3 lang="en">No paying twice</h3><h3 lang="he" dir="rtl">בלי לשלם פעמיים</h3><h3 lang="th">ไม่เสียภาษีซ้ำซ้อน</h3>
+      <p lang="en">Tax paid at home is credited under the treaty, using the Revenue Department's own method.</p><p lang="he" dir="rtl">מס ששולם בבית מזוכה לפי האמנה, בשיטה של רשות המסים עצמה.</p>
       <p lang="th">คำนวณเครดิตภาษีต่างประเทศตามอนุสัญญาภาษีซ้อน ด้วยวิธีของกรมสรรพากร</p>
     </div>
   </div>
 </section>
 
 <section id="install">
-  <p class="kicker" lang="en">Start in five minutes</p><p class="kicker" lang="th">เริ่มใช้ใน 5 นาที</p>
-  <h2 lang="en">Three steps and you're set up</h2><h2 lang="th">3 ขั้นตอนก็พร้อมใช้</h2>
+  <p class="kicker" lang="en">Start in five minutes</p><p class="kicker" lang="he" dir="rtl">מתחילים בחמש דקות</p><p class="kicker" lang="th">เริ่มใช้ใน 5 นาที</p>
+  <h2 lang="en">Three steps and you're set up</h2><h2 lang="he" dir="rtl">שלושה צעדים ואתה מוכן</h2><h2 lang="th">3 ขั้นตอนก็พร้อมใช้</h2>
   <div class="steps">
     <div class="step">
-      <h3 lang="en">Install</h3><h3 lang="th">ติดตั้ง</h3>
-      <p lang="en">In the Claude app, download the file and drag it into a chat, then press Install. In Claude Code, run:</p>
+      <h3 lang="en">Install</h3><h3 lang="he" dir="rtl">התקנה</h3><h3 lang="th">ติดตั้ง</h3>
+      <p lang="en">In the Claude app, download the file and drag it into a chat, then press Install. In Claude Code, run:</p><p lang="he" dir="rtl">באפליקציית Claude, הורד את הקובץ, גרור אותו לשיחה ולחץ Install. ב-Claude Code, הרץ:</p>
       <p lang="th">ในแอป Claude ดาวน์โหลดไฟล์ ลากไปวางในแชต แล้วกด Install หรือใน Claude Code พิมพ์:</p>
       <pre>/plugin marketplace add Reflection2024/thaitax-assistant
 /plugin install thaitax-assistant@thaitax-assistant</pre>
     </div>
     <div class="step">
-      <h3 lang="en">Say "Get started"</h3><h3 lang="th">พิมพ์ "เริ่มต้น"</h3>
-      <p lang="en">It welcomes you and asks a few short rounds of questions about you or your company, in English, Hebrew or Thai.</p>
-      <p lang="th">ระบบจะต้อนรับคุณ และถามข้อมูลเกี่ยวกับคุณหรือบริษัททีละชุดสั้น ๆ เป็นภาษาไทย อังกฤษ หรือฮีบรู</p>
+      <h3 lang="en">Say "Get started"</h3><h3 lang="he" dir="rtl">תגיד "בוא נתחיל"</h3><h3 lang="th">พิมพ์ "เริ่มต้น"</h3>
+      <p lang="en">It welcomes you and asks a few short rounds of questions about you or your company, in your own language: English, Thai, Hebrew, Russian, French, any language you speak.</p><p lang="he" dir="rtl">היא מקבלת אותך בברכה ושואלת כמה סבבים קצרים של שאלות עליך או על החברה שלך, בשפה שלך: עברית, אנגלית, תאילנדית, רוסית, צרפתית, כל שפה שאתה מדבר.</p>
+      <p lang="th">ระบบจะต้อนรับคุณ และถามข้อมูลเกี่ยวกับคุณหรือบริษัททีละชุดสั้น ๆ ด้วยภาษาของคุณเอง ไทย อังกฤษ ฮีบรู รัสเซีย ฝรั่งเศส หรือภาษาใดก็ได้ที่คุณพูด</p>
     </div>
     <div class="step">
-      <h3 lang="en">Connect and go</h3><h3 lang="th">เชื่อมต่อแล้วเริ่มใช้</h3>
-      <p lang="en">It walks you through connecting FlowAccount, Stripe, email and calendar, shows you how to send receipt photos, and runs your first task.</p>
+      <h3 lang="en">Connect and go</h3><h3 lang="he" dir="rtl">מחברים ויוצאים לדרך</h3><h3 lang="th">เชื่อมต่อแล้วเริ่มใช้</h3>
+      <p lang="en">It walks you through connecting FlowAccount, Stripe, email and calendar, shows you how to send receipt photos, and runs your first task.</p><p lang="he" dir="rtl">היא מדריכה אותך לחבר את FlowAccount, Stripe, המייל והיומן, מראה איך לשלוח תמונות של קבלות, ומריצה את המשימה הראשונה שלך.</p>
       <p lang="th">พาเชื่อมต่อ FlowAccount, Stripe, อีเมล และปฏิทิน สอนส่งรูปใบเสร็จ แล้วทำงานแรกให้ดูทันที</p>
     </div>
   </div>
 </section>
 
 <section id="proactive">
-  <p class="kicker" lang="en">It works with you</p><p class="kicker" lang="th">ทำงานไปพร้อมกับคุณ</p>
-  <h2 lang="en">You don't have to remember what comes next. It asks, checks and reminds you.</h2>
+  <p class="kicker" lang="en">It works with you</p><p class="kicker" lang="he" dir="rtl">היא עובדת איתך</p><p class="kicker" lang="th">ทำงานไปพร้อมกับคุณ</p>
+  <h2 lang="en">You don't have to remember what comes next. It asks, checks and reminds you.</h2><h2 lang="he" dir="rtl">אתה לא צריך לזכור מה הלאה. היא שואלת, בודקת ומזכירה לך.</h2>
   <h2 lang="th">ไม่ต้องจำว่าต้องทำอะไรต่อ ระบบจะถาม ตรวจ และเตือนคุณเอง</h2>
   <div class="grid">
-    <div class="feat"><h3 lang="en">Asks for what's missing</h3><h3 lang="th">ขอเอกสารที่ขาด</h3><p lang="en">"Please send October's Kasikorn statement and the 50 ทวิ from Siam Coast." It asks for exactly what's needed, a few items at a time, and keeps the list for you.</p><p lang="th">"กรุณาส่งสเตทเมนต์กสิกรเดือนตุลาคม และ 50 ทวิ จากสยามโคสต์" ขอเฉพาะที่จำเป็น ครั้งละไม่กี่รายการ และจดรายการไว้ให้</p></div>
-    <div class="feat"><h3 lang="en">Checks every document</h3><h3 lang="th">ตรวจทุกเอกสาร</h3><p lang="en">Wrong tax ID, buyer name that doesn't match, VAT that isn't 7%, a withholding certificate on the wrong form. Found the moment you send it.</p><p lang="th">เลขผู้เสียภาษีผิด ชื่อผู้ซื้อไม่ตรง VAT ไม่ใช่ 7% หรือ 50 ทวิ ผิดแบบ พบทันทีที่คุณส่ง</p></div>
-    <div class="feat"><h3 lang="en">Tells you what to fix</h3><h3 lang="th">บอกว่าต้องแก้อะไร</h3><p lang="en">Each mistake comes with the fix: a corrected draft, or a polite request to your supplier in Thai, ready to send when you say yes.</p><p lang="th">ทุกข้อผิดพลาดมาพร้อมวิธีแก้ ทั้งร่างเอกสารที่ถูกต้อง หรือข้อความขอแก้ไขถึงคู่ค้าเป็นภาษาไทย พร้อมส่งเมื่อคุณอนุมัติ</p></div>
-    <div class="feat"><h3 lang="en">Reviews your books</h3><h3 lang="th">ตรวจสมุดบัญชี</h3><p lang="en">Journals and trial balance checked against your returns: VAT and withholding accounts, duplicates, entries with no document.</p><p lang="th">ตรวจสมุดรายวันและงบทดลองเทียบกับแบบภาษี ทั้งบัญชี VAT ภาษีหัก ณ ที่จ่าย รายการซ้ำ และรายการที่ไม่มีเอกสาร</p></div>
-    <div class="feat"><h3 lang="en">Puts it in your calendar</h3><h3 lang="th">ลงปฏิทินให้</h3><p lang="en">Every deadline, with a reminder 3 days before, and a nudge on the 25th to send the month's receipts. Only after you say yes.</p><p lang="th">ทุกกำหนดยื่นพร้อมแจ้งเตือนล่วงหน้า 3 วัน และเตือนส่งใบเสร็จทุกวันที่ 25 เมื่อคุณอนุญาตเท่านั้น</p></div>
-    <div class="feat"><h3 lang="en">Double-checks your accountant</h3><h3 lang="th">ตรวจทานงานนักบัญชี</h3><p lang="en">Every return filed, on time, matching your books, and your tax money actually received by the Revenue Department. Questions drafted politely, so you can trust and verify.</p><p lang="th">ยื่นแบบครบ ตรงเวลา ตรงกับบัญชี และเงินภาษีถึงกรมสรรพากรจริง พร้อมร่างคำถามอย่างสุภาพ ให้คุณไว้ใจได้และตรวจสอบได้</p></div>
-    <div class="feat"><h3 lang="en">Researches before it answers</h3><h3 lang="th">ค้นข้อมูลก่อนตอบ</h3><p lang="en">Ask anything. It checks the Revenue Department, the Royal Gazette and Social Security in Thai and English, and answers with the links, so you know the answer is current.</p><p lang="th">ถามได้ทุกเรื่อง ระบบค้นจากกรมสรรพากร ราชกิจจานุเบกษา และประกันสังคม ทั้งภาษาไทยและอังกฤษ แล้วตอบพร้อมลิงก์ที่มา คุณจึงมั่นใจว่าข้อมูลเป็นปัจจุบัน</p></div>
-    <div class="feat"><h3 lang="en">Warns you early</h3><h3 lang="th">เตือนล่วงหน้า</h3><p lang="en">A work permit about to expire, VAT threshold getting close, your 180th day in Thailand. You hear about it before it becomes a problem.</p><p lang="th">ใบอนุญาตทำงานใกล้หมดอายุ รายได้ใกล้เกณฑ์ VAT หรือใกล้ครบ 180 วันในไทย คุณจะรู้ก่อนที่จะเป็นปัญหา</p></div>
+    <div class="feat"><h3 lang="en">Asks for what's missing</h3><h3 lang="he" dir="rtl">מבקשת את מה שחסר</h3><h3 lang="th">ขอเอกสารที่ขาด</h3><p lang="en">"Please send October's Kasikorn statement and the 50 ทวิ from Siam Coast." It asks for exactly what's needed, a few items at a time, and keeps the list for you.</p><p lang="he" dir="rtl">"בבקשה שלח את דף הבנק של כסיקורן לאוקטובר ואת ה-⁦50 ทวิ⁩ מ-Siam Coast." היא מבקשת בדיוק מה שצריך, בכל פעם כמה פריטים, ושומרת לך את הרשימה.</p><p lang="th">"กรุณาส่งสเตทเมนต์กสิกรเดือนตุลาคม และ 50 ทวิ จากสยามโคสต์" ขอเฉพาะที่จำเป็น ครั้งละไม่กี่รายการ และจดรายการไว้ให้</p></div>
+    <div class="feat"><h3 lang="en">Checks every document</h3><h3 lang="he" dir="rtl">בודקת כל מסמך</h3><h3 lang="th">ตรวจทุกเอกสาร</h3><p lang="en">Wrong tax ID, buyer name that doesn't match, VAT that isn't 7%, a withholding certificate on the wrong form. Found the moment you send it.</p><p lang="he" dir="rtl">מספר זיהוי שגוי, שם קונה שלא תואם, מע"מ שהוא לא 7%, תעודת ניכוי על הטופס הלא נכון. נמצא ברגע שאתה שולח.</p><p lang="th">เลขผู้เสียภาษีผิด ชื่อผู้ซื้อไม่ตรง VAT ไม่ใช่ 7% หรือ 50 ทวิ ผิดแบบ พบทันทีที่คุณส่ง</p></div>
+    <div class="feat"><h3 lang="en">Tells you what to fix</h3><h3 lang="he" dir="rtl">אומרת לך מה לתקן</h3><h3 lang="th">บอกว่าต้องแก้อะไร</h3><p lang="en">Each mistake comes with the fix: a corrected draft, or a polite request to your supplier in Thai, ready to send when you say yes.</p><p lang="he" dir="rtl">לכל טעות מגיע תיקון: טיוטה מתוקנת, או בקשה מנומסת לספק בתאילנדית, מוכנה לשליחה כשתגיד כן.</p><p lang="th">ทุกข้อผิดพลาดมาพร้อมวิธีแก้ ทั้งร่างเอกสารที่ถูกต้อง หรือข้อความขอแก้ไขถึงคู่ค้าเป็นภาษาไทย พร้อมส่งเมื่อคุณอนุมัติ</p></div>
+    <div class="feat"><h3 lang="en">Reviews your books</h3><h3 lang="he" dir="rtl">בודקת את הספרים</h3><h3 lang="th">ตรวจสมุดบัญชี</h3><p lang="en">Journals and trial balance checked against your returns: VAT and withholding accounts, duplicates, entries with no document.</p><p lang="he" dir="rtl">יומנים ומאזן בוחן נבדקים מול הדוחות: חשבונות מע"מ וניכוי במקור, כפילויות, רישומים בלי מסמך.</p><p lang="th">ตรวจสมุดรายวันและงบทดลองเทียบกับแบบภาษี ทั้งบัญชี VAT ภาษีหัก ณ ที่จ่าย รายการซ้ำ และรายการที่ไม่มีเอกสาร</p></div>
+    <div class="feat"><h3 lang="en">Puts it in your calendar</h3><h3 lang="he" dir="rtl">שמה את זה ביומן שלך</h3><h3 lang="th">ลงปฏิทินให้</h3><p lang="en">Every deadline, with a reminder 3 days before, and a nudge on the 25th to send the month's receipts. Only after you say yes.</p><p lang="he" dir="rtl">כל מועד, עם תזכורת 3 ימים לפני, ודחיפה ב-25 לחודש לשלוח את הקבלות. רק אחרי שתגיד כן.</p><p lang="th">ทุกกำหนดยื่นพร้อมแจ้งเตือนล่วงหน้า 3 วัน และเตือนส่งใบเสร็จทุกวันที่ 25 เมื่อคุณอนุญาตเท่านั้น</p></div>
+    <div class="feat"><h3 lang="en">Double-checks your accountant</h3><h3 lang="he" dir="rtl">בודקת שוב את רואה החשבון</h3><h3 lang="th">ตรวจทานงานนักบัญชี</h3><p lang="en">Every return filed, on time, matching your books, and your tax money actually received by the Revenue Department. Questions drafted politely, so you can trust and verify.</p><p lang="he" dir="rtl">כל דוח הוגש, בזמן, תואם לספרים, וכסף המס שלך באמת הגיע לרשות המסים. שאלות מנוסחות בנימוס, כדי שתוכל לסמוך ולוודא.</p><p lang="th">ยื่นแบบครบ ตรงเวลา ตรงกับบัญชี และเงินภาษีถึงกรมสรรพากรจริง พร้อมร่างคำถามอย่างสุภาพ ให้คุณไว้ใจได้และตรวจสอบได้</p></div>
+    <div class="feat"><h3 lang="en">Researches before it answers</h3><h3 lang="he" dir="rtl">חוקרת לפני שהיא עונה</h3><h3 lang="th">ค้นข้อมูลก่อนตอบ</h3><p lang="en">Ask anything. It checks the Revenue Department, the Royal Gazette and Social Security in Thai and English, and answers with the links, so you know the answer is current.</p><p lang="he" dir="rtl">תשאל כל דבר. היא בודקת את רשות המסים, הרשומות הרשמיות והביטוח הלאומי בתאילנדית ובאנגלית, ועונה עם הקישורים, כדי שתדע שהתשובה עדכנית.</p><p lang="th">ถามได้ทุกเรื่อง ระบบค้นจากกรมสรรพากร ราชกิจจานุเบกษา และประกันสังคม ทั้งภาษาไทยและอังกฤษ แล้วตอบพร้อมลิงก์ที่มา คุณจึงมั่นใจว่าข้อมูลเป็นปัจจุบัน</p></div>
+    <div class="feat"><h3 lang="en">Warns you early</h3><h3 lang="he" dir="rtl">מזהירה מוקדם</h3><h3 lang="th">เตือนล่วงหน้า</h3><p lang="en">A work permit about to expire, VAT threshold getting close, your 180th day in Thailand. You hear about it before it becomes a problem.</p><p lang="he" dir="rtl">אישור עבודה שעומד לפוג, סף המע"מ שמתקרב, היום ה-180 שלך בתאילנד. אתה שומע על זה לפני שזה הופך לבעיה.</p><p lang="th">ใบอนุญาตทำงานใกล้หมดอายุ รายได้ใกล้เกณฑ์ VAT หรือใกล้ครบ 180 วันในไทย คุณจะรู้ก่อนที่จะเป็นปัญหา</p></div>
   </div>
 </section>
 
 <section id="family">
-  <p class="kicker" lang="en">Family budget</p><p class="kicker" lang="th">งบประมาณครอบครัว</p>
-  <h2 lang="en">Where does your money actually go each month?</h2>
+  <p class="kicker" lang="en">Family budget</p><p class="kicker" lang="he" dir="rtl">תקציב משפחתי</p><p class="kicker" lang="th">งบประมาณครอบครัว</p>
+  <h2 lang="en">Where does your money actually go each month?</h2><h2 lang="he" dir="rtl">לאן באמת הולך הכסף שלך כל חודש?</h2>
   <h2 lang="th">แต่ละเดือน เงินของคุณไปไหนบ้าง</h2>
   <div class="fam">
     <div>
-      <p class="sub" lang="en">Send your bank statements, from a Thai bank, Wise or a card abroad, in any currency. In a few minutes you see your family's month on one calm page.</p>
+      <p class="sub" lang="en">Send your bank statements, from a Thai bank, Wise or a card abroad, in any currency. In a few minutes you see your family's month on one calm page.</p><p class="sub" lang="he" dir="rtl">שלח את דפי הבנק שלך, מבנק תאילנדי, מ-Wise או מכרטיס מחו"ל, בכל מטבע. תוך כמה דקות אתה רואה את החודש של המשפחה בדף אחד רגוע.</p>
       <p class="sub" lang="th">ส่งสเตทเมนต์ธนาคาร ไม่ว่าจะเป็นธนาคารไทย Wise หรือบัตรจากต่างประเทศ สกุลเงินใดก็ได้ ไม่กี่นาทีคุณจะเห็นภาพการเงินของครอบครัวในหน้าเดียว</p>
       <ul lang="en">
         <li>Money in versus money out, month by month</li>
@@ -587,7 +552,11 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
         <li>Every fixed payment and subscription, with what it costs you a year</li>
         <li>Two streaming services? Two cloud plans? A price that crept up? You'll see it</li>
         <li>Correct a category once, and it remembers</li>
-      </ul>
+      </ul><ul lang="he" dir="rtl"><li>נכנס מול יצא, חודש אחרי חודש</li>
+<li>לאן זה הולך: סופר, בית ספר, שכירות, אוכל בחוץ, טיולים</li>
+<li>כל תשלום קבוע ומנוי, עם כמה הוא עולה לך בשנה</li>
+<li>שני שירותי סטרימינג? שני שירותי ענן? מחיר שעלה בשקט? תראה את זה</li>
+<li>תתקן קטגוריה פעם אחת, והיא זוכרת</li></ul>
       <ul lang="th">
         <li>เงินเข้าเทียบกับเงินออก รายเดือน</li>
         <li>เงินไปที่ไหน: ของใช้ในบ้าน ค่าเรียน ค่าเช่า กินข้าวนอกบ้าน ท่องเที่ยว</li>
@@ -595,75 +564,103 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
         <li>สตรีมมิงสองเจ้า? พื้นที่คลาวด์สองที่? ราคาที่ขึ้นโดยไม่รู้ตัว? คุณจะเห็นทันที</li>
         <li>แก้หมวดครั้งเดียว ระบบจำไว้ให้</li>
       </ul>
-      <p class="sub" lang="en">No bank passwords, ever, and nothing is moved or cancelled for you. Want a full budgeting app? It can export to Actual Budget.</p>
+      <p class="sub" lang="en">No bank passwords, ever, and nothing is moved or cancelled for you. Want a full budgeting app? It can export to Actual Budget.</p><p class="sub" lang="he" dir="rtl">אף פעם לא סיסמאות לבנק, ושום דבר לא מועבר או מבוטל בשבילך. רוצה אפליקציית תקציב מלאה? אפשר לייצא ל-Actual Budget.</p>
       <p class="sub" lang="th">ไม่ขอรหัสผ่านธนาคาร ไม่โอนเงินหรือยกเลิกสิ่งใดแทนคุณ ต้องการแอปงบประมาณเต็มรูปแบบ? ส่งออกไปยัง Actual Budget ได้</p>
     </div>
     <div class="mini" aria-label="Example family dashboard">
       <div class="tl">
-        <div><span lang="en">Money in</span><span lang="th">เงินเข้า</span><b>฿157,920</b></div>
-        <div><span lang="en">Money out</span><span lang="th">เงินออก</span><b>฿102,302</b></div>
-        <div><span lang="en">Left over</span><span lang="th">คงเหลือ</span><b style="color:var(--jade)">฿55,618</b></div>
+        <div><span lang="en">Money in</span><span lang="he" dir="rtl">נכנס</span><span lang="th">เงินเข้า</span><b>฿157,920</b></div>
+        <div><span lang="en">Money out</span><span lang="he" dir="rtl">יצא</span><span lang="th">เงินออก</span><b>฿102,302</b></div>
+        <div><span lang="en">Left over</span><span lang="he" dir="rtl">נשאר</span><span lang="th">คงเหลือ</span><b style="color:var(--jade)">฿55,618</b></div>
       </div>
       <div class="bars" aria-hidden="true">
         <div><i class="in" style="height:82%"></i><i class="out" style="height:58%"></i></div>
         <div><i class="in" style="height:80%"></i><i class="out" style="height:52%"></i></div>
         <div><i class="in" style="height:84%"></i><i class="out" style="height:55%"></i></div>
       </div>
-      <div class="flag" lang="en"><b>Worth a look:</b> Netflix and Disney+, ฿708 a month together. Do you watch both?</div>
+      <div class="flag" lang="en"><b>Worth a look:</b> Netflix and Disney+, ฿708 a month together. Do you watch both?</div><div class="flag" lang="he" dir="rtl"><b>שווה הצצה:</b> Netflix ו-Disney+, ביחד ฿708 בחודש. אתם צופים בשניהם?</div>
       <div class="flag" lang="th"><b>ควรดู:</b> Netflix และ Disney+ รวม ฿708 ต่อเดือน ดูทั้งสองอย่างไหม</div>
       <div class="rows">
-        <div><span>Villa rent</span><span>฿45,000 <small lang="en">/ month</small><small lang="th">/ เดือน</small></span></div>
-        <div><span>AIS Fibre</span><span>฿799 <small lang="en">/ month</small><small lang="th">/ เดือน</small></span></div>
-        <div><span>Google One + iCloud</span><span>฿699 <small lang="en">/ month</small><small lang="th">/ เดือน</small></span></div>
+        <div><span>Villa rent</span><span>฿45,000 <small lang="en">/ month</small><small lang="he" dir="rtl">/ חודש</small><small lang="th">/ เดือน</small></span></div>
+        <div><span>AIS Fibre</span><span>฿799 <small lang="en">/ month</small><small lang="he" dir="rtl">/ חודש</small><small lang="th">/ เดือน</small></span></div>
+        <div><span>Google One + iCloud</span><span>฿699 <small lang="en">/ month</small><small lang="he" dir="rtl">/ חודש</small><small lang="th">/ เดือน</small></span></div>
       </div>
-      <p class="sub" style="margin:0;font-size:13px" lang="en">Example figures.</p><p class="sub" style="margin:0;font-size:13px" lang="th">ตัวเลขตัวอย่าง</p>
+      <p class="sub" style="margin:0;font-size:13px" lang="en">Example figures.</p><p class="sub" style="margin:0;font-size:13px" lang="he" dir="rtl">מספרים לדוגמה.</p><p class="sub" style="margin:0;font-size:13px" lang="th">ตัวเลขตัวอย่าง</p>
     </div>
   </div>
 </section>
 
+<section id="dashboards">
+  <p class="kicker" lang="en">Dashboards</p><p class="kicker" lang="he" dir="rtl">דשבורדים</p><p class="kicker" lang="th">แดชบอร์ด</p>
+  <h2 lang="en">Dashboards you can build, just by asking</h2><h2 lang="he" dir="rtl">דשבורדים שאפשר לבנות, רק מבקשים</h2><h2 lang="th">แดชบอร์ดที่สร้างได้ แค่ขอ</h2>
+  <p class="sub" lang="en">Say what you want to see. It builds a page from your own files that you can open any time, and refreshes it whenever you ask.</p><p class="sub" lang="he" dir="rtl">תגיד מה אתה רוצה לראות, והיא בונה עמוד מהקבצים שלך, שאפשר לפתוח מתי שתרצה ולרענן בכל פעם שתבקש.</p><p class="sub" lang="th">บอกว่าอยากเห็นอะไร ผู้ช่วยจะสร้างหน้าแดชบอร์ดจากไฟล์ของคุณ เปิดดูได้ทุกเมื่อ และอัปเดตได้ทุกครั้งที่ขอ</p>
+  <h3 class="dgroup" lang="en">For you</h3><h3 class="dgroup" lang="he" dir="rtl">לך</h3><h3 class="dgroup" lang="th">สำหรับคุณ</h3>
+  <div class="dgrid">
+    <article class="dcard"><h3><span lang="en">Days in Thailand and money from abroad</span><span lang="he" dir="rtl">ימים בתאילנד וכסף מחו"ל</span><span lang="th">จำนวนวันในไทยและเงินจากต่างประเทศ</span></h3><p class="dd"><span lang="en">See if you're tax resident, and which transfers count as income.</span><span lang="he" dir="rtl">תראה אם אתה תושב מס, ואילו העברות נחשבות הכנסה.</span><span lang="th">ดูว่าคุณเป็นผู้มีถิ่นที่อยู่ทางภาษีหรือไม่ และการโอนใดนับเป็นเงินได้</span></p><div class="viz" aria-hidden="true"><div class="ringrow"><svg viewBox="0 0 64 64" class="ring"><circle cx="32" cy="32" r="26" class="trk"/><circle cx="32" cy="32" r="26" class="val" stroke-dasharray="96 163.4"/><text x="32" y="36">214</text></svg><div class="legend"><p><i class="dot g"></i><span lang="en">Savings before 2024</span><span lang="he" dir="rtl">חסכונות מלפני 2024</span><span lang="th">เงินออมก่อนปี 2024</span> <b>฿302,400</b></p><p><i class="dot o"></i><span lang="en">Income since 2024</span><span lang="he" dir="rtl">הכנסה מ-2024</span><span lang="th">เงินได้ตั้งแต่ปี 2024</span> <b>฿472,920</b></p><p class="note"><span lang="en">214 of 180 days: tax resident</span><span lang="he" dir="rtl">214 ימים מתוך 180: תושב מס</span><span lang="th">214 จาก 180 วัน: ผู้มีถิ่นที่อยู่</span></p></div></div></div><p class="ask-q"><span lang="en">How many days have I been here, and what did I bring in?</span><span lang="he" dir="rtl">כמה ימים הייתי פה השנה, ומה העברתי?</span><span lang="th">ปีนี้ฉันอยู่ไทยกี่วัน และโอนเงินเข้ามาเท่าไร</span></p></article>
+    <article class="dcard"><h3><span lang="en">Tax you can still save before 31 December</span><span lang="he" dir="rtl">כמה מס אפשר עוד לחסוך עד 31 בדצמבר</span><span lang="th">ภาษีที่ยังลดได้ก่อน 31 ธันวาคม</span></h3><p class="dd"><span lang="en">Every allowance still open to you, in baht.</span><span lang="he" dir="rtl">כל הקלה שעוד פתוחה לך, בבאט.</span><span lang="th">ทุกค่าลดหย่อนที่ยังใช้ได้ เป็นเงินบาท</span></p><div class="viz" aria-hidden="true"><div class="hbars"><p><span lang="en">Tax today</span><span lang="he" dir="rtl">המס היום</span><span lang="th">ภาษีตอนนี้</span><span class="hb"><i style="width:100%"></i></span><b>฿48,500</b></p><p><span lang="en">With RMF</span><span lang="he" dir="rtl">עם RMF</span><span lang="th">เมื่อซื้อ RMF</span><span class="hb"><i class="g" style="width:85%"></i></span><b>฿41,000</b></p><p><span lang="en">Plus health insurance</span><span lang="he" dir="rtl">וגם ביטוח בריאות</span><span lang="th">รวมประกันสุขภาพ</span><span class="hb"><i class="g" style="width:78%"></i></span><b>฿37,800</b></p><p class="note"><span lang="en">You save ฿10,700</span><span lang="he" dir="rtl">חיסכון של ฿10,700</span><span lang="th">ประหยัดได้ ฿10,700</span></p></div></div><p class="ask-q"><span lang="en">How can I pay less tax this year?</span><span lang="he" dir="rtl">איך אני משלם פחות מס השנה?</span><span lang="th">ปีนี้จะจ่ายภาษีน้อยลงได้อย่างไร</span></p></article>
+    <article class="dcard"><h3><span lang="en">Rent from your condo or villa</span><span lang="he" dir="rtl">שכירות מהדירה או מהווילה</span><span lang="th">ค่าเช่าคอนโดหรือวิลล่า</span></h3><p class="dd"><span lang="en">Rent month by month, the tax on it, and when land tax is due.</span><span lang="he" dir="rtl">שכירות חודש אחרי חודש, המס עליה, ומתי משלמים מס קרקע.</span><span lang="th">ค่าเช่ารายเดือน ภาษีที่ต้องจ่าย และกำหนดชำระภาษีที่ดิน</span></p><div class="viz" aria-hidden="true"><div class="vbars"><i class="g" style="height:60%"></i><i class="g" style="height:62%"></i><i class="g" style="height:80%"></i><i class="g" style="height:95%"></i><i class="g" style="height:90%"></i><i class="g" style="height:70%"></i><i class="g" style="height:55%"></i><i class="g" style="height:50%"></i><i class="g" style="height:58%"></i><i class="g" style="height:66%"></i><i class="g" style="height:85%"></i><i class="g" style="height:100%"></i></div><p class="chipline"><span class="chip"><span lang="en">Year: ฿486,000</span><span lang="he" dir="rtl">השנה: ฿486,000</span><span lang="th">ทั้งปี: ฿486,000</span></span><span class="chip warn"><span lang="en">Land tax due 30 Apr</span><span lang="he" dir="rtl">מס קרקע עד 30 באפריל</span><span lang="th">ภาษีที่ดิน ชำระภายใน 30 เม.ย.</span></span></p></div><p class="ask-q"><span lang="en">Show me my rental income for the year</span><span lang="he" dir="rtl">תראה לי את הכנסות השכירות של השנה</span><span lang="th">ขอดูรายได้ค่าเช่าทั้งปี</span></p></article>
+  </div>
+  <h3 class="dgroup" lang="en">For your company</h3><h3 class="dgroup" lang="he" dir="rtl">לחברה שלך</h3><h3 class="dgroup" lang="th">สำหรับบริษัทของคุณ</h3>
+  <div class="dgrid">
+    <article class="dcard"><h3><span lang="en">This month's taxes and deadlines</span><span lang="he" dir="rtl">המסים והמועדים של החודש</span><span lang="th">ภาษีและกำหนดยื่นของเดือนนี้</span></h3><p class="dd"><span lang="en">Every filing, the amount, and what's still missing.</span><span lang="he" dir="rtl">כל דוח, הסכום, ומה עוד חסר.</span><span lang="th">ทุกแบบยื่น ยอดเงิน และเอกสารที่ยังขาด</span></p><div class="viz" aria-hidden="true"><div class="trows"><p><i class="dot g"></i><b>⁦ภ.พ.30⁩</b><span>฿10,605</span><em>23.11</em></p><p><i class="dot g"></i><b>⁦ภ.พ.36⁩</b><span>฿1,960</span><em>16.11</em></p><p><i class="dot o"></i><b>⁦ภ.ง.ด.53⁩</b><span>฿900</span><em>16.11</em></p><p><i class="dot g"></i><b>SSO</b><span>฿3,000</span><em>15.11</em></p><p class="note"><span lang="en">1 withholding certificate missing</span><span lang="he" dir="rtl">חסרה תעודת ניכוי אחת</span><span lang="th">ขาดหนังสือรับรองหัก ณ ที่จ่าย 1 ใบ</span></p></div></div><p class="ask-q"><span lang="en">What's due this month?</span><span lang="he" dir="rtl">מה צריך להגיש החודש?</span><span lang="th">เดือนนี้ต้องยื่นอะไรบ้าง</span></p></article>
+    <article class="dcard"><h3><span lang="en">Cash and who owes you</span><span lang="he" dir="rtl">מזומנים ומי חייב לך</span><span lang="th">เงินสดและลูกหนี้</span></h3><p class="dd"><span lang="en">A 90-day cash outlook, with tax and social security payments already in it.</span><span lang="he" dir="rtl">תחזית מזומנים ל-90 יום, כולל תשלומי מס וביטוח לאומי.</span><span lang="th">ประมาณการเงินสด 90 วัน รวมภาษีและประกันสังคมแล้ว</span></p><div class="viz" aria-hidden="true"><svg viewBox="0 0 220 70" class="line"><polyline points="0,40 25,34 50,38 75,22 100,30 125,26 150,44 175,30 200,18 220,20"/><line x1="0" y1="62" x2="220" y2="62"/></svg><div class="aging"><p><b>฿184k</b><span lang="en">0–30 days</span><span lang="he" dir="rtl">0–30 ימים</span><span lang="th">0–30 วัน</span></p><p><b>฿52k</b><span lang="en">31–60 days</span><span lang="he" dir="rtl">31–60 ימים</span><span lang="th">31–60 วัน</span></p><p class="late"><b>฿18k</b><span lang="en">Over 60</span><span lang="he" dir="rtl">מעל 60</span><span lang="th">เกิน 60 วัน</span></p></div></div><p class="ask-q"><span lang="en">Show me cash for the next 90 days</span><span lang="he" dir="rtl">תראה לי את המזומנים ל-90 הימים הבאים</span><span lang="th">ขอดูเงินสด 90 วันข้างหน้า</span></p></article>
+    <article class="dcard"><h3><span lang="en">Payroll and your staff</span><span lang="he" dir="rtl">משכורות והעובדים שלך</span><span lang="th">เงินเดือนและพนักงาน</span></h3><p class="dd"><span lang="en">Cost per month, social security, and work permits about to expire.</span><span lang="he" dir="rtl">עלות לחודש, ביטוח לאומי, ואישורי עבודה שעומדים לפוג.</span><span lang="th">ค่าใช้จ่ายต่อเดือน ประกันสังคม และใบอนุญาตทำงานที่ใกล้หมดอายุ</span></p><div class="viz" aria-hidden="true"><div class="vbars"><i class="" style="height:70%"></i><i class="" style="height:72%"></i><i class="" style="height:71%"></i><i class="" style="height:78%"></i><i class="" style="height:80%"></i><i class="" style="height:84%"></i></div><p class="chipline"><span class="chip"><span lang="en">4 staff · ฿84,000 / month</span><span lang="he" dir="rtl">4 עובדים · ฿84,000 לחודש</span><span lang="th">พนักงาน 4 คน · ฿84,000 / เดือน</span></span><span class="chip warn"><span lang="en">Work permit: 41 days left</span><span lang="he" dir="rtl">אישור עבודה: עוד 41 יום</span><span lang="th">ใบอนุญาตทำงาน: เหลือ 41 วัน</span></span></p></div><p class="ask-q"><span lang="en">Build me a payroll dashboard</span><span lang="he" dir="rtl">תבנה לי דשבורד משכורות</span><span lang="th">สร้างแดชบอร์ดเงินเดือนให้หน่อย</span></p></article>
+  </div>
+  <p class="fine" lang="en">Sample numbers.</p><p class="fine" lang="he" dir="rtl">מספרים לדוגמה.</p><p class="fine" lang="th">ตัวเลขตัวอย่าง</p>
+</section>
+
+
 <section id="beyond">
-  <p class="kicker" lang="en">Everything around it</p><p class="kicker" lang="th">เรื่องอื่น ๆ ที่เกี่ยวข้อง</p>
-  <h2 lang="en">The rest of Thai paperwork, made lighter too.</h2>
+  <p class="kicker" lang="en">Everything around it</p><p class="kicker" lang="he" dir="rtl">כל מה שמסביב</p><p class="kicker" lang="th">เรื่องอื่น ๆ ที่เกี่ยวข้อง</p>
+  <h2 lang="en">The rest of Thai paperwork, made lighter too.</h2><h2 lang="he" dir="rtl">גם כאשר הניירת בתאילנדית, הכול הרבה יותר קל.</h2>
   <h2 lang="th">งานเอกสารอื่น ๆ ในไทย ก็ง่ายขึ้นด้วย</h2>
   <div class="grid">
-    <div class="feat"><h3 lang="en">On the real forms</h3><h3 lang="th">บนแบบฟอร์มจริง</h3><p lang="en">Your returns come back on the Revenue Department's own forms, filled in, with a one-page explanation. Send them straight to your accountant.</p><p lang="th">แบบแสดงรายการของคุณกลับมาบนแบบฟอร์มจริงของกรมสรรพากร กรอกครบ พร้อมใบอธิบายหนึ่งหน้า ส่งให้นักบัญชีได้ทันที</p></div>
-    <div class="feat"><h3 lang="en">A letter in Thai?</h3><h3 lang="th">ได้รับจดหมายภาษาไทย?</h3><p lang="en">Photo it. You get what they want, by when, what to prepare, and a polite reply in Thai, ready to send.</p><p lang="th">ถ่ายรูปส่งมา ระบบบอกว่าเขาต้องการอะไร ภายในเมื่อไร ต้องเตรียมอะไร พร้อมร่างคำตอบอย่างสุภาพ</p></div>
-    <div class="feat"><h3 lang="en">Save tax before 31 December</h3><h3 lang="th">ลดหย่อนก่อน 31 ธันวาคม</h3><p lang="en">See exactly how much each allowance still open to you would save, in baht, so the decision is easy.</p><p lang="th">ดูว่าค่าลดหย่อนแต่ละรายการที่ยังใช้ได้ ช่วยประหยัดภาษีได้กี่บาท ตัดสินใจได้ง่าย</p></div>
-    <div class="feat"><h3 lang="en">Property, in numbers</h3><h3 lang="th">อสังหาฯ เป็นตัวเลขชัดเจน</h3><p lang="en">Your yearly land and building tax checked, and the full cost of selling or leasing: transfer fee, taxes, who pays what.</p><p lang="th">ตรวจภาษีที่ดินและสิ่งปลูกสร้างรายปี และค่าใช้จ่ายทั้งหมดเมื่อขายหรือให้เช่า ใครจ่ายอะไร</p></div>
-    <div class="feat"><h3 lang="en">Your company, in good standing</h3><h3 lang="th">บริษัทของคุณ ครบถ้วนทุกขั้นตอน</h3><p lang="en">Audit, AGM, DBD filings, shareholder list, licence renewals. Every date in your calendar, every draft prepared.</p><p lang="th">ตรวจสอบบัญชี ประชุมผู้ถือหุ้น ส่งงบ DBD บอจ.5 ต่ออายุใบอนุญาต ทุกวันลงปฏิทิน ทุกเอกสารเตรียมไว้ให้</p></div>
-    <div class="feat"><h3 lang="en">Visa dates, never missed</h3><h3 lang="th">ไม่พลาดวันวีซ่า</h3><p lang="en">90-day reports, extensions, work permits, for you and your family, as gentle reminders.</p><p lang="th">รายงานตัว 90 วัน ต่อวีซ่า ใบอนุญาตทำงาน สำหรับคุณและครอบครัว เตือนอย่างนุ่มนวล</p></div>
-    <div class="feat"><h3 lang="en">Light, never heavy</h3><h3 lang="th">ง่าย ไม่เป็นภาระ</h3><p lang="en">It only asks what it can't find, a few things at a time. "Skip" is always fine, and it tells you when everything is in order.</p><p lang="th">ถามเฉพาะสิ่งที่หาเองไม่ได้ ครั้งละไม่กี่ข้อ ข้ามได้เสมอ และบอกคุณเมื่อทุกอย่างเรียบร้อย</p></div>
+    <div class="feat"><h3 lang="en">On the real forms</h3><h3 lang="he" dir="rtl">על הטפסים האמיתיים</h3><h3 lang="th">บนแบบฟอร์มจริง</h3><p lang="en">Your returns come back on the Revenue Department's own forms, filled in, with a one-page explanation. Send them straight to your accountant.</p><p lang="he" dir="rtl">הדוחות שלך חוזרים על הטפסים של רשות המסים עצמה, ממולאים, עם דף הסבר של עמוד אחד. שלח אותם ישר לרואה החשבון.</p><p lang="th">แบบแสดงรายการของคุณกลับมาบนแบบฟอร์มจริงของกรมสรรพากร กรอกครบ พร้อมใบอธิบายหนึ่งหน้า ส่งให้นักบัญชีได้ทันที</p></div>
+    <div class="feat"><h3 lang="en">A letter in Thai?</h3><h3 lang="he" dir="rtl">מכתב בתאילנדית?</h3><h3 lang="th">ได้รับจดหมายภาษาไทย?</h3><p lang="en">Photo it. You get what they want, by when, what to prepare, and a polite reply in Thai, ready to send.</p><p lang="he" dir="rtl">תצלם אותו. תקבל מה הם רוצים, עד מתי, מה להכין, ותשובה מנומסת בתאילנדית, מוכנה לשליחה.</p><p lang="th">ถ่ายรูปส่งมา ระบบบอกว่าเขาต้องการอะไร ภายในเมื่อไร ต้องเตรียมอะไร พร้อมร่างคำตอบอย่างสุภาพ</p></div>
+    <div class="feat"><h3 lang="en">Save tax before 31 December</h3><h3 lang="he" dir="rtl">לחסוך במס לפני 31 בדצמבר</h3><h3 lang="th">ลดหย่อนก่อน 31 ธันวาคม</h3><p lang="en">See exactly how much each allowance still open to you would save, in baht, so the decision is easy.</p><p lang="he" dir="rtl">תראה בדיוק כמה כל הקלה שעוד פתוחה לך תחסוך, בבאט, כדי שההחלטה תהיה קלה.</p><p lang="th">ดูว่าค่าลดหย่อนแต่ละรายการที่ยังใช้ได้ ช่วยประหยัดภาษีได้กี่บาท ตัดสินใจได้ง่าย</p></div>
+    <div class="feat"><h3 lang="en">Property, in numbers</h3><h3 lang="he" dir="rtl">נדל"ן, במספרים</h3><h3 lang="th">อสังหาฯ เป็นตัวเลขชัดเจน</h3><p lang="en">Your yearly land and building tax checked, and the full cost of selling or leasing: transfer fee, taxes, who pays what.</p><p lang="he" dir="rtl">מס הקרקע והבניין השנתי שלך נבדק, וכל העלות של מכירה או השכרה: אגרת העברה, מסים, מי משלם מה.</p><p lang="th">ตรวจภาษีที่ดินและสิ่งปลูกสร้างรายปี และค่าใช้จ่ายทั้งหมดเมื่อขายหรือให้เช่า ใครจ่ายอะไร</p></div>
+    <div class="feat"><h3 lang="en">Your company, in good standing</h3><h3 lang="he" dir="rtl">החברה שלך, תקינה</h3><h3 lang="th">บริษัทของคุณ ครบถ้วนทุกขั้นตอน</h3><p lang="en">Audit, AGM, DBD filings, shareholder list, licence renewals. Every date in your calendar, every draft prepared.</p><p lang="he" dir="rtl">ביקורת, אסיפה שנתית, הגשות לרשם החברות, רשימת בעלי מניות, חידוש רישיונות. כל תאריך ביומן שלך, כל טיוטה מוכנה.</p><p lang="th">ตรวจสอบบัญชี ประชุมผู้ถือหุ้น ส่งงบ DBD ⁦บอจ.5⁩ ต่ออายุใบอนุญาต ทุกวันลงปฏิทิน ทุกเอกสารเตรียมไว้ให้</p></div>
+    <div class="feat"><h3 lang="en">Visa dates, never missed</h3><h3 lang="he" dir="rtl">תאריכי ויזה, אף פעם לא מפוספסים</h3><h3 lang="th">ไม่พลาดวันวีซ่า</h3><p lang="en">90-day reports, extensions, work permits, for you and your family, as gentle reminders.</p><p lang="he" dir="rtl">דיווחי 90 יום, הארכות, אישורי עבודה, לך ולמשפחה, כתזכורות עדינות.</p><p lang="th">รายงานตัว 90 วัน ต่อวีซ่า ใบอนุญาตทำงาน สำหรับคุณและครอบครัว เตือนอย่างนุ่มนวล</p></div>
+    <div class="feat"><h3 lang="en">Light, never heavy</h3><h3 lang="he" dir="rtl">קל, אף פעם לא כבד</h3><h3 lang="th">ง่าย ไม่เป็นภาระ</h3><p lang="en">It only asks what it can't find, a few things at a time. "Skip" is always fine, and it tells you when everything is in order.</p><p lang="he" dir="rtl">היא שואלת רק מה שהיא לא מוצאת, בכל פעם כמה דברים. "דלג" תמיד בסדר, והיא אומרת לך כשהכול מסודר.</p><p lang="th">ถามเฉพาะสิ่งที่หาเองไม่ได้ ครั้งละไม่กี่ข้อ ข้ามได้เสมอ และบอกคุณเมื่อทุกอย่างเรียบร้อย</p></div>
   </div>
 </section>
 
 <section id="connect">
-  <p class="kicker" lang="en">What to connect</p><p class="kicker" lang="th">เชื่อมต่ออะไรได้บ้าง</p>
-  <h2 lang="en">Connect what you already use. Skip the rest.</h2>
+  <p class="kicker" lang="en">What to connect</p><p class="kicker" lang="he" dir="rtl">מה לחבר</p><p class="kicker" lang="th">เชื่อมต่ออะไรได้บ้าง</p>
+  <h2 lang="en">Connect what you already use. Skip the rest.</h2><h2 lang="he" dir="rtl">תחבר את מה שאתה כבר משתמש בו. את השאר תדלג.</h2>
   <h2 lang="th">เชื่อมต่อเฉพาะสิ่งที่คุณใช้อยู่แล้ว</h2>
-  <p class="sub" lang="en">Say "Get started" and ThaiTax Assistant walks you through it, one connection at a time, in your language. Every connection uses your own sign-in, and you can remove it whenever you like.</p>
+  <p class="sub" lang="en">Say "Get started" and ThaiTax Assistant walks you through it, one connection at a time, in your language. Every connection uses your own sign-in, and you can remove it whenever you like.</p><p class="sub" lang="he" dir="rtl">תגיד "בוא נתחיל" ו-ThaiTax Assistant מדריך אותך, חיבור אחד בכל פעם, בשפה שלך. כל חיבור משתמש בכניסה שלך, ואפשר להסיר אותו מתי שתרצה.</p>
   <p class="sub" lang="th">พิมพ์ "เริ่มต้น" แล้วระบบจะพาคุณเชื่อมต่อทีละขั้นตอนเป็นภาษาของคุณ ทุกการเชื่อมต่อใช้บัญชีของคุณเอง และยกเลิกได้ทุกเมื่อ</p>
   <div class="grid">
-    <div class="feat"><h3>FlowAccount</h3><p lang="en">Sales, purchases, receivables and tax reports, read automatically.</p><p lang="th">อ่านยอดขาย ยอดซื้อ ลูกหนี้ และรายงานภาษีอัตโนมัติ</p></div>
-    <div class="feat"><h3>Stripe · Omise</h3><p lang="en">Payments and payouts matched to your invoices.</p><p lang="th">จับคู่ยอดชำระและยอดโอนกับใบแจ้งหนี้</p></div>
-    <div class="feat"><h3 lang="en">Email</h3><h3 lang="th">อีเมล</h3><p lang="en">Invoices, receipts and 50 ทวิ found in your inbox. Reminders drafted for you to send.</p><p lang="th">ค้นหาใบแจ้งหนี้ ใบเสร็จ และ 50 ทวิ ในกล่องจดหมาย พร้อมร่างจดหมายให้คุณส่ง</p></div>
-    <div class="feat"><h3 lang="en">Calendar</h3><h3 lang="th">ปฏิทิน</h3><p lang="en">Every Thai tax deadline as a reminder, once you say yes.</p><p lang="th">ทุกกำหนดยื่นภาษีเป็นการแจ้งเตือน เมื่อคุณอนุญาต</p></div>
-    <div class="feat"><h3 lang="en">Cloud drive</h3><h3 lang="th">ไดรฟ์ออนไลน์</h3><p lang="en">Statements in, and each month's tax pack saved in its own folder.</p><p lang="th">อ่านสเตทเมนต์ และเก็บชุดเอกสารภาษีแต่ละเดือนเป็นโฟลเดอร์</p></div>
-    <div class="feat"><h3 lang="en">Receipt photos</h3><h3 lang="th">รูปใบเสร็จ</h3><p lang="en">Snap a receipt, then Share → Claude from your gallery. You get the amount, the VAT, and whether your company can claim it.</p><p lang="th">ถ่ายใบเสร็จ แล้วกดแชร์ไปที่ Claude จากแกลเลอรี ได้ยอดเงิน VAT และบอกว่าบริษัทนำไปเครดิตได้หรือไม่</p></div>
+    <div class="feat"><h3>FlowAccount</h3><p lang="en">Sales, purchases, receivables and tax reports, read automatically.</p><p lang="he" dir="rtl">מכירות, קניות, חייבים ודוחות מס, נקראים אוטומטית.</p><p lang="th">อ่านยอดขาย ยอดซื้อ ลูกหนี้ และรายงานภาษีอัตโนมัติ</p></div>
+    <div class="feat"><h3>Stripe · Omise</h3><p lang="en">Payments and payouts matched to your invoices.</p><p lang="he" dir="rtl">תשלומים והעברות מותאמים לחשבוניות שלך.</p><p lang="th">จับคู่ยอดชำระและยอดโอนกับใบแจ้งหนี้</p></div>
+    <div class="feat"><h3 lang="en">Email</h3><h3 lang="he" dir="rtl">מייל</h3><h3 lang="th">อีเมล</h3><p lang="en">Invoices, receipts and 50 ทวิ found in your inbox. Reminders drafted for you to send.</p><p lang="he" dir="rtl">חשבוניות, קבלות ו-⁦50 ทวิ⁩ נמצאים בתיבת הדואר שלך. תזכורות מנוסחות כדי שתשלח.</p><p lang="th">ค้นหาใบแจ้งหนี้ ใบเสร็จ และ 50 ทวิ ในกล่องจดหมาย พร้อมร่างจดหมายให้คุณส่ง</p></div>
+    <div class="feat"><h3 lang="en">Calendar</h3><h3 lang="he" dir="rtl">יומן</h3><h3 lang="th">ปฏิทิน</h3><p lang="en">Every Thai tax deadline as a reminder, once you say yes.</p><p lang="he" dir="rtl">כל מועד מס בתאילנד כתזכורת, אחרי שתגיד כן.</p><p lang="th">ทุกกำหนดยื่นภาษีเป็นการแจ้งเตือน เมื่อคุณอนุญาต</p></div>
+    <div class="feat"><h3 lang="en">Cloud drive</h3><h3 lang="he" dir="rtl">אחסון בענן</h3><h3 lang="th">ไดรฟ์ออนไลน์</h3><p lang="en">Statements in, and each month's tax pack saved in its own folder.</p><p lang="he" dir="rtl">דפי בנק נכנסים, וחבילת המס של כל חודש נשמרת בתיקייה משלה.</p><p lang="th">อ่านสเตทเมนต์ และเก็บชุดเอกสารภาษีแต่ละเดือนเป็นโฟลเดอร์</p></div>
+    <div class="feat"><h3 lang="en">Receipt photos</h3><h3 lang="he" dir="rtl">תמונות של קבלות</h3><h3 lang="th">รูปใบเสร็จ</h3><p lang="en">Snap a receipt, then Share → Claude from your gallery. You get the amount, the VAT, and whether your company can claim it.</p><p lang="he" dir="rtl">צלם קבלה, ואז שתף ← Claude מהגלריה. תקבל את הסכום, המע"מ, והאם החברה שלך יכולה לקזז אותו.</p><p lang="th">ถ่ายใบเสร็จ แล้วกดแชร์ไปที่ Claude จากแกลเลอรี ได้ยอดเงิน VAT และบอกว่าบริษัทนำไปเครดิตได้หรือไม่</p></div>
   </div>
 </section>
 
 <section>
-  <p class="kicker" lang="en">Our commitments</p><p class="kicker" lang="th">หลักการของเรา</p>
-  <h2 lang="en">Built carefully, because it is your money</h2><h2 lang="th">ออกแบบอย่างรอบคอบ เพราะเป็นเงินของคุณ</h2>
+  <p class="kicker" lang="en">Our commitments</p><p class="kicker" lang="he" dir="rtl">המחויבויות שלנו</p><p class="kicker" lang="th">หลักการของเรา</p>
+  <h2 lang="en">Built carefully, because it is your money</h2><h2 lang="he" dir="rtl">נבנה בזהירות, כי מדובר בכסף שלך</h2><h2 lang="th">ออกแบบอย่างรอบคอบ เพราะเป็นเงินของคุณ</h2>
   <div class="promise" lang="en">
+    <p><b>We store none of the user's information.</b> ThaiTax Assistant has no server and no database of its own: files stay on the user's computer, in the user's own Claude account and in the services the user chooses to connect.</p>
     <p>Nothing is filed, paid or sent without the user's explicit approval.</p>
     <p>ThaiTax Assistant drafts tax invoices. Numbered invoices are issued only from the user's own accounting system.</p>
     <p>It never logs in to Revenue Department, Social Security or bank portals.</p>
     <p>Rates and deadlines are checked against official Thai sources before use.</p>
     <p>Each person and each company is kept separate. Currencies are never added together.</p>
     <p>All work is prepared for review by the user's Thai accountant.</p>
-  </div>
+  </div><div class="promise" lang="he" dir="rtl"><p><b>איננו שומרים מידע של המשתמשים.</b> ל-ThaiTax Assistant אין שרת ואין מאגר מידע משלו: הקבצים נשארים במחשב של המשתמש, בחשבון ה-Claude שלו ובשירותים שבחר לחבר.</p>
+    <p>שום דבר לא מוגש, משולם או נשלח ללא אישור מפורש של המשתמש.</p>
+    <p>ThaiTax Assistant מנסח טיוטות של חשבוניות מס. חשבוניות ממוספרות מופקות רק ממערכת הנהלת החשבונות של המשתמש.</p>
+    <p>המערכת לעולם אינה נכנסת לפורטלים של רשות המסים, הביטוח הלאומי או הבנקים.</p>
+    <p>שיעורים ומועדים נבדקים מול מקורות רשמיים בתאילנד לפני השימוש.</p>
+    <p>כל אדם וכל חברה נשמרים בנפרד. מטבעות שונים אינם מחוברים יחד.</p>
+    <p>כל העבודה מוכנה לבדיקת רואה החשבון התאילנדי של המשתמש.</p></div>
   <div class="promise" lang="th">
+    <p><b>เราไม่เก็บข้อมูลของผู้ใช้</b> ThaiTax Assistant ไม่มีเซิร์ฟเวอร์หรือฐานข้อมูลของตัวเอง ไฟล์อยู่ในคอมพิวเตอร์ของผู้ใช้ ในบัญชี Claude ของผู้ใช้ และในบริการที่ผู้ใช้เลือกเชื่อมต่อ</p>
     <p>ไม่มีการยื่นแบบ ชำระเงิน หรือส่งเอกสารใด ๆ โดยไม่ได้รับการอนุมัติจากผู้ใช้</p>
     <p>ระบบร่างใบกำกับภาษีเท่านั้น ใบกำกับภาษีที่มีเลขที่จะออกจากระบบบัญชีของผู้ใช้</p>
     <p>ไม่เข้าสู่ระบบของกรมสรรพากร สำนักงานประกันสังคม หรือธนาคาร</p>
@@ -675,39 +672,47 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
 
 <section>
   <p class="kicker">FAQ</p>
-  <h2 lang="en">Questions you might have</h2><h2 lang="th">คำถามที่พบบ่อย</h2>
+  <h2 lang="en">Questions you might have</h2><h2 lang="he" dir="rtl">שאלות שאולי יש לך</h2><h2 lang="th">คำถามที่พบบ่อย</h2>
   <div lang="en">
     <details><summary>Is it really free?</summary><p>Yes. ThaiTax Assistant is free to download and use. You need your own Claude plan, plus FlowAccount or Stripe if you want live connections.</p></details>
+    <details><summary>Which language can I talk to it in?</summary><p>Yours. Write or speak to it in any language, English, Thai, Hebrew, Russian, French and more, and it answers in the same language. The official forms stay in Thai, with an explanation in your language.</p></details>
     <details><summary>Does it replace my accountant?</summary><p>No. It does the preparation, so your accountant reviews a clean file instead of a box of receipts. Filing stays with you and your accountant.</p></details>
     <details><summary>I don't use FlowAccount. Can I still use it?</summary><p>Yes. Upload the export from PEAK, Express, your gateway or your bank, and ThaiTax Assistant reads it.</p></details>
     <details><summary>I only have personal income. Is it for me?</summary><p>Yes. Freelance work, rent from a property, or salary with side income: ThaiTax Assistant prepares your personal tax file and keeps track of your withholding certificates.</p></details>
     <details><summary>I live here, but my income comes from abroad. Do I need to file?</summary><p>If you spend 180 days or more in Thailand in a year and bring income earned from 2024 into the country, it is likely reportable. ThaiTax Assistant checks your days and your transfers, prepares the foreign-income declaration and the treaty credit, and lists what your accountant needs to confirm.</p></details>
     <details><summary>How do I know the answers are up to date?</summary><p>Thai tax rules change often. Before any figure you act on, ThaiTax Assistant checks the official sources (Revenue Department, Royal Gazette, Social Security Office), cross-checks them, and shows you the links. Proposed changes are marked as "not yet law". Every rate it uses is also re-verified every January.</p></details>
-    <details><summary>Where does my data go?</summary><p>Your data stays between you, Claude and the services you connect. ThaiTax Assistant does not send ID numbers, salaries or bank details to any outside service.</p></details>
-  </div>
+    <details><summary>Where does my data go?</summary><p>We don't keep any of your information. There is no server and no database of ours: your files stay on your computer, in your own Claude account and in the services you connect. ThaiTax Assistant does not send ID numbers, salaries or bank details to any outside service.</p></details>
+  </div><div lang="he" dir="rtl"><details><summary>זה באמת חינם?</summary><p>כן. ThaiTax Assistant חינם להורדה ולשימוש. צריך מנוי Claude משלך, ו-FlowAccount או Stripe אם אתה רוצה חיבורים חיים.</p></details>
+    <details><summary>באיזו שפה אפשר לדבר איתה?</summary><p>בשפה שלך. תכתוב או תדבר איתה בכל שפה, עברית, אנגלית, תאילנדית, רוסית, צרפתית ועוד, והיא עונה באותה שפה. הטפסים הרשמיים נשארים בתאילנדית, עם הסבר בשפה שלך.</p></details>
+    <details><summary>זה מחליף את רואה החשבון שלי?</summary><p>לא. זה עושה את ההכנה, כך שרואה החשבון בודק קובץ מסודר במקום קופסה של קבלות. ההגשה נשארת אצלך ואצל רואה החשבון.</p></details>
+    <details><summary>אני לא משתמש ב-FlowAccount. זה עדיין מתאים?</summary><p>כן. תעלה את הקובץ מ-PEAK, מ-Express, ממערכת הסליקה או מהבנק, ו-ThaiTax Assistant קורא אותו.</p></details>
+    <details><summary>יש לי רק הכנסה אישית. זה בשבילי?</summary><p>כן. פרילנס, שכירות מנכס, או משכורת עם הכנסה צדדית: ThaiTax Assistant מכין את תיק המס האישי שלך ועוקב אחרי תעודות הניכוי.</p></details>
+    <details><summary>אני גר כאן, אבל ההכנסה שלי מחו"ל. אני צריך להגיש?</summary><p>אם אתה בתאילנד 180 יום או יותר בשנה ומכניס לארץ הכנסה שהופקה מ-2024, סביר שהיא חייבת בדיווח. ThaiTax Assistant בודק את הימים וההעברות שלך, מכין את הצהרת ההכנסה מחו"ל ואת הזיכוי לפי האמנה, ומפרט מה רואה החשבון צריך לאשר.</p></details>
+    <details><summary>איך אני יודע שהתשובות עדכניות?</summary><p>חוקי המס בתאילנד משתנים לעיתים קרובות. לפני כל מספר שאתה פועל לפיו, ThaiTax Assistant בודק את המקורות הרשמיים (רשות המסים, הרשומות הרשמיות, הביטוח הלאומי), מצליב ביניהם ומראה לך את הקישורים. שינויים מוצעים מסומנים "עדיין לא חוק". כל שיעור נבדק מחדש בכל ינואר.</p></details>
+    <details><summary>לאן המידע שלי הולך?</summary><p>אנחנו לא שומרים שום מידע שלך. אין לנו שרת ואין מאגר מידע: הקבצים נשארים על המחשב שלך, בחשבון ה-Claude שלך ובשירותים שאתה מחבר. ThaiTax Assistant לא שולח מספרי זהות, משכורות או פרטי בנק לשום שירות חיצוני.</p></details></div>
   <div lang="th">
     <details><summary>ใช้ฟรีจริงไหม</summary><p>ฟรี ดาวน์โหลดและใช้งานได้ทันที คุณต้องมีบัญชี Claude ของตัวเอง และ FlowAccount หรือ Stripe หากต้องการเชื่อมต่อข้อมูลอัตโนมัติ</p></details>
+    <details><summary>คุยกับผู้ช่วยได้ภาษาอะไรบ้าง?</summary><p>ภาษาของคุณ พิมพ์หรือพูดได้ทุกภาษา ไทย อังกฤษ ฮีบรู รัสเซีย ฝรั่งเศส และอื่น ๆ ผู้ช่วยจะตอบเป็นภาษาเดียวกัน แบบฟอร์มทางการยังคงเป็นภาษาไทย พร้อมคำอธิบายเป็นภาษาของคุณ</p></details>
     <details><summary>ใช้แทนนักบัญชีได้ไหม</summary><p>ไม่ได้ ระบบช่วยเตรียมงาน นักบัญชีของคุณจะได้ตรวจไฟล์ที่เรียบร้อยแทนกล่องใบเสร็จ การยื่นแบบยังเป็นหน้าที่ของคุณและนักบัญชี</p></details>
     <details><summary>ไม่ได้ใช้ FlowAccount ใช้ได้ไหม</summary><p>ได้ อัปโหลดไฟล์ส่งออกจาก PEAK, Express, เกตเวย์ชำระเงิน หรือธนาคาร ระบบจะอ่านให้</p></details>
     <details><summary>มีแค่รายได้ส่วนตัว ใช้ได้ไหม</summary><p>ได้ ทั้งรายได้ฟรีแลนซ์ ค่าเช่า หรือเงินเดือนกับรายได้เสริม ระบบเตรียมข้อมูลภาษีส่วนบุคคลและติดตามหนังสือรับรอง 50 ทวิ ให้</p></details>
     <details><summary>อยู่ไทยแต่มีรายได้จากต่างประเทศ ต้องยื่นภาษีไหม</summary><p>ถ้าคุณอยู่ในไทยตั้งแต่ 180 วันขึ้นไปในปีนั้น และนำเงินได้ที่เกิดตั้งแต่ปี 2567 เข้ามาในประเทศ มีแนวโน้มว่าต้องยื่น ระบบตรวจจำนวนวันและยอดโอน เตรียมแบบแจ้งเงินได้จากต่างประเทศและเครดิตภาษี พร้อมรายการที่นักบัญชีต้องยืนยัน</p></details>
     <details><summary>รู้ได้อย่างไรว่าข้อมูลเป็นปัจจุบัน</summary><p>กฎภาษีไทยเปลี่ยนบ่อย ก่อนใช้ตัวเลขใดที่คุณจะนำไปใช้จริง ระบบจะตรวจจากแหล่งทางการ (กรมสรรพากร ราชกิจจานุเบกษา สำนักงานประกันสังคม) ตรวจทานซ้ำ และแสดงลิงก์ให้คุณ กฎที่ยังเป็นร่างจะระบุว่า "ยังไม่มีผลบังคับใช้" และอัตราทั้งหมดจะได้รับการตรวจสอบใหม่ทุกเดือนมกราคม</p></details>
-    <details><summary>ข้อมูลของฉันไปที่ไหน</summary><p>ข้อมูลอยู่ระหว่างคุณ Claude และบริการที่คุณเชื่อมต่อเท่านั้น ระบบไม่ส่งเลขบัตร เงินเดือน หรือข้อมูลบัญชีธนาคารไปยังบริการภายนอก</p></details>
+    <details><summary>ข้อมูลของฉันไปที่ไหน</summary><p>เราไม่เก็บข้อมูลของคุณเลย เราไม่มีเซิร์ฟเวอร์หรือฐานข้อมูล ไฟล์ของคุณอยู่ในคอมพิวเตอร์ของคุณ ในบัญชี Claude ของคุณ และในบริการที่คุณเชื่อมต่อ ระบบไม่ส่งเลขบัตร เงินเดือน หรือข้อมูลบัญชีธนาคารไปยังบริการภายนอก</p></details>
   </div>
 </section>
 
 <div class="final">
-  <h2 lang="en">Hand the paperwork to ThaiTax Assistant. Keep the island life.</h2>
+  <h2 lang="en">Hand the paperwork to ThaiTax Assistant. Keep the island life.</h2><h2 lang="he" dir="rtl">תן ל-ThaiTax Assistant את הניירת. תשמור לעצמך את חיי האי.</h2>
   <h2 lang="th">ให้ ThaiTax Assistant ดูแลงานเอกสาร คุณใช้ชีวิตให้สบาย</h2>
-  <a class="btn primary" href="thaitax-assistant.plugin"><span lang="en">Download free</span><span lang="th">ดาวน์โหลดฟรี</span> ↓</a>
+  <a class="btn primary" href="thaitax-assistant.plugin"><span lang="en">Download free</span><span lang="he" dir="rtl">הורדה חינם</span><span lang="th">ดาวน์โหลดฟรี</span> ↓</a>
 </div>
 </main>
 
 <footer>
-  <p lang="en">Prepared for review by your Thai accountant. Not tax or legal advice. Nothing is filed without your approval.</p>
+  <p lang="en">Prepared for review by your Thai accountant. Not tax or legal advice. Nothing is filed without your approval.</p><p lang="he" dir="rtl">מוכן לבדיקת רואה החשבון התאילנדי שלך. אינו ייעוץ מס או ייעוץ משפטי. שום דבר לא מוגש ללא אישורך.</p>
   <p lang="th">จัดเตรียมเพื่อให้นักบัญชีของท่านตรวจสอบ ไม่ใช่คำแนะนำด้านภาษีหรือกฎหมาย ไม่มีการยื่นแบบใด ๆ โดยไม่ได้รับการอนุมัติ</p>
-  <p><a href="https://github.com/Reflection2024/thaitax-assistant/issues/new/choose"><span lang="en">Found a mistake or have an idea? Tell us</span><span lang="th">พบข้อผิดพลาดหรือมีข้อเสนอแนะ แจ้งเราได้ที่นี่</span></a></p>
-  <p>© 2026 Reflection Thailand · <a href="https://github.com/Reflection2024/thaitax-assistant">GitHub</a></p>
+  <p><a href="https://github.com/Reflection2024/thaitax-assistant/issues/new/choose"><span lang="en">Found a mistake or have an idea? Tell us</span><span lang="he" dir="rtl">מצאת טעות או יש לך רעיון? ספר לנו</span><span lang="th">พบข้อผิดพลาดหรือมีข้อเสนอแนะ แจ้งเราได้ที่นี่</span></a></p>
 </footer>
 </div>
 
@@ -715,13 +720,14 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
 (function(){
   var root=document.documentElement;
   function apply(){
-    var l=(location.hash==="#th")?"th":(location.hash==="#en"?"en":null);
+    var l={"#th":"th","#en":"en","#he":"he"}[location.hash]||null;
     if(!l){try{l=localStorage.getItem("thaitax-lang")}catch(e){}}
-    if(!l){l=(navigator.language||"").toLowerCase().indexOf("th")===0?"th":"en"}
-    root.lang=l;
+    if(!l){var nl=(navigator.language||"").toLowerCase();l=nl.indexOf("th")===0?"th":(nl.indexOf("he")===0||nl.indexOf("iw")===0?"he":"en")}
+    root.lang=l;root.dir=(l==="he")?"rtl":"ltr";
     try{localStorage.setItem("thaitax-lang",l)}catch(e){}
     document.getElementById("l-en").setAttribute("aria-current",l==="en");
     document.getElementById("l-th").setAttribute("aria-current",l==="th");
+    document.getElementById("l-he").setAttribute("aria-current",l==="he");
   }
   window.addEventListener("hashchange",apply);apply();
   var btns=document.querySelectorAll(".filters button");
@@ -737,7 +743,8 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
  var st=document.getElementById('stage'),status=document.getElementById('status');if(!st)return;
  var docs=[].slice.call(st.querySelectorAll('.doc'));
  var T={en:['Your month, as it usually looks…','Reading your documents…','Asking only what it needs · filling the official form…','<b>Done.</b> One clean file for your accountant.','Play again'],
-        th:['เดือนของคุณ ตามปกติ…','กำลังอ่านเอกสาร…','ถามเฉพาะที่จำเป็น · กำลังกรอกแบบฟอร์มทางการ…','<b>เสร็จแล้ว</b> ไฟล์เดียวที่เรียบร้อยสำหรับนักบัญชี','เล่นอีกครั้ง']};
+        th:['เดือนของคุณ ตามปกติ…','กำลังอ่านเอกสาร…','ถามเฉพาะที่จำเป็น · กำลังกรอกแบบฟอร์มทางการ…','<b>เสร็จแล้ว</b> ไฟล์เดียวที่เรียบร้อยสำหรับนักบัญชี','เล่นอีกครั้ง'],
+        he:['החודש שלך, כמו שהוא נראה בדרך כלל…','קוראת את המסמכים שלך…','שואלת רק מה שצריך · ממלאת את הטופס הרשמי…','<b>סיימנו.</b> קובץ אחד מסודר לרואה החשבון.','נגן שוב']};
  function t(i){return (T[document.documentElement.lang]||T.en)[i]}
  function messy(){docs.forEach(function(d){d.style.transitionDelay='0s';d.style.transform='translate('+d.dataset.x+','+d.dataset.y+') rotate('+d.dataset.r+'deg)'})}
  function gather(){docs.forEach(function(d,i){d.style.transitionDelay=(i*0.07)+'s';d.style.transform='translate(-50%,-50%) rotate('+(i%2?3:-3)+'deg) scale(.55)'})}
