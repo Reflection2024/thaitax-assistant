@@ -1,6 +1,6 @@
 ---
 name: cash-and-collections
-description: "Shows a business in Thailand where its cash stands and who owes it money: receivables and payables from FlowAccount, card and online payments and payouts from Stripe and Omise (or exports from 2C2P, GB Prime Pay, KSher), a matching of payments to invoices, a 30/60/90-day cash outlook including upcoming tax and SSO payments, and overdue reminders in Thai, English or Hebrew for the owner to send. Use when the owner asks 'who owes me money', 'cash flow', 'overdue invoices', 'did the payout arrive', 'match payments', 'מי חייב לי', 'תזרים', 'חובות לקוחות', 'ใครค้างชำระ', 'กระแสเงินสด', 'ทวงหนี้'."
+description: "Shows a business in Thailand where its cash stands and who owes it money: receivables and payables from FlowAccount, card and online payments and payouts from Stripe and Omise (or exports from 2C2P, GB Prime Pay, KSher), a matching of payments to invoices, a 30/60/90-day cash outlook including upcoming tax and SSO payments, and overdue reminders in Thai, English or Hebrew for the owner to send. Also use it first for a cash or receivables dashboard or chart ('cash dashboard', 'דשבורד תזרים'), before drawing anything. Use when the owner asks 'who owes me money', 'cash flow', 'overdue invoices', 'did the payout arrive', 'match payments', 'מי חייב לי', 'תזרים', 'חובות לקוחות', 'ใครค้างชำระ', 'กระแสเงินสด', 'ทวงหนี้'."
 ---
 
 # Cash and collections

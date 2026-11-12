@@ -1,6 +1,6 @@
 ---
 name: thai-monthly-tax
-description: "Prepares the monthly Thai tax package for one company at a time: VAT return PP.30, reverse-charge PP.36, withholding returns PND.3, PND.53 and PND.54, the social security total, and the half-year PND.51 or annual PND.50 working papers, with the due dates and a list of what is missing. Works from FlowAccount or an uploaded export. Prepared for the owner's Thai accountant; nothing is filed. Use when the owner asks 'what's due this month', 'monthly tax', 'VAT return', 'withholding', 'PP.30', 'PND.53', 'מה צריך להגיש החודש', 'דוחות מס', 'מע\"מ תאילנד', 'ภาษี', 'ภ.พ.30', 'ภ.ง.ด.3', 'ภ.ง.ด.53', 'ภาษีหัก ณ ที่จ่าย'."
+description: "Prepares the monthly Thai tax package for one company at a time: VAT return PP.30, reverse-charge PP.36, withholding returns PND.3, PND.53 and PND.54, the social security total, and the half-year PND.51 or annual PND.50 working papers, with the due dates and a list of what is missing. Works from FlowAccount or an uploaded export. Prepared for the owner's Thai accountant; nothing is filed. Also use it first for a monthly tax dashboard or deadlines overview ('tax dashboard', 'דשבורד מסים'), before drawing anything. Use when the owner asks 'what's due this month', 'monthly tax', 'VAT return', 'withholding', 'PP.30', 'PND.53', 'מה צריך להגיש החודש', 'דוחות מס', 'מע\"מ תאילנד', 'ภาษี', 'ภ.พ.30', 'ภ.ง.ด.3', 'ภ.ง.ด.53', 'ภาษีหัก ณ ที่จ่าย'."
 ---
 
 # Thai monthly tax

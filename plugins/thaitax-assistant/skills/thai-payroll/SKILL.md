@@ -1,6 +1,6 @@
 ---
 name: thai-payroll
-description: "Prepares Thai payroll for the owner to approve: gross pay, overtime and holiday pay under the Labour Protection Act, social security (5% each side up to the wage ceiling), income tax withheld for PND.1, net pay, employer cost, payslip data in Thai, and flags for minimum wage, SSO registration and foreign staff work permits. Stages the run; never pays anyone or submits anything. Use when the owner says 'payroll', 'pay my staff', 'social security', 'SSO', 'PND.1', 'work permit expiring', 'משכורות', 'ביטוח לאומי תאילנד', 'תלושים', 'เงินเดือน', 'ประกันสังคม', 'ภ.ง.ด.1', 'สลิปเงินเดือน'."
+description: "Prepares Thai payroll for the owner to approve: gross pay, overtime and holiday pay under the Labour Protection Act, social security (5% each side up to the wage ceiling), income tax withheld for PND.1, net pay, employer cost, payslip data in Thai, and flags for minimum wage, SSO registration and foreign staff work permits. Stages the run; never pays anyone or submits anything. Also use it first for a payroll dashboard, chart or staff-cost overview ('דשבורד משכורות', 'payroll dashboard'), before drawing anything. Use when the owner says 'payroll', 'pay my staff', 'social security', 'SSO', 'PND.1', 'work permit expiring', 'משכורות', 'ביטוח לאומי תאילנד', 'תלושים', 'เงินเดือน', 'ประกันสังคม', 'ภ.ง.ด.1', 'สลิปเงินเดือน'."
 ---
 
 # Thai payroll
