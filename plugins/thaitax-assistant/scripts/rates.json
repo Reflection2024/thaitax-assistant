@@ -45,8 +45,8 @@
       0.02
     ],
     "e_wht_valid_until": "2027-12-31",
-    "verified": "2026-11-11",
-    "source": "rd.go.th withholding tables; e-WHT Ministerial Regulation 2026-2027"
+    "verified": "2026-11-12",
+    "source": "rd.go.th withholding tables; e-WHT 1% extension to 31 Dec 2027 approved by Cabinet 16 Jun 2026 (retroactive from 1 Jan 2026); confirm the Ministerial Regulation is gazetted before applying"
   },
   "pit": {
     "bands": [
@@ -139,7 +139,7 @@
       "online_day": 23
     },
     "pp36": {
-      "paper_day": 15,
+      "paper_day": 7,
       "online_day": 15
     },
     "sso": {
@@ -153,8 +153,8 @@
       "paper": "09-30",
       "online_extra_days": 8
     },
-    "verified": "2026-11-11",
-    "source": "MoF notice on online filing extension (filings due 1 Feb 2024 - 31 Jan 2027); verified 2026-11-11",
+    "verified": "2026-11-12",
+    "source": "MoF notice on online filing extension (filings due 1 Feb 2024 - 31 Jan 2027); verified 2026-11-11; PP.36 paper within 7 days after month end, online 15 days (rd.go.th/46202.html), re-verified 2026-11-12",
     "online_extension_valid_until": "2027-01-31"
   },
   "property": {

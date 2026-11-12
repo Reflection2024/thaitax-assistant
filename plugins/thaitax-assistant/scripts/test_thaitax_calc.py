@@ -103,6 +103,11 @@ class T(unittest.TestCase):
         self.assertIsNone(c.deadlines("2026-11")["online_extension_warning"])
         self.assertIsNotNone(c.deadlines("2027-01")["online_extension_warning"])
 
+    def test_pp36_paper_seventh_online_fifteenth(self):
+        d = c.deadlines("2026-09")["PP.36 (reverse charge)"]
+        self.assertEqual(d["paper"]["date"], "2026-10-07")
+        self.assertEqual(d["online"]["date"], "2026-10-15")
+
     def test_lease_registration(self):
         self.assertEqual(c.lease_registration(36000000)["total"], "396000.00")
 

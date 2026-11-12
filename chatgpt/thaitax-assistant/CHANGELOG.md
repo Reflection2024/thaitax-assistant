@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-rc.15 (2026-11-12): deep check
+- Fix: PP.36 paper deadline is 7 days after the month end (online 15th); it was set to the 15th for paper too. New regression test.
+- ภ.ง.ด.94 updated to the official tax-year 2569 (2026) form from rd.go.th; all 56 mapped boxes checked and a filled preview rendered.
+- e-WHT 1%: the extension to 31 Dec 2027 is a Cabinet approval (16 Jun 2026); the skills now say to confirm the Ministerial Regulation is gazetted before applying 1%.
+- Re-verified against current sources: VAT 7% to 30 Sep 2027 (Royal Decree 807), online-filing 8-day extension to 31 Jan 2027 (renewal to be confirmed), SSO ceiling 17,500, minimum wage (Notification 14), transfer fee 0.01% to 30 Jun 2027 (Thai-national buyers, ≤ THB 7m), foreign-income remittance relief still draft.
+
 ## ChatGPT edition (2026-11-12)
 - The same 23 assistants for ChatGPT: `chatgpt/thaitax-assistant` (built from this plugin by `tools/build_chatgpt.py`, ChatGPT wording swapped for ChatGPT wording, `plugin.json` + `.codex-plugin/plugin.json`), a marketplace entry in `.agents/plugins/marketplace.json`, and `docs/thaitax-assistant-chatgpt.zip`. FlowAccount and Stripe are declared as MCP servers in `mcp.json` and connected in ChatGPT with the user's own sign-in; without a connection, everything works from uploaded files.
 - Site: the install section lets the visitor choose ChatGPT or ChatGPT, each with its own download and steps.
