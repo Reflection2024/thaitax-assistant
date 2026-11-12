@@ -1,0 +1,81 @@
+{
+ "lang": "en",
+ "title": "Cash and who owes you",
+ "subtitle": "Next 90 days, tax and social security included",
+ "kpis": [
+  {
+   "label": "Cash today",
+   "value": "฿612,000"
+  },
+  {
+   "label": "Owed to you",
+   "value": "฿254,000"
+  },
+  {
+   "label": "Over 60 days",
+   "value": "฿18,000",
+   "tone": "bad"
+  }
+ ],
+ "sections": [
+  {
+   "type": "line",
+   "title": "Cash, next 90 days",
+   "labels": [
+    "W1",
+    "W2",
+    "W3",
+    "W4",
+    "W5",
+    "W6",
+    "W7",
+    "W8",
+    "W9",
+    "W10",
+    "W11",
+    "W12",
+    "W13"
+   ],
+   "values": [
+    612,
+    598,
+    640,
+    610,
+    585,
+    660,
+    700,
+    655,
+    620,
+    690,
+    720,
+    705,
+    740
+   ]
+  },
+  {
+   "type": "hbars",
+   "title": "Who owes you, by age",
+   "items": [
+    {
+     "label": "0–30 days",
+     "value": 184000,
+     "display": "฿184,000",
+     "tone": "good"
+    },
+    {
+     "label": "31–60 days",
+     "value": 52000,
+     "display": "฿52,000",
+     "tone": "warn"
+    },
+    {
+     "label": "Over 60 days",
+     "value": 18000,
+     "display": "฿18,000",
+     "tone": "bad"
+    }
+   ]
+  }
+ ],
+ "footer": "Sample numbers, in thousands of baht in the chart."
+}

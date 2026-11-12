@@ -42,3 +42,7 @@ If the form you need is not bundled, or rd.go.th has a newer version for the tax
 
 - The forms are the RD's own PDFs for the 2568 (2025) tax year or the latest monthly version. The annual personal forms for tax year 2569 (2026) are published by the RD around January 2027: replace them then (the `tax-facts-update` skill does this).
 - Filling a form is not filing it. The user or accountant files through e-Filing or at the office.
+
+## Explanation in the user's language
+
+The form itself stays exactly as the Revenue Department prints it, in Thai. The one-page explanation is written in the user's language: put the notes in that language and run `explain values.json out.html --lang <code>` (or `out.pdf` for English and Thai; the script switches to HTML on its own when the PDF font cannot draw the script).

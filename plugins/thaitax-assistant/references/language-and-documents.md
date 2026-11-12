@@ -2,7 +2,9 @@
 
 ## Which language
 
-- **To the owner:** reply in the language the owner writes in (English, Hebrew or Thai). The profile records their preference.
+- **To the owner:** reply in the language the owner writes in, whatever it is (English, Thai, Hebrew, Russian, French, German, Chinese, Arabic...). Questions, options, explanations, dashboards and explanation sheets all follow that language. If they switch language, switch with them. The profile records their preference.
+- **Right-to-left languages** (Hebrew, Arabic, Persian, Urdu): set `dir="rtl"` in HTML and keep amounts, dates and Thai form names in their own left-to-right run.
+- **Official Thai forms stay in Thai.** The explanation that comes with them is in the owner's language (`official_forms.py explain ... out.html --lang <code>` for scripts other than Latin and Thai).
 - **Documents:** write in the language of the reader, not the owner.
   - A reminder to a Thai customer is in Thai, with English alongside if helpful.
   - A note to a Hebrew-speaking partner is in Hebrew.

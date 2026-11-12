@@ -60,7 +60,7 @@ Tip: photograph the whole receipt, flat, in good light. Thai tax invoices must s
 - "Put my tax deadlines in my calendar."
 - "What does my company need to do this year?" (AGM, DBD filings, licences)
 
-Speak in English, Hebrew or Thai. You can mix languages.
+Speak in any language: English, Thai, Hebrew, Russian, French or any other. You can mix languages, and the answers follow yours.
 
 ## Part 4: What it will never do
 

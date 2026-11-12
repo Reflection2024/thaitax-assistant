@@ -7,7 +7,7 @@
     python3 -I official_forms.py fill PND90 values.json out.pdf [--final]
     python3 -I official_forms.py preview out.pdf outdir [--dpi 110]    # PNG of each page, to check the result
     python3 -I official_forms.py debug PND90 names.pdf                  # every box labelled with its name (for mapping)
-    python3 -I official_forms.py explain values.json out.pdf [--title ...]
+    python3 -I official_forms.py explain values.json out.pdf|out.html [--title ...] [--lang he] [--footer ...]
 
 values.json:
   {"form": "PND90",
@@ -317,8 +317,49 @@ def preview(pdf_path, outdir, dpi=110):
     return {"pages": files}
 
 
-def explain(values_path, out_path, title=None):
-    """One-page explanation: each filled line, its amount and the note (Thai/English)."""
+RTL_LANGS = {"he", "iw", "ar", "fa", "ur", "yi"}
+FOOT = "Explanation for you. Send the official form to your accountant; keep this sheet for your records."
+
+
+def explain_html(values_path, out_path, title=None, lang="en", footer=None):
+    """The explanation sheet as one HTML page, in any language and script (right to left where needed)."""
+    import html as _h
+    with open(values_path, encoding="utf-8") as f:
+        data = json.load(f)
+    vals = data.get("values", data)
+    d = "rtl" if lang.split("-")[0].lower() in RTL_LANGS else "ltr"
+    rows = []
+    for k, v in vals.items():
+        if not isinstance(v, dict) or not v.get("note"):
+            continue
+        val = _fmt(v.get("value"))
+        if isinstance(val, str) and re.fullmatch(r"-?\d+(\.\d+)?", val):
+            val = f"{float(val):,.2f}"
+        rows.append(f"<tr><td><bdi>{_h.escape(str(v.get('line', k)))}</bdi></td><td><bdi>{'✓' if val is True else _h.escape(str(val))}</bdi></td>"
+                    f"<td>{_h.escape(str(v['note']))}</td></tr>")
+    t = _h.escape(title or f"{data.get('form', 'Form')}: what is in each line")
+    page = (f'<!DOCTYPE html><html lang="{_h.escape(lang)}" dir="{d}"><head><meta charset="utf-8"><title>{t}</title><style>'
+            'body{font:15px/1.5 "Noto Sans","Noto Sans Thai","Noto Sans Hebrew",Sarabun,Arial,sans-serif;margin:32px;color:#1d140d}'
+            'table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #e5ddd3;padding:7px 8px;text-align:start;vertical-align:top}'
+            'td:nth-child(2){white-space:nowrap}footer{color:#777;font-size:12px;margin-top:18px}</style></head>'
+            f'<body><h1 style="font-size:20px">{t}</h1><table>{"".join(rows)}</table><footer>{_h.escape(footer or FOOT)}</footer></body></html>')
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write(page)
+    return {"written": out_path, "rows": len(rows)}
+
+
+def explain(values_path, out_path, title=None, lang="en", footer=None):
+    """One-page explanation: each filled line, its amount and the note.
+    PDF for English and Thai; write to a .html path for any other language (Hebrew, Russian, Arabic...)."""
+    if out_path.lower().endswith((".html", ".htm")):
+        return explain_html(values_path, out_path, title, lang, footer)
+    with open(values_path, encoding="utf-8") as f:
+        _all = json.dumps(json.load(f), ensure_ascii=False) + (title or "") + (footer or "")
+    if any(not (ord(ch) < 0x250 or 0x0E00 <= ord(ch) <= 0x0E7F or 0x2000 <= ord(ch) <= 0x20CF or ch in "✓") for ch in _all):
+        html_path = re.sub(r"\.pdf$", "", out_path, flags=re.I) + ".html"
+        r = explain_html(values_path, html_path, title, lang, footer)
+        r["note"] = "Switched to HTML: the PDF font covers only Latin and Thai. Open in a browser and print to PDF if needed."
+        return r
     from reportlab.lib.pagesizes import A4
     from reportlab.pdfbase import pdfmetrics
     from reportlab.pdfbase.ttfonts import TTFont
@@ -348,7 +389,7 @@ def explain(values_path, out_path, title=None):
         if y < 60:
             c.showPage(); c.setFont("Sarabun", 9.5); y = H - 50
     c.setFillGray(0.45); c.setFont("Sarabun", 7.5)
-    c.drawString(40, 30, "Explanation for you. Send the official form to your accountant; keep this sheet for your records.")
+    c.drawString(40, 30, footer or FOOT)
     c.save()
     return {"written": out_path}
 
@@ -382,7 +423,9 @@ def main(argv):
         print(json.dumps(preview(argv[2], argv[3], dpi))); return 0
     if cmd == "explain":
         t = argv[argv.index("--title") + 1] if "--title" in argv else None
-        print(json.dumps(explain(argv[2], argv[3], t), ensure_ascii=False)); return 0
+        lg = argv[argv.index("--lang") + 1] if "--lang" in argv else "en"
+        ft = argv[argv.index("--footer") + 1] if "--footer" in argv else None
+        print(json.dumps(explain(argv[2], argv[3], t, lg, ft), ensure_ascii=False)); return 0
     print(__doc__); return 2
 
 

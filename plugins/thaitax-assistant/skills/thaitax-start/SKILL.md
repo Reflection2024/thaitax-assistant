@@ -66,6 +66,8 @@ Always end this step with the **phone-photo how-to** from the welcome guide, eve
 
 Show the draft and wait for a yes. Save it to persistent memory, or, if memory is unavailable, write `thaitax-profile.md` for the user to keep. Follow the "What gets saved" rules in the intake checklist.
 
+Tell the user, in one line in their language: ThaiTax Assistant keeps nothing on any server of its own; the profile and files stay in their own Claude account, on their computer and in the services they connect (see "Your data stays yours" in `../../references/connectors-and-safety.md`).
+
 ```markdown
 ## ThaiTax Assistant profile
 - **Language:** user <en|he|th> · customers/staff <th, en, he>

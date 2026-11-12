@@ -41,6 +41,7 @@ Every return comes back **on the official Revenue Department form**, filled in a
 | company-housekeeping | Companies: AGM, DBD filings, บอจ.5, 14-day changes, licences, all in the calendar | "What does my company need to do this year?" |
 | visa-reminders | Everyone: 90-day reports, extensions, work permits, TM30 (reminders only) | "Remind me of my visa dates" |
 | contracts-and-payments | Companies: suppliers & contracts register, right withholding before every payment, 50 ทวิ, monthly check | "I need to pay a supplier" |
+| dashboards | Any dashboard from your own files, in your language: days in Thailand & transfers, tax to save before 31 Dec, rent & land tax, this month's taxes, 90-day cash & receivables, payroll & work permits | "Build me a dashboard" |
 | family-budget | Families: bank statements → a dashboard of money in vs. out, where it goes, subscriptions and fixed payments; optional Actual Budget export | "Where does our money go?" |
 | monthly-pack | Both: the whole month in one go, optional automatic run on the 1st | "Run the month" |
 | thai-export-reader | Both: PEAK / Express / gateway / bank files | (upload a file) |

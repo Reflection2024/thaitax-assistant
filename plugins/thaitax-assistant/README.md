@@ -30,6 +30,7 @@ ThaiTax Assistant takes care of the Thai admin that usually needs an accountant,
 | **company-housekeeping** | Your company's yearly calendar: AGM, DBD, บอจ.5, changes, licences | "What does my company need to do this year?" |
 | **visa-reminders** | 90-day reports, extensions, work permits, TM30: reminders only | "Remind me of my visa dates" |
 | **contracts-and-payments** | Suppliers & contracts register: every payment linked to its contract and tax invoice, withholding at the right rate for each service before every payment, 50 ทวิ drafted, monthly check | "I need to pay a supplier" |
+| **dashboards** | A dashboard page from your own files, in your language, refreshed when you ask: days in Thailand and transfers, tax still to save, rent and land tax, this month's taxes, 90-day cash and who owes you, payroll and work permits | "Build me a dashboard" |
 | **family-budget** | Your bank statements → a family dashboard: money in vs. out, where it goes, every fixed payment and subscription, services paid twice. Optional export to Actual Budget | "Where does our money go?" |
 | **monthly-pack** | Everything for the month in one go, automatically on the 1st if you want, with a draft email to your accountant | "Run the month" |
 | **thai-export-reader** | Reads PEAK / Express / gateway / bank files with Thai headers and BE dates | (upload a file) |
@@ -40,6 +41,7 @@ ThaiTax Assistant takes care of the Thai admin that usually needs an accountant,
 - `scripts/make_document.js`: Thai + English/Hebrew tax invoices, receipts, quotations, billing notes and payslips with the same layout every time.
 - `scripts/official_forms.py` + `assets/forms/`: the Revenue Department's own PDF forms (ภ.ง.ด.90/91/94, foreign-income declaration, ภ.ง.ด.1/3/53 and their attachments, ภ.พ.30, ภ.พ.36, ภ.ง.ด.50/51, 50 ทวิ) filled in with your figures, checked by preview, plus a one-page explanation. Send the form straight to your accountant.
 - `scripts/budget.py` + `scripts/budget_dashboard.py`: family budget engine (categories, recurring payments, duplicates, FX) and a self-contained dashboard page in English, Hebrew or Thai (tested).
+- `scripts/dashboard.py`: draws any dashboard (KPIs, bars, lines, rings, tables, lists) from a JSON spec, in any language, right to left where needed; six example specs in `assets/dashboards/` (tested).
 - `skills/tax-facts-update`: annual re-verification of every rate and deadline.
 
 ### Getting started

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-rc.14 (2026-11-12): dashboards, any language, your data stays yours
+- New skill `dashboards` (23rd): builds a dashboard page from the user's own files for a person or a company (days in Thailand and money from abroad, tax still to save before 31 December, rent and land tax, this month's taxes and deadlines, 90-day cash and receivables, payroll and work permits, family budget), in the user's language, refreshed on request.
+- `scripts/dashboard.py`: draws any dashboard from a JSON spec with inline SVG, no network; right to left for Hebrew, Arabic, Persian, Urdu; numbers kept left to right. Six example specs in `assets/dashboards/`. 4 tests.
+- Language: the assistant answers in whatever language the user writes in, not only English, Hebrew or Thai. Official forms stay in Thai; `official_forms.py explain` now writes the explanation in any language (`--lang`, HTML output, automatic switch from PDF when the script needs it).
+- Privacy: a "Your data stays yours" section: no server, no database, nothing sent to the developers; files stay on the user's computer, Claude account and connected services.
+
 ## 1.0.0-rc.13 (2026-11-11): contracts, withholding, employee documents
 - New skill `contracts-and-payments`: a Suppliers & contracts register in the company's drive linking every expense to its contract and tax invoice; withholding worked out before every supplier payment by service type (services 3%, rent 5%, advertising 2%, transport 1%...) and form (PND.3 / 53 / 54), with the amount to transfer and the 50 ทวิ drafted on the official form; withholding terms recorded when a contract is signed; a monthly check.
 - `scripts/contracts.py check`: payments without a contract or invoice, amounts that differ from the contract, VAT missing from a VAT-registered supplier's invoice, withholding not taken or wrong, missing 50 ทวิ, contracts ending within 30 days. 6 tests; sample data in `pilot/sample-data`.
