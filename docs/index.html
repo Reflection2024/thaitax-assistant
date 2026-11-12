@@ -11,14 +11,11 @@
 <style>
 /* Layout idea: a calm ink-and-marigold page; a real "this month" card is the hero's proof. */
 :root{
-  --ink:#16243a; --paper:#f6f4ee; --card:#ffffff; --marigold:#e2962b; --jade:#2c7a68; --line:#dcd7ca; --muted:#5b6574;
-  --display:"Bricolage Grotesque","IBM Plex Sans Thai",system-ui,sans-serif;
+  --ink:#1d140d; --paper:#fffaf4; --card:#ffffff; --marigold:#e2962b; --jade:#127a52; --line:#efe4d8; --muted:#6b5646;
+  --display:Inter,"IBM Plex Sans Thai",system-ui,-apple-system,sans-serif;
   --body:"IBM Plex Sans Thai",system-ui,-apple-system,"Segoe UI",sans-serif;
   color-scheme:light;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --ink:#eef0f3; --paper:#111a28; --card:#18243a; --marigold:#f0aa45; --jade:#5cc0a6; --line:#2b3a52; --muted:#a3adbb; color-scheme:dark;}}
-:root[data-theme="dark"]{--ink:#eef0f3; --paper:#111a28; --card:#18243a; --marigold:#f0aa45; --jade:#5cc0a6; --line:#2b3a52; --muted:#a3adbb; color-scheme:dark;}
 
 *{box-sizing:border-box}
 html,body{margin:0}
@@ -144,11 +141,85 @@ footer{padding:28px 0 48px;color:var(--muted);font-size:13.5px;display:grid;gap:
   .final{padding:30px}
 }
 @media (prefers-reduced-motion:no-preference){.btn{transition:transform .15s}.btn:hover{transform:translateY(-1px)}}
+
+/* ===== warm fintech refresh: from chaos to calm ===== */
+body{background:var(--paper)}
+h1,h2,h3{letter-spacing:-.03em;font-weight:850}
+section{border-top:0;padding:72px 0;position:relative}
+section:nth-of-type(odd)::before{content:"";position:absolute;inset:0 calc(50% - 50vw);background:linear-gradient(180deg,#ffffff,#f6fbf8);z-index:-1}
+.kicker{color:var(--jade);font-weight:700}
+.btn{border:0;border-radius:16px;padding:16px 24px;font-weight:750}
+.btn.primary{background:var(--jade);color:#fff;box-shadow:0 14px 30px rgba(18,122,82,.3)}
+.btn.ghost{background:#fff;box-shadow:inset 0 0 0 1.5px var(--line)}
+.path,.ask,.mini,.month,.feat{border:0;border-radius:20px;box-shadow:0 1px 2px rgba(60,35,15,.05),0 14px 34px -14px rgba(60,35,15,.2)}
+.feat{border-left:0;padding:24px}
+.feat::before{content:"";display:block;width:34px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--jade),#7fd3a8);margin-bottom:14px}
+.ask .q{background:#fff3e3;border-radius:16px 16px 16px 4px}
+.ask .a{border-left-color:var(--jade)}
+.step::before{background:var(--jade);color:#fff}
+pre{background:#1d140d;color:#ffe9d1}
+.final{background:linear-gradient(135deg,#0f5c3f,#127a52 55%,#1f9a6a);color:#fff;border-radius:28px;box-shadow:0 30px 60px -20px rgba(18,122,82,.45)}
+.final .btn.primary{background:#fff;color:#0f5c3f;box-shadow:none}
+.filters button{border:0;box-shadow:inset 0 0 0 1.5px var(--line)}
+.filters button[aria-pressed="true"]{background:var(--jade);color:#fff;box-shadow:none}
+.langs{border:0;background:#fff;box-shadow:inset 0 0 0 1px var(--line);padding:3px}
+.langs a{border-radius:999px}
+.langs a[aria-current="true"]{background:var(--ink);color:#fff}
+.pill{background:#e6f6ee;color:var(--jade)}
+.logo i{background:var(--ink);color:#ffd9a8}
+.bleed{width:100vw;margin-left:calc(50% - 50vw)}
+.h2o{position:relative;overflow:hidden;background:radial-gradient(900px 600px at 0% 0%,#ffe7cf 0%,transparent 60%),radial-gradient(900px 700px at 100% 100%,#d9f3e6 0%,transparent 60%),linear-gradient(180deg,#fff8f0,#f4fbf7)}
+.h2o .in{max-width:1180px;margin:0 auto;padding:0 28px 60px}
+.h2o header{padding:22px 0}
+.h2o .grid2{display:grid;grid-template-columns:1fr 1.05fr;gap:30px;align-items:center;min-height:min(760px,calc(100vh - 110px))}
+.h2o .grid2>*{min-width:0}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;color:var(--muted)}
+.eyebrow b{color:var(--jade)}
+.h2o h1{font-size:clamp(40px,5.2vw,68px);line-height:1.02;letter-spacing:-.04em;margin:22px 0 0}
+html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(36px,4.4vw,58px)}
+.h2o h1 .swap{display:block;color:var(--jade)}
+.h2o .lead{font-size:19px;line-height:1.55;color:var(--muted);max-width:29em;margin:22px 0 30px}
+.proof{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap}
+.proof div{font-size:13px;color:var(--muted)}.proof b{display:block;font-size:22px;color:var(--ink);letter-spacing:-.02em}
+.stage{position:relative;height:640px}
+.doc{position:absolute;left:50%;top:50%;background:#fffdf9;border-radius:8px;box-shadow:0 14px 30px rgba(70,40,15,.18),0 2px 6px rgba(70,40,15,.08);font-size:11px;line-height:1.45;color:#3b2a1d;transition:transform 1.1s cubic-bezier(.65,0,.25,1),opacity .7s ease,filter .7s;will-change:transform}
+.doc .h{font-weight:800;font-size:12.5px;margin-bottom:6px;display:flex;justify-content:space-between;gap:8px}
+.ln{height:5px;border-radius:3px;background:#efe4d8;margin:6px 0}
+.receipt{width:150px;padding:14px 12px 18px;border-radius:4px 4px 0 0;-webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 8px) no-repeat,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/12px 8px repeat-x;mask:linear-gradient(#000 0 0) top/100% calc(100% - 8px) no-repeat,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/12px 8px repeat-x}
+.receipt .tot{border-top:1px dashed #cdbba8;margin-top:8px;padding-top:6px;font-weight:800;display:flex;justify-content:space-between}
+.letter{width:210px;padding:16px}
+.seal{width:26px;height:26px;border-radius:50%;border:2px solid #b8893a;display:grid;place-items:center;font-size:12px;color:#b8893a;font-weight:800}
+.stmt{width:230px;padding:14px}.stmt table{font-size:10px}.stmt td{padding:3px 0;border-bottom:1px solid #f0e6dc}.stmt td:last-child{text-align:right}
+.neg{color:#b5432b}.pos{color:#127a52}
+.stickynote{width:140px;padding:14px;background:#fff3a6;border-radius:3px;font-family:"Comic Sans MS","Chalkboard SE",cursive;font-size:13px;color:#5a4400;box-shadow:0 10px 20px rgba(120,90,0,.2)}
+.linemsg{width:190px;padding:12px;background:#fff;border-radius:16px}
+.linemsg .bub{background:#e9f9ec;border-radius:12px;padding:8px 10px;margin-top:6px}
+.linemsg .gr{display:inline-block;background:#06c755;color:#fff;font-weight:800;border-radius:6px;padding:1px 6px;font-size:10px}
+.finalform{position:absolute;left:50%;top:50%;width:360px;transform:translate(-50%,-46%) scale(.82) rotate(-2deg);opacity:0;transition:all 1.1s cubic-bezier(.2,.8,.2,1);z-index:10}
+.finalform img{width:100%;display:block;border-radius:10px;box-shadow:0 40px 80px rgba(13,60,40,.32),0 0 0 1px rgba(0,0,0,.04)}
+.stampx{position:absolute;right:14px;top:-18px;background:var(--jade);color:#fff;font-weight:850;font-size:14px;padding:11px 16px;border-radius:999px;transform:rotate(9deg) scale(2.2);opacity:0;transition:all .45s cubic-bezier(.3,1.6,.5,1);box-shadow:0 12px 26px rgba(18,122,82,.45);white-space:nowrap}
+.chipx{position:absolute;background:#fff;border-radius:14px;padding:11px 14px;font-size:13px;font-weight:650;box-shadow:0 16px 34px rgba(30,40,30,.16);opacity:0;transform:translateY(10px);transition:all .5s;z-index:12;display:flex;gap:8px;align-items:center;white-space:nowrap}
+.chipx i{font-style:normal;width:24px;height:24px;border-radius:8px;display:grid;place-items:center;font-size:13px}
+.beam{position:absolute;left:8%;right:8%;height:120px;top:-130px;background:linear-gradient(180deg,transparent,rgba(18,122,82,.18) 70%,rgba(18,122,82,.55) 98%,transparent);border-bottom:2px solid rgba(18,122,82,.8);z-index:9;opacity:0;pointer-events:none;border-radius:20px}
+.stage.scan .beam{animation:beam 1.4s ease-in-out forwards}
+@keyframes beam{0%{opacity:0;top:-130px}15%{opacity:1}85%{opacity:1}100%{opacity:0;top:620px}}
+.stage.scan .doc{filter:saturate(.6)}
+.stage.done .doc{opacity:0}
+.stage.done .finalform{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(-1.5deg)}
+.stage.stamped .stampx{opacity:1;transform:rotate(9deg) scale(1)}
+.stage.chips .chipx{opacity:1;transform:none}
+.status{position:absolute;left:50%;bottom:6px;transform:translateX(-50%);font-size:13px;color:var(--muted);background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:999px;padding:7px 14px;z-index:12;white-space:nowrap}
+.status b{color:var(--jade)}.replay{cursor:pointer;text-decoration:underline;text-underline-offset:3px;margin-left:8px}
+.glance .wrapg{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+.glance .wrapg>*{min-width:0}
+@media(max-width:960px){.h2o .in{padding:0 20px 40px}.h2o .grid2{grid-template-columns:1fr;min-height:0}.stage{height:600px;transform:scale(.62);transform-origin:top center;margin:-10px 0 -220px}.glance .wrapg{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.doc,.finalform,.stampx,.chipx{transition:none!important}.beam{display:none}}
 </style>
 </head>
 <body>
 <div class="wrap">
 
+<div class="bleed h2o" id="top"><div class="in">
 <header>
   <a class="logo" href="#top" aria-label="ThaiTax Assistant"><i>฿</i>ThaiTax Assistant</a>
   <nav class="nav">
@@ -159,22 +230,53 @@ footer{padding:28px 0 48px;color:var(--muted);font-size:13.5px;display:grid;gap:
     <a class="gh" href="https://github.com/Reflection2024/thaitax-assistant">GitHub</a>
   </nav>
 </header>
-
-<main id="top">
-<div class="hero">
-  <div>
-    <h1 lang="en">Every Thai tax report,<br><em>ready for your accountant.</em></h1>
-    <h1 lang="th">รายงานภาษีทุกฉบับ<br><em>พร้อมส่งนักบัญชี</em></h1>
-    <p class="lede" lang="en">Personal or company: ThaiTax Assistant gathers your numbers, prepares your monthly and annual reports, and hands your accountant a clean file. You just approve.</p>
-    <p class="lede" lang="th">ทั้งภาษีส่วนบุคคลและภาษีบริษัท ThaiTax Assistant รวบรวมตัวเลขของคุณ เตรียมแบบรายเดือนและรายปี แล้วส่งไฟล์ที่เรียบร้อยให้นักบัญชี คุณแค่อนุมัติ</p>
-    <div class="ctas">
-      <a class="btn primary" href="thaitax-assistant.plugin"><span lang="en">Download free</span><span lang="th">ดาวน์โหลดฟรี</span> ↓</a>
-      <a class="btn ghost" href="#install"><span lang="en">Install in Claude Code</span><span lang="th">ติดตั้งใน Claude Code</span></a>
-    </div>
-    <div class="facts" lang="en"><span>Free</span><span>English · עברית · ไทย</span><span>For you personally, your company, or both</span></div>
-    <div class="facts" lang="th"><span>ฟรี</span><span>ไทย · English · עברית</span><span>สำหรับบุคคลธรรมดา นิติบุคคล หรือทั้งสองอย่าง</span></div>
+<div class="grid2">
+ <div>
+  <div class="eyebrow" lang="en">Free · works inside Claude · <b>official RD forms</b></div>
+  <div class="eyebrow" lang="th">ฟรี · ใช้งานใน Claude · <b>แบบฟอร์มกรมสรรพากรจริง</b></div>
+  <h1 lang="en">Thai paperwork, sorted.<span class="swap">Evenings, yours again.</span></h1>
+  <h1 lang="th">เอกสารภาษีไทย จัดการเรียบร้อย<span class="swap">เวลาเย็นกลับมาเป็นของคุณ</span></h1>
+  <p class="lead" lang="en">Send the receipts, the bank statements, the letter you can't read. Your assistant asks what it needs, fills the official forms, and hands your accountant one clean file.</p>
+  <p class="lead" lang="th">ส่งใบเสร็จ สเตทเมนต์ธนาคาร หรือจดหมายที่อ่านไม่ออกมาได้เลย ผู้ช่วยจะถามเฉพาะสิ่งที่จำเป็น กรอกแบบฟอร์มทางการ แล้วส่งไฟล์ที่เรียบร้อยให้นักบัญชีของคุณ</p>
+  <div class="ctas">
+   <a class="btn primary" href="thaitax-assistant.plugin"><span lang="en">Get it free</span><span lang="th">รับฟรี</span> →</a>
+   <a class="btn ghost" href="#install"><span lang="en">How to install</span><span lang="th">วิธีติดตั้ง</span></a>
   </div>
+  <div class="proof">
+   <div><b>22</b><span lang="en">assistants, personal &amp; company</span><span lang="th">ผู้ช่วย ทั้งบุคคลและบริษัท</span></div>
+   <div><b>13</b><span lang="en">official forms filled</span><span lang="th">แบบฟอร์มทางการที่กรอกให้</span></div>
+   <div><b>EN · HE · TH</b><span lang="en">your language</span><span lang="th">ภาษาของคุณ</span></div>
+  </div>
+ </div>
+ <div class="stage" id="stage" aria-label="Animation: a pile of documents becomes one filled official form">
+  <div class="beam"></div>
+  <div class="doc receipt" data-x="-118%" data-y="-108%" data-r="-11"><div class="h"><span>7-Eleven</span><span>#4471</span></div><div class="ln"></div><div class="ln" style="width:70%"></div><div class="ln"></div><div class="ln" style="width:55%"></div><div class="tot"><span>TOTAL</span><span>฿2,966</span></div></div>
+  <div class="doc letter" data-x="-2%" data-y="-118%" data-r="7"><div class="h"><span>กรมสรรพากร</span><span class="seal">ส</span></div>เรื่อง แจ้งให้ยื่นเอกสารเพิ่มเติม<div class="ln"></div><div class="ln"></div><div class="ln" style="width:65%"></div><div class="ln" style="width:80%"></div></div>
+  <div class="doc stmt" data-x="-104%" data-y="-12%" data-r="5"><div class="h"><span>KBank · Statement Oct</span></div><table>
+   <tr><td>03/10 Villa rent</td><td class="neg">-45,000.00</td></tr><tr><td>05/10 PEA</td><td class="neg">-4,200.00</td></tr><tr><td>07/10 Client ABC</td><td class="pos">+128,400.00</td></tr><tr><td>12/10 Makro</td><td class="neg">-2,378.00</td></tr></table></div>
+  <div class="doc receipt" data-x="18%" data-y="-30%" data-r="-6"><div class="h"><span>ใบกำกับภาษี</span></div>Clean Service Co.<div class="ln"></div><div class="ln" style="width:60%"></div><div class="tot"><span>รวม</span><span>฿26,750</span></div></div>
+  <div class="doc linemsg" data-x="-40%" data-y="22%" data-r="-4"><span class="gr">LINE</span> Accountant<div class="bub">Khun, please send October documents by the 5th 🙏</div></div>
+  <div class="doc stickynote" data-x="32%" data-y="30%" data-r="8">90-day report<br>due Friday!!</div>
+  <div class="doc letter" data-x="-128%" data-y="44%" data-r="9" style="width:170px"><div class="h"><span>50 ทวิ</span></div>หนังสือรับรองการหักภาษี<div class="ln"></div><div class="ln" style="width:50%"></div></div>
+  <div class="finalform"><img src="pp30.jpg" alt="Filled official ภ.พ.30 VAT return (example)"><div class="stampx"><span lang="en">✓ Ready for your accountant</span><span lang="th">✓ พร้อมส่งนักบัญชี</span></div></div>
+  <div class="chipx" style="left:-2%;top:16%"><i style="background:#e6f6ee">📄</i><span lang="en">23 receipts read</span><span lang="th">อ่านใบเสร็จแล้ว 23 ใบ</span></div>
+  <div class="chipx" style="right:-2%;top:38%"><i style="background:#fff1d6">⚠️</i><span lang="en">2 tax invoices missing, request drafted</span><span lang="th">ขาดใบกำกับภาษี 2 ใบ ร่างคำขอแล้ว</span></div>
+  <div class="chipx" style="left:2%;bottom:16%"><i style="background:#e6f6ee">฿</i><span lang="en">VAT to pay ฿18,697 · due 23 Nov</span><span lang="th">VAT ต้องชำระ ฿18,697 · ภายใน 23 พ.ย.</span></div>
+  <div class="status" id="status"></div>
+ </div>
+</div>
+</div></div>
+<main>
 
+<section class="glance">
+ <div class="wrapg">
+  <div>
+   <p class="kicker" lang="en">Every month, at a glance</p><p class="kicker" lang="th">ทุกเดือน ในหน้าเดียว</p>
+   <h2 lang="en">You see what's due. It's already prepared.</h2>
+   <h2 lang="th">คุณเห็นว่าต้องยื่นอะไร และทุกอย่างเตรียมไว้แล้ว</h2>
+   <p class="sub" lang="en">Your assistant keeps track of every Thai deadline for you and your company, prepares each form before it's due, and tells you exactly what is still missing.</p>
+   <p class="sub" lang="th">ผู้ช่วยติดตามกำหนดยื่นภาษีทุกฉบับของคุณและบริษัท เตรียมแบบฟอร์มก่อนถึงกำหนด และบอกชัดเจนว่ายังขาดอะไร</p>
+  </div>
   <div class="month" aria-label="Example monthly summary">
     <div class="top">
       <b lang="en">What's due this month</b><b lang="th">เดือนนี้ต้องยื่นอะไรบ้าง</b>
@@ -198,7 +300,9 @@ footer{padding:28px 0 48px;color:var(--muted);font-size:13.5px;display:grid;gap:
       <span class="pill" lang="en">Ready for your accountant</span><span class="pill" lang="th">พร้อมส่งนักบัญชี</span>
     </p>
   </div>
-</div>
+
+ </div>
+</section>
 
 <section>
   <p class="kicker" lang="en">Made for your situation</p><p class="kicker" lang="th">เหมาะกับคุณ</p>
@@ -626,6 +730,28 @@ footer{padding:28px 0 48px;color:var(--muted);font-size:13.5px;display:grid;gap:
     btns.forEach(function(x){x.setAttribute("aria-pressed",x===b)});
     document.querySelectorAll(".ask").forEach(function(c){c.hidden=!(f==="all"||c.getAttribute("data-k")===f)});
   })});
+})();
+</script>
+<script>
+(function(){
+ var st=document.getElementById('stage'),status=document.getElementById('status');if(!st)return;
+ var docs=[].slice.call(st.querySelectorAll('.doc'));
+ var T={en:['Your month, as it usually looks…','Reading your documents…','Asking only what it needs · filling the official form…','<b>Done.</b> One clean file for your accountant.','Play again'],
+        th:['เดือนของคุณ ตามปกติ…','กำลังอ่านเอกสาร…','ถามเฉพาะที่จำเป็น · กำลังกรอกแบบฟอร์มทางการ…','<b>เสร็จแล้ว</b> ไฟล์เดียวที่เรียบร้อยสำหรับนักบัญชี','เล่นอีกครั้ง']};
+ function t(i){return (T[document.documentElement.lang]||T.en)[i]}
+ function messy(){docs.forEach(function(d){d.style.transitionDelay='0s';d.style.transform='translate('+d.dataset.x+','+d.dataset.y+') rotate('+d.dataset.r+'deg)'})}
+ function gather(){docs.forEach(function(d,i){d.style.transitionDelay=(i*0.07)+'s';d.style.transform='translate(-50%,-50%) rotate('+(i%2?3:-3)+'deg) scale(.55)'})}
+ var run=0;function wait(ms){return new Promise(function(r){setTimeout(r,ms)})}
+ window.ttPlay=async function(){var me=++run;st.className='stage';messy();status.innerHTML=t(0);
+  await wait(2200);if(me!==run)return;st.classList.add('scan');status.innerHTML=t(1);
+  await wait(1500);if(me!==run)return;gather();status.innerHTML=t(2);
+  await wait(1300);if(me!==run)return;st.classList.add('done');
+  await wait(900);if(me!==run)return;st.classList.add('stamped');
+  await wait(500);if(me!==run)return;st.classList.add('chips');status.innerHTML=t(3)+'<span class="replay" onclick="ttPlay()">'+t(4)+'</span>';};
+ messy();
+ if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){st.className='stage done stamped chips';status.innerHTML=t(3);}
+ else setTimeout(ttPlay,600);
+ window.addEventListener('hashchange',function(){setTimeout(ttPlay,50)});
 })();
 </script>
 </body>
