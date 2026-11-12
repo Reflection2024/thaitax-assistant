@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0-rc.16 (2026-11-12): automations for users
+- New skill `automations-reminders-and-scheduled-tasks` (24th) and `references/automations.md`: a catalog of 14 automations (deadline reminders, monthly pack, weekly email sweep, 25th nudge, dashboard refresh, payroll prep, overdue invoices, supplier payment check, quarterly accountant check, visa and permits, 180-day counter, tax-year milestones, property dates, family budget month). The user picks; the assistant creates scheduled tasks (Claude scheduled tasks / ChatGPT Tasks); every run prepares and drafts, never sends, files or pays.
+- `thaitax-start` step 4 and intake round 5 now offer these as one multi-select question; the profile records them.
+
 ## 1.0.0-rc.15 (2026-11-12): deep check
 - Fix: PP.36 paper deadline is 7 days after the month end (online 15th); it was set to the 15th for paper too. New regression test.
 - ภ.ง.ด.94 updated to the official tax-year 2569 (2026) form from rd.go.th; all 56 mapped boxes checked and a filled preview rendered.

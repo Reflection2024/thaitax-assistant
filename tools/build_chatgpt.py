@@ -38,6 +38,10 @@ SWAPS = [
     ("`.claude-plugin/plugin.json`", "`plugin.json`"),
     ("in **Settings → Connectors**, with their own sign-in", "in ChatGPT, with their own sign-in: **Plugins → + → Add custom MCP server** for FlowAccount (`https://mcp.flowaccount.com/mcp`) and Stripe (`https://mcp.stripe.com`), or the ready-made app in **Settings → Apps** when one exists"),
     ("Open **Settings → Connectors**, find *X*, press **Connect** and sign in.", "Open **Plugins → + → Add custom MCP server** (or **Settings → Apps** if *X* is listed there), enter its MCP address, press **Connect** and sign in."),
+    ("In Claude use the scheduled-task tool; in ChatGPT use Tasks.", "Use ChatGPT Tasks."),
+    ("(Claude: scheduled tasks; ChatGPT: Tasks)", "(ChatGPT Tasks)"),
+    ("(Claude scheduled tasks / ChatGPT Tasks)", "(ChatGPT Tasks)"),
+    ("(Claude scheduled tasks, ChatGPT Tasks)", "(ChatGPT Tasks)"),
     ("Claude Code", "Codex"),
     ("Claude", "ChatGPT"),
 ]

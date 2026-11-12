@@ -56,11 +56,10 @@ Show the connection checklist as a table, tailored to the answers: only the rows
 
 Always end this step with the **phone-photo how-to** from the welcome guide, even if nothing else was connected.
 
-## Step 4: Rhythm (intake round 5)
+## Step 4: Automations (intake round 5)
 
-- Offer to add this year's deadlines to the connected calendar (company: the 7th, 15th and 23rd monthly; individual: 31 March, 30 September), each with a reminder 3 days before, plus a monthly "send your receipts and statements" reminder on the 25th. Show the list first and create the events only on an explicit yes.
 - Explain in one line how the assistant works from now on: it asks for documents, checks each one for mistakes, tells you what to fix, and reminds you before deadlines.
-- Offer the **automatic monthly pack**: "On the 1st of each month I'll prepare everything for the month that just ended (deadlines, tax figures, who owes you, missing documents) and a draft email to your accountant. Nothing is sent without you." On a yes, set it up as described in `monthly-pack` § Scheduling.
+- Offer the automations that fit this profile, following `automations-reminders-and-scheduled-tasks` (catalog in `../../references/automations.md`): one clickable multi-select question with 3 to 5 options (for example deadline reminders, the monthly pack, the weekly email sweep, payroll prep, the 25th nudge) plus "Show me all". Create only what the user picks; each run prepares and drafts, never sends or pays.
 
 ## Step 5: Save the profile
 
@@ -82,7 +81,7 @@ Tell the user, in one line in their language: ThaiTax Assistant keeps nothing on
   - <Company> · tax ID <13 digits> · <head office | branch 0000X> · VAT <yes since … | no> · SME <yes|no|?> · year end <dd Month> · activity <…> · BOI/Amity <…> · customers <Thai companies / individuals / foreign> · staff <n, foreign n> · e-WHT <y/n> · e-Tax <y/n>
 - **Tools:** accounting <…> · payments <…> · payroll <…> · bank <…>
 - **Connections:** FlowAccount <✓|later|n/a> · Stripe <…> · Email <…> · Calendar <…> · Drive <…> · Omise <…> · phone photos explained ✓
-- **Reminders:** calendar deadlines <yes|no> · monthly check-in <yes|no>
+- **Automations:** <name — day/time, one per line, or none>
 - **Missing:** <items the user will send later>
 - **Working rule saved as a preference:** <yes|no>
 - **Set up:** <YYYY-MM-DD>
