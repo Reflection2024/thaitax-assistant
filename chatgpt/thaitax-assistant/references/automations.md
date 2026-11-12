@@ -21,9 +21,40 @@ Write each task's prompt as a complete standalone instruction in the user's lang
 | 13 | **Property dates** | property owners | 1 Mar each year, and when the bill arrives | `property-tax` | Land and building tax due date, whether last year's bill looked right, rent tax set-aside. |
 | 14 | **Family budget month** | families using the budget | 3rd of each month | `family-budget` | Last month in one page: in vs out, new subscriptions, price rises. |
 
+## The standard set
+
+Offer these seven first, pre-selected wherever they fit the profile:
+
+| Automation | # in the table |
+|---|---|
+| Monthly pack on the 1st | 2 |
+| Send-your-documents nudge on the 25th | 4 |
+| Overdue invoices with reminders drafted for the customer | 7 |
+| Supplier payments check before the 7th | 8 |
+| Visa and work permits, for the user and their family | 10 |
+| 180-day counter | 11 |
+| Family budget month | 14 |
+
+Skip the ones that do not apply (no company: skip 2, 7, 8; no foreign income: skip 11; no family budget: skip 14). The others in the table are offered under "Show me all".
+
+## Where every run gets its documents
+
+Each run looks, in this order, and uses everything it finds:
+
+1. **Gmail** (if connected): tax invoices, receipts, 50 ทวิ, supplier bills, and the bank's monthly e-statements (for the family budget and the bank reconciliation). Search only the period of the run; open attachments; never send anything.
+2. **The user's Google Drive folder** (if connected): the folder named in the profile, for example `ThaiTax/<company>/<YYYY-MM>/`. File what the run finds in Gmail into the same folder.
+3. **FlowAccount** (if connected): sales, purchases, receivables, payables.
+4. **Uploads:** whatever is still missing is listed by name at the end of the run ("please upload: KBank October statement, 2 receipts from Makro"), so the user can upload it in the chat.
+
+Ask for the Drive folder and the bank that sends the e-statement during setup; save both in the profile.
+
+## Visa and permits
+
+Track the user and the family members they name (spouse, children), and, for companies, foreign staff only if the user adds them. Dates come from the passport stamps, visas and work permits the user shares once; keep them in the profile and remind 30 days before each date.
+
 ## How to offer them
 
-1. Pick the 3 to 5 that fit the profile best and show them as **one multi-select question** (clickable). Add "Show me all" as an option.
+1. Show the standard set (filtered by the profile) as **one multi-select question** (clickable), all pre-selected, plus "Show me all".
 2. For each chosen one, say the day and time in one line and create the task. Use ChatGPT Tasks. Calendar reminders (automation 1) can instead be calendar events with a reminder, if the user prefers their calendar.
 3. Record in the profile: `- **Automations:** <names and days>`.
 4. Changing later: the user can say "stop the email sweep", "move payroll prep to the 23rd", "what runs automatically?". List, change or remove the tasks accordingly; confirm each removal.

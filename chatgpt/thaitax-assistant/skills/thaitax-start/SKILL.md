@@ -59,7 +59,7 @@ Always end this step with the **phone-photo how-to** from the welcome guide, eve
 ## Step 4: Automations (intake round 5)
 
 - Explain in one line how the assistant works from now on: it asks for documents, checks each one for mistakes, tells you what to fix, and reminds you before deadlines.
-- Offer the automations that fit this profile, following `automations-reminders-and-scheduled-tasks` (catalog in `../../references/automations.md`): one clickable multi-select question with 3 to 5 options (for example deadline reminders, the monthly pack, the weekly email sweep, payroll prep, the 25th nudge) plus "Show me all". Create only what the user picks; each run prepares and drafts, never sends or pays.
+- Offer the automations that fit this profile, following `automations-reminders-and-scheduled-tasks` (catalog in `../../references/automations.md`): one clickable multi-select question with the standard set that fits this profile (monthly pack on the 1st, the 25th nudge, overdue invoices with reminders drafted, supplier payments check before the 7th, visa and permits for the user and family, the 180-day counter, family budget month) plus "Show me all". Then ask where documents come from (Gmail, a Google Drive folder, FlowAccount, uploads) and which bank sends the monthly e-statement. Create only what the user picks; each run prepares and drafts, never sends or pays.
 
 ## Step 5: Save the profile
 
@@ -82,6 +82,8 @@ Tell the user, in one line in their language: ThaiTax Assistant keeps nothing on
 - **Tools:** accounting <…> · payments <…> · payroll <…> · bank <…>
 - **Connections:** FlowAccount <✓|later|n/a> · Stripe <…> · Email <…> · Calendar <…> · Drive <…> · Omise <…> · phone photos explained ✓
 - **Automations:** <name — day/time, one per line, or none>
+- **Document sources:** Gmail <yes|no> · Drive folder <path|none> · FlowAccount <yes|no> · uploads ✓ · bank e-statement from <bank|none>
+- **Visa tracking:** <user, spouse, children…>
 - **Missing:** <items the user will send later>
 - **Working rule saved as a preference:** <yes|no>
 - **Set up:** <YYYY-MM-DD>

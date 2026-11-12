@@ -18,7 +18,8 @@ Read `../../references/automations.md` (the catalog), `../../references/connecto
 ## Set up
 
 1. Read the profile. If there is none, run `thaitax-start` first.
-2. Choose the 3 to 5 automations from the catalog that fit this person or company, plus "Show me all". Ask once, as a clickable multi-select question in the user's language, with the day and one-line result for each.
+2. Offer the **standard set** from the catalog (monthly pack, the 25th nudge, overdue invoices, supplier payments check, visa and permits for the user and family, the 180-day counter, family budget month), filtered to what fits this profile, plus "Show me all". Ask once, as a clickable multi-select question in the user's language, with the day and one-line result for each.
+2a. Ask in the same round where documents should come from (Gmail, a Google Drive folder, FlowAccount, uploads; several allowed), which bank sends the monthly e-statement, and which family members to track for visas. Save them in the profile; every task prompt names these sources.
 3. For each one picked: confirm the day and time in one line, then create the scheduled task with the app's scheduling tool (ChatGPT Tasks). The task prompt is standalone, in the user's language, names the person or company, the skill to run, and says that nothing is sent, filed or paid without the user's yes.
 4. Deadline reminders can be calendar events instead, if the user prefers: show the list of dates first and create them only on a yes.
 5. Save to the profile: `- **Automations:** <name — day/time>` per task. Answer with a short list of what will run and when, and how to change it ("say *stop the email sweep*").

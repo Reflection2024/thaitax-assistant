@@ -48,7 +48,8 @@ Walk through the table in `welcome-guide.md` Part 2. For each item record **conn
 ## Round 5: Automations and permissions
 
 1. Which automations to switch on (one multi-select question; options and rules in `automations.md`): deadline reminders, monthly pack, weekly email sweep, the 25th nudge, dashboard refresh, payroll prep, and the others that fit the profile. Calendar reminders: which calendar.
-2. Times: keep the suggested day and time or pick another.
+2. Where documents come from for the runs: Gmail, a Google Drive folder (which one), FlowAccount, uploads. Which bank sends the monthly e-statement. Which family members to track for visas.
+3. Times: keep the suggested day and time or pick another.
 3. Standing permissions are **never** assumed. Every send, post, create or pay still needs a yes at the time. State this once, plainly.
 
 ## What gets saved
