@@ -120,7 +120,7 @@ section h2{font-size:clamp(28px,3.6vw,40px);font-weight:800;max-width:22em}
 .ask .a li{margin:3px 0}
 .num{font-variant-numeric:tabular-nums;white-space:nowrap}
 @media (max-width:860px){.asks{grid-template-columns:1fr}}
-pre{direction:ltr;text-align:left;unicode-bidi:isolate}.pick{display:inline-flex;gap:4px;margin-top:22px;padding:4px;background:#fff;border:1px solid var(--line);border-radius:999px}.pick button{font:inherit;font-weight:600;padding:9px 22px;border:0;border-radius:999px;background:transparent;color:var(--muted);cursor:pointer}.pick button[aria-pressed="true"]{background:var(--ink);color:#fff}.steps[hidden]{display:none}.btn.dl{margin:12px 0 4px;display:inline-flex}
+pre{direction:ltr;text-align:left;unicode-bidi:isolate}.pick{display:inline-flex;gap:4px;margin-top:22px;padding:4px;background:#fff;border:1px solid var(--line);border-radius:999px}.pick button{font:inherit;font-weight:600;padding:9px 22px;border:0;border-radius:999px;background:transparent;color:var(--muted);cursor:pointer}.pick button[aria-pressed="true"]{background:var(--ink);color:#fff}.steps[hidden]{display:none}.btn.dl{margin:12px 0 4px;display:inline-flex}.dlrow{display:flex;gap:10px;flex-wrap:wrap}.adv{margin-top:10px;font-size:14px;color:var(--muted)}.adv summary{cursor:pointer}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px;counter-reset:s}
 .step{counter-increment:s}
 .step::before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--paper);font-family:var(--display);font-weight:800;margin-bottom:12px}
@@ -530,9 +530,13 @@ html[lang="th"] .h2o h1{line-height:1.22;letter-spacing:-.01em;font-size:clamp(3
 <div class="steps" data-p="chatgpt" hidden>
     <div class="step">
       <h3 lang="en">Install</h3><h3 lang="he" dir="rtl">התקנה</h3><h3 lang="th">ติดตั้ง</h3>
-      <p lang="en">In the ChatGPT desktop app, on a paid plan that includes Plugins: add our plugin list once from the terminal, restart the app, and install ThaiTax Assistant from Plugins. A workspace owner can instead upload the ZIP under Admin → Plugins.</p><p lang="he" dir="rtl">באפליקציית ChatGPT למחשב, במנוי בתשלום שכולל Plugins: מוסיפים פעם אחת את רשימת הפלאג-אינים שלנו מהטרמינל, מפעילים מחדש את האפליקציה, ומתקינים את ThaiTax Assistant מתוך Plugins. מנהל של סביבת עבודה יכול במקום זה להעלות את קובץ ה-ZIP דרך Admin ← Plugins.</p><p lang="th">ในแอป ChatGPT บนคอมพิวเตอร์ ด้วยแพ็กเกจแบบชำระเงินที่มี Plugins: เพิ่มรายการปลั๊กอินของเราครั้งเดียวจากเทอร์มินัล รีสตาร์ตแอป แล้วติดตั้ง ThaiTax Assistant จาก Plugins หรือผู้ดูแลเวิร์กสเปซอัปโหลดไฟล์ ZIP ที่ Admin → Plugins</p>
-      <a class="btn primary dl" href="https://reflection2024.github.io/thaitax-assistant/thaitax-assistant-chatgpt.zip"><span lang="en">Download for ChatGPT</span><span lang="he" dir="rtl">הורדה ל-ChatGPT</span><span lang="th">ดาวน์โหลดสำหรับ ChatGPT</span> ↓</a>
-      <pre>codex plugin marketplace add Reflection2024/thaitax-assistant</pre>
+      <p lang="en">Download the installer for your computer and double-click it. It installs ThaiTax Assistant and reopens ChatGPT. You need the ChatGPT desktop app on a paid plan that includes Plugins. On a Mac, the first time: right-click the file and choose Open.</p><p lang="he" dir="rtl">הורד את קובץ ההתקנה למחשב שלך ולחץ עליו פעמיים. הוא מתקין את ThaiTax Assistant ופותח מחדש את ChatGPT. צריך את אפליקציית ChatGPT למחשב, במנוי בתשלום שכולל Plugins. במק, בפעם הראשונה: קליק ימני על הקובץ ובחר "פתח".</p><p lang="th">ดาวน์โหลดตัวติดตั้งสำหรับคอมพิวเตอร์ของคุณแล้วดับเบิลคลิก ระบบจะติดตั้ง ThaiTax Assistant และเปิด ChatGPT ใหม่ ต้องใช้แอป ChatGPT บนคอมพิวเตอร์ แพ็กเกจแบบชำระเงินที่มี Plugins บน Mac ครั้งแรก: คลิกขวาที่ไฟล์แล้วเลือก Open</p>
+      <p class="dlrow"><a class="btn primary dl" href="https://reflection2024.github.io/thaitax-assistant/ThaiTax-ChatGPT-Mac.zip">Mac ↓</a> <a class="btn primary dl" href="https://reflection2024.github.io/thaitax-assistant/ThaiTax-ChatGPT-Windows.zip">Windows ↓</a></p>
+      <details class="adv"><summary><span lang="en">Install by hand</span><span lang="he" dir="rtl">התקנה ידנית</span><span lang="th">ติดตั้งเอง</span></summary>
+        <pre>codex plugin marketplace add Reflection2024/thaitax-assistant
+codex plugin add thaitax-assistant@thaitax-assistant</pre>
+        <p><a href="https://reflection2024.github.io/thaitax-assistant/thaitax-assistant-chatgpt.zip"><span lang="en">Plugin ZIP for workspace owners (Admin → Plugins → Upload)</span><span lang="he" dir="rtl">קובץ ZIP למנהלי סביבת עבודה (Admin ← Plugins ← Upload)</span><span lang="th">ไฟล์ ZIP สำหรับผู้ดูแลเวิร์กสเปซ (Admin → Plugins → Upload)</span></a></p>
+      </details>
     </div>
     <div class="step">
       <h3 lang="en">Say "Get started"</h3><h3 lang="he" dir="rtl">תגיד "בוא נתחיל"</h3><h3 lang="th">พิมพ์ "เริ่มต้น"</h3>

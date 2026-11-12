@@ -14,9 +14,10 @@
 
 **Claude desktop app:** download [`thaitax-assistant.plugin`](https://reflection2024.github.io/thaitax-assistant/thaitax-assistant.plugin), drag it into a Claude chat, and press **Install**.
 
-**ChatGPT** (paid plan that includes Plugins): in the ChatGPT desktop app, add the marketplace once and restart, then install ThaiTax Assistant from Plugins:
+**ChatGPT** (desktop app, paid plan that includes Plugins): download the one-click installer for [Mac](https://reflection2024.github.io/thaitax-assistant/ThaiTax-ChatGPT-Mac.zip) or [Windows](https://reflection2024.github.io/thaitax-assistant/ThaiTax-ChatGPT-Windows.zip) and double-click it (Mac, first time: right-click → Open). It installs or updates the plugin and reopens ChatGPT. By hand:
 ```
 codex plugin marketplace add Reflection2024/thaitax-assistant
+codex plugin add thaitax-assistant@thaitax-assistant
 ```
 Or download [`thaitax-assistant-chatgpt.zip`](https://reflection2024.github.io/thaitax-assistant/thaitax-assistant-chatgpt.zip) (workspace owners: Admin → Plugins → Upload). Same assistants. FlowAccount and Stripe connect as MCP servers (`mcp.json`; in ChatGPT: Plugins → + → Add custom MCP server). Rebuild after any change with `python3 tools/build_chatgpt.py`.
 
