@@ -60,3 +60,7 @@ Full documentation: [`plugins/thaitax-assistant/README.md`](plugins/thaitax-assi
 > Prepared for review by your Thai accountant. Not tax or legal advice. Nothing is filed without your explicit yes.
 
 © Reflection Thailand
+
+## Monthly update check
+
+On the 1st of every month a scheduled task re-downloads every official form (`tools/check_forms.py`), re-verifies rates, thresholds and deadlines against official Thai sources, and, if anything changed, prepares the update on a branch with a pull request and asks the maintainer to approve before anything reaches users. Procedure: [`tools/MONTHLY_CHECK.md`](tools/MONTHLY_CHECK.md).
