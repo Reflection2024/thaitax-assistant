@@ -101,7 +101,7 @@ def build() -> dict:
     with zipfile.ZipFile(ZIP, "w", zipfile.ZIP_DEFLATED) as z:
         for p in sorted(OUT.rglob("*")):
             if p.is_file():
-                z.write(p, Path("thaitax-assistant") / p.relative_to(OUT))
+                z.write(p, p.relative_to(OUT))
     return {"skills": len(skills), "files_reworded": changed, "leftovers": leftovers, "zip": str(ZIP.relative_to(ROOT)), "zip_mb": round(ZIP.stat().st_size / 1e6, 1)}
 
 

@@ -14,7 +14,7 @@
 
 **Claude desktop app:** download [`thaitax-assistant.plugin`](https://reflection2024.github.io/thaitax-assistant/thaitax-assistant.plugin), drag it into a Claude chat, and press **Install**.
 
-**ChatGPT** (desktop app, paid plan that includes Plugins): download the one-click installer for [Mac](https://reflection2024.github.io/thaitax-assistant/ThaiTax-ChatGPT-Mac.zip) or [Windows](https://reflection2024.github.io/thaitax-assistant/ThaiTax-ChatGPT-Windows.zip) and double-click it (Mac, first time: right-click → Open). It installs or updates the plugin and reopens ChatGPT. By hand:
+**ChatGPT** (desktop app, paid plan that includes Plugins): download the one-click installer for [Mac](https://reflection2024.github.io/thaitax-assistant/ThaiTax-Installer-for-ChatGPT-Mac.zip) or [Windows](https://reflection2024.github.io/thaitax-assistant/ThaiTax-Installer-for-ChatGPT-Windows.zip) and double-click it (Mac, first time: right-click → Open). It installs or updates the plugin and reopens ChatGPT. By hand:
 ```
 codex plugin marketplace add Reflection2024/thaitax-assistant
 codex plugin add thaitax-assistant@thaitax-assistant
