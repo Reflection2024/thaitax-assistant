@@ -1,5 +1,5 @@
 ---
-name: dashboards
+name: dashboard-builder-thai-tax-payroll-cash-budget
 description: "Use BEFORE drawing any dashboard, chart or visual overview of a person's or company's Thai tax, payroll, cash, rent, budget or foreign income, even if a chart or visualizer tool is available and even when files come with the request. Builds the page from the user's own files: days in Thailand and money from abroad, tax still to save before 31 December, rent and land tax, this month's taxes and deadlines, 90-day cash and who owes money, payroll and work permits, family budget. Numbers come from the matching ThaiTax Assistant skill (its questions first); scripts/dashboard.py draws the page in the user's language; refreshed on request. Use when the user says 'dashboard', 'build me a dashboard', 'chart', 'track', 'overview', 'דשבורד', 'תבנה לי דשבורד', 'לוח בקרה', 'แดชบอร์ด'."
 ---
 

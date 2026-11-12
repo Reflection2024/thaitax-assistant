@@ -1,7 +1,7 @@
 # Changelog
 
 ## 1.0.0-rc.14 (2026-11-12): dashboards, any language, your data stays yours
-- New skill `dashboards` (23rd): builds a dashboard page from the user's own files for a person or a company (days in Thailand and money from abroad, tax still to save before 31 December, rent and land tax, this month's taxes and deadlines, 90-day cash and receivables, payroll and work permits, family budget), in the user's language, refreshed on request.
+- New skill `dashboard-builder-thai-tax-payroll-cash-budget` (23rd): builds a dashboard page from the user's own files for a person or a company (days in Thailand and money from abroad, tax still to save before 31 December, rent and land tax, this month's taxes and deadlines, 90-day cash and receivables, payroll and work permits, family budget), in the user's language, refreshed on request.
 - `scripts/dashboard.py`: draws any dashboard from a JSON spec with inline SVG, no network; right to left for Hebrew, Arabic, Persian, Urdu; numbers kept left to right. Six example specs in `assets/dashboards/`. 4 tests.
 - Language: the assistant answers in whatever language the user writes in, not only English, Hebrew or Thai. Official forms stay in Thai; `official_forms.py explain` now writes the explanation in any language (`--lang`, HTML output, automatic switch from PDF when the script needs it).
 - Privacy: a "Your data stays yours" section: no server, no database, nothing sent to the developers; files stay on the user's computer, Claude account and connected services.
