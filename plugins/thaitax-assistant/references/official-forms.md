@@ -12,7 +12,7 @@ Every return or certificate you prepare is delivered **on the official Revenue D
 | ID | Form |
 |---|---|
 | PND90, PND91, PND94 | Personal income tax returns |
-| PND90_FOREIGN | Income Declaration for Foreign-Sourced Income |
+| PND90_FOREIGN | Income Declaration for Foreign-Sourced Income (fillable 2569 version) |
 | PND1, PND3, PND3_ATTACH, PND53 | Monthly withholding returns and the payee list |
 | PP30, PP36 | VAT return and reverse-charge VAT |
 | (more when added) | PND50, PND51, PND53 attachment, 50 ทวิ certificate, SSO 1-10 |
