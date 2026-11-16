@@ -22,7 +22,7 @@
       }
     ],
     "rounding": "half_up_to_baht (50 satang or more up, less dropped; SSO form instructions)",
-    "verified": "2026-11-11",
+    "verified": "2026-11-16",
     "source": "Ministerial Regulation B.E. 2568 (Royal Gazette); SSO SPS 1-10 instructions; verified 2026-11-11",
     "pit_deduction_max_2026": 10500
   },
@@ -45,8 +45,8 @@
       0.02
     ],
     "e_wht_valid_until": "2027-12-31",
-    "verified": "2026-11-12",
-    "source": "rd.go.th withholding tables; e-WHT 1% extension to 31 Dec 2027 approved by Cabinet 16 Jun 2026 (retroactive from 1 Jan 2026); confirm the Ministerial Regulation is gazetted before applying"
+    "verified": "2026-11-16",
+    "source": "rd.go.th withholding tables; e-WHT 1% for 1 Jan 2026 - 31 Dec 2027: Cabinet approval 16 Jun 2026 (RD news 14/2569), Ministerial Regulation No. 402 (B.E. 2569) published in the Royal Gazette in October 2026 (DST magazine; Bizwings, 9 Nov 2026); verified 2026-11-16"
   },
   "pit": {
     "bands": [
@@ -361,7 +361,7 @@
     }
   },
   "minimum_wage": {
-    "notification": "Wage Committee No. 14, in force 2025-07-01, still current Nov 2026",
+    "notification": "Wage Committee No. 14, in force 2025-07-01, still current 16 Nov 2026 (2027 provincial proposals under review, no new rates announced)",
     "daily_thb": {
       "bangkok": 400,
       "phuket": 400,
@@ -373,7 +373,7 @@
       "hotels_type_2_3_4_nationwide": 400,
       "entertainment_venues_nationwide": 400
     },
-    "verified": "2026-11-11",
+    "verified": "2026-11-16",
     "source": "Royal Gazette 1 Jul 2025; Thai press and MoL summaries"
   },
   "severance_days": {

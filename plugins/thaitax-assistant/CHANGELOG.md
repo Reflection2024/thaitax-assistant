@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0-rc.18 (2026-11-16): monthly update 2026-11
+- e-WHT 1% (1 Jan 2026 - 31 Dec 2027) is now law: Ministerial Regulation No. 402 (B.E. 2569) was published in the Royal Gazette in October 2026. The "confirm it is gazetted first" caveat is removed; the 1% still applies only when the payer actually uses e-WHT.
+- Foreign-income declaration (PND90_FOREIGN) replaced with the rd.go.th version of 30 Jun 2026 (`pit/2569/Foreign_Income_300669.pdf`): same content, now a fillable PDF (463 boxes).
+- Monthly check: all 15 bundled forms unchanged on rd.go.th. Re-verified: SSO ceiling 17,500 (2026-2028), minimum wage (Notification 14; 2027 proposals still under review), foreign-income remittance relief still draft.
+
 ## 1.0.0-rc.17 (2026-11-12): standard automation set
 - Setup now offers a standard set, pre-selected where it fits: monthly pack on the 1st, the 25th nudge, overdue invoices with reminders drafted, supplier payments check before the 7th, visa and permits for the user and family, the 180-day counter, family budget month. The rest stay under "Show me all".
 - Every run gathers documents from Gmail (including the bank's monthly e-statement), the user's Google Drive folder and FlowAccount, files them in the month's folder, and lists by name anything still to upload. Setup asks for these sources and saves them in the profile.
